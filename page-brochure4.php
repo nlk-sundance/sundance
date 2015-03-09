@@ -66,7 +66,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                         </tr>
                     </table>
                     <input type="submit" value="Get My Brochure" class="bigBlueBtn blueFade" onClick="_gaq.push(['_trackEvent', 'lead', 'brochure-full']);" />
-                    <p><small>* indicates required fields.<br><a href="http://www.sundancespas.com/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
+                    <p><small>* indicates required fields.<br><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
                 </form>
                 <div class="more-fold"></div>
             </div>

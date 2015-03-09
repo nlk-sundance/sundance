@@ -119,7 +119,7 @@ function sds_is_thanks_page() {
 				<!-- SiteCatalyst code version: H.15.1.
 				Copyright 1997-2008 Omniture, Inc. More info available at
 				http://www.omniture.com -->
-				<script language="JavaScript" type="text/javascript" src="http://www.sundancespas.com/Omniture/Omniture_SundanceSpas_Code.js"></script>
+				<script language="JavaScript" type="text/javascript" src="<?php echo get_bloginfo('url'); ?>/Omniture/Omniture_SundanceSpas_Code.js"></script>
 				<script language="JavaScript" type="text/javascript"><!--
 				/* You may give each page an identifying name, server, and channel on
 				the next lines. */

@@ -73,12 +73,12 @@ Unmatched Overall Efficiency*</h3>
           <td>$9.86</td>
         <td>NA</td>
         </tr>
-          <th><a href="http://www.sundancespas.com/selectseries/victoria/">Victoria&trade;</a></th>
+          <th><a href="<?php echo get_bloginfo('url'); ?>/selectseries/victoria/">Victoria&trade;</a></th>
           <td>$13.61</td>
           <td>NA</td>
         </tr>
          <tr> 
-        <th><a href="http://www.sundancespas.com/880series/aspen/">Aspen&trade;</a></th>
+        <th><a href="<?php echo get_bloginfo('url'); ?>/880series/aspen/">Aspen&trade;</a></th>
           <td>$20.74</td>
           <td>NA</td>
         </tr>
