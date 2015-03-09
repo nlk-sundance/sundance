@@ -114,7 +114,7 @@ get_header(); ?>
                               </div>
                               <br /><br /><br />
                               <div class="horzBorder"></div>
-                              <p><small>Your privacy is very important to us.<br /><a href="http://www.sundancespas.com/about-us/privacy-policy" target="_blank" title="Policies">View our privacy policy</a>.</small></p>
+                              <p><small>Your privacy is very important to us.<br /><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank" title="Policies">View our privacy policy</a>.</small></p>
                               <?php the_content(); /* for tracking */ ?>
                         </div>
                   </div>
