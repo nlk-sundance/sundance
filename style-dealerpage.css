@@ -1,0 +1,675 @@
+/** new landing **/
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-arrow-right, .icon-arrow-down, .icon-arrow-up, .icon-arrow-left, .icon-file, .icon-location, .icon-mobile, .icon-envelope, .icon-map-pin-stroke {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-arrow-right:before {
+	content: "\e127";
+}
+.icon-arrow-down:before {
+	content: "\e129";
+}
+.icon-arrow-up:before {
+	content: "\e125";
+}
+.icon-arrow-left:before {
+	content: "\e12b";
+}
+.icon-file:before {
+	content: "\e02a";
+}
+.icon-location:before {
+	content: "\e048";
+}
+.icon-mobile:before {
+	content: "\e059";
+}
+.icon-envelope:before {
+	content: "\e000";
+}
+.icon-map-pin-stroke:before {
+	content: "\e001";
+}
+
+
+
+/*  -- Dealer Info Page
+----------------------------------------------------------------------------------*/
+
+/* shapes */
+.right-carrot {
+    height: 4px;
+    width: 4px;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* page */
+.bd .main.hero { width: 100%; }
+
+.dealer-page {
+}
+
+.dealer-page .wrap {
+	
+}
+.dealer-page .clr {
+	clear: both;
+}
+
+/* top banner */
+.dealer-page .dealer-banner {
+	position: relative;
+	height: 75px;
+	width: 100%;
+}
+.dealer-page .dealer-banner h2 {
+	font-size: 26px;
+	line-height: 70px;
+	text-transform: none;
+	padding-left: 30px;
+}
+.dealer-page .dealer-banner-rt a {
+	position: absolute;
+	top: 20px;
+	display: block;
+	width: 154px;
+	height: 38px;
+	text-transform: none;
+}
+.dealer-page .dealer-banner-rt .rt {
+	right: 6px;
+}
+.dealer-page .dealer-banner-rt .lt {
+	right: 165px;
+}
+.dealer-page .print-button {	
+	background: url('/wp-content/themes/sundance/images/dealer-locator/btn-printpage.png') no-repeat 50% 0%;
+}
+.dealer-page .send-to-phone-button {
+	background: url('/wp-content/themes/sundance/images/dealer-locator/btn-sendtophone.png') no-repeat 50% 0%;
+}
+
+
+/* left column */
+.dealer-page .dealer-lt-col {
+	width: 640px;
+	position: relative;
+	float: left;
+	}
+
+	/* images */
+	.dealer-page .dealer-images {
+		width: 304px;
+		position: relative;
+		float: left;
+		z-index: 9;
+		}
+		.dealer-page .dealer-images .dealer-img-contain {
+			height: 205px;
+			width: 304px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #000;
+			overflow: hidden;
+		}
+		.dealer-page .dealer-images img {
+			height: 205px;
+			width: 304px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			}
+		.dealer-page .dealer-images .dealer-locator-form {
+			width: 304px;
+			height: 99px;
+			border-radius: 0 0 6px 0;
+			background-color: #000;
+			margin-top: -6px;
+			position: absolute;
+			top: 205px;
+			left: 0;
+			}
+			.dealer-locator-form p {
+				font: 400 19px arial;
+				color: #daa90a;
+				margin: 12px 16px;
+				}
+			.dealer-locator-form input#saddr {
+				width: 200px;
+				margin-left: 16px;
+				padding: 6px;
+				border-radius: 4px 0 0 4px;
+				border: none;
+				-webkit-box-shadow: inset 2px 2px 6px rgba(0,0,0,.7);
+				-moz-box-shadow: inset 2px 2px 6px rgba(0,0,0,.7);
+				box-shadow: inset 2px 2px 6px rgba(0,0,0,.7);
+				}
+			.dealer-locator-form #get_directions {
+				display: inline-block;
+				position: relative;
+				width: 54px;
+				height: 28px;
+				margin-left: -4px;
+				padding-left: 10px;
+				border: none;
+				border-radius: 0 4px 4px 0;
+				font: 700 12px/28px arial;
+				color: #222;
+				text-shadow: 0px 0px 1px #222, 0px 0px 3px #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				text-align: left;
+				letter-spacing: 1px;
+				cursor: pointer;
+				background: rgb(218,167,0);
+				background: -moz-linear-gradient(top, rgba(218,167,0,1) 0%, rgba(198,143,0,1) 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(218,167,0,1)), color-stop(100%,rgba(198,143,0,1)));
+				background: -webkit-linear-gradient(top, rgba(218,167,0,1) 0%,rgba(198,143,0,1) 100%);
+				background: -o-linear-gradient(top, rgba(218,167,0,1) 0%,rgba(198,143,0,1) 100%);
+				background: -ms-linear-gradient(top, rgba(218,167,0,1) 0%,rgba(198,143,0,1) 100%);
+				background: linear-gradient(to bottom, rgba(218,167,0,1) 0%,rgba(198,143,0,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daa700', endColorstr='#c68f00',GradientType=0 );
+				-webkit-box-shadow: inset -1px 1px 6px rgba(0,0,0,.7);
+				-moz-box-shadow: inset -1px 1px 6px rgba(0,0,0,.7);
+				box-shadow: inset -1px 1px 6px rgba(0,0,0,.7);
+				}
+			.dealer-locator-form .right-carrot {
+				float: right;
+				position: relative;
+				top: 12px;
+				left: -30px;
+				}
+	/* contact details */
+	.dealer-page .dealer-details {
+		height: 256px;
+		width: 356px;
+		padding: 16px 30px;
+		float: right;
+		position: relative;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		}
+		.dealer-page .dealer-details h4 {
+			font: 900 13px 'Lato', arial, sans-serif;
+			color: #222;
+			text-transform: uppercase;
+		}
+		.dealer-page .dealer-details p {
+			font-weight: 700;
+		}
+		.dealer-details a {
+			text-decoration: none;
+			display: block;
+			cursor: pointer;
+		}
+		.dealer-details a.lt {
+			float: left;
+		}
+		.dealer-details a.rt {
+			float:right;
+		}
+		.dealer-details .icons {
+			display: inline-block;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		.dealer-details .the-words {
+			font: 700 12px arial;
+			color: #222;
+			padding-left: 10px;
+			position: relative;
+			top: -4px;
+		}
+		.dealer-page .dealer-details div {
+			position: absolute;
+			top: 200px;
+			width: 296px;
+		}
+	/* map */
+	.dealer-page .dealer-map {
+		width: 640px;
+		height: 188px;
+		position: relative;
+		float: left;
+		background-color: #ddd;
+		}
+		#directions-panel #print-directions {
+			float: right;
+			margin: 2px;
+			cursor: pointer;
+		}
+
+	/* main content */
+	.dealer-promo img {
+		width: 620px;
+		min-height: 100px;
+		max-height: 240px;
+		margin-bottom: 26px !important;
+		background-color: lightgray;
+	}
+	div.dealer-exp-vid {
+		margin-bottom: 20px;
+		position: relative;
+		clear: both;
+		height: 176px;
+	}
+	div.dealer-exp-vid iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	div.dealer-exp-vid a {
+		width: 86px;
+		height: 27px;
+		margin: 0;
+		display: block;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	div.dealer-article h2 {
+		font: 700 21px arial, sans-serif;
+		margin-bottom: 10px;
+	}
+	div.dealer-article h3 {
+		font: 700 17px arial, sans-serif;
+		margin-bottom: 6px;
+	}
+	div.dealer-article img {
+		/* float: left; */
+		margin: 4px 12px 12px 0;
+	}
+
+	span.play-now {
+		text-transform: uppercase;
+		font: 400 13px/29px 'GSBQ';
+		color: #222;
+		text-decoration: none;
+		margin: 0 0 0.5em;
+		display: block;
+		height: 27px;
+		width: 86px;
+		padding-left: 40px;
+		background: url('/wp-content/themes/jht/images/dealer-locator/play-button.png') no-repeat 0 50%;
+	}
+
+	.dealer-page .dealer-article {
+		position: relative;
+		float: left;
+		padding: 20px;
+		width: 620px;
+		}
+	#directions-panel {
+		position: relative;
+		float: left;
+		background-color: #e1e1e1;
+		padding: 0 12px;
+		max-height: 0px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+		}
+	#dirs-showhide {
+		font-size: 13px;
+		line-height: 24px;
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 24px;
+		clear: right;
+		cursor: pointer;
+		float: left;
+		}
+
+		.adp.classic {
+			clear: both;
+		}
+
+/* right column */
+.dealer-page .dealer-rt-col {
+	float: left;
+	width: 320px;
+	background: #797866;
+	}
+	/* testimonials */
+	.dealer-testimonials {
+		background-color: #fff !important;
+		background: url('/wp-content/themes/sundance/images/dealer-locator/testimonial-grad.png') repeat-x 0 100%;
+		color: #786C5F;
+		height: 256px;
+		width: 100%;
+		}
+		.dealer-testimonials span.test-quot {
+			font: 700 66px 'Arial';
+			color: #786C5F;
+		}
+		span.test-quot.lt { 
+			float: left;
+			position: relative;
+			top: -4px;
+		}
+		span.test-quot.rt { 
+			float: right;
+			position: relative;
+			top: 210px;
+		}
+		.dealer-testimonials p {
+			display: block;
+			position: absolute;
+			height: 200px;
+			width: 220px;
+			margin: 20px 40px;
+			padding-top: 12px;
+			border-top: 1px solid #777;
+			border-bottom: 1px solid #777;
+			font: 400 14px/18px tahoma, arial, sans-serif;
+		}
+	/* right side widgets */
+	.dealer-rt-col .widge {
+		background: #797866;
+		width: 268px;
+		margin: 12px auto;
+		padding: 12px 0;
+		border-radius: 8px;
+	}
+	.widge.wht {
+		background-color: #fff;
+	}
+	.widge.gld {
+		background: #797866;
+	}
+	.dealer-rt-col .widge * {
+		padding: 0 14px;
+	}
+	.dealer-rt-col .widge a {
+		display: block;
+	}
+
+	.dealer-wet-test.widge {
+		box-shadow: 0px 0px 9px rgba( 0, 0, 0, .5 );
+	}
+	.dealer-wet-test.widge img {
+		width: 240px;
+	}
+
+	.dealer-visit-guide h4, .dealer-request-quote h4, .dealer-brochure h4, .dealer-services h4 {
+		font: 700 17px arial, sans-serif;
+		color: #333;
+		margin: 4px 10px 12px;
+		}
+	.dealer-visit-guide p {
+		font: 700 12px/17px arial, sans-serif;
+		color: #222;
+		margin: -4px 10px 12px;
+		}
+	.dealer-wet-test h3 {
+		font: 700 19px arial, sans-serif;
+		color: #CC9B00;
+		margin: 4px 10px 12px;
+	}
+	.dealer-wet-test h4 {
+		font: 700 17px arial, sans-serif;
+		color: #CC9B00;
+		margin: 4px 10px 4px;
+	}
+	.dealer-wet-test p {
+		font: 700 12px/17px arial, sans-serif;
+		color: #222;
+		margin: -4px 10px 12px;
+		}
+	.dealer-brochure p {
+		font: 400 16px/24px arial, sans-serif;
+		margin: -4px 10px 12px;
+		}
+	.dealer-brochure p span {
+		font: 900 19px 'Lato';
+		color: #BE9200;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0 !important;
+		text-shadow: 0px 0px 1px #be9200, 0px 0px 3px #fff;
+		}
+	.dealer-brochure {
+		background: url('/wp-content/themes/jht/images/dealer-locator/brochure-thumb.png') no-repeat 90% 20%, #ead073;
+		}
+	.dealer-visit-guide .fs1,
+	.dealer-request-quote .fs1,
+	.dealer-brochure .fs1 {
+		float: right;
+		width: 15px;
+		height: 15px;
+		margin: 0 !important;
+		padding: 0px !important;
+	}
+	.dealer-visit-guide .arrow-cover-t {
+		position: relative;
+		float: right;
+		height: 15px;
+		width: 6px;
+		margin: 0 !important;
+		padding: 0px !important;
+		top: -15px;
+		left: -6px;
+		background: -moz-linear-gradient(top,  rgba(30,30,30,1) 0%, rgba(28,28,28,1) 7%, rgba(20,20,20,0) 33%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,30,30,1)), color-stop(7%,rgba(28,28,28,1)), color-stop(33%,rgba(20,20,20,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+	.dealer-request-quote .arrow-cover-l,
+	.dealer-brochure .arrow-cover-l {
+		position: relative;
+		float: right;
+		height: 5px;
+		width: 15px;
+		margin: 0 !important;
+		padding: 0px !important;
+		top: -11px;
+		left: -1px;
+		background: -moz-linear-gradient(left,  rgba(30,30,30,1) 0%, rgba(28,28,28,1) 7%, rgba(20,20,20,0) 33%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,30,30,1)), color-stop(7%,rgba(28,28,28,1)), color-stop(33%,rgba(20,20,20,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(30,30,30,1) 0%,rgba(28,28,28,1) 7%,rgba(20,20,20,0) 33%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1e1e', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+		}
+	.dealer-services li {
+		font: 700 12px/17px arial, sans-serif;
+		color: #222;
+		margin: -4px 0 4px -18px;
+		list-style-type: none;
+		}
+
+/* buttons */
+a.black-button,
+input[type=submit].black-button {
+	font: 700 12px 'Lato', arial, sans-serif;
+	letter-spacing: .1em;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #fff, 0px 0px 4px #000;
+	width: 200px;
+	margin: auto;
+	padding: 12px 20px !important;
+	border-radius: 8px;
+
+	background: rgb(50,50,50); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,50,50,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(50,50,50,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+a.black-button:hover,
+input[type=submit].black-button:hover {
+	background: rgb(0,0,0); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(50,50,50,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(50,50,50,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(50,50,50,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(50,50,50,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(50,50,50,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(50,50,50,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#323232',GradientType=0 ); /* IE6-9 */
+}
+
+/* hide stuff */
+.dealer-page .silverMenu,
+.dealer-page .silverMenu + .threeCol {
+	display: none;
+	}
+
+
+
+
+
+
+
+
+/* SMS form */
+#sms-container {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 89;
+}
+
+#sms-form,
+#sms-form-success {
+	position: fixed;	
+	width: 300px;
+	height: 240px;
+	margin-left: -100px;
+	margin-top: -100px;
+	top: 50%;
+	left: 50%;
+	border: 1px solid #222;
+	border-radius: 12px;
+	box-shadow: 0px 0px 40px #000;
+	background: rgb(218,167,0); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(218,167,0,1) 0%, rgba(216,176,43,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(218,167,0,1)), color-stop(100%,rgba(216,176,43,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(218,167,0,1) 0%,rgba(216,176,43,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(218,167,0,1) 0%,rgba(216,176,43,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(218,167,0,1) 0%,rgba(216,176,43,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(218,167,0,1) 0%,rgba(216,176,43,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daa700', endColorstr='#d8b02b',GradientType=0 ); /* IE6-9 */
+}
+#sms-form-success {
+	display: none;
+}
+#sms-form-success h3 {
+	font: 700 30px 'Lato', sans-serif;
+	color: #222;
+	margin: 26px 24px 12px 24px;
+	text-shadow: 0px 0px 1px #fff;
+}
+#sms-form-success p {
+	font: 700 17px/24px arial;
+	color: #222;
+	margin: 32px 24px;
+}
+#sms-form-success .black-button {
+	position: relative;
+	left: 50%;
+	margin-left: -41px;
+	cursor: pointer;
+	border: none;
+}
+
+
+#sms-form form {
+	margin: 0 24px;
+}
+#sms-form h3 {
+	font: 700 30px 'Lato', sans-serif;
+	color: #222;
+	margin: 16px 0 12px 24px;
+	text-shadow: 0px 0px 1px #fff;
+}
+
+#sms-form label {
+	display: block;
+	font: 700 15px arial;
+	color: #222;
+}
+#sms-form input[type=submit].black-button {
+	position: relative;
+	top: 3px;
+	left: 6px;
+	cursor: pointer;
+	border: none;
+	width: 95%;
+}
+#sms-carrier, #sms-phonenumber {
+	width: 99%;
+	height: 24px;
+	margin: 2px 0 12px;
+}
+
+a.close-popup {
+	position: absolute;
+	top: 2px;
+	right: 8px;
+	font: 700 17px 'Lato';
+	display: block;
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0px 0px 8px #000;
+}
+
