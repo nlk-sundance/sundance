@@ -90,7 +90,7 @@ get_header(); ?>
 				</div>
 			</div>
 	</div>
-	<div class="col w240 last awareness-right">
+	<div class="col w240 awareness-right">
 		<div>
 			<p><span>New to hot tubs?</span> Get expert advice from an authorized Sundance dealer.</p>
 			<a href="/hot-tub-dealer-locator/" class="awareness-button b225">LOCATE YOUR NEAREST DEALER</a>
