@@ -4225,7 +4225,7 @@ strong{
 		padding-top: 19px;
 	}
 	div.awareness-text {
-		width: 320px;
+		width: 100%;
 		min-height: 275px;
 		float: left;
 		padding-right: 22px;

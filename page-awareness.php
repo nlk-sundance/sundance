@@ -37,7 +37,25 @@ get_header(); ?>
 					</a>
 				</div>
 			</div>
-			<div class="clr">
+			
+	</div>
+	<div class="col w240 awareness-right">
+		<div>
+			<p><span>New to hot tubs?</span> Get expert advice from an authorized Sundance dealer.</p>
+			<a href="/hot-tub-dealer-locator/" class="awareness-button b225">LOCATE YOUR NEAREST DEALER</a>
+		</div>
+		<div>
+			<p><span>Find the hot tub model</span> that fits your lifestyle, backyard and budget.</p>
+			<a href="/hot-tubs-and-spas/" class="awareness-button b225">VIEW OUR SPAS</a>
+		</div>
+		<div>
+			<p>Learn more about the healing benefits of Sundance hydrotherapy. <span>Try a hydrotherapy spa session at your local Sundance spa dealer.</span></p>
+			<a href="/hot-tub-dealer-locator/" class="awareness-button b225">BOOK A SESSION TODAY</a>
+		</div>
+	</div>
+	<div class="clr"></div>
+	<div class="awareness-full-width">
+		<div class="clr">
 				<div class="awareness-text">
 					<h4>2. Decrease Stress and Relax</h4>
 					<p class="text top">There's no doubt that on a daily basis, stress can take a toll. Finding ways to de-stress is important to achieving optimal health and well-being. While a glass of wine may be one way of coping, we think your doctor would agree that taking a dip in your hot tub is a much better choice. It can truly help you recover from that stressful day. Dr. Becker of Washington State University found that a simple 24 minute dip actually changes nervous system patterns of test subjects to match those of a relaxed, focused person.</p>
@@ -89,20 +107,6 @@ get_header(); ?>
 					<img src="/wp-content/themes/sundance/images/awareness/sdsawareness5.jpg" />
 				</div>
 			</div>
-	</div>
-	<div class="col w240 awareness-right">
-		<div>
-			<p><span>New to hot tubs?</span> Get expert advice from an authorized Sundance dealer.</p>
-			<a href="/hot-tub-dealer-locator/" class="awareness-button b225">LOCATE YOUR NEAREST DEALER</a>
-		</div>
-		<div>
-			<p><span>Find the hot tub model</span> that fits your lifestyle, backyard and budget.</p>
-			<a href="/hot-tubs-and-spas/" class="awareness-button b225">VIEW OUR SPAS</a>
-		</div>
-		<div>
-			<p>Learn more about the healing benefits of Sundance hydrotherapy. <span>Try a hydrotherapy spa session at your local Sundance spa dealer.</span></p>
-			<a href="/hot-tub-dealer-locator/" class="awareness-button b225">BOOK A SESSION TODAY</a>
-		</div>
 	</div>
 	<div class="awareness-bottom three-col">
 		<div>
