@@ -4226,9 +4226,10 @@ strong{
 	}
 	div.awareness-text {
 		width: 100%;
-		min-height: 275px;
+		xmin-height: 275px;
 		float: left;
 		padding-right: 22px;
+		padding-bottom: 25px;
 	}
 	div.awareness-text h4 {
 		font: bold 16px/24px "Verdana" !important;
