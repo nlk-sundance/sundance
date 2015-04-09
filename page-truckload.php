@@ -50,7 +50,7 @@ get_header(); ?>
                         <br /><br />
                         <?php echo $dealer->additional_html; ?>
                         <br />
-                        <a href="<?php echo $row->website; ?>" target="_blank"><?php echo $dealer->website; ?></a>
+                        <a href="<?php echo $dealer->website; ?>" target="_blank"><?php echo $dealer->website; ?></a>
                     </div>
                 </div>
             
