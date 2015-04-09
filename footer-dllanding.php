@@ -145,6 +145,7 @@
     
 <div class="ft">
     <script>
+    /*
         jQuery(document).ready(function($){
             $('<a>')
                 .attr('href','#dealer-locations')
@@ -171,8 +172,8 @@
                 <?php } ?>
                 .html('United States')
                 .prependTo('#country');
-            */
-        });
+            * /
+        }); */
     </script>
     <div class="wrap">
         <div class="inner">
