@@ -116,7 +116,6 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-coastal.png" timg="coastal" height="313" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-mahogny.png" timg="mahogny" height="313" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-autumnwall.png" timg="autumnwall" height="313" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-terrastone.png" timg="terrastone" height="313" width="576" />
 				</div>
 				<div class="tub-shell">
 					<img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/celestite.png" timg="celestite" height="137" width="576" />
@@ -125,7 +124,9 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara.png" timg="sahara" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand.png" timg="sand" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand.png" timg="coppersand" height="137" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/seamist.png" timg="seamist" height="137" width="576" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight.png" timg="midnight" height="137" width="576" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco.png" timg="monaco" height="137" width="576" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/carribeansurf.png" timg="carribeansurf" height="137" width="576" />
 				</div>
 			</div>
 			<div class="tub-details">
@@ -144,14 +145,15 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Copper Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="seamist" data-pdf="seamist" rel="Sea Mist" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/seamist-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="carribeansurf" data-pdf="carribeansurf" rel="Carribean Surf" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/carribeansurf-thumb.jpg" height="50" width="50" /></div>
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
 				<div class="skirt thumb coastal active" timg="coastal" rel="Coastal" data-pdf="coastal" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/coastal-thumb.jpg" height="50" width="50" /></div>
 				<div class="skirt thumb mahogny" timg="mahogny" rel="Mahogny" data-pdf="mahogny" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/mahogny-thumb.jpg" height="50" width="50" /></div>
 				<div class="skirt thumb autumnwall" timg="autumnwall" rel="Autumn Walnut" data-pdf="autumnwall" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/autumnwall-thumb.jpg" height="50" width="50" /></div>
-				<div class="skirt thumb terrastone" timg="terrastone" rel="TerraStone™" data-pdf="terrastone" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/terrastone-thumb.jpg" height="50" width="50" /></div>
 			</div>
 			<a class="btn bigBlueBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/">Get Pricing</a>
 			<a class="pdf-download" href="" download="">Download Your Selected Color PDF</a>
