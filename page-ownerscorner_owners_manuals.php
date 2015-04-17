@@ -523,7 +523,7 @@ get_header(); ?>
                         <div>
                             <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/2015FR_SUN_PreDel_Guide_4.1.15.pdf">2015 Sundance PreDelivery Guide</a>
                             <br />
-                            French (All Models)
+                            French (All Models) <br />
                             <br />
                             <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/Deutsch_Select_Web.pdf">2014 Select Series Owners Manual</a>
                             <br />
