@@ -23,7 +23,7 @@ get_header(); ?>
                     <div class="expander">
                         <h3>1. Portable Spas 60Hz (North America)</h3>
                         <div>
-                            <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/2015EN_SUN_PreDel_Guide_4.1.15.pdf">2015 Sundance PreDelivery Guide</a>a>
+                            <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/2015EN_SUN_PreDel_Guide_4.1.15.pdf">2015 Sundance PreDelivery Guide</a>
                             <br />
                             English (All Models)
                             <br />
