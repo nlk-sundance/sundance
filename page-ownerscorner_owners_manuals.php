@@ -521,7 +521,7 @@ get_header(); ?>
                     <div class="expander">
                         <h3>3. Portable Spas 50Hz (Export)</h3>
                         <div>
-                            <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/2015FR_SUN_PreDel_Guide_4.1.15.pdf">2015 Sundance PreDelivery Guide</a>a>
+                            <a href="<?php echo get_bloginfo('url'); ?>/Communications/InstructionManuals/2015FR_SUN_PreDel_Guide_4.1.15.pdf">2015 Sundance PreDelivery Guide</a>
                             <br />
                             French (All Models)
                             <br />
