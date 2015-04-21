@@ -5436,3 +5436,16 @@ strong{
 	padding: 20px 25px;
 }
 
+a.get-colorselector
+{
+	text-align: center;
+	font-size: 14px;
+	font-family: Tahoma,Geneva,sans-serif;
+	color: #786C60;
+	float: left;
+	width: 100%;
+	margin: 10px 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+

@@ -197,7 +197,6 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                     } ?>
                     </ul>
                     <?php } ?>
-                    <a class="get-colorselector" href="#" onClick="jQuery('.color-selector-modal-bg').show();">Download Your Selected Color PDF</a>
                 </div>
                 <div class="energy">
                     <img src="<?php bloginfo('template_url'); ?>/images/icons/energy-efficient.png" border="0" />
@@ -205,6 +204,8 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                     <h4>Energy Efficiency</h4>
                     <p>Monthly Cost at<br />101º water temperature</p>
                 </div>
+                <div class="clear"></div>
+                <a class="get-colorselector" href="#" onClick="jQuery('.color-selector-modal-bg').show();">View the Spa Color Selector</a>
             </div>
         </div>
     </div>
@@ -511,7 +512,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 
 <div class="color-selector-modal-bg" style="display: none;">
     <div class="color-selector-modal">
-    	<div class="color-selector-modal-title"><h2>Hot Tub Color Selector</h2><span><a id="close-cs-modal">close</a></div>
+    	<div class="color-selector-modal-title"><h2>Spa Color Selector</h2><span><a id="close-cs-modal">close</a></div>
     	<?php get_template_part('block', 'color_selector'); ?>
 	</div>
 </div>
