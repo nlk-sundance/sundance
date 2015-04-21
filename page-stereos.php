@@ -51,16 +51,6 @@ get_header(); ?>
                 		  	</ul>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <img src="<?php bloginfo('template_url'); ?>/images/features/New_JBL_Speakers.jpg" border="0" />
-                            <h3>Speakers</h3>
-                           	<ul>
-                		      	<li>JBL Speakers</li>
-                			    <li>Sub-woofer for deep bass on select models</li>
-                		  	</ul>
-                        </div>
-                    </li>
                 </ul>
                 <br class="clear" />
             </div>
