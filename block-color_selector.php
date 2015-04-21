@@ -28,13 +28,15 @@
 /* styles for when modal */
 .color-selector-modal-bg { background-color: rgba(0,0,0,.66); height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 999; }
 .color-selector-modal { background-color: #fff; margin: 55px auto; width: 1020px; }
-.color-selector-modal-title { background-color: #000; position: relative; width: 100%; }
-.color-selector-modal-title h2 { color: #fff; font: 700 24px/84px "AL"; letter-spacing: 1px; margin: 40px; }
+.color-selector-modal-title { background-color: #797866; position: relative; width: 100%; }
+.color-selector-modal-title h2 { color: #fff; font: 700 24px/84px "AL"; letter-spacing: 1px; margin: 40px 40px 0px; }
 .color-selector-modal-title span { position: absolute; right: 36px; top: 36px; }
 .color-selector-modal-title span a { color: #fff; cursor: pointer; font: 700 16px "AL"; }
 .color-selector-modal-title span a:after { border: 1px solid #fff; content: 'x'; display: inline-block; height: 7px; line-height: 5px; margin-left: 8px; padding: 2px; }
 .color-selector-modal .hidemodal { display: none !important;}
-
+.color-selector-modal .color-selector.color-selector-container .color-selector-wrapper .left .tub-container{ margin-top: 41px; }
+.color-selector-modal .color-selector.color-selector-container .color-selector-wrapper .right h2{ margin-top: 0px;}
+.color-selector-modal .color-selector.color-selector-container{ height: 525px;}
 div[timg="platinum"] img { background-color: #d4d7d7; }
 div[timg="silverpearl"] img { background-color: #e5e4de; }
 div[timg="monaco"] img { background-color: #887e78; }
@@ -102,13 +104,15 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	font-family: Verdana;
 	font-weight: bold;
 }
-
+.color-selector-modal-title span a::after {
+	padding-top: 4px;
+}	
 </style>
 <div class="color-selector color-selector-container">
 
 	<div class="color-selector-wrapper">
-		<h1 class="color-heading hidemodal">Hot Tub Color Selector</h1>
-		<p class="hidemodal">Use the Color palette to the right to pick out your shell and cabinet color.</p>
+		<h1 class="color-heading hidemodal">Spa Color Selector</h1>
+		<p class="hidemodal">Use the color palette to the right to pick out your shell and cabinet color.</p>
 		<div class="left">
 
 			<div class="tub-container">
@@ -130,7 +134,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Cameo&trade; model shown for visualization purposes only. Tub size and jet placement will vary by model. Not all colors available in all models. See individual product pages for available colors.</p>
+				<p>Cameo&trade; model shown for visualization purposes only. Spa size and jet placement will vary by model. Not all colors available in all models. See individual product pages for available colors.</p>
 			</div>
 
 		</div>
@@ -141,7 +145,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 			<div class="shells">
 				<div class="shell thumb active" timg="celestite" data-pdf="celestite" rel="Celestite" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/celestite-thumb.jpg" height="50" width="50"/></div>
 				<div class="shell thumb" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="oyester" data-pdf="oyester" rel="Oyester" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="oyester" data-pdf="oyester" rel="Oyster" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Copper Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
