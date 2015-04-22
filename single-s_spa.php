@@ -201,7 +201,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                 <div class="energy">
                     <img src="<?php bloginfo('template_url'); ?>/images/icons/energy-efficient.png" border="0" />
                     <span class="cost"><?php echo str_replace('.', '<sup>', $s_specs['emoc']). '</sup>'; ?></span>
-                    <h4>Energy Efficiency</h4>
+                    <h4>Energy Efficiency <a href="#" title="Monthly energy costs are estimates based on the results of the California Energy Commissions Portable Hot Tub Testing Protocol. Ambient temperature of 60° F / 15° C and national average of 10 cents per kWh. Actual monthly costs may vary depending on temperature, electricity costs, and usage.">(?)</a></h4>
                     <p>Monthly Cost at<br />101º water temperature</p>
                 </div>
                 <div class="clear"></div>
@@ -517,4 +517,5 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 	</div>
 </div>
 
+<script type="text/javascript">jQuery(document).tooltip();</script>
 <?php get_footer(); ?>
