@@ -32,7 +32,7 @@ get_header(); ?>
                 <div class="inner">
                     <a href="<?php echo bloginfo('url'); ?>/truckload/"><img src="<?php bloginfo('template_url'); ?>/images/icons/truckload-sale.jpg" alt="Truckload Super Sale" width="230" height="145" /></a>
                     <h2 class="avenir65-20"><a href="<?php echo bloginfo('url'); ?>/truckload/">Truckload Savings Event</a></h2>
-                    <p class="avenir65-13">Request a sale in your town and <br />save up to 50%.</p>
+                    <p class="avenir65-13">Take advantage of the season’s <br />best discounts!</p>
                     <p><a href="<?php echo bloginfo('url'); ?>/truckload/" class="goArrow">Go</a></p>
                 </div>
             </div>
