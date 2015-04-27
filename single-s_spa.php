@@ -205,7 +205,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                     <p>Monthly Cost at<br />101º water temperature</p>
                 </div>
                 <div class="clear"></div>
-                <a class="get-colorselector" href="#" onClick="jQuery('.color-selector-modal-bg').show();">View the Spa Color Selector</a>
+                <a class="get-colorselector" href="#" onClick="jQuery('.color-selector-modal-bg').show();">View the Color Selector</a>
             </div>
         </div>
     </div>
