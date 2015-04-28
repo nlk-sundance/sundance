@@ -5438,7 +5438,6 @@ strong{
 
 a.get-colorselector
 {
-	text-align: center;
 	font-size: 14px;
 	font-family: Tahoma,Geneva,sans-serif;
 	color: #786C60;
@@ -5447,5 +5446,7 @@ a.get-colorselector
 	margin: 10px 0px 5px;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: #236DC7;
+	text-decoration: underline;
 }
 
