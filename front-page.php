@@ -38,10 +38,10 @@ get_header(); ?>
             </div>
             <div class="col w240">
                 <div class="inner">
-                    <a href="<?php echo get_permalink(2823); ?>"><img src="<?php bloginfo('template_url'); ?>/images/icons/hydrotherapy.jpg" border="0" /></a>
-                    <h2 class="avenir65-20"><a href="<?php echo get_permalink(2823); ?>">Hydrotherapy Spa</a></h2>
-                    <p class="avenir65-13">Positive results for our bodies and our minds.</p>
-                    <p><a href="<?php echo get_permalink(2823); ?>" class="goArrow">Go</a></p>
+                    <a href="<?php echo get_bluginfo('url'); ?>/accessories/sunstrong-covers/"><img src="<?php bloginfo('template_url'); ?>/images/icons/sunstrongcover.jpg" border="0" /></a>
+                    <h2 class="avenir65-20"><a href="<?php echo get_bluginfo('url'); ?>/accessories/sunstrong-covers/">SunStrong™ Premium Spa Covers</a></h2>
+                    <p class="avenir65-13">Make caring for your spa both stylish and simple.</p>
+                    <p><a href="<?php echo get_bluginfo('url'); ?>/accessories/sunstrong-covers/" class="goArrow">Go</a></p>
                 </div>
             </div>
             <div class="col w240 last">
