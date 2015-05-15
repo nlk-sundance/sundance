@@ -16,7 +16,7 @@ get_header(); ?>
             $promo_end = "6/1/2015"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
-                case 'www.sundancespas.ca':
+                case 'http://www.sundancespas.ca':
                     $promo_img = get_bloginfo('template_url') . '/images/hero/spring-promo-2015-CA.png';
                     break;
                 
