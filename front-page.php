@@ -12,13 +12,15 @@ get_header(); ?>
     <div class="slides">
     	<div class="slide">
             <!-- Holiday Promo (commented out - no promo) -->
-            <?php /* <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php bloginfo('template_url'); ?>/images/hero/Homepage_03.jpg" width="960" height="320" alt="Hot Tubs" /></a> */ ?>
+            <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php bloginfo('template_url'); ?>/images/hero/spring-promo-2015.jpg" width="960" height="320" alt="Hot Tubs" /></a>
 
             <!-- Regular home hero -->
             <?php /* COMMENT OUT FOR PROMO */ ?>
+            <?php /*
             <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/hero/home-slide2.jpg" width="960" height="320" alt="Hot Tubs" /></a>
             <h1>Life is better with a Sundance Spa</h1>
             <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/IB8YE8ka2s0?rel=0">Watch the Video</div>
+            */ ?>
         </div>
     </div>
     <div class="rightCol">
