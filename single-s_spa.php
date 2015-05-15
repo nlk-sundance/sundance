@@ -233,6 +233,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             </ul>
         </div>
         <a href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
+        <a href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
     </div>
     <br class="clear" />
     <div class="tabWrap">
