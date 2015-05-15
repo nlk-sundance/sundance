@@ -17,11 +17,11 @@ get_header(); ?>
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
                 case 'www.sundancespas.ca':
-                    $promo_img = bloginfo('template_url') . '/images/hero/spring-promo-2015-CA.png';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/spring-promo-2015-CA.png';
                     break;
                 
                 default:
-                    $promo_img = bloginfo('template_url') . '/images/hero/spring-promo-2015.png';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/spring-promo-2015.png';
                     break;
             }
             if ( time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
