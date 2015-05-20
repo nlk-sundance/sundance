@@ -4,6 +4,21 @@
 
 ?>
 <style>
+body
+{
+	background: #FFF !important;
+}
+
+.bd
+{
+	margin-top: 0px !important;	
+}
+
+.bd .wrap, .bd .main
+{
+	border: 0px solid #FFF !important;	
+}
+
 .color-selector.color-selector-container { height: 600px; margin-top: 1px; width: 100%; }
 .color-selector.color-selector-container .color-selector-wrapper { margin: auto; width: 960px; }
 .color-selector.color-selector-container .color-selector-wrapper .left { box-sizing: border-box; float: left; height: 400px; margin-right: 45px; text-align: center; width: 576px; }
@@ -20,7 +35,7 @@
 .color-selector.color-selector-container .color-selector-wrapper .right h2 { font-size: 16px; letter-spacing: .75px; margin: 24px 5px 10px; text-transform: none; }
 .color-selector.color-selector-container .color-selector-wrapper .right h2 span { font-family: "GSL"; font-weight: 700; }
 .color-selector.color-selector-container .color-selector-wrapper .right .btn { margin-top: 34px; text-transform: uppercase; }
-.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download { color: #414141; font: 400 16px/40px "GSL"; }
+.color-selector.color-selector-container .color-selector-wrapper .right .xpdf-download { color: #414141; font: 400 16px/40px "GSL"; }
 .color-selector.color-selector-container .color-selector-wrapper .thumb { border: 2px solid #fff; border-radius: 0px; cursor: pointer; display: inline-block; margin: 2px 3px; overflow: hidden; -webkit-transition: border-color .05s; transition: border-color .05s; }
 .color-selector.color-selector-container .color-selector-wrapper .thumb.active,
 .color-selector.color-selector-container .color-selector-wrapper .thumb:hover { border: 2px solid #666; box-shadow: 0px 0px 6px rgba(0,0,0,.25);  }
@@ -94,7 +109,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
     font-size: 15px;
 }
 
-.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download
+.color-selector.color-selector-container .color-selector-wrapper .right .xpdf-download
 {
 	font-size: 13px;
 	line-height: 20px;
