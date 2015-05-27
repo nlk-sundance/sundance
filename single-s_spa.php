@@ -240,7 +240,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
             ?>
 
-            <a id="show-msrp" href="#" class="bigBlueBtn getpricing">Get MSRP Pricing</a>
+            <a id="show-msrp" class="bigBlueBtn getpricing">Get MSRP Pricing</a>
 
             <div class="msrp" style="display: none;">
                 <?php echo '<p class="msrp-price">' . $msrp . '</p>'; ?>
