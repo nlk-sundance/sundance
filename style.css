@@ -918,6 +918,7 @@ strong{
 		box-sizing: border-box;
 		width:729px;
 	}
+	.hot-tub-detail .bd .main { background: transparent; }
 	.bd .istub .main .spa-name {
 		position: absolute;
 		bottom: 56px;
@@ -5411,21 +5412,6 @@ strong{
 .uh-four h2:before { background: url(images/dealer-locator/uh-four.png) no-repeat 0 0; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* - - - - - Landing Page - Email Nurture - - - - - */
 .col.w240.leftMenu .inner .custom-sidebar {
 	overflow: hidden;
@@ -5454,3 +5440,20 @@ a.get-colorselector
 	text-decoration: underline;
 }
 
+/* - - - - - MSRP - - - - - */
+.msrp {
+	background-color: #efefef;
+	border: 1px solid #efefef;
+	margin-left: -10px;
+	margin-top: 20px;
+	padding: 16px 16px 20px;
+}
+.msrp .msrp-price {
+	font-family: "AL";
+	font-size: 30px;
+}
+.msrp .msrp-price + p {
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 16px 0;
+}
