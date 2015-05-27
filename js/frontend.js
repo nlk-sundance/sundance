@@ -590,7 +590,8 @@ jQuery(function($){
 
 
 (function($){
-	$('#show-msrp').click(function(){
+	$('#show-msrp').click(function(e){
+		e.preventDefault();
 		if ( $(this).hasClass('close') ) { 
 		    $('.msrp').hide(); 
 		    $(this).removeClass('close').text('Get MSRP Pricing'); 
