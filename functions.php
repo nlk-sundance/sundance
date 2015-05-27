@@ -1472,20 +1472,20 @@ function sundance_meta_save($post_id){
 	return $post_id;
 	
 	// Check permissions
-	if (in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
+	if ( isset($_POST['post_type']) && in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
 		if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
 	} else {
 	//if ( !current_user_can( 'edit_post', $post_id ) )
 	  return $post_id;
 	}
 	
-	if($_POST['post_type'] == 'page') {
+	if( isset($_POST['post_type']) && $_POST['post_type'] == 'page') {
 		$info = $_POST['s_pageopts'];
 		update_post_meta($post_id, 's_pageopts', $info);
 		return $info;
 	}
 	
-	if( in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
+	if( isset($_POST['post_type']) && in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
 		$info = $_POST['s_info'];
 		update_post_meta($post_id, 's_info', $info);
 		return $info;
@@ -2837,14 +2837,17 @@ function custom_data_layer_container() {
 	
 	$expire = time()+60*60*24*30;
 
-	$custId = get_current_user_id() > 0 ? get_current_user_id() : isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) ;
+	$custId = ( get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
 	setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
 	$str .= '"get":' . json_encode($_SERVER['QUERY_STRING']) . ',';
-	$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
+	if ( function_exists('geo_data') )
+		$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
 	$str .= '"customerId":"' . $custId . '",';
 	
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
