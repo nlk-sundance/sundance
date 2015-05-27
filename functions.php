@@ -1329,6 +1329,7 @@ function sundance_specs_metabox() {
 	$info = $custom[0];
 	if($info=='') $info = array(
 		'product_id' => '',
+		'msrp' => '',
 		'seats' => '',
 		'dim_us' => '',
 		'dim_int' => '',
@@ -1354,6 +1355,9 @@ function sundance_specs_metabox() {
 	?><table width="100%">
 	<tr valign="top">
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
+    </tr>
+	<tr valign="top">
+    <td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="s_specs[seats]">Seats</label></td><td><input type="text" name="s_specs[seats]" value="<?php esc_attr_e($info['seats']); ?>" size="10" /></td>
@@ -1950,7 +1954,7 @@ add_action( 'edit_category', 'sundance_edit_cat_transients' );
 
 // [slug]-accs : on sitemap.php & elsewhere?
 function sundance_publ_acc_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	$thisterms = wp_get_object_terms($post_id, 's_acc_cat', array('fields' => 'slugs'));
 	foreach ( $thisterms as $t ) {
 		delete_transient( $t .'-accs' );
@@ -1959,7 +1963,7 @@ function sundance_publ_acc_transients($post_id) {
 add_action( 'publish_s_acc', 'sundance_publ_acc_transients' );
 
 function sundance_flush_tubcats_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	// we know we want to flush jht_tubs
     delete_transient( 's_tubcats' );
     delete_transient( 's_tubcats_landing' );
@@ -2589,230 +2593,7 @@ function format_phone_us( $phone = '', $format='standard', $convert = true, $tri
 	}
 }
 
-// GEO FUNCTIONS
-function geo_data( $debug = false, $return = null ) {
-	// do nothing if viewing admin pages (geo not needed)
-	if ( is_admin() )
-		return false;
-	if( session_id() == '' ) {
-		session_start();
-	}
-
-	$ip = get_the_ip();
-
-	if ( isset( $_POST['PostalCode'] ) ) :
-		$a = geo_data_mysql_zip( $_POST['PostalCode'] );
-		if ( $a ) {
-			$_SESSION['geoDbLookupData'] = $a;
-			return $a;
-		}
-	endif;
-
-	if ( isset($_SESSION['geoDbLookupData']) && $_SESSION['geoDbLookupData']['ip'] === $ip ) :
-		$a = $_SESSION['geoDbLookupData'];
-	else :
-		$a = geo_data_mysql_ip( $ip );
-		if ( !$a ) {
-			//$a = geo_data_curl( $ip );
-		}
-	endif;
-
-	/* Possibly...
-
-	// if session set, use that
-	if ( isset($_SESSION['geoDbLookupData']) ) :
-		$a = $_SESSION['geoDbLookupData'];
-	// otherwise search by IP
-	elseif ( $ip ) :
-		$a = geo_data_mysql_ip( $ip );
-	// if IP result not valid, search by post code
-	elseif ( isset( $_POST['PostalCode'] ) ) :
-		$a = geo_data_mysql_zip( $_POST['PostalCode'] );
-	// if no post cde and no IP
-	// return some sort of default
-	endif;
-
-	if ( $a ) {
-		$_SESSION['geoDbLookupData'] = $a;
-		return $a;
-	}
-
-	*/
-
-	if ( !$a ) {
-		return array(
-			'locId'				=>	0,
-			'country'			=>	'US',
-			'region'			=>	'',
-			'city'				=>	'',
-			'postalCode'		=>	'00000',
-			'latitude'			=>	'',
-			'longitude'			=>	'',
-			'metroCode'			=>	'',
-			'areacode'			=>	'',
-			'ip'				=>	'',
-			);
-	}
-
-	$_SESSION['geoDbLookupData'] = $a;
-	// And finally we return the resulting array to wherever it is needed...
-	return $a;
-}
-
-function geo_data_curl( $ip ) {
-	if ( !$ip ) {
-		$ip = 'me';
-	}
-	$username = '66659';
-	$password = 'FJv62Mz6ezIB';
-
-	$ch = curl_init('https://geoip.maxmind.com/geoip/v2.0/city/' . $ip . '');
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 1);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$result = curl_exec($ch);
-	$httpResult = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-	$a = json_decode($result, true);
-	$b = array(
-		'locId'				=>	0,
-		'country'			=>	$a['country']['iso_code'],
-		'region'			=>	$a['subdivisions'][0]['iso_code'],
-		'city'				=>	$a['city']['names']['en'],
-		'postalCode'		=>	$a['postal']['code'],
-		'latitude'			=>	$a['location']['latitude'],
-		'longitude'			=>	$a['location']['longitude'],
-		'metroCode'			=>	$a['location']['metro_code'],
-		'areacode'			=>	'',
-		'ip'				=>	$ip,
-		'queries_remaining'	=>	$a['maxmind']['queries_remaining'],
-		);
-	if ( $httpResult == 200 ) {
-		return $b;
-	}
-	return false;
-}
-
-function geo_data_mysql_ip( $ip ) {
-	$a = false;
-
-	$livehost		= array( 'www.sundancespas.com', 'www.sundancespas.ca' );
-	$betahost		= array( 'beta.sundancespas.com' );
-	$devhost		= array( 'sundancespas.ninthlink.me' );
-	$localhost		= array( 'local.sundance' );
-	if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $betahost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
-	}
-	$query = "SELECT gl.* FROM geoip_locations gl LEFT JOIN geoip_blocks gb ON gb.locId = gl.locId WHERE gb.startIpNum <= INET_ATON( ? ) AND gb.endIpNum >= INET_ATON( ? ) LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "ss", $ip, $ip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$postalCode,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	$ip,
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
-	return $a;
-}
-
-function geo_data_mysql_zip( $zip ) {
-	$a = false;
-	
-	$livehost		= array( 'www.sundancespas.com', 'www.sundancespas.ca' );
-	$betahost		= array( 'beta.sundancespas.com' );
-	$devhost		= array( 'sundancespas.ninthlink.me' );
-	$localhost		= array( 'local.sundance' );
-	if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $betahost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
-	}
-	$clean_zip = clean_zip( $zip );
-	$query = "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "s", $clean_zip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$zip,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	get_the_ip(),
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
-	return $a;
-}
+require('functions_geo.php');
 
 function getRemoteIPAddress() {
 
