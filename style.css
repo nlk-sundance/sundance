@@ -42,6 +42,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+img.emoji {
+	max-width: 18px !important;
+	vertical-align: middle !important;
+}
 ol, ul {
 	list-style: none;
 }
