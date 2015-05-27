@@ -5457,3 +5457,11 @@ a.get-colorselector
 	line-height: 1.2em;
 	margin: 16px 0;
 }
+a#show-msrp {
+	cursor: pointer;
+}
+a#show-msrp.close {
+	background: #c2c2c2;
+	background-color: #c2c2c2;
+	text-shadow: none;
+}
