@@ -586,3 +586,17 @@ jQuery(function($){
 		$('#show-locator').removeClass('deactivate');
 	})
 });
+
+
+
+(function($){
+	$('#show-msrp').click(function(){
+		if ( $(this).hasClass('close') ) { 
+		    $('.msrp').hide(); 
+		    $(this).removeClass('close').text('Get MSRP Pricing'); 
+		} else { 
+		    $('.msrp').show(); 
+		    $(this).addClass('close').text('Close'); 
+		}
+	});
+})(jQuery);
