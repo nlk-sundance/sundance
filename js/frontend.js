@@ -590,11 +590,8 @@ jQuery(function($){
 
 
 (function($){
-
-	$('#show-msrp').hide();
-
+	// Get MSRP Pricing button action
 	$(window).load(function(){
-		$('#show-msrp').show();
 		$('#show-msrp').on('click', function(e){
 			e.preventDefault();
 			if ( $(this).hasClass('close') ) {
@@ -606,5 +603,4 @@ jQuery(function($){
 			}
 		});
 	});
-
 })(jQuery);
