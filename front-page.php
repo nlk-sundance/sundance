@@ -13,7 +13,7 @@ get_header(); ?>
     	<div class="slide">
             <?php
             $promo_start = "5/15/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-            $promo_end = "6/1/2015"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+            $promo_end = "6/2/2015"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
                 case 'http://www.sundancespas.ca':
