@@ -240,11 +240,11 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
             ?>
 
-            <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">Get MSRP Pricing</a>
+            <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View Suggested Retail Pricing</a>
 
             <div class="msrp" style="display: none;">
                 <?php echo '<p class="msrp-price">' . $msrp . '</p>'; ?>
-                <p>Prices listed are Manufacturer’s Suggested Retail Price (MSRP). Actual retail price may vary based on rebates and/or incentives that may be available at your local dealer. Please request a quote or visit your local dealer for current pricing information.</p>
+                <p>Prices listed are suggested retail price. Actual retail price may vary based on rebates and/or incentives that may be available at your local dealer. Please request a quote or visit your local dealer for current pricing information.</p>
                 <a href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
                 <a href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
             </div>
