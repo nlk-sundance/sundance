@@ -1329,6 +1329,7 @@ function sundance_specs_metabox() {
 	$info = $custom[0];
 	if($info=='') $info = array(
 		'product_id' => '',
+		'msrp' => '',
 		'seats' => '',
 		'dim_us' => '',
 		'dim_int' => '',
@@ -1355,6 +1356,9 @@ function sundance_specs_metabox() {
 	<tr valign="top">
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
     </tr>
+	<tr valign="top">
+	<td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
+	</tr>
     <tr valign="top">
     <td width="187"><label for="s_specs[seats]">Seats</label></td><td><input type="text" name="s_specs[seats]" value="<?php esc_attr_e($info['seats']); ?>" size="10" /></td>
     </tr>
