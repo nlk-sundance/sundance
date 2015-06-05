@@ -109,6 +109,37 @@ function geo_data( $zip = false, $debug = false ) {
 }
 
 
+/**
+ * Redirect CA users to .ca site if land on US site
+ *
+ */
+if ( ! function_exists('geo_redirection') ) :
+function geo_redirection() {
+
+	if ( ! is_front_page() )
+		return;
+
+	$tld = array_pop( explode('.', get_bloginfo('url') ) );
+
+	if ( $tld !== 'com' )
+		return;
+
+	$g = geo_data();
+	$c = $g['country'];
+	switch ($c) {
+		case 'CA':
+			wp_redirect('http://www.sundancespas.ca/');
+			break;
+		default:
+			break;
+	}
+}
+endif;
+add_action( 'wp', 'geo_redirection' );
+
+
+
+
 if ( ! function_exists('clean_zip') ) :
 function clean_zip( $zip ) {
 
