@@ -63,8 +63,8 @@ function geo_data( $zip = false, $debug = false ) {
 			FROM geoip_locations gl 
 			LEFT JOIN geoip_blocks gb 
 				ON gb.locId = gl.locId 
-			WHERE gb.startIpNum <= INET_ATON( $ip ) 
-				AND gb.endIpNum >= INET_ATON( $ip ) 
+			WHERE gb.startIpNum <= INET_ATON( '$ip' ) 
+				AND gb.endIpNum >= INET_ATON( '$ip' ) 
 			LIMIT 1
 			"
 		);
