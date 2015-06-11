@@ -3274,7 +3274,7 @@ function sds_my_server() {
 
 
 /** BV : BazaarVoice Integrations **/
-
+/*
 	// load SDK
 	require('includes/bvseosdk.php');
 
@@ -3305,7 +3305,7 @@ function sds_my_server() {
 		}
 		add_action( 'wp_enqueue_scripts', 'bazaar_voice_scripts' );
 	}
-
+*/
 	// Remove Canonical Link Added By Yoast WordPress SEO Plugin if URL has query string (this is for BV SEO Pagination)
 	function remove_yoast_canonical_link() {
 		return false;
