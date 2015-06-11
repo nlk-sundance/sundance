@@ -60,7 +60,7 @@ foreach ( $s_jets as $v ) {
 
 
 $prod = esc_attr($s_specs['product_id']);
-$bv = new BV(
+/*$bv = new BV(
     array(
         'deployment_zone_id' => 'Main_Site-en_US',
         'product_id' => $prod, // must match ExternalID in the BV product feed
@@ -68,7 +68,7 @@ $bv = new BV(
         'staging' => FALSE
         )
     );
-
+*/
 
 // transient for s_alljets
 if ( false === ( $special_query_results = get_transient( 's_alljets' ) ) ) {
