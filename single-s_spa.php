@@ -510,15 +510,15 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                             <?php echo $bv->reviews->getContent();?>
                         </div>
                         <script type="text/javascript">
-                        $BV.ui( 'rr', 'show_reviews', {
-                        doShowContent : function () {
-                        // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                            $('ul#spatabs li.current').removeClass('current');
-                            $('div.tab.current').removeClass('current');
-                            $('li a[href="#reviews"]').parent().addClass('current');
-                            $('#reviews').addClass('current').css('display', 'block');
-                        }
-                        });
+//                        $BV.ui( 'rr', 'show_reviews', {
+//                        doShowContent : function () {
+//                        // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+//                            $('ul#spatabs li.current').removeClass('current');
+//                            $('div.tab.current').removeClass('current');
+//                            $('li a[href="#reviews"]').parent().addClass('current');
+//                            $('#reviews').addClass('current').css('display', 'block');
+//                        }
+//                        });
                         </script>
                     </div>
                 </div>

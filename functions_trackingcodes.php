@@ -191,16 +191,16 @@ function sds_is_thanks_page() {
 
 		if ( !empty( $prod ) ) { ?>
 			<script type="text/javascript"> 
-			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
+//			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
 			</script>
 		<?php }
 		
 		if ( !empty( $val ) ) { ?>
 			<script>
-			$BV.SI.trackConversion({
-			"type" : "lead",
-			"value" : "<?php echo $val; ?>"
-			});
+//			$BV.SI.trackConversion({
+//			"type" : "lead",
+//			"value" : "<?php echo $val; ?>"
+//			});
 			</script>
 		<?php }
 	}
