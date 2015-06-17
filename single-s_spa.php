@@ -149,7 +149,6 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 				?></div>
                 <div class="specs">
                     <div itemscope itemtype="http://schema.org/Product">
-                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
                         <div id="BVRRSummaryContainer"></div>
                             <div class="description"><?php echo sundance_shortdesc($post->post_content); ?></div>
                              <table width="100%">
