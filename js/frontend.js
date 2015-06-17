@@ -596,7 +596,7 @@ jQuery(function($){
 			e.preventDefault();
 			if ( $(this).hasClass('close') ) {
 			    $('.msrp').hide();
-			    $(this).removeClass('close').text('View Suggested Retail Pricing');
+			    $(this).removeClass('close').text('View MSRP');
 			} else {
 			    $('.msrp').show();
 			    $(this).addClass('close').text('Close');
