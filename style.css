@@ -5465,3 +5465,7 @@ a#show-msrp.close {
 	background-color: #c2c2c2;
 	text-shadow: none;
 }
+.msrp > p + p {
+	line-height: 1.4em;
+	margin: 10px 0;
+}
