@@ -142,8 +142,8 @@
                 $mm .= '</ul>';
                 $mm .= '</div><br class="clear" />';
                 $mm .= '</div>';
-				$sitemap = $mm;
-                //set_transient( 's_sitemap', $mm, 60*60*12 );
+		$sitemap = $mm;
+                set_transient( 's_sitemap', $mm, 60*60*12 );
             }
             // Use the data like you would have normally...
             //$sitemap = get_transient( 's_sitemap' );

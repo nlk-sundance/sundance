@@ -115,7 +115,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 
 ?>
 <div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
-    <div itemscope itemtype="http://schema.org/Product">
+  <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
@@ -514,6 +514,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
     </div>
 
     <br class="clear" />
+  </div>
 </div>
 <?php endwhile; ?>
 
