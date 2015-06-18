@@ -158,7 +158,6 @@ function clean_zip( $zip ) {
 endif;
 
 
-
 // If geo_ip returns zip code, and zip code is in test_market array, return true
 function msrp_display() {
 
@@ -178,7 +177,6 @@ function msrp_display() {
 	if ( in_array( $a['postalCode'], $test_market ) ) {
 		return true;
 	}
-	
 	return false;
 }
 
@@ -188,7 +186,6 @@ function geo_meta_debug() {
 	$o = geo_data();
 	echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
 }
-
 
 
 ?>
