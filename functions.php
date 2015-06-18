@@ -2882,8 +2882,8 @@ function startupguide_ajax_content() {
     die(1);
 }
 
-//wp_enqueue_script( 'startupguide-mobile-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
-//wp_localize_script( 'startupguide-mobile-ajax-request', 'StartupMobileAjax', array( 'mobileajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+wp_enqueue_script( 'startupguide-mobile-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
+wp_localize_script( 'startupguide-mobile-ajax-request', 'StartupMobileAjax', array( 'mobileajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 add_action( 'wp_ajax_load-mobile-content', 'startupguide_mobile_ajax_content'); // for users logged-in
 add_action ( 'wp_ajax_nopriv_load-mobile-content', 'startupguide_mobile_ajax_content' ); // guests
