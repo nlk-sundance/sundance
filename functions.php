@@ -2624,43 +2624,39 @@ endif;
 
 
 // Google Tag Manager Main
-add_action('do_google_tag_manager', 'google_tag_manager_container');
+add_action('google_tag_manager', 'google_tag_manager_container', 10);
 function google_tag_manager_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NTFWKQ');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager() {
-	do_action('do_google_tag_manager');
+	do_action('google_tag_manager');
 }
 
 // Google Tag Manager Criteo
-add_action('do_google_tag_manager_criteo', 'google_tag_manager_criteo_container');
+add_action('google_tag_manager_criteo', 'google_tag_manager_criteo_container', 10);
 function google_tag_manager_criteo_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PWJ2SH');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager_criteo() {
-	do_action('do_google_tag_manager_criteo');
+	do_action('google_tag_manager_criteo');
 }
 
 

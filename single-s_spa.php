@@ -106,7 +106,7 @@ $allfeats = get_transient( 's_allfeats' );
 $custom = get_post_meta($post->ID,'s_cats');
 $cats = $custom[0];
 $serID = $cats[0];
-$ser = wp_get_single_post($serID);
+$ser = get_post($serID);
 
 if ( $ser->post_title == 'Select' ) { $serval = 'aDETNR5oAgg'; }
 if ( $ser->post_title == 880 ) { $serval = 'zCdzYmarTWk'; }
