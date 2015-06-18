@@ -115,13 +115,16 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 
 ?>
 <div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
+
+    <div itemscope itemtype="http://schema.org/Product">
+
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
         <?php if ( $ser->post_title != 'Select' ) { ?>
         <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $serval; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($ser->post_title); ?> Series</div>
         <?php } ?>
-        <div class="spa-name"><?php echo get_the_title(); ?></div>
+        <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
     <div class="side col w230 last">
         <div class="rightCol">
@@ -481,23 +484,20 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             </div>
             <div class="tab reviews" id="reviews">
                 <div class="inner">
-                    <div itemscope itemtype="http://schema.org/Product">
-                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
                         <div id="BVRRContainer">
-                            <?php echo $bv->reviews->getContent();?>
+                            <?php echo $bv->reviews->getContent(); ?>
                         </div>
                         <script type="text/javascript">
                         $BV.ui( 'rr', 'show_reviews', {
-                        doShowContent : function () {
-                        // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                            $('ul#spatabs li.current').removeClass('current');
-                            $('div.tab.current').removeClass('current');
-                            $('li a[href="#reviews"]').parent().addClass('current');
-                            $('#reviews').addClass('current').css('display', 'block');
-                        }
+                            doShowContent : function () {
+                            // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+                                $('ul#spatabs li.current').removeClass('current');
+                                $('div.tab.current').removeClass('current');
+                                $('li a[href="#reviews"]').parent().addClass('current');
+                                $('#reviews').addClass('current').css('display', 'block');
+                            }
                         });
                         </script>
-                    </div>
                 </div>
             </div>
 
@@ -512,6 +512,9 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             </div>
         </div>
     </div>
+
+    </div>
+
     <br class="clear" />
 </div>
 <?php endwhile; ?>
