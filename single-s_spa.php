@@ -234,8 +234,6 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                <?php } ?>
             </ul>
         </div>
-        <a href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
-        <a href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
 
         <?php if ( msrp_display() ) : ?>
             <?php
