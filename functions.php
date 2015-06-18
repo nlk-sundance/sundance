@@ -2596,16 +2596,13 @@ function format_phone_us( $phone = '', $format='standard', $convert = true, $tri
 require('functions_geo.php');
 
 function getRemoteIPAddress() {
-
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) :
         return $_SERVER['HTTP_CLIENT_IP'];
 	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) :
         return $_SERVER['HTTP_X_FORWARDED_FOR'];
     endif;
-
     return $_SERVER['REMOTE_ADDR'];
 }
-
 
 
 // [get_blog_info dir="url"]
