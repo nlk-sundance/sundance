@@ -39,7 +39,13 @@ function geo_data( $zip = false, $debug = false ) {
 	global $wpdb;
 
 	$ip = get_the_ip();
-	$zip = ( isset( $_POST['zip'] ) ) ? $_POST['zip'] : ( isset( $_GET['zip'] ) ) ? $_GET['zip'] : $zip;
+	$zip = ( isset( $_POST['zip'] ) ) 
+		? $_POST['zip'] 
+		: ( isset( $_GET['zip'] ) ) 
+			? $_GET['zip'] 
+			: ( isset($_COOKIE['jhtgeo']) && !empty($_COOKIE['jhtgeo']) ) 
+				? $_COOKIE['jhtgeo']
+				: $zip;
 
 	$zip = clean_zip( $zip ); // clean the zip for geo search
 
