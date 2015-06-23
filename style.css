@@ -70,19 +70,19 @@ strong{
 /* - - - - TYPOGRAPHY - - - - */
 .avenir65-12{
 	font-size:12px !important;
-	font-family:AM, Tahoma, Geneva, sans-serif;
+	font-family: "AM", Tahoma, Geneva, sans-serif;
 }
 .avenir65-13{
 	font-size:13px !important;
-	font-family:AM, Tahoma, Geneva, sans-serif;
+	font-family: "AM", Tahoma, Geneva, sans-serif;
 }
 .avenir65-18{
 	font-size:18px !important;
-	font-family:AM, Tahoma, Geneva, sans-serif;
+	font-family: "AM", Tahoma, Geneva, sans-serif;
 }
 .avenir65-20{
 	font-size:20px !important;
-	font-family:AM, Tahoma, Geneva, sans-serif;
+	font-family: "AM", Tahoma, Geneva, sans-serif;
 }
 
 @font-face {
@@ -313,7 +313,7 @@ strong{
 
 /* - - - - LAYOUT - - - - */
 	body {
-		font-family:Verdana, Geneva, sans-serif;
+		font-family: "AR", Verdana, Geneva, sans-serif;
 		font-size:12px;
 		background:#FFF url(images/bg/body.jpg) top center no-repeat;
 		color:#786C60;
@@ -383,7 +383,7 @@ strong{
 /* - - - - HEAD - - - - */
 	.hd{
 		background: #797866;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -454,7 +454,7 @@ strong{
 	.hd .mainMenu li:hover a,
 	.hd .mainMenu li.active a{
 		background:#F1F0EE;
-		color: #786C5F;
+		color: #000000;
 	}
 	.hd .mainMenu li.last:hover a, .hd .mainMenu li.last.active a { background: none; color: #fff }
 	.hd .mainMenu li.last:hover a:hover { text-decoration: underline }
@@ -543,7 +543,7 @@ strong{
 		padding:10px 21px;
 		float:left;
 		background:#FFF;
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
@@ -596,7 +596,7 @@ strong{
 		line-height:18px;
 		border: 1px solid #E9E9E9;
 		margin: 0 0 0 5px;
-		font-family:Arial, Helvetica, sans-serif;
+		font-family:"AR", Arial, Helvetica, sans-serif;
 		color:#C3C0B7;
 	}
 	.hd .mainMenu li.find form input.submit{
@@ -641,7 +641,7 @@ strong{
 		display:block;
 		float:none !important;
 		padding: 0 !important;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:12px;
 		line-height:1.42em;
 	}
@@ -1038,7 +1038,7 @@ strong{
 		float: left;
 		width: 70px;
 		font: bold 12px/116% Verdana, Geneva, sans-serif;
-		color: #786c5f;
+		color: #000000;
 		text-align: center;
 		background: #f1f0ee;
 		border: 1px solid #d6d6d6;
@@ -1086,7 +1086,7 @@ strong{
 	.truckform label {
 		display: block;
 		font: 13px/15px "AM", sans-serif;
-		color: #797866;
+		color: #000000;
 	}
 	.truckform .txt {
 		border: 1px solid #dcdcdc;
@@ -1112,7 +1112,7 @@ strong{
 	.bd .main h2{
 		font-size:17px;
 		color:#669999;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height:120%;
 		padding: 0 0 7px;
 	}
@@ -1161,7 +1161,7 @@ strong{
 	}
 	.main .subMenu li a{
 		color:#8D8567;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR",Tahoma, Geneva, sans-serif;
 		display:block;
 		width:180px;
 		text-align:center;
@@ -1415,7 +1415,7 @@ strong{
 	}
 	.bd .tubSeries h1 strong{
 		font-weight:normal;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.tubSeries .overhead{
 		margin: 12px 0 0;
@@ -1434,13 +1434,13 @@ strong{
 	}
 	.tubSeries h2{
 		font-size:12px;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		text-transform:uppercase;
 		margin: 0 0 20px;
 	}
 	.tubSeries .description p{
 		font-size:13px;
-		color: #A59685;
+		color: #000000;
 		padding: 0 140px 0 0;
 		line-height:150%;
 	}
@@ -1467,7 +1467,7 @@ strong{
 		display: block;
 		padding:5px 5px 16px;
 		background: #fff;
-		color: #a59685;
+		color: #000000;
 	}
 	.tubSeries .description .details table a:hover{
 		text-decoration: none;
@@ -1551,7 +1551,7 @@ strong{
 	}
 	.main .headline .model h1{
 		font-size:72px;
-		font-family: AL, Tahoma, Geneva, sans-serif;
+		font-family: "AL", Tahoma, Geneva, sans-serif;
 		margin:0;
 		padding:0;
 		color:#786C5F;
@@ -1570,7 +1570,7 @@ strong{
 	}
 	.main .headline .description h3{
 		font-size:12px;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		color:#786C5F;
 		margin: 0 0 10px;
 		text-transform:uppercase;	
@@ -1598,7 +1598,7 @@ strong{
 	.page .main .tubSeries .overhead { width: 222px; height: 232px; left: 0 }
 	.hot-tub-detail .main .specs{
 		color:#A59687;
-		font-family: Tahoma, Geneva, sans-serif;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
 		font-size:13px;
 		line-height:150%;
 		float:left;
@@ -1636,8 +1636,8 @@ strong{
 	}
 	.hot-tub-detail .main .colors h3{
 		font-size:12px;
-		font-family:Tahoma, Geneva, sans-serif;
-		color:#786C60;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
+		color:#000000;
 		float: left;
 		width: 100%;
 		margin: 0 0 5px;
@@ -1674,8 +1674,8 @@ strong{
 		position: absolute;
 		right: 16px;
 		top: 12px;
-		font-family: Tahoma, Geneva, sans-serif;
-		color: #786C61;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
+		color: #000000;
 		font-size: 30px;
 	}
 	.hot-tub-detail .main .energy .cost sup{
@@ -1690,7 +1690,7 @@ strong{
 		font-size:17px;
 		text-transform:none;
 		padding:22px 0 0;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		border:none;
 	}
 	.hot-tub-detail .energy h4{
@@ -1723,9 +1723,9 @@ strong{
 		position:relative;
 	}
 	.hot-tub-detail .side.features ul li a{
-		color: #A59685;
+		color: #000000;
 		display:block;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.hot-tub-detail .side.features li .feature{
 		position:absolute;
@@ -1808,7 +1808,7 @@ strong{
 		color:#FFF;
 		background:#8F8669;
 	}
-	.hot-tub-detail .side.features ul li .feature .more a { font-family: Tahoma, Geneva, sans-serif; color: #fff }
+	.hot-tub-detail .side.features ul li .feature .more a { font-family: "AR", Tahoma, Geneva, sans-serif; color: #fff }
 	.hot-tub-detail .tabWrap{
 		position:relative;
 		margin: 30px 0 -8px;
@@ -1863,7 +1863,7 @@ strong{
 	}
 	.hot-tub-detail .tab .w160 h3{
 		font-weight:bold;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		margin: 0 0 6px;
 	}
 	.hot-tub-detail .tab .w160 ul{
@@ -1889,7 +1889,7 @@ strong{
 		float:left;
 		padding: 0 14px 14px 0;
 		color:#786C60;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		line-height:16px;
 	}
 	/* - - - SPECS - - - */
@@ -1974,7 +1974,7 @@ strong{
 	}
 	.hot-tub-detail .bd .findDealer h2{
 		font-size:14.5px;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		color:#786C61;
 		margin: 0 0 5px;
 	}
@@ -2018,7 +2018,7 @@ strong{
 	.page .bd .cols .leftMenu .inner h3{
 		font-size:17px;
 		color:#669999;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height:120%;
 		padding: 0 0 7px;
 	}
@@ -2047,7 +2047,7 @@ strong{
 	.bd .leftMenu li{
 		padding: 0 30px 16px 0;
 		text-transform:uppercase;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.page .bd .cols .leftMenu.normul .inner ul { padding-left: 1.5em }
 	.bd .leftMenu.normul li { font: 10px/166% Verdana, Geneva, sans-serif; text-transform: none; padding: 0 0 1em; list-style: disc }
@@ -2087,7 +2087,7 @@ strong{
 		display:block;
 		margin:10px 0 10px 10px;
 		padding:0 10px 0 0;
-		color: #786C61;
+		color: #000000;
 		text-transform:uppercase;
 		font: 14px/17px "AM";
 	}
@@ -2109,10 +2109,10 @@ strong{
 
 	/* text and fonts */
 	.owners-corner p,
-	.bd .owners-corner .entry-content li { color: #797866; }
+	.bd .owners-corner .entry-content li { color: #000000; }
 
 	.bd .owners-corner .main h2 {
-		color: #786C5F;
+		color: #000000;
 		font-family: "AL", arial, helvetica, sans-serif;
 		font-size: 24px;
 	}
@@ -2131,7 +2131,7 @@ strong{
 		margin-right: 0;
 	}
 	.bd .main .owners-links h2 {
-		color: #797866;
+		color: #000000;
 		font: 20px/24px "AM";
 		margin: 16px 30px 14px 0;
 	}
@@ -2163,7 +2163,7 @@ strong{
 	}
 	span.oc-badge > span {
 		clear: both;
-		color: #4C443B;
+		color: #000000;
 		display: block;
 	}
 	span.oc-badge > span:first-child {
@@ -2419,9 +2419,9 @@ strong{
 		}
 		.bd div.sunsmart .main h2 {
 			font-size: 21px;
-			color: #786C61;
+			color: #000000;
 			font-weight: normal;
-			font-family: AL, Tahoma, Geneva, sans-serif;
+			font-family: "AL", Tahoma, Geneva, sans-serif;
 		}
 		.bd div.sunsmart .main img#sunsmart-list {
 			margin: 20px auto;
@@ -2636,14 +2636,14 @@ strong{
 
 	}
 	.backyard-life .tiles ul.grid h2{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:15px;
 		text-transform:uppercase;
 		padding:0 0 10px;
 		color:#786C61;
 	}
 	.backyard-life .tiles ul.grid h3{
-		font-family: AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:11px;
 		padding:0 0 10px;
 	}
@@ -2700,7 +2700,7 @@ strong{
 	}
 	.sitemap .entry-content ul li{
 		font-size:13px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.sitemap .entry-content ul li a{
 		color:#A59685;
@@ -2745,7 +2745,7 @@ strong{
 	.blog .return p.n { float: right }
 	.blog h1.title,
 	.page h1.title{
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		font-size:32px;
 		margin: 11px 19px 11px;
 		padding:0;
@@ -2770,7 +2770,7 @@ strong{
 		font-size:13px;
 		line-height:146%;
 		margin: 0 0 19px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.page .entry-content{
 		color:#A59685;
@@ -2796,7 +2796,7 @@ strong{
 		font-size:19px;
 	}
 	.entry-content h2{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:17px;
 	}
 	.entry-content h3{
@@ -2843,7 +2843,7 @@ strong{
 	}
 	#comments{
 		padding:19px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	#comments h3#comments-title{
 		font-size:12px;
@@ -2873,7 +2873,7 @@ strong{
 	#respond input[type="text"],
 	#respond textarea{
 		width:380px;
-		font-family: Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		font-size:14px;
 	}
 	#respond input[type="submit"]{
@@ -2945,7 +2945,7 @@ strong{
 		padding: 0 5px 0 0;
 	}
 	.video .videoList .thumbs .title{
-		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-family:"AR", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size:12px;
 	}
 
@@ -3050,7 +3050,7 @@ strong{
 	.bd .leftSide h2{
 		font-size: 17px;
 		color: #699 !important;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height: 120%;
 		padding: 0 0 7px !important;
 	}
@@ -3211,7 +3211,7 @@ strong{
 	}
 	.locateDealerForm label{
 		font-weight:bold;
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		color:#6F6459;
 	}
 	.locateDealerForm select{
@@ -3235,7 +3235,7 @@ strong{
 		margin: 0 0 20px;
 	}
 	.locate .results h3{
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		font-size:13px;
 		margin:0;
 		padding:0;
@@ -3367,7 +3367,7 @@ strong{
 		list-style: none;
 	}
 	.page.locate.details .entry-content #dealer_details_3col #dealer_details_3col_details {
-		color: #786C5F !important;
+		color: #000000 !important;
 		padding: 18px 24px;
 	}
 	.page.locate.details .entry-content #dealer_details_3col #dealer_details_3col_details a.teal-button {
@@ -3451,7 +3451,7 @@ strong{
 		font-size: 14px;
 		font-family: 'AH';
 		font-weight: 400;
-		color: #786C5F;
+		color: #000000;
 		margin-top: 20px;
 		margin-bottom: 30px;
 		line-height: 39px;
@@ -3464,7 +3464,7 @@ strong{
 	}
 	#dealer_details_2col_testimonials li {
 		list-style: none;
-		color: #786C5F;
+		color: #000000;
 	}
 	#dealer_details_2col_testimonials #testimonial-container p {
 		font-size: 14px;
@@ -3475,7 +3475,7 @@ strong{
 	#dealer_details_2col_testimonials span.test-quot {
 		position: absolute;
 		font-size: 70px;
-		font-family: helvetica;
+		font-family:"AR", helvetica;
 	}
 	#dealer_details_2col_testimonials span.test-quot.lt {
 		left: -34px;
@@ -3559,7 +3559,7 @@ strong{
 	#dealer_details_main #dealer_details_main_tabbed ul.header li.active,
 	#dealer_details_main #dealer_details_main_tabbed ul.header li:hover {
 		background-color: #fff;
-		color: #797866;
+		color: #000000;
 		border-color: #797866;
 		border-width: 1px 1px 0 1px;
 		border-style: solid;
@@ -3580,16 +3580,16 @@ strong{
 		display: block;
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h3 {
-		color: #797866;
+		color: #000000;
 		font: 400 18px 'AH';
 		margin-bottom: 18px
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h4 {
-		color: #797866;
+		color: #000000;
 		font: 400 14px 'AH';
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area p {
-		color: #797866;
+		color: #000000;
 		font-size: 14px;
 	}
 	#dealer_details_main #dealer_details_main_tabbed #dealer_staff_intro_text {
@@ -3604,7 +3604,7 @@ strong{
 	#dealer_details_main #dealer_details_main_sidebar div.header {
 		background-color: #E5DFCD;
 		box-sizing: border-box;
-		color: #786C60;
+		color: #000000;
 		font-size: 15px;
 		font-family: 'AM';
 		height: 39px;
@@ -3654,7 +3654,7 @@ strong{
 		margin-left: -230px;
 		width: 460px;
 		background-color: #e5dfcd;
-		color: #797866;
+		color: #000000;
 	}
 	#sms-container #sms-form h3,
 	#sms-container #sms-form-success h3 {
@@ -3728,7 +3728,7 @@ strong{
 		padding: 5px;
 	}
 	.bd .w240 h2 a{
-		color: #797866;
+		color: #000000;
 		text-decoration: none;
 	}
 	.bd .w240 h1,
@@ -3737,7 +3737,7 @@ strong{
 	.bd .w240 h4,
 	.bd .w240 p,
 	.bd .w240 ul{
-		color: #797866;
+		color: #000000;
 		padding: 5px;
 	}
 
@@ -3763,14 +3763,14 @@ strong{
 	.home .bd .w240.blog h3,
 	.home .bd .w240.blog p,
 	.home .bd .w240.blog li{
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		line-height:142%;
 	}
 	.home .bd .w240.blog ul li{
 		line-height:150%;
 	}
 	.home .bd .w240.blog ul li a{
-		color: #786C60;
+		color: #000000;
 		text-decoration:none;
 	}
 	.bd a{
@@ -3790,7 +3790,7 @@ strong{
 	}
 	.bd .w480 ul li{
 		line-height:155%;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 
 	.acc { float: left; width: 100%; margin: 10px 0 }
@@ -3824,7 +3824,7 @@ strong{
 		padding: 4px;
 	}
 	.bd .list li a.arrowRight{
-		color: #7B736F;
+		color: #000000;
 		display:block;
 		background:url(images/icons/arrowRight.jpg) right center no-repeat;
 		height:32px;
@@ -3836,7 +3836,7 @@ strong{
 		color:#216CC5;
 	}
 	.side .searchform { display: block; width: 100%; margin: 5px }
-	.side #s { float: left; width: 152px; height: 28px; border: none; padding: 0 11px; font-size: 11px; font-family: Tahoma, Geneva, sans-serif; color: #333; background: url(images/icons/search-form.png) no-repeat 0 0 }
+	.side #s { float: left; width: 152px; height: 28px; border: none; padding: 0 11px; font-size: 11px; font-family: "AR", Tahoma, Geneva, sans-serif; color: #333; background: url(images/icons/search-form.png) no-repeat 0 0 }
 	.bd .w230 .thirtyYears{
 		background:url(images/icons/thirtyfiveyears_new.jpg) center no-repeat;
 		height:115px;
@@ -3856,7 +3856,7 @@ strong{
 	.ft{	
 		clear:both;
 		margin: 0;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.ft .wrap .inner{
 		float:left;
@@ -3993,16 +3993,16 @@ strong{
 		display:block;
 	}
 	.overlay .dialog h2{
-		font-family: AR, Tahoma, Geneva, sans-serif;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
 		font-size:21px;
 		margin: 0 0 1em;
 	}
 	.overlay .dialog table{
 	}
 	.overlay .dialog td{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:14px;
-		color: #797866;
+		color: #000000;
 		padding: 0 10px 5px 0;
 	}
 		
@@ -4238,7 +4238,7 @@ strong{
 	div.awareness-text h4 {
 		font: bold 16px/24px "Verdana" !important;
 		margin-bottom: 12px;
-		color: #779798;
+		color: #000000;
 	}
 	div.awareness-text p.text {
 		padding-right: 4px;
@@ -5341,7 +5341,7 @@ strong{
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div input[type="text"],
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div select {
 	box-sizing: border-box;
-	color: #786C5F;
+	color: #000000;
 	font-style: 18px;
 	height: 36px;
 	width: 290px;
@@ -5443,8 +5443,8 @@ strong{
 a.get-colorselector
 {
 	font-size: 14px;
-	font-family: Tahoma,Geneva,sans-serif;
-	color: #786C60;
+	font-family:"AR", Tahoma,Geneva,sans-serif;
+	color: #000000;
 	float: left;
 	width: 100%;
 	margin: 10px 0px 5px;
