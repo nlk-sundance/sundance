@@ -1357,8 +1357,8 @@ function sundance_specs_metabox() {
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
     </tr>
 	<tr valign="top">
-    <td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
-    </tr>
+	<td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
+	</tr>
     <tr valign="top">
     <td width="187"><label for="s_specs[seats]">Seats</label></td><td><input type="text" name="s_specs[seats]" value="<?php esc_attr_e($info['seats']); ?>" size="10" /></td>
     </tr>
@@ -1673,8 +1673,8 @@ function my_deregister_heartbeat() {
 
 function sundance_add_scripts() {
 	if ( ! is_admin() ) {
-		wp_deregister_script('jquery');
-		wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false);
+		//wp_deregister_script('jquery');
+		//wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false);
 		wp_enqueue_script( 'jquery-migrate','http://code.jquery.com/jquery-migrate-1.2.1.js',array('jquery'), '1.2.1', false);
 		wp_enqueue_script( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', array('jquery'), '1.11.2', false );
 		wp_enqueue_script( 'jquery-ui-tooltip', get_bloginfo('template_url') .'/js/jquery-ui-1.10.3.custom.min.js', array('jquery'), '1.10.4' );
@@ -2593,16 +2593,32 @@ function format_phone_us( $phone = '', $format='standard', $convert = true, $tri
 	}
 }
 
+// GEO FUNCTIONS
+
 require('functions_geo.php');
 
-function getRemoteIPAddress() {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) :
-        return $_SERVER['HTTP_CLIENT_IP'];
-	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) :
-        return $_SERVER['HTTP_X_FORWARDED_FOR'];
-    endif;
-    return $_SERVER['REMOTE_ADDR'];
+// geo redirect
+if ( ! function_exists('geo_redirection') ) {
+	function geo_redirection() {
+
+		$g = geo_data();
+		$c = $g['country'];
+
+		switch ($c) {
+			case 'CA':
+				if ( is_front_page() ) {
+					wp_redirect('http://www.sundancespas.ca/');
+					//exit();
+				}
+				break;
+			default:
+				break;
+		}
+	}
 }
+add_action( 'wp', 'geo_redirection' );
+
+
 
 
 // [get_blog_info dir="url"]
@@ -2667,7 +2683,7 @@ function custom_data_layer_container() {
 	
 	$expire = time()+60*60*24*30;
 
-	$custId = ( get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) ) );
+	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
 	setcookie("sdscid", $custId, $expire, '/');
 	
@@ -2736,8 +2752,11 @@ include('functions_trackingcodes.php');
  *	*	*	*	*	*	*	*	*/
 
 // StartUp Guide Ajaxify
-wp_enqueue_script( 'startupguide-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
-wp_localize_script( 'startupguide-ajax-request', 'StartupAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+function startupguide_ajaxify() {
+	wp_enqueue_script( 'startupguide-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
+	wp_localize_script( 'startupguide-ajax-request', 'StartupAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action('wp_enqueue_scripts', 'startupguide_ajaxify');
 
 add_action( 'wp_ajax_load-content', 'startupguide_ajax_content'); // for users logged-in
 add_action ( 'wp_ajax_nopriv_load-content', 'startupguide_ajax_content' ); // guests

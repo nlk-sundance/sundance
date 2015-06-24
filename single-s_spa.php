@@ -115,13 +115,14 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 
 ?>
 <div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
+  <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
         <?php if ( $ser->post_title != 'Select' ) { ?>
         <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $serval; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($ser->post_title); ?> Series</div>
         <?php } ?>
-        <div class="spa-name"><?php echo get_the_title(); ?></div>
+        <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
     <div class="side col w230 last">
         <div class="rightCol">
@@ -148,36 +149,38 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 				}
 				?></div>
                 <div class="specs">
-                <div id="BVRRSummaryContainer"></div>
-                    <div class="description"><?php echo sundance_shortdesc($post->post_content); ?></div>
-                     <table width="100%">
-                        <tr>
-                            <td class="label">Series</td>
-                            <td><?php
-							esc_attr_e($ser->post_title);
-							?></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Seats</td>
-                            <td><?php esc_attr_e($s_specs['seats']);
-                            //echo '<pre>'. print_r($s_specs,true) .'</pre>';
-							?></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Dimensions</td>
-                            <td><?php esc_attr_e($s_specs['dim_us']); ?> <small>(<?php esc_attr_e($s_specs['dim_int']); ?>)</small></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Spa Volume</td>
-                            <td><?php esc_attr_e($s_specs['vol_us']); ?> <small>(<?php esc_attr_e($s_specs['vol_int']); ?>)</small></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Total Jets</td>
-                            <td><?php echo ''. absint($jetcount) .' <small>('. absint($jetvars) .' varieties)</small>'; ?></td>
-                        </tr>
-                    </table>
-                    <div class="share"><?php if(function_exists('sharethis_button')) sharethis_button(); ?></div>
-                </div>
+                    <div itemscope itemtype="http://schema.org/Product">
+                        <div id="BVRRSummaryContainer"></div>
+                            <div class="description"><?php echo sundance_shortdesc($post->post_content); ?></div>
+                             <table width="100%">
+                                <tr>
+                                    <td class="label">Series</td>
+                                    <td><?php
+        							esc_attr_e($ser->post_title);
+        							?></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Seats</td>
+                                    <td><?php esc_attr_e($s_specs['seats']);
+                                    //echo '<pre>'. print_r($s_specs,true) .'</pre>';
+        							?></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Dimensions</td>
+                                    <td><?php esc_attr_e($s_specs['dim_us']); ?> <small>(<?php esc_attr_e($s_specs['dim_int']); ?>)</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Spa Volume</td>
+                                    <td><?php esc_attr_e($s_specs['vol_us']); ?> <small>(<?php esc_attr_e($s_specs['vol_int']); ?>)</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Total Jets</td>
+                                    <td><?php echo ''. absint($jetcount) .' <small>('. absint($jetvars) .' varieties)</small>'; ?></td>
+                                </tr>
+                            </table>
+                            <div class="share"><?php if(function_exists('sharethis_button')) sharethis_button(); ?></div>
+                        </div>
+                    </div>
                 <div class="colors">
                     <h3>Shell Colors</h3>
                     <ul>
@@ -495,20 +498,23 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
             </div>
             <div class="tab reviews" id="reviews">
                 <div class="inner">
-                    <div id="BVRRContainer">
-                        <?php echo $bv->reviews->getContent();?>
+                    <div itemscope itemtype="http://schema.org/Product">
+                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                        <div id="BVRRContainer">
+                            <?php echo $bv->reviews->getContent();?>
+                        </div>
+                        <script type="text/javascript">
+                        $BV.ui( 'rr', 'show_reviews', {
+                            doShowContent : function () {
+                            // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+                                $('ul#spatabs li.current').removeClass('current');
+                                $('div.tab.current').removeClass('current');
+                                $('li a[href="#reviews"]').parent().addClass('current');
+                                $('#reviews').addClass('current').css('display', 'block');
+                            }
+                        });
+                        </script>
                     </div>
-                    <script type="text/javascript">
-                    $BV.ui( 'rr', 'show_reviews', {
-                    doShowContent : function () {
-                    // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                        $('ul#spatabs li.current').removeClass('current');
-                        $('div.tab.current').removeClass('current');
-                        $('li a[href="#reviews"]').parent().addClass('current');
-                        $('#reviews').addClass('current').css('display', 'block');
-                    }
-                    });
-                    </script>
                 </div>
             </div>
 
@@ -524,6 +530,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
         </div>
     </div>
     <br class="clear" />
+  </div>
 </div>
 <?php endwhile; ?>
 

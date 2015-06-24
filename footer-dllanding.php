@@ -119,7 +119,7 @@
                 $mm .= '<li><a href="'. get_permalink(2897) .'">Press Room</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2959) .'">Become a Dealer</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2965) .'">Contact</a></li>';
-                $mm .= '<li><a href="'. get_permalink(2970) .'">Employment Opportunities</a></li>';
+                $mm .= '<li><a href="http://www.jacuzzi.com/careers/">Employment Opportunities</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2972) .'">Owner Resources</a></li>';
                 $mm .= '<li><a href="'. get_permalink(1892) .'">Sundance Blog</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2412) .'">Sundance Video</a></li>';

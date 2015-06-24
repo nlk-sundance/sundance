@@ -126,7 +126,7 @@
                 $mm .= '<li><a href="'. get_permalink(2897) .'">Press Room</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2959) .'">Become a Dealer</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2965) .'">Contact</a></li>';
-                $mm .= '<li><a href="'. get_permalink(2970) .'">Employment Opportunities</a></li>';
+                $mm .= '<li><a href="http://www.jacuzzi.com/careers/">Careers</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2972) .'">Owner Resources</a></li>';
                 $mm .= '<li><a href="'. get_permalink(1892) .'">Sundance Blog</a></li>';
                 $mm .= '<li><a href="'. get_permalink(2412) .'">Sundance Video</a></li>';
@@ -142,8 +142,8 @@
                 $mm .= '</ul>';
                 $mm .= '</div><br class="clear" />';
                 $mm .= '</div>';
-				$sitemap = $mm;
-                //set_transient( 's_sitemap', $mm, 60*60*12 );
+		$sitemap = $mm;
+                set_transient( 's_sitemap', $mm, 60*60*12 );
             }
             // Use the data like you would have normally...
             //$sitemap = get_transient( 's_sitemap' );
