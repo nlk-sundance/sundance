@@ -314,9 +314,9 @@ strong{
 /* - - - - LAYOUT - - - - */
 	body {
 		font-family: "AR", Verdana, Geneva, sans-serif;
-		font-size:12px;
+		font-size: 85%;
 		background:#FFF url(images/bg/body.jpg) top center no-repeat;
-		color:#000000;
+		color: #493627;
 	}
 	.wrap{
 		width:960px;
@@ -454,7 +454,7 @@ strong{
 	.hd .mainMenu li:hover a,
 	.hd .mainMenu li.active a{
 		background:#F1F0EE;
-		color: #000000;
+		color: #493627;
 	}
 	.hd .mainMenu li.last:hover a, .hd .mainMenu li.last.active a { background: none; color: #fff }
 	.hd .mainMenu li.last:hover a:hover { text-decoration: underline }
@@ -466,7 +466,7 @@ strong{
 		left: 0;
 		z-index:100;
 		background:#F1F0EE;
-		color:#000000;
+		color: #493627;
 		padding:10px 0 30px;
 		width:115px;
 		
@@ -495,7 +495,7 @@ strong{
 		position:static;
 	}
 	.hd .mainMenu li ul li a{
-		color:#000000;
+		color: #493627;
 		padding: 5px 12px;
 		text-transform:none;
 		/*white-space:nowrap;*/
@@ -646,7 +646,7 @@ strong{
 		line-height:1.42em;
 	}
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul li a{
-		color:#000000;
+		color: #493627;
 	}
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul li:hover{
 		background:none;
@@ -657,7 +657,7 @@ strong{
 	.hd .mainMenu .sitemap h2{
 		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:13px;
-		color:#000000;
+		color: #493627;
 		margin: 0 0 5px;
 		padding:0;
 		line-height:1.15em;
@@ -665,7 +665,7 @@ strong{
 		background:none !important;
 	}
 	.hd .mainMenu .sitemap h2 a{
-		color:#000000;
+		color: #493627;
 		text-decoration:none;
 		text-transform:uppercase;
 		background:none !important;
@@ -680,7 +680,7 @@ strong{
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul.list li a{
 		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:11px;
-		color:#000000;
+		color: #493627;
 		text-transform:uppercase;
 		display:block;
 		padding:2px 0 0;
@@ -940,7 +940,7 @@ strong{
 	}
 	.bd .main h1{
 		font-size:36px;
-		color:#000000;
+		color: #493627;
 		font-weight:normal;
 		padding: 0 0 20px;
 		font-family:AL, Tahoma, Geneva, sans-serif
@@ -1038,7 +1038,7 @@ strong{
 		float: left;
 		width: 70px;
 		font: bold 12px/116% Verdana, Geneva, sans-serif;
-		color: #000000;
+		color: #493627;
 		text-align: center;
 		background: #f1f0ee;
 		border: 1px solid #d6d6d6;
@@ -1086,7 +1086,7 @@ strong{
 	.truckform label {
 		display: block;
 		font: 13px/15px "AM", sans-serif;
-		color: #000000;
+		color: #493627;
 	}
 	.truckform .txt {
 		border: 1px solid #dcdcdc;
@@ -1430,7 +1430,7 @@ strong{
 	}
 	.bd .tubSeries h1 a{
 		text-decoration:none;
-		color:#000000;
+		color: #493627;
 	}
 	.tubSeries h2{
 		font-size:12px;
@@ -1440,7 +1440,7 @@ strong{
 	}
 	.tubSeries .description p{
 		font-size:13px;
-		color: #000000;
+		color: #493627;
 		padding: 0 140px 0 0;
 		line-height:150%;
 	}
@@ -1453,7 +1453,7 @@ strong{
 		border-top:1px solid #D6D6D6;
 		padding: 6px 3px;
 		font: 700 21px 'AH', Tahoma, Geneva, sans-serif;
-		color:#000000;
+		color: #493627;
 		text-transform:uppercase;
 
 	}
@@ -1467,14 +1467,14 @@ strong{
 		display: block;
 		padding:5px 5px 16px;
 		background: #fff;
-		color: #000000;
+		color: #493627;
 	}
 	.tubSeries .description .details table a:hover{
 		text-decoration: none;
 	}
 	.tubSeries .description .details table .h3{
 		font: 700 16px Arial, Tahoma, sans-serif;
-		color:#000000;
+		color: #493627;
 		display: block;
 		margin: 3px 0;
 	}
@@ -1482,7 +1482,7 @@ strong{
 		display: block;
 		padding: 0 0 2px;
 		font-size:13px;
-		color:#000000;
+		color: #493627;
 		line-height:125%;
 	}
 	.tubSeries .description .details table .p img{
@@ -1554,14 +1554,14 @@ strong{
 		font-family: "AL", Tahoma, Geneva, sans-serif;
 		margin:0;
 		padding:0;
-		color:#000000;
+		color: #493627;
 	}
 	.main .headline .model h2{
 		font-size:30px;
 		text-transform:lowercase;
 		padding:0;
 		margin:-15px 0 0;
-		color:#000000;
+		color: #493627;
 	}
 	.main .headline .description{
 		float:left;
@@ -1571,12 +1571,12 @@ strong{
 	.main .headline .description h3{
 		font-size:12px;
 		font-family: "AM", Tahoma, Geneva, sans-serif;
-		color:#000000;
+		color: #493627;
 		margin: 0 0 10px;
 		text-transform:uppercase;	
 	}
 	.main .headline .description p{
-		color:#000000;
+		color: #493627;
 		font-size:13px;
 		line-height:150%;
 	}
@@ -1597,7 +1597,7 @@ strong{
 	}
 	.page .main .tubSeries .overhead { width: 222px; height: 232px; left: 0 }
 	.hot-tub-detail .main .specs{
-		color:#000000;
+		color: #493627;
 		font-family: "AR", Tahoma, Geneva, sans-serif;
 		font-size:13px;
 		line-height:150%;
@@ -1608,7 +1608,7 @@ strong{
 		margin: 0 0 20px;
 	}
 	.hot-tub-detail .main .description a{
-		color:#000000;
+		color: #493627;
 		font-weight:bold;
 		text-decoration:underline;
 	}
@@ -1637,7 +1637,7 @@ strong{
 	.hot-tub-detail .main .colors h3{
 		font-size:12px;
 		font-family:"AR", Tahoma, Geneva, sans-serif;
-		color:#000000;
+		color: #493627;
 		float: left;
 		width: 100%;
 		margin: 0 0 5px;
@@ -1675,7 +1675,7 @@ strong{
 		right: 16px;
 		top: 12px;
 		font-family: "AR", Tahoma, Geneva, sans-serif;
-		color: #000000;
+		color: #493627;
 		font-size: 30px;
 	}
 	.hot-tub-detail .main .energy .cost sup{
@@ -1697,10 +1697,10 @@ strong{
 		text-decoration:underline;
 		font-weight:bold;
 		padding: 6px 0 2px;
-		color:#000000;
+		color: #493627;
 	}
 	.hot-tub-detail .energy p{
-		color:#000000;
+		color: #493627;
 		line-height:125%;
 	}
 	.hot-tub-detail .side.features .inner{
@@ -1723,7 +1723,7 @@ strong{
 		position:relative;
 	}
 	.hot-tub-detail .side.features ul li a{
-		color: #000000;
+		color: #493627;
 		display:block;
 		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
@@ -1734,7 +1734,7 @@ strong{
 		z-index:999;
 		width: 330px;
 		background:#FFF;
-		color:#000000;
+		color: #493627;
 		text-transform:none;
 		padding: 0 0 50px 0;
 		opacity:0;
@@ -1839,7 +1839,7 @@ strong{
 	.hot-tub-detail .tabContainer .tabs li.current a{
 		padding: 8px 4px 8px 16px;
 		border-left:1px solid #797866;
-		color:#000000;
+		color: #493627;
 		background: #FFF;
 	}
 	.hot-tub-detail .tabContainer .tabs li:last-child a{
@@ -1888,7 +1888,7 @@ strong{
 	.hot-tub-detail .tab.colors li {
 		float:left;
 		padding: 0 14px 14px 0;
-		color:#000000;
+		color: #493627;
 		font-family:"AR", Tahoma, Geneva, sans-serif;
 		line-height:16px;
 	}
@@ -1945,7 +1945,7 @@ strong{
 		line-height:20px;
 	}
 	.hot-tub-detail .tab.jets ul li a{
-		color:#000000;
+		color: #493627;
 	}
 	.hot-tub-detail .tab.jets ul li a:hover{
 		text-decoration:none;
@@ -1975,7 +1975,7 @@ strong{
 	.hot-tub-detail .bd .findDealer h2{
 		font-size:14.5px;
 		font-family: "AM", Tahoma, Geneva, sans-serif;
-		color:#000000;
+		color: #493627;
 		margin: 0 0 5px;
 	}
 	.hot-tub-detail .bd .findDealer input.text {
@@ -2006,7 +2006,7 @@ strong{
 		width: 100%;
 	}
 	.hot-tub-detail .bd .findDealer .actions li a{
-		color:#000000;
+		color: #493627;
 		text-decoration:underline;
 	}
 
@@ -2052,7 +2052,7 @@ strong{
 	.page .bd .cols .leftMenu.normul .inner ul { padding-left: 1.5em }
 	.bd .leftMenu.normul li { font: 10px/166% Verdana, Geneva, sans-serif; text-transform: none; padding: 0 0 1em; list-style: disc }
 	.bd .leftMenu li a{
-		color:#000000;
+		color: #493627;
 		text-decoration:none;
 	}
 	.bd .leftMenu .share{ padding:10px 0 20px; float: left; width: 108%;  }
@@ -2087,7 +2087,7 @@ strong{
 		display:block;
 		margin:10px 0 10px 10px;
 		padding:0 10px 0 0;
-		color: #000000;
+		color: #493627;
 		text-transform:uppercase;
 		font: 14px/17px "AM";
 	}
@@ -2109,10 +2109,10 @@ strong{
 
 	/* text and fonts */
 	.owners-corner p,
-	.bd .owners-corner .entry-content li { color: #000000; }
+	.bd .owners-corner .entry-content li { color: #493627; }
 
 	.bd .owners-corner .main h2 {
-		color: #000000;
+		color: #493627;
 		font-family: "AL", arial, helvetica, sans-serif;
 		font-size: 24px;
 	}
@@ -2131,7 +2131,7 @@ strong{
 		margin-right: 0;
 	}
 	.bd .main .owners-links h2 {
-		color: #000000;
+		color: #493627;
 		font: 20px/24px "AM";
 		margin: 16px 30px 14px 0;
 	}
@@ -2163,7 +2163,7 @@ strong{
 	}
 	span.oc-badge > span {
 		clear: both;
-		color: #000000;
+		color: #493627;
 		display: block;
 	}
 	span.oc-badge > span:first-child {
@@ -2419,7 +2419,7 @@ strong{
 		}
 		.bd div.sunsmart .main h2 {
 			font-size: 21px;
-			color: #000000;
+			color: #493627;
 			font-weight: normal;
 			font-family: "AL", Tahoma, Geneva, sans-serif;
 		}
@@ -2640,7 +2640,7 @@ strong{
 		font-size:15px;
 		text-transform:uppercase;
 		padding:0 0 10px;
-		color:#000000;
+		color: #493627;
 	}
 	.backyard-life .tiles ul.grid h3{
 		font-family: "AH", Tahoma, Geneva, sans-serif;
@@ -2654,7 +2654,7 @@ strong{
 		padding:0;
 		display:inline;
 		margin:0;
-		color:#000000;
+		color: #493627;
 		font-size:11px;
 	}
 	.backyard-life .tiles ul.grid p{
@@ -2683,12 +2683,12 @@ strong{
 	}
 	.sitemap .entry-content h2{
 		font-family: "AH", Tahoma, Geneva, sans-serif;
-		color:#000000;
+		color: #493627;
 		font-size:13px;
 		text-transform:uppercase;
 	}
 	.sitemap .entry-content h2 a{
-		color:#000000;
+		color: #493627;
 	}
 	.sitemap .entry-content ul{
 		margin: 0 0 15px;
@@ -2703,7 +2703,7 @@ strong{
 		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.sitemap .entry-content ul li a{
-		color:#000000;
+		color: #493627;
 	}
 
 /* - - - - BLOG STYLES - - - */
@@ -2726,7 +2726,7 @@ strong{
 		line-height:145%;
 	}
 	.blog .tiles ul.grid p a{
-		color:#000000;
+		color: #493627;
 	}
 
 	.blog .return{
@@ -2773,7 +2773,7 @@ strong{
 		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.page .entry-content{
-		color:#000000;
+		color: #493627;
 	}
 	.entry-content h1,
 	.entry-content h2,
@@ -2913,7 +2913,7 @@ strong{
 		font-size:11px;
 	}
 	.blog .side .widget ul li a{
-		color:#000000;
+		color: #493627;
 	}
 
 /* - - - - VIDEO LANDING - - - - */
@@ -2950,7 +2950,7 @@ strong{
 	}
 
 	.video .videoList .thumbs .title a{
-		color:#000000;
+		color: #493627;
 		display:block;
 	}
 	.video .videoList .thumbs li:hover .title a,
@@ -3451,7 +3451,7 @@ strong{
 		font-size: 14px;
 		font-family: 'AH';
 		font-weight: 400;
-		color: #000000;
+		color: #493627;
 		margin-top: 20px;
 		margin-bottom: 30px;
 		line-height: 39px;
@@ -3464,7 +3464,7 @@ strong{
 	}
 	#dealer_details_2col_testimonials li {
 		list-style: none;
-		color: #000000;
+		color: #493627;
 	}
 	#dealer_details_2col_testimonials #testimonial-container p {
 		font-size: 14px;
@@ -3559,7 +3559,7 @@ strong{
 	#dealer_details_main #dealer_details_main_tabbed ul.header li.active,
 	#dealer_details_main #dealer_details_main_tabbed ul.header li:hover {
 		background-color: #fff;
-		color: #000000;
+		color: #493627;
 		border-color: #797866;
 		border-width: 1px 1px 0 1px;
 		border-style: solid;
@@ -3580,16 +3580,16 @@ strong{
 		display: block;
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h3 {
-		color: #000000;
+		color: #493627;
 		font: 400 18px 'AH';
 		margin-bottom: 18px
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h4 {
-		color: #000000;
+		color: #493627;
 		font: 400 14px 'AH';
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area p {
-		color: #000000;
+		color: #493627;
 		font-size: 14px;
 	}
 	#dealer_details_main #dealer_details_main_tabbed #dealer_staff_intro_text {
@@ -3604,7 +3604,7 @@ strong{
 	#dealer_details_main #dealer_details_main_sidebar div.header {
 		background-color: #E5DFCD;
 		box-sizing: border-box;
-		color: #000000;
+		color: #493627;
 		font-size: 15px;
 		font-family: 'AM';
 		height: 39px;
@@ -3654,7 +3654,7 @@ strong{
 		margin-left: -230px;
 		width: 460px;
 		background-color: #e5dfcd;
-		color: #000000;
+		color: #493627;
 	}
 	#sms-container #sms-form h3,
 	#sms-container #sms-form-success h3 {
@@ -3728,7 +3728,7 @@ strong{
 		padding: 5px;
 	}
 	.bd .w240 h2 a{
-		color: #000000;
+		color: #493627;
 		text-decoration: none;
 	}
 	.bd .w240 h1,
@@ -3737,7 +3737,7 @@ strong{
 	.bd .w240 h4,
 	.bd .w240 p,
 	.bd .w240 ul{
-		color: #000000;
+		color: #493627;
 		padding: 5px;
 	}
 
@@ -3770,7 +3770,7 @@ strong{
 		line-height:150%;
 	}
 	.home .bd .w240.blog ul li a{
-		color: #000000;
+		color: #493627;
 		text-decoration:none;
 	}
 	.bd a{
@@ -3824,7 +3824,7 @@ strong{
 		padding: 4px;
 	}
 	.bd .list li a.arrowRight{
-		color: #000000;
+		color: #493627;
 		display:block;
 		background:url(images/icons/arrowRight.jpg) right center no-repeat;
 		height:32px;
@@ -3911,7 +3911,7 @@ strong{
 	.ft .menuWrap .topMenu li a{
 		font-weight:bold;
 		line-height: 12px;
-		color:#000000;
+		color: #493627;
 		text-decoration:none;
 		position: relative;
 		top: -4px;
@@ -3924,7 +3924,7 @@ strong{
 	.ft .menuWrap .bottomMenu li a{
 		font-size:11px;
 		line-height: 14px;
-		color:#000000;
+		color: #493627;
 		text-decoration:none;
 		position: relative; top: -4px;
 	}
@@ -4002,7 +4002,7 @@ strong{
 	.overlay .dialog td{
 		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:14px;
-		color: #000000;
+		color: #493627;
 		padding: 0 10px 5px 0;
 	}
 		
@@ -4238,7 +4238,7 @@ strong{
 	div.awareness-text h4 {
 		font: bold 16px/24px "Verdana" !important;
 		margin-bottom: 12px;
-		color: #000000;
+		color: #493627;
 	}
 	div.awareness-text p.text {
 		padding-right: 4px;
@@ -5341,7 +5341,7 @@ strong{
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div input[type="text"],
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div select {
 	box-sizing: border-box;
-	color: #000000;
+	color: #493627;
 	font-style: 18px;
 	height: 36px;
 	width: 290px;
@@ -5444,7 +5444,7 @@ a.get-colorselector
 {
 	font-size: 14px;
 	font-family:"AR", Tahoma,Geneva,sans-serif;
-	color: #000000;
+	color: #493627;
 	float: left;
 	width: 100%;
 	margin: 10px 0px 5px;
