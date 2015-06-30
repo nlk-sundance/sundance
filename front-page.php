@@ -12,24 +12,24 @@ get_header(); ?>
     <div class="slides">
     	<div class="slide">
             <?php
-            $promo_start = "5/15/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-            $promo_end = "6/1/2015"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+            $show_promo = true;
+            $promo_start = "6/25/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+            $promo_end = "7/14/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
                 case 'http://www.sundancespas.ca':
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/spring-promo-2015-CA.png';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/canada-day2015.jpg';
                     break;
                 
                 default:
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/spring-promo-2015.png';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/independence-day2015.jpg';
                     break;
             }
-            if ( time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
+            if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
                 <!-- Spring Promo -->
                 <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php echo $promo_img; ?>" width="960" height="320" alt="Hot Tubs" /></a>
             <?php else : ?>
                 <!-- Default -->
-                <?php /* COMMENT OUT FOR PROMO */ ?>
                 <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/hero/home-slide2.jpg" width="960" height="320" alt="Hot Tubs" /></a>
                 <h1>Life is better with a Sundance Spa</h1>
                 <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/IB8YE8ka2s0?rel=0">Watch the Video</div>
