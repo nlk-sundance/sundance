@@ -1472,20 +1472,20 @@ function sundance_meta_save($post_id){
 	return $post_id;
 	
 	// Check permissions
-	if (in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
+	if ( isset($_POST['post_type']) && in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
 		if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
 	} else {
 	//if ( !current_user_can( 'edit_post', $post_id ) )
 	  return $post_id;
 	}
 	
-	if($_POST['post_type'] == 'page') {
+	if( isset($_POST['post_type']) && $_POST['post_type'] == 'page') {
 		$info = $_POST['s_pageopts'];
 		update_post_meta($post_id, 's_pageopts', $info);
 		return $info;
 	}
 	
-	if( in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
+	if( isset($_POST['post_type']) && in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
 		$info = $_POST['s_info'];
 		update_post_meta($post_id, 's_info', $info);
 		return $info;
@@ -1954,7 +1954,7 @@ add_action( 'edit_category', 'sundance_edit_cat_transients' );
 
 // [slug]-accs : on sitemap.php & elsewhere?
 function sundance_publ_acc_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	$thisterms = wp_get_object_terms($post_id, 's_acc_cat', array('fields' => 'slugs'));
 	foreach ( $thisterms as $t ) {
 		delete_transient( $t .'-accs' );
@@ -1963,7 +1963,7 @@ function sundance_publ_acc_transients($post_id) {
 add_action( 'publish_s_acc', 'sundance_publ_acc_transients' );
 
 function sundance_flush_tubcats_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	// we know we want to flush jht_tubs
     delete_transient( 's_tubcats' );
     delete_transient( 's_tubcats_landing' );
@@ -2640,43 +2640,39 @@ endif;
 
 
 // Google Tag Manager Main
-add_action('do_google_tag_manager', 'google_tag_manager_container');
+add_action('google_tag_manager', 'google_tag_manager_container', 10);
 function google_tag_manager_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NTFWKQ');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager() {
-	do_action('do_google_tag_manager');
+	do_action('google_tag_manager');
 }
 
 // Google Tag Manager Criteo
-add_action('do_google_tag_manager_criteo', 'google_tag_manager_criteo_container');
+add_action('google_tag_manager_criteo', 'google_tag_manager_criteo_container', 10);
 function google_tag_manager_criteo_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PWJ2SH');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager_criteo() {
-	do_action('do_google_tag_manager_criteo');
+	do_action('google_tag_manager_criteo');
 }
 
 
@@ -2694,7 +2690,10 @@ function custom_data_layer_container() {
 
 	$str = '<script>dataLayer = [{';
 	$str .= '"get":' . json_encode($_SERVER['QUERY_STRING']) . ',';
-	$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
+	if ( function_exists('geo_data') )
+		$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
 	$str .= '"customerId":"' . $custId . '",';
 	
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
@@ -3186,7 +3185,6 @@ function sds_my_server() {
 		add_filter( 'wpseo_canonical', 'remove_yoast_canonical_link' );
 
 /** END BazaarVoice **/
-
 
 
 

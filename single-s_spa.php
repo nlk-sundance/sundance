@@ -106,7 +106,7 @@ $allfeats = get_transient( 's_allfeats' );
 $custom = get_post_meta($post->ID,'s_cats');
 $cats = $custom[0];
 $serID = $cats[0];
-$ser = wp_get_single_post($serID);
+$ser = get_post($serID);
 
 if ( $ser->post_title == 'Select' ) { $serval = 'aDETNR5oAgg'; }
 if ( $ser->post_title == 880 ) { $serval = 'zCdzYmarTWk'; }
@@ -235,8 +235,24 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
                <?php } ?>
             </ul>
         </div>
-        <a href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
-        <a href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
+
+        <?php if ( msrp_display() ) : ?>
+            <?php
+            $msrp = esc_attr($s_specs['msrp']);
+            $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
+            ?>
+            <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View MSRP</a>
+            <div class="msrp" style="display: none;">
+                <?php echo '<p><span class="msrp-price">' . $msrp . '</span> MSRP</p>'; ?>
+                <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
+                <a id="msrp-pricing" href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
+                <a id="msrp-dealer" href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
+            </div>
+        <?php else : ?>
+            <a href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
+            <a href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
+        <?php endif; ?>
+
     </div>
     <br class="clear" />
     <div class="tabWrap">
