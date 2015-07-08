@@ -1333,7 +1333,8 @@ strong{
 		padding: 16px 34px;
 		z-index: 9;
 	}
-	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn {
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		position: absolute;
 		right: -4px;
 		top: 54px;

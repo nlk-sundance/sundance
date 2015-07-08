@@ -65,6 +65,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <p><small>* indicates required fields.<br><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
                 </form>
                 */ ?>
+                <div class="the-brochure-img"></div>
                 <?php echo do_shortcode('[gravityform id=10 ajax=true title=false description=false]'); ?>
                 <div class="more-fold"></div>
             </div>
