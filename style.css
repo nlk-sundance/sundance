@@ -4567,10 +4567,26 @@ strong{
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
 			margin-top: 8px;
+			height: 24px;
+			padding: 0;
 		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body ::-webkit-input-placeholder,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body :-moz-placeholder,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body ::-moz-placeholder,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body :-ms-input-placeholder {
+			color: #000;
+		}
+
 		body.sundance-brochure .bd .wrap .page-header .content form label {
 			color: #000;
 			display: none;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] {
+			margin-top: 0;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] + label {
+			display: block;
+			margin-top: 3px;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form > table {
 			position: relative;
