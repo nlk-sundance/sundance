@@ -4567,7 +4567,7 @@ strong{
 
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
-			margin-top: 4px;
+			margin-top: 1px;
 			height: 24px;
 			padding: 0;
 		}
@@ -4585,9 +4585,12 @@ strong{
 			color: #000;
 			display: none;
 		}
+		body.sundance-brochure .bd .wrap .page-header .content form .pad_top select {
+			margin-top: 32px;
+		}
 		body.sundance-brochure .bd .wrap .page-header .content form .show_label label {
 			display: block;
-			margin-top: 5px;
+			margin-top: 0px;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form .show_label select {
 			width: 98%;
