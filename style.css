@@ -1278,10 +1278,12 @@ strong{
 	.blueFade {
 		
 	}
-	.sundance-brochure .bigBlueBtn {
+	.sundance-brochure .bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		border: 1px solid #00A1B7 !important;
 	}
-	.bigBlueBtn {
+	.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		font: 400 16px/22px 'AH', Helvetica, Geneva, arial, sans-serif;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -4478,6 +4480,10 @@ strong{
 			border: none;
 		}
 
+		body.sundance-brochure .gform_wrapper {
+			margin: 0;
+		}
+
 		body.sundance-brochure.brochure1 .bd .wrap .page-header,
 		body.sundance-brochure.brochure2 .bd .wrap .page-header {
 			height: 700px;
@@ -4542,7 +4548,7 @@ strong{
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content.one-part .the-brochure-img {
-			left: -34px;
+			/*left: -34px;*/
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
@@ -4550,11 +4556,21 @@ strong{
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
-			width: 960px;
+			/*width: 960px;*/
+			width: auto;
 			margin: auto;
+			padding-left: 170px;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body {
+			width: 600px
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
+			margin-top: 8px;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form label {
 			color: #000;
+			display: none;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form > table {
 			position: relative;
