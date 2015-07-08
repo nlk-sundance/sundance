@@ -23,7 +23,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	
             </div>
             <div class="brown-bar">
-
+                <?php /*
                 <form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="two-part-form">
                     <div class="the-brochure-img"></div>
                     <?php avala_hidden_fields( 13, 6, 12 ); ?>
@@ -64,6 +64,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <input type="submit" value="Get My Brochure" class="bigBlueBtn blueFade" onClick="_gaq.push(['_trackEvent', 'lead', 'brochure-full']);" />
                     <p><small>* indicates required fields.<br><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
                 </form>
+                */ ?>
+                <?php echo do_shortcode('[gravityform id=10 ajax=true title=false description=false]'); ?>
                 <div class="more-fold"></div>
             </div>
 
