@@ -186,16 +186,16 @@ function sds_is_thanks_page() {
 		global $post;
 		$custom = get_post_meta($post->ID,'s_specs');
 		$s_specs = isset($custom[0]) ? $custom[0] : $custom;
-		$prod = esc_attr($s_specs['product_id']);
+		$prod = isset($s_specs['product_id']) ? esc_attr($s_specs['product_id']) : false;
 		$val = get_post_meta( $post->ID, 'lead-type', true );
 
-		if ( !empty( $prod ) ) { ?>
+		if ( $prod ) { ?>
 			<script type="text/javascript"> 
 			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
 			</script>
 		<?php }
 		
-		if ( !empty( $val ) ) { ?>
+		if ( $val ) { ?>
 			<script>
 			$BV.SI.trackConversion({
 			"type" : "lead",
