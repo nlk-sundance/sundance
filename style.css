@@ -4564,6 +4564,12 @@ strong{
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body {
 			width: 600px
 		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+			margin-bottom: 0 !important;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .validation_error {
+			display: none;
+		}
 
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
 		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
