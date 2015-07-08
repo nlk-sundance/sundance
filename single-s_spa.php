@@ -148,37 +148,35 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 				}
 				?></div>
                 <div class="specs">
-                    <div itemscope itemtype="http://schema.org/Product">
-                        <div id="BVRRSummaryContainer"></div>
-                            <div class="description"><?php echo sundance_shortdesc($post->post_content); ?></div>
-                             <table width="100%">
-                                <tr>
-                                    <td class="label">Series</td>
-                                    <td><?php
-        							esc_attr_e($ser->post_title);
-        							?></td>
-                                </tr>
-                                <tr>
-                                    <td class="label">Seats</td>
-                                    <td><?php esc_attr_e($s_specs['seats']);
-                                    //echo '<pre>'. print_r($s_specs,true) .'</pre>';
-        							?></td>
-                                </tr>
-                                <tr>
-                                    <td class="label">Dimensions</td>
-                                    <td><?php esc_attr_e($s_specs['dim_us']); ?> <small>(<?php esc_attr_e($s_specs['dim_int']); ?>)</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="label">Spa Volume</td>
-                                    <td><?php esc_attr_e($s_specs['vol_us']); ?> <small>(<?php esc_attr_e($s_specs['vol_int']); ?>)</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="label">Total Jets</td>
-                                    <td><?php echo ''. absint($jetcount) .' <small>('. absint($jetvars) .' varieties)</small>'; ?></td>
-                                </tr>
-                            </table>
-                            <div class="share"><?php if(function_exists('sharethis_button')) sharethis_button(); ?></div>
-                        </div>
+                    <div id="BVRRSummaryContainer"></div>
+                        <div class="description"><?php echo sundance_shortdesc($post->post_content); ?></div>
+                         <table width="100%">
+                            <tr>
+                                <td class="label">Series</td>
+                                <td><?php
+    							esc_attr_e($ser->post_title);
+    							?></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Seats</td>
+                                <td><?php esc_attr_e($s_specs['seats']);
+                                //echo '<pre>'. print_r($s_specs,true) .'</pre>';
+    							?></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Dimensions</td>
+                                <td><?php esc_attr_e($s_specs['dim_us']); ?> <small>(<?php esc_attr_e($s_specs['dim_int']); ?>)</small></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Spa Volume</td>
+                                <td><?php esc_attr_e($s_specs['vol_us']); ?> <small>(<?php esc_attr_e($s_specs['vol_int']); ?>)</small></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Total Jets</td>
+                                <td><?php echo ''. absint($jetcount) .' <small>('. absint($jetvars) .' varieties)</small>'; ?></td>
+                            </tr>
+                        </table>
+                        <div class="share"><?php if(function_exists('sharethis_button')) sharethis_button(); ?></div>
                     </div>
                 <div class="colors">
                     <h3>Shell Colors</h3>
