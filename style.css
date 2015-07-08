@@ -4656,6 +4656,11 @@ strong{
 			font-size: 9px;
 			font-style: italic;
 		}
+		body.sundance-brochure .bd .wrap .page-header .content .privacy {
+			position: absolute;
+  			right: 66px;
+  			top: 112px;
+		}
 
 
 		body.sundance-brochure .bd .wrap .page-header .content .more-fold {
