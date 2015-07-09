@@ -39,20 +39,14 @@ function geo_data( $zip = false, $debug = false ) {
 	global $wpdb;
 
 	$ip = get_the_ip();
-	$zip = ( isset( $_POST['zip'] ) ) 
-		? $_POST['zip'] 
-		: ( isset( $_GET['zip'] ) ) 
-			? $_GET['zip'] 
-			: ( isset($_COOKIE['jhtgeo']) && !empty($_COOKIE['jhtgeo']) ) 
-				? $_COOKIE['jhtgeo']
-				: $zip;
+	$zip = ( ( isset($_POST['zip']) && !empty($_POST['zip']) ) ? $_POST['zip'] : ( isset($_GET['zip']) && !empty($_GET['zip']) ? $_GET['zip'] : ( ( isset($_COOKIE['jhtgeo']) && !empty($_COOKIE['jhtgeo']) )	? $_COOKIE['jhtgeo'] : $zip ) ) );
 
 	$zip = clean_zip( $zip ); // clean the zip for geo search
 
 	$a = array();
 	$rows = false;
 
-	if ( $zip ) :
+	if ( !empty($zip) ) :
 		
 		$rows = $wpdb->get_results(
 			"
@@ -87,7 +81,7 @@ function geo_data( $zip = false, $debug = false ) {
 				'country'		=>	$row->country,
 				'region'		=>	$row->region,
 				'city'			=>	$row->city,
-				'postalCode'	=>	( $zip ? $zip : $row->postalCode ),
+				'postalCode'	=>	( !empty($zip) ? $zip : $row->postalCode ),
 				'latitude'		=>	$row->latitude,
 				'longitude'		=>	$row->longitude,
 				'metroCode'		=>	$row->metroCode,
