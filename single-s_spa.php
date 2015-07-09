@@ -117,7 +117,7 @@ if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
 <script>
 dataLayer.push({ 
     'pageType':'productPage',
-    'msrpStatus':<?php echo ( msrp_display() ? 'MSRP Available' : 'MSRP Not Available' ); ?>, // status if in test market or not - optional
+    'msrpStatus':<?php echo ( msrp_display() ? '"MSRP Available"' : '"MSRP Not Available"' ); ?>, // status if in test market or not - optional
     'event':'pageReady'
 });
 </script>
