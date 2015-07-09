@@ -181,7 +181,7 @@ function msrp_display() {
 	
 	$a = geo_data();
 	
-	if ( isset($test_market[ $a['region'] ][ $a['city'] ]) ) { //&& in_array($a['postalCode'], $test_market[ $a['region'] ][ $a['city'] ]) ) {
+	if ( isset($test_market[ $a['region'] ][ $a['city'] ]) || in_array($a['postalCode'], $test_market['OH']['Columbus']) || in_array($a['postalCode'], $test_market['CA']['San Francisco']) ) {
 		return true;
 	}
 	
