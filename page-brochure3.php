@@ -34,6 +34,9 @@ div#input_11_7_1 {
 label#label_11_7_1 {
   display: block;
 }
+input#gform_submit_button_11 {
+  right: 12px;
+}
 </style>
 <div id="main-wrapper">
 	<div class="page-header one-part" id="page-header">
