@@ -16,6 +16,25 @@ get_header();
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
+<style>
+.gform-body.row {
+  width: 600px;
+  padding-top: 13px;
+}
+select#input_11_4 {
+  height: 24px;
+  margin-top: 37px;
+}
+select#input_11_6 {
+  height: 24px;
+}
+div#input_11_7_1 {
+  padding-top: 4px;
+}
+label#label_11_7_1 {
+  display: block;
+}
+</style>
 <div id="main-wrapper">
 	<div class="page-header one-part" id="page-header">
     	<div class="content center one-part"> <!-- bg image here -->
