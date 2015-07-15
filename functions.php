@@ -2685,7 +2685,7 @@ function custom_data_layer_container() {
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	setcookie("sdscid", $custId, $expire, '/');
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
