@@ -50,7 +50,7 @@ function sds_is_thanks_page() {
 			</script>
 		<?php
 	}
-	add_action('wp_head', 'google_tracking_codes_header');
+	//add_action('wp_head', 'google_tracking_codes_header'); // this is now in GTM
 
 	function google_tracking_codes_footer() {
 
