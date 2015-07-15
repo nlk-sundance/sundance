@@ -2708,7 +2708,8 @@ function custom_data_layer_container() {
 		global $post;
 		$custom = get_post_meta($post->ID, 's_cat_tubs');
 		$cat_tubs = $custom[0];
-		if ( count( $cat_tubs ) !== 0 ) {
+		$str_list = '';
+		if ( count( $cat_tubs ) !== 0 && is_array($cat_tubs) ) {
 			$i = 0;
 			foreach( $cat_tubs as $k => $v ) {
 				$i++;
