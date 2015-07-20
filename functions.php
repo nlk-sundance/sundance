@@ -91,6 +91,7 @@ function sundance_setup() {
 	add_image_size( 'blog-mid', 211, 159, true );
 	add_image_size( 'blog-thm', 93, 70, true );
 	add_image_size( 'accthm', 140, 125, true );
+	add_image_size( 'banner-full', 960, 285, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
