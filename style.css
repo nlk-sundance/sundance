@@ -5527,3 +5527,167 @@ a#show-msrp.close {
 	line-height: 1.4em;
 	margin: 10px 0;
 }
+
+/* ----- HOT TUB BUYER'S GUIDE ----- */
+
+.bd .main .main-title.fullwidth-title img
+{
+	width: 960px;
+	height: 285px;
+}
+
+.bd .main .main-title.fullwidth-title h1
+{
+	font-family: "AH";
+}
+
+.bd .main.buyersguidemain .hero-content
+{
+	background: #ecedef;
+	padding: 50px 50px 30px 30px;
+	
+}
+
+.bd .main.buyersguidemain .hero-content h2
+{
+	color: #37495c;
+	font-family: "AH";
+	font-size: 28px;
+	line-height: 32px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.bd .main.buyersguidemain .hero-content p
+{
+	color: #a59685;
+	font-family: "Verdana";
+	font-size: 13px;
+	line-height: 19px;
+	margin-bottom: 15px;
+}
+
+
+.bd .main.buyersguidemain .page .entry-content h3
+{
+	color: #37495c;
+	font-family: "AL";
+	font-size: 21px;
+	line-height: 26px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	text-transform: none;
+}
+
+.bd .main.buyersguidemain .page  .entry-content h4
+{
+	color: #37495c;
+}
+
+.bd .main.buyersguidemain .page .entry-content p
+{
+	color: #a59685;
+	font-family: "Verdana";
+	font-size: 13px;
+	line-height: 19px;
+	margin-bottom: 15px;
+}
+
+.bd .main.buyersguidemain .page  .entry-content ul.checklist
+{
+	margin-left: 0px;
+}
+
+.bd .main.buyersguidemain .page  .entry-content ul.checklist li
+{
+	list-style: none;
+	background: url('images/buyingguide/checklist_icon.png') 0 0 no-repeat transparent;
+	padding-left: 20px;
+	color: #a59685;
+	font-size: 13px;
+	line-height: 17px;
+	margin-bottom: 10px;
+}
+
+
+.bottomnavigation
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0px 20px;
+}
+
+.bottomnavigation div.previous-step
+{
+	float: left;
+	width: 50px;
+	
+}
+
+
+.bottomnavigation div.next-steps
+{
+	float: right;
+	width: 630px;
+	text-align: right;
+}
+
+.bottomnavigation div.previous-step span.previous-arr
+{
+	width: 36px;
+	height: 30px;
+	display: block;
+	text-indent: -9999px;
+	background: url('images/buyingguide/previous_step.png') 0 0 no-repeat transparent;
+}
+
+.bottomnavigation div.next-steps a.nextstep , .bottomnavigation div.next-steps span.orspan
+{
+	font-family: "AH";
+	color: #37495c;
+	font-size: 11px;
+	line-height: 26px;	
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+.bottomnavigation div.next-steps a.btn.btn-green
+{
+	background: #018ea1;
+	font-family: "AH";
+	color: #FFF;
+	font-size: 11px;
+	padding: 10px 15px;
+	display: inline-block;
+	margin: 0px 5px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+
+.bd .w230.buyerguidesidebar .inner {
+    padding: 0px 10px 20px 20px;
+    position: relative;
+    margin-top: 55px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li
+{
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li a
+{
+	color: #818c95;
+	font-family: "AM";
+	color: #37495c;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li.current-menu-item a
+{
+	color: #4b5257;
+	font-family: "AH";
+}
