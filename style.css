@@ -313,7 +313,7 @@ strong{
 
 /* - - - - LAYOUT - - - - */
 	body {
-		font-family: "AR", Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		font-size: 85%;
 		background:#FFF url(images/bg/body.jpg) top center no-repeat;
 		color: #493627;
