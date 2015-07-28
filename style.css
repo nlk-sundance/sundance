@@ -918,6 +918,7 @@ strong{
 		box-sizing: border-box;
 		width:729px;
 	}
+	.hot-tub-detail .bd .main { background: transparent; }
 	.bd .istub .main .spa-name {
 		position: absolute;
 		bottom: 56px;
@@ -1277,10 +1278,12 @@ strong{
 	.blueFade {
 		
 	}
-	.sundance-brochure .bigBlueBtn {
+	.sundance-brochure .bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		border: 1px solid #00A1B7 !important;
 	}
-	.bigBlueBtn {
+	.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		font: 400 16px/22px 'AH', Helvetica, Geneva, arial, sans-serif;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -1332,7 +1335,8 @@ strong{
 		padding: 16px 34px;
 		z-index: 9;
 	}
-	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn {
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		position: absolute;
 		right: -4px;
 		top: 54px;
@@ -4476,6 +4480,10 @@ strong{
 			border: none;
 		}
 
+		body.sundance-brochure .gform_wrapper {
+			margin: 0;
+		}
+
 		body.sundance-brochure.brochure1 .bd .wrap .page-header,
 		body.sundance-brochure.brochure2 .bd .wrap .page-header {
 			height: 700px;
@@ -4540,7 +4548,7 @@ strong{
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content.one-part .the-brochure-img {
-			left: -34px;
+			/*left: -34px;*/
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
@@ -4548,11 +4556,57 @@ strong{
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
-			width: 960px;
+			/*width: 960px;*/
+			width: auto;
 			margin: auto;
+			padding-left: 170px;
 		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body {
+			width: 600px
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+			margin-bottom: 0 !important;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .validation_error {
+			display: none;
+		}
+
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
+			margin-top: 1px;
+			height: 24px;
+			padding: 0;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
+			height: 29px;
+		}
+		body.sundance-brochure ::-webkit-input-placeholder,
+		body.sundance-brochure :-moz-placeholder,
+		body.sundance-brochure ::-moz-placeholder,
+		body.sundance-brochure :-ms-input-placeholder {
+			color: #000;
+		}
+
 		body.sundance-brochure .bd .wrap .page-header .content form label {
 			color: #000;
+			display: none;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .pad_top select {
+			margin-top: 32px;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .show_label label {
+			display: block;
+			margin-top: 0px;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .show_label select {
+			width: 98%;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] {
+			margin-top: 0;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] + label {
+			display: block;
+			margin-top: 3px;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form > table {
 			position: relative;
@@ -4610,6 +4664,11 @@ strong{
 			top: 111px;
 			font-size: 9px;
 			font-style: italic;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content .privacy {
+			position: absolute;
+  			right: 66px;
+  			top: 112px;
 		}
 
 
@@ -5411,21 +5470,6 @@ strong{
 .uh-four h2:before { background: url(images/dealer-locator/uh-four.png) no-repeat 0 0; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* - - - - - Landing Page - Email Nurture - - - - - */
 .col.w240.leftMenu .inner .custom-sidebar {
 	overflow: hidden;
@@ -5454,3 +5498,32 @@ a.get-colorselector
 	text-decoration: underline;
 }
 
+/* - - - - - MSRP - - - - - */
+.msrp {
+	background-color: #efefef;
+	border: 1px solid #efefef;
+	margin-left: -10px;
+	margin-top: 20px;
+	padding: 16px 16px 20px;
+}
+.msrp .msrp-price {
+	font-family: "AL";
+	font-size: 30px;
+}
+.msrp .msrp-price + p {
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 16px 0;
+}
+a#show-msrp {
+	cursor: pointer;
+}
+a#show-msrp.close {
+	background: #c2c2c2;
+	background-color: #c2c2c2;
+	text-shadow: none;
+}
+.msrp > p + p {
+	line-height: 1.4em;
+	margin: 10px 0;
+}
