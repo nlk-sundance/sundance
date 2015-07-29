@@ -191,25 +191,27 @@ function sds_is_thanks_page() {
 
 		if ( $prod ) { ?>
 			<script type="text/javascript"> 
-//			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
+			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
 			</script>
 		<?php }
 		
 		if ( $val ) { ?>
 			<script>
-//			$BV.SI.trackConversion({
-//			"type" : "lead",
-//			"value" : "<?php echo $val; ?>"
-//			});
+			$BV.SI.trackConversion({
+			"type" : "lead",
+			"value" : "<?php echo $val; ?>"
+			});
 			</script>
 		<?php }
 	}
 
-//	add_action('wp_footer', 'pixel_ms');
-//	add_action('wp_footer', 'pixel_turn');
-	//add_action('wp_footer', 'pixel_sitecatalyst');
-//	add_action('wp_footer', 'quantcast_tag');
-//	add_action('wp_head', 'pixel_bazaarinvoice');
+	if (sds_my_server() !== 'local') {
+		add_action('wp_footer', 'pixel_ms');
+		add_action('wp_footer', 'pixel_turn');
+		add_action('wp_footer', 'pixel_sitecatalyst');
+		add_action('wp_footer', 'quantcast_tag');
+		add_action('wp_head', 'pixel_bazaarinvoice');
+	}
 
 /************* END OF THE OTHERS ********************/
 
