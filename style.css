@@ -1835,12 +1835,12 @@ strong{
 	}
 	.hot-tub-detail .tabContainer .tabs li a{
 		color:#FFF;
-		padding:8px;
+		padding: 8px 42px 8px 12px;
 		display:block;
 		background:url(images/icons/tabSeparator.png) bottom right no-repeat;
 	}
 	.hot-tub-detail .tabContainer .tabs li.current a{
-		padding: 8px 4px 8px 16px;
+		/*padding: 8px 4px 8px 16px;*/
 		border-left:1px solid #797866;
 		color: #493627;
 		background: #FFF;
