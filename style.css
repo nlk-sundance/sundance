@@ -1824,7 +1824,7 @@ strong{
 	}
 	.hot-tub-detail .tabContainer .tabs li{
 		float:left;
-		width:120px;
+		/*width:120px;*/
 		text-transform:uppercase;
 		background:#797866;
 		border-top:1px solid #797866;
