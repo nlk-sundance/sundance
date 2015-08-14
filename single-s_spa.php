@@ -12,6 +12,23 @@
  * @subpackage Sundance
  * @since Sundance 2.0
  */
+
+
+/**
+ * http_response_code / status_header fix for tub pages
+ *
+ * We are bypassing all the 404fix function mess and just directly embedding on single tub pages for now. The whole build/system for generating pages is a nightmare!
+ * @see https://ninthlink.atlassian.net/browse/JAC-870
+ *
+ */
+if( function_exists('http_response_code') ) {
+    http_response_code(200);
+} else {
+    status_header(200);
+}
+
+
+
 get_header();
 while ( have_posts() ) : the_post();
 global $post;
@@ -123,6 +140,7 @@ dataLayer.push({
 <div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
   <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
+        <?php var_dump(http_response_code()); ?>
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
         <?php if ( $ser->post_title != 'Select' ) { ?>
