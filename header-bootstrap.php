@@ -30,8 +30,8 @@
 	</title>
 
     <!-- Bootstrap -->
-    <link href="<?php get_bloginfo('template_url'); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php get_bloginfo('template_url'); ?>/bootstrap/css/custom.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/bootstrap/css/custom.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Roboto:400,700,900' rel='stylesheet' type='text/css'>
 	
@@ -42,7 +42,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php wp_enqueue_script('jquery'); ?>
-    <script src="<?php get_bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
   </head>
   
 <body <?php body_class(); ?>>
