@@ -1667,7 +1667,7 @@ function my_deregister_heartbeat() {
 
 
 function sundance_add_scripts() {
-	if ( ! is_admin() ) {
+	if ( ! is_admin() && !is_front_page()) {
 		//wp_deregister_script('jquery');
 		//wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false);
 		wp_enqueue_script( 'jquery-migrate','http://code.jquery.com/jquery-migrate-1.2.1.js',array('jquery'), '1.2.1', false);
@@ -1676,21 +1676,19 @@ function sundance_add_scripts() {
 		wp_enqueue_script( 'jquery.cookie', get_bloginfo('template_url') .'/js/jquery.cookie.js', array('jquery'), '1.0' );
 		wp_enqueue_script( 'sundance-frontend', get_bloginfo('template_url') .'/js/frontend.js', array('jquery', 'jquery.cookie', 'thickbox'), '1.1' );
 		wp_enqueue_script( 'tipr', get_bloginfo('template_url') .'/js/tipr/tipr.js', array('jquery'), '1' );
-
-		
 	}
 }
 
 function sundance_add_styles() {
-	if ( ! is_admin() ) {
-		wp_enqueue_style('thickbox');
-		
-		$theme = wp_get_theme();
-		wp_enqueue_style( 'sundance', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
-		wp_enqueue_style( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css', array(), $theme->Version );
-		wp_enqueue_style( 'jquery-ui-css', get_template_directory_uri() . '/css/ui-lightness/jquery-ui-1.10.3.custom.min.css', array(), $theme->Version );
-		wp_enqueue_style( 'style-dealerpage',  get_template_directory_uri() . '/style-dealerpage.css', array(), $theme->Version );
-		wp_enqueue_style( 'style-tipr',  get_template_directory_uri() . '/js/tipr/tipr.css', array(), $theme->Version );
+	if ( ! is_admin() && !is_front_page()) {
+			wp_enqueue_style('thickbox');
+			
+			$theme = wp_get_theme();
+			wp_enqueue_style( 'sundance', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
+			wp_enqueue_style( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css', array(), $theme->Version );
+			wp_enqueue_style( 'jquery-ui-css', get_template_directory_uri() . '/css/ui-lightness/jquery-ui-1.10.3.custom.min.css', array(), $theme->Version );
+			wp_enqueue_style( 'style-dealerpage',  get_template_directory_uri() . '/style-dealerpage.css', array(), $theme->Version );
+			wp_enqueue_style( 'style-tipr',  get_template_directory_uri() . '/js/tipr/tipr.css', array(), $theme->Version );
 	}
 }
 

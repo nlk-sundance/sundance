@@ -1,0 +1,46 @@
+/* AvenirHeavy */
+@font-face {
+    font-family: 'AH';
+    src: url('ah-webfont.eot');
+    src: url('ah-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ah-webfont.woff') format('woff'),
+         url('ah-webfont.ttf') format('truetype'),
+         url('ah-webfont.svg#AH') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* AvenirLight */
+@font-face {
+    font-family: 'AL';
+    src: url('al-webfont.eot');
+    src: url('al-webfont.eot?#iefix') format('embedded-opentype'),
+         url('al-webfont.woff') format('woff'),
+         url('al-webfont.ttf') format('truetype'),
+         url('al-webfont.svg#AL') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* AvenirMedium */
+@font-face {
+    font-family: 'AM';
+    src: url('am-webfont.eot');
+    src: url('am-webfont.eot?#iefix') format('embedded-opentype'),
+         url('am-webfont.woff') format('woff'),
+         url('am-webfont.ttf') format('truetype'),
+         url('am-webfont.svg#AM') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* AvenirRegular */
+@font-face {
+    font-family: 'AR';
+    src: url('ar-webfont.eot');
+    src: url('ar-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ar-webfont.woff') format('woff'),
+         url('ar-webfont.ttf') format('truetype'),
+         url('ar-webfont.svg#AR') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
