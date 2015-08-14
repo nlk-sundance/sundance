@@ -1,6 +1,6 @@
 <?php
 /**
- * Home Page template file
+ * Template Name: HomePage
  *
  * @package Sundance
  * @subpackage Sundance
