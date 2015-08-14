@@ -652,15 +652,21 @@ ul.hydrotherapy li
     margin-right: -11px;
 }
 
-ul.categories{
+ul.categories, .blogcat ul{
 	padding: 0px;
 }
 
-ul.categories li{
+ul.categories li, .blogcat ul li{
 	list-style-type: none;
+	display: inline-block;
+    width: 45%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    padding-right: 2%;
 }
 
-ul.categories li a{
+ul.categories li a, .blogcat ul li a{
 	color: #666666;
 	font-size: 12px;
 	line-height: 18px;
@@ -836,6 +842,30 @@ ul.footer-links li.border
 	clear: both;
 	margin: 0 auto;
 }
+
+.two-col-special {
+    border: 1px dotted blue;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.two-col-special li {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top; /* In case multi-word categories form two lines */
+}
+.two-col-special li:before {
+    content: '+';
+    padding: 5px;
+    margin-right: 5px; /* you can tweak the gap */
+    color: orange;
+    background-color: white; /* in case you want a color... */
+    display: inline-block;
+}
+
 
 @media(max-width: 767px){
 	.wrapper.headercontainer h1.logo a{

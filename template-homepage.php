@@ -178,13 +178,13 @@ get_header('bootstrap'); ?>
 	  			<div class="row news">
 	  				<div class="col-xs-12 col-sm-4 col-md-4">
 	  					<h1>Blog</h1>
-	  					<p>From news on the best ways to care for your spa to how to get a better night's sleep. Learn and stay informed with our Sundance Spas <a href="<?php echo get_bloginfo('url'); ?>/spa-blog/">Blog</a>.</p>
+	  					<p>From news on the best ways to care for your spa to how to get a better night's sleep. Learn and stay informed with our Sundance Spas...<a href="<?php echo get_bloginfo('url'); ?>/spa-blog/">Read More</a>.</p>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4">
 	  					<h1>Online Financing</h1>
 	  					<p><span>Qualify for online financing now.</span> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
 	  				</div>
-	  				<div class="col-xs-12 col-sm-2 col-md-2 tub">
+	  				<div class="col-xs-12 col-sm-4 col-md-4 tub blogcat">
 	  					<h1>Categories</h1>
 	  					<?php
 							if ( false === ( $special_query_results = get_transient( 'wp_list_categories' ) ) ) {
@@ -196,16 +196,6 @@ get_header('bootstrap'); ?>
 							$wp_list_categories = get_transient( 'wp_list_categories' );
 							echo $wp_list_categories;
 						?>	
-	  				</div>
-	  				<div class="col-xs-12 col-sm-2 col-md-2 tub1">
-	  					<ul class="rightcategories">
-		  					<li><a href="#">Hot Tub Reviews</li>
-		  					<li><a href="#">Hot Tub Sales and Promotions</a></li>
-		  					<li><a href="#">Hot Tub Series and Models</a></li>
-		  					<li><a href="#">Sundance Spas Dealers</a></li>
-		  					<li><a href="#">Sundance Spas Events</a></li>
-		  					<li><a href="#">Sundance Spas Lifestyle</a></li>
-		  				</ul>	
 	  				</div>
 	  			</div>
 	  		</div>
