@@ -194,7 +194,7 @@ get_header('bootstrap'); ?>
 							}
 							// Use the data like you would have normally...
 							$wp_list_categories = get_transient( 'wp_list_categories' );
-							echo $wp_list_categories;
+							echo '<ul class="categories">'.$wp_list_categories.'</ul>';
 						?>	
 	  				</div>
 	  			</div>
