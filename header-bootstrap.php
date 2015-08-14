@@ -41,7 +41,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <?php wp_enqueue_script('jquery'); ?>
+    <?php 
+    	wp_enqueue_script('jquery');
+		wp_head(); 
+    ?>
     <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
   </head>
   
@@ -57,19 +60,21 @@
   		<div class="container">
   			<div class="row">
   				<div class="col-xs-12 col-sm-5 col-md-5">
-  					<h1 class="logo"><a href="#">logo</a></h1>
+  					<h1 class="logo"><a href="<?php bloginfo('url'); ?>">logo</a></h1>
   				</div>
   				<div class="col-xs-12 col-sm-7 col-md-7">
   					<ul class="toplist">
-  						<li class="listborder"><a href="#">Free Brochure</a></li>
-  						<li><a href="#">Nearest Dealer</a></li>
-  						<li><form><input type="text" class="zip btn-start" placeholder="zip/postal code" /></form></li>
+  						<li class="listborder"><a href="<?php bloginfo('url'); ?>/request-literature/">Free Brochure</a></li>
+  						<li><a href="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/">Nearest Dealer</a></li>
+  						<li>
+  							<form id="dealer-finder" method="post" action="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/cities/">
+								<input type="text" class="zip btn-start" name="zip" id="zip" placeholder="zip/postal code" />
+								<input name="zipcodeSearch" value="1" type="hidden">
+							</form>
+  						</li>
   					</ul>
-  				</div>
-  			</div>		
-			<div class="row">
-				<div class="col-xs-12">
-					<nav class="navbar navbar-default" role="navigation">
+  					<div class="clear"></div>
+  					<nav class="navbar navbar-default" role="navigation">
 						<div class="container-fluid">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
@@ -83,29 +88,49 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 										<ul class="nav navbar-nav">
-											<li class="listborder">
-												<a href="#">SPA<span class="sr-only">(current)</span></a>
+											<li class="listborder dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPA</a>
+												<ul class="dropdown-menu">
+													<li><a href="<?php bloginfo('url'); ?>/selectseries/">Select Series<sup>&trade;</sup></a></li>
+													<li><a href="<?php bloginfo('url'); ?>/880series/">880 Series<sup>&trade;</sup></a></li>
+													<li><a href="<?php bloginfo('url'); ?>/780series/">780 Series<sup>&trade;</sup></a></li>
+													<li><a href="<?php bloginfo('url'); ?>/680series/">680 Series<sup>&trade;</sup></a></li>
+												</ul>
 											</li>
 											<li class="listborder">
-												<a href="#">ABOUT US</a>
+												<a href="<?php bloginfo('url'); ?>/about-us/">ABOUT US</a>
 											</li>
 											<li class="listborder dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ACCESSORIES</a>
-												<ul class="dropdown-menu">
-										            <li><a href="#">Action</a></li>
-										            <li><a href="#">Another action</a></li>
-										            <li><a href="#">Something else here</a></li>
-										            <li role="separator" class="divider"></li>
-										            <li><a href="#">Separated link</a></li>
-										            <li role="separator" class="divider"></li>
-										            <li><a href="#">One more separated link</a></li>
-										          </ul>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/spa-steps/">Steps</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/spa-scents/">SunScents</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/spa-cleaner/">Water Purification</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/spa-filters/">Spa Filters for Your Hot Tub</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/cover-lifters/">Spa Cover Lifters &amp; Accessories</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/spa-equipment/">Accessories Bazaar</a>
+														</li>
+														<li>
+															<a href="<?php bloginfo('url'); ?>/accessories/sunstrong-covers/">Sunstrong™ Covers</a>
+														</li>
+													</ul>
 											</li>
 											<li class="listborder">
-												<a href="#">OWNER</a>
+												<a href="<?php bloginfo('url'); ?>/customer-care/">OWNER</a>
 											</li>
 											<li class="listborder">
-												<a href="#">GET PRICING</a>
+												<a href="<?php bloginfo('url'); ?>/get-a-quote/">GET PRICING</a>
 											</li>
 											<li class="search">
 												<a href="#">SEARCH</a>
@@ -114,7 +139,7 @@
 							</div>
 						</div><!-- /.container-fluid -->
 					</nav>
-				</div>
-			</div>
+  				</div>
+  			</div>
   		</div>
   	</section>
