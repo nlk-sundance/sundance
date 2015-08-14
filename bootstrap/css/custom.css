@@ -206,6 +206,29 @@ ul.navbar-nav li.search a{
 	min-height: 201px;
 }
 
+.wrapper.minicontainer .hovercard
+{
+	  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+	display: block;
+	height: 201px;
+	width: 210px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapper.minicontainer .hovercard:hover
+{
+	position: absolute;
+	width: 220px;
+	height: 215px;
+	top: -15px;
+	left: -20px;
+}
+
 .wrapper.minicontainer .therapy
 {
 	background: url("../images/image2.png") 0 0 no-repeat transparent;

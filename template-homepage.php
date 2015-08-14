@@ -29,28 +29,28 @@ get_header('bootstrap'); ?>
   			<div class="row ">
   				<div class="col-xs-12 col-sm-3 col-md-3">
   					<div class="selling">
-  						<div class="bestselling">
+  						<div class="bestselling hovercard">
   				<h3>BEST SELLING</h3>
   				</div>
   				</div>
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
   					<div class="therapy">
-  						<div class="bestherapy">
+  						<div class="bestherapy hovercard">
   				<h3>THERAPY</h3>
   				</div>
   				</div> 				
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
   				<div class="entertaining">
-  						<div class="mostentertaining">
+  						<div class="mostentertaining hovercard">
   				<h3>ENTERTAINING</h3>
   				</div>
   				</div> 				
   				</div> 				
   				<div class="col-xs-12 col-sm-3 col-md-3">
   				<div class="search">
-  						<div class="mostsearch">
+  						<div class="mostsearch hovercard">
   				<h3>SEARCH BY SIZE</h3>
   				</div>
   				</div> 	
