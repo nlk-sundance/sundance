@@ -2745,6 +2745,74 @@ include('functions_trackingcodes.php');
 
 
 
+/**
+* Is SubPage?
+*
+* Checks if the current page is a sub-page and returns true or false.
+*
+* @param  $page mixed optional ( post_name or ID ) to check against.
+* @return boolean
+*/
+function sds_is_subpage( $page = null )
+{
+    global $post;
+    // is this even a page?
+    if ( ! is_page() )
+        return false;
+    // does it have a parent?
+    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+        return false;
+    // is there something to check against?
+    if ( ! isset( $page ) ) {
+        // yup this is a sub-page
+        return true;
+    } else {
+        // if $page is an integer then its a simple check
+        if ( is_int( $page ) ) {
+            // check
+            if ( $post->post_parent == $page )
+                return true;
+        } else if ( is_string( $page ) ) {
+            // get ancestors
+            $parent = get_ancestors( $post->ID, 'page' );
+            // does it have ancestors?
+            if ( empty( $parent ) )
+                return false;
+            // get the first ancestor
+            $parent = get_post( $parent[0] );
+            // compare the post_name
+            if ( $parent->post_name == $page )
+                return true;
+        }
+        return false;
+    }
+}
+
+
+
+function sharpspring_become_a_dealer() {
+	$str = '<script type="text/javascript">
+		var _ss = _ss || [];
+		_ss.push(\'_setDomain\', \'https://koi-7AFC9LNY.sharpspring.com/net\');
+		_ss.push(\'_setAccount\', \'KOI-II72QWOE\');
+		_ss.push(\'_trackPageView\');
+		(function(){ 
+			var ss = document.createElement(\'script\');
+			ss.type = \'text/javascript\';
+			ss.async = true;
+			ss.src = (\'https:\' == document.location.protocol ? \'https://\' : \'http://\') + \'koi-7AFC9LNY.sharpspring.com/client/ss.js?ver=1.1.1\';
+			var scr = document.getElementsByTagName(\'script\')[0];
+			scr.parentNode.insertBefore(ss, scr); 
+		}
+		)();
+		</script>';
+	if ( sds_is_subpage('become-a-dealer') || is_page( 'become-a-dealer' ) )
+		echo $str;
+}
+
+add_action( 'wp_head', 'sharpspring_become_a_dealer' );
+
+
 /*	*	*	*	*	*	*	*	*
  *
  *	SDS Startup Guide Web app
