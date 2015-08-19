@@ -263,7 +263,7 @@ dataLayer.push({
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
             ?>
             <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View MSRP</a>
-            <div class="msrp" style="display: none;">
+            <div class="msrp" style="/* display: none; */">
                 <?php echo '<p><span class="msrp-price">' . $msrp . '</span> MSRP</p>'; ?>
                 <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
                 <a id="msrp-pricing" href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
