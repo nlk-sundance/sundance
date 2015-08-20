@@ -18,7 +18,7 @@ get_header(); ?>
 	<div class="main col w960">
 		<div class="main-title fullwidth-title">
 			<?php the_post_thumbnail('banner-full'); ?>
-			<h1>HOT TUB BUYER'S GUIDE</h1>
+			<h1>SPAS BUYER'S GUIDE</h1>
 		</div>
 	</div>
 </div>
