@@ -12,6 +12,23 @@
  * @subpackage Sundance
  * @since Sundance 2.0
  */
+
+
+/**
+ * http_response_code / status_header fix for tub pages
+ *
+ * We are bypassing all the 404fix function mess and just directly embedding on single tub pages for now. The whole build/system for generating pages is a nightmare!
+ * @see https://ninthlink.atlassian.net/browse/JAC-870
+ *
+ */
+if( function_exists('http_response_code') ) {
+    http_response_code(200);
+} else {
+    status_header(200);
+}
+
+
+
 get_header();
 while ( have_posts() ) : the_post();
 global $post;
@@ -246,7 +263,7 @@ dataLayer.push({
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
             ?>
             <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View MSRP</a>
-            <div class="msrp" style="display: none;">
+            <div class="msrp" style="/* display: none; */">
                 <?php echo '<p><span class="msrp-price">' . $msrp . '</span> MSRP</p>'; ?>
                 <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
                 <a id="msrp-pricing" href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
