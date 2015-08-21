@@ -26,7 +26,10 @@ get_header(); ?>
                     break;
             }
             if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
-                <!-- Spring Promo -->
+                <!-- Promo -->
+                <style type="text/css">
+                #home-dealer-locate { display: none; }
+                </style>
                 <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php echo $promo_img; ?>" width="960" height="320" alt="Hot Tubs" /></a>
             <?php else : ?>
                 <!-- Default -->
