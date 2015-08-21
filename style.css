@@ -5691,3 +5691,17 @@ a#show-msrp.close {
 	color: #4b5257;
 	font-family: "AH";
 }
+/* ----- LABOR DAY SALE ----- */
+.labor-head { font-family: "AM"; font-size: 17px; }
+.labor-head .tagline { padding-top: 5px; }
+.labor-main-content .c2a, .labor-main-content .foot-note { font-family: "AL"; color: #fff; }
+.labor-main-content .c2a h2 { font-size: 36px; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid #fff; display: inline-block; padding-bottom: 10px; margin-bottom: 10px;}
+.labor-main-content .c2a .line1 { font-size: 22px; text-transform: uppercase; display: inline-block; border-bottom: 2px solid #fff; padding-bottom: 10px;  margin-bottom: 10px;}
+.labor-main-content .c2a .line2 { font-size: 35px; font-weight: bold; }
+.labor-main-content .c2a .line3 { font-size: 18px; }
+.labor-main-content .gfield_required, .labor-main-content label { display: none; }
+.labor-main-content input.input-md { border-radius: 5px; border: 1px solid #b29f77; padding: 10px 0 10px 10px;  margin-bottom: 10px!important;}
+.labor-bottom-content2 { position: relative; }
+.labor-bottom-content h3 { color: #786c5f; font-weight: bold; font-size: 35px; padding-top: 8px; margin-left: 25px;}
+.labor-bottom-content2 p { font-size: 16px; color: #333; }
+.labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
