@@ -48,7 +48,8 @@ function submitGeneric() {
 
 	            <div itemscope itemtype="http://schema.org/Product">
 	                <meta itemprop="name" content="<?php echo the_title(); ?>" />
-	                <div id="BVRRContainer">
+	                <div id="BVRRContainer" style="position: relative;">
+	                	<button onclick="submitGeneric();" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button>
 	                    <?php echo $bv->reviews->getContent();?>
 	                </div>
 	            </div>
