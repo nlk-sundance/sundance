@@ -7,18 +7,34 @@
  * @since Sundance 2.0
  */
 
+$is_live = ( sds_my_server() == 'live' ? true : false );
 $bv = new BV(
     array(
         'deployment_zone_id' => 'ReadOnly-en_US',
         'product_id' => "SDS-ALL-REVIEWS", // must match ExternalID in the BV product feed
         'cloud_key' => 'sundancespas-486bb392da92b7b9f1e1628eec33b8ae',
-        'staging' => false
+        'staging' => $is_live
         )
     );
 
 
 get_header(); ?>
 
+<script type="text/javascript">                  
+$BV.configure("global", { "productId" : "SDS-ALL-REVIEWS" });
+$BV.ui( 'rr', 'show_reviews', {
+doShowContent : function () {
+    // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+}
+});
+function submitGeneric() {
+    $BV.ui(
+        "rr",
+        "submit_generic",
+        { "categoryId" : "SDS" }
+    );
+}
+</script>
 <div class="cols">
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="main col w730">
@@ -50,21 +66,6 @@ get_header(); ?>
 
 <br class="clear" />
 
-<script type="text/javascript">                  
-$BV.configure("global", { "productId" : "JHT-ALL-REVIEWS" });
-$BV.ui( 'rr', 'show_reviews', {
-doShowContent : function () {
-    // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-}
-});
-function submitGeneric() {
-    $BV.ui(
-        "rr",
-        "submit_generic",
-        { "categoryId" : "JHT" }
-    );
-}
-</script>
 
 
 <?php get_footer(); ?>

@@ -3205,6 +3205,8 @@ function sds_my_server() {
 			break;
 		case 'http://localhost/sundancespas.com' :
 		case 'http://localhost/sundancespas.com/' :
+		case 'http://localhost.sundancespas.com' :
+		case 'http://localhost.sundancespas.com/' :
 			return 'local';
 			break;
 	}
