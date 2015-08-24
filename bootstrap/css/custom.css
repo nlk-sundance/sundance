@@ -133,13 +133,15 @@ ul.navbar-nav li.search a{
 
 .wrapper.bannercontainer{
 	background: #000;
+	background: url("../images/slider.jpg") center center no-repeat #000;
+	background-size: cover;
 }
 
 .wrapper.bannercontainer .bigcontainer
 {
-	background: url("../images/slider.jpg") center 0px no-repeat transparent;
+	
 	min-height: 492px;
-	background-size: cover;
+	xbackground-size: cover;
 }
 
 .wrapper.bannercontainer .bannercaption
