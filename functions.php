@@ -3227,7 +3227,7 @@ function sds_my_server() {
 			if ( is_page('reviews') ) {
 				if( sds_my_server() != 'live' )
 				{
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/ReadOnly/en_US/bvapi.js', array(), '1.0', false); //staging
 				}
 				else
 				{
