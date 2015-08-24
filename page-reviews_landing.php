@@ -43,13 +43,12 @@ function submitGeneric() {
 			<h1><?php sundance_pagetitle(); ?></h1>
 		</div>
 		<div class="page">
-			<div class="entry-content">
+			<div class="entry-content" style="position: relative;">
 				<?php the_content(); ?>
-
+				<button onclick="submitGeneric();" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button>
 	            <div itemscope itemtype="http://schema.org/Product">
 	                <meta itemprop="name" content="<?php echo the_title(); ?>" />
-	                <div id="BVRRContainer" style="position: relative;">
-	                	<button onclick="submitGeneric();" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button>
+	                <div id="BVRRContainer">
 	                    <?php echo $bv->reviews->getContent();?>
 	                </div>
 	            </div>
