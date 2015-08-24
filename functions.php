@@ -2686,7 +2686,7 @@ function custom_data_layer_container() {
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	setcookie("sdscid", $custId, $expire, '/');
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
@@ -2700,7 +2700,7 @@ function custom_data_layer_container() {
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
 		$parts = explode( "&", get_the_title($post->ID) );
 		$prodId = $parts[0];
-		setcookie("sdsspa", $prodId, $expire, '/');
+		//setcookie("sdsspa", $prodId, $expire, '/');
 
 		$str .= '"productId":"' . $prodId . '",';
 	}
