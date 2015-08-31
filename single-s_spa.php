@@ -138,7 +138,7 @@ dataLayer.push({
     'event':'pageReady'
 });
 </script>
-<div class="cols istub <?php echo strtolower( $ser->post_title ); ?>">
+<div class="cols istub <?php echo ( is_numeric($ser->post_title) ? 'series' . $ser->post_title : strtolower( $ser->post_title ) ); ?>">
   <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
