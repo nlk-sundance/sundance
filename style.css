@@ -5703,6 +5703,11 @@ a#show-msrp.close {
     min-width: 960px;
 }
 
+.hd .mainMenu
+{
+	width: auto;
+}
+
 .hd .mainMenu li:first-child
 {
 	background: none;
@@ -5751,6 +5756,11 @@ a#show-msrp.close {
 	font-weight: 400;
 	color: #CACED1;
 	line-height: 12px;
+}
+
+.hd .mainMenu .sitemap > ul .sitemapFlop ul.list li a
+{
+	color: #CACED1;
 }
 
 .hd .mainMenu li ul li:hover a{
