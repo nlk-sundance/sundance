@@ -5740,8 +5740,8 @@ a#show-msrp.close {
 
 .hd .mainMenu > li > a
 {
-	padding-left: 8px;
-	padding-right: 8px;
+	xpadding-left: 8px;
+	xpadding-right: 8px;
 }
 
 .hd .mainMenu li ul li a, .hd .mainMenu .sitemap > ul .sitemapFlop ul li a
