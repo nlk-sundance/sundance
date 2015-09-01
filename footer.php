@@ -157,7 +157,10 @@
             }
             // Use the data like you would have normally...
             //$sitemap = get_transient( 's_sitemap' );
-            echo $sitemap; ?></div></li></ul></li><li class="find last"><?php get_sidebar('dlform'); ?></li></ul>
+            echo $sitemap; ?></div></li></ul></li>
+            <?php /* ?><li class="find last"><?php get_sidebar('dlform'); ?></li><?php */ ?>
+            <li class="search"><a href="#">SEARCH</a></li>
+            </ul>
     </div>
 </div>
     

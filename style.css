@@ -5710,7 +5710,7 @@ a#show-msrp.close {
 /* Blue Header */
 
 .hd {
-    background: #3F5364 none repeat scroll 0% 0%;
+    background: #3f5364 none repeat scroll 0% 0%;
     font-family: "AM",Tahoma,Geneva,sans-serif;
     position: absolute;
     top: 0px;
@@ -5744,7 +5744,23 @@ a#show-msrp.close {
 	background: #3F5364;
 }
 
-.hd .mainMenu li ul li a
+.hd .mainMenu li ul li ul, .hd .mainMenu li ul li ul li, .hd .mainMenu .sitemap > ul .sitemapFlop
+{
+	background: #3F5364;
+}
+
+.hd .mainMenu li ul li ul li:hover
+{
+	background: #496175;
+}
+
+.hd .mainMenu > li > a
+{
+	xpadding-left: 8px;
+	xpadding-right: 8px;
+}
+
+.hd .mainMenu li ul li a, .hd .mainMenu .sitemap > ul .sitemapFlop ul li a
 {
 	font-family: "AL";
 	font-size: 13px;
@@ -5756,11 +5772,24 @@ a#show-msrp.close {
 .hd .mainMenu li ul li:hover a{
 	background: #496175;
 }
+
+
+.hd .mainMenu li.search {
+	padding-right: 10px;
+}
+
+.hd .mainMenu li.search a{
+	background: url("bootstrap/images/search_icon.png") no-repeat scroll right 9px transparent;
+    min-width: 22px;
+    min-height: 20px;
+    display: inline-block;
+    padding-right: 25px;
+}
 	
 .hd .toplist {
     position: absolute;
-    top: 10px;
-    right: 30px;
+    top: 0px;
+    right: 5px;
     margin: 0px;
     padding: 0px;
     font-size: 11px;
@@ -5774,8 +5803,9 @@ a#show-msrp.close {
     padding: 0px 5px;
 }
 
+
 .hd ul.toplist li.listborder {
-	background: transparent url("bootstrap/images/footerlinkborder.png") no-repeat scroll right 7px;
+	background: transparent url("bootstrap/images/footerlinkborder.png") no-repeat scroll right 0px;
 	min-width: 3px;
 	min-height: 8px;
 	padding-right: 15px;
