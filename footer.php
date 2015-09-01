@@ -15,7 +15,6 @@
             <h1><a href="<?php bloginfo('url'); ?>">Sundance Spas&reg;</a></h1>
         </div>
         <?php
-        wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
         ?>
         <?php get_template_part( 'block', 'mainmenu' ); ?>
     </div>
