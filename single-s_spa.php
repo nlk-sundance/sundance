@@ -137,12 +137,12 @@ dataLayer.push({
     'event':'pageReady'
 });
 </script>
-<div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
+<div class="cols istub <?php echo ( is_numeric($ser->post_title) ? 'series' . $ser->post_title : strtolower( $ser->post_title ) ); ?>">
   <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
-        <?php if ( $ser->post_title != 'Select' ) { ?>
+        <?php if ( ! in_array( $ser->post_title, array('Select', '680') ) ) { ?>
         <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $serval; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($ser->post_title); ?> Series</div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>

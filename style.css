@@ -926,8 +926,9 @@ strong{
 		color: #fff;
 		text-transform: uppercase;
 	}
-	.bd .istub.select .main .spa-name {
-		bottom: -14px;
+	.bd .istub.select .main .spa-name,
+	.bd .istub.series680 .main .spa-name {
+		bottom: -11px;
 	}
 	.bd .istub .main .spa-name sup {
 		font-size: smaller;
