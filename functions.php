@@ -2688,7 +2688,7 @@ function custom_data_layer_container() {
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	//setcookie("sdscid", $custId, $expire, '/'); // moved to alternate function - setcookie can only be called on init or sooner
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
@@ -2705,6 +2705,7 @@ function custom_data_layer_container() {
 		$parts = explode( "&", get_the_title($post->ID) );
 		$prodId = $parts[0];
 		//setcookie("sdsspa", $prodId, $expire, '/');
+
 		$str .= '"productId":"' . $prodId . '",';
 	}
 	if ( get_post_type($post->ID) == "s_cat" ) { // is category spa page
@@ -3222,6 +3223,8 @@ function sds_my_server() {
 			break;
 		case 'http://localhost/sundancespas.com' :
 		case 'http://localhost/sundancespas.com/' :
+		case 'http://localhost.sundancespas.com' :
+		case 'http://localhost.sundancespas.com/' :
 			return 'local';
 			break;
 	}
@@ -3242,7 +3245,7 @@ function sds_my_server() {
 			if ( is_page('reviews') ) {
 				if( sds_my_server() != 'live' )
 				{
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/ReadOnly/en_US/bvapi.js', array(), '1.0', false); //staging
 				}
 				else
 				{
