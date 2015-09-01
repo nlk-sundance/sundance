@@ -5691,6 +5691,7 @@ a#show-msrp.close {
 	color: #4b5257;
 	font-family: "AH";
 }
+<<<<<<< HEAD
 /* ----- LABOR DAY SALE ----- */
 .labor-head { font-family: "AM"; font-size: 17px; }
 .labor-head .tagline { padding-top: 5px; }
@@ -5705,3 +5706,112 @@ a#show-msrp.close {
 .labor-bottom-content h3 { color: #786c5f; font-weight: bold; font-size: 35px; padding-top: 8px; margin-left: 25px;}
 .labor-bottom-content2 p { font-size: 16px; color: #333; }
 .labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
+=======
+
+/* Blue Header */
+
+.hd {
+    background: #797866 none repeat scroll 0% 0%;
+    font-family: "AM",Tahoma,Geneva,sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-width: 960px;
+}
+
+.hd .mainMenu li:first-child
+{
+	background: none;
+}
+
+.hd .mainMenu li a
+{
+	font-family: "AL";
+	font-size: 13px;
+	font-weight: 400;
+	color: #CACED1;
+	line-height: 12px;
+}
+
+.hd .mainMenu li:hover a,
+	.hd .mainMenu li.active a{
+		background: none;
+		color: #CACED1;
+}
+
+.hd .mainMenu li ul
+{
+	background: #3F5364;
+}
+
+.hd .mainMenu li ul li a
+{
+	font-family: "AL";
+	font-size: 13px;
+	font-weight: 400;
+	color: #CACED1;
+	line-height: 12px;
+}
+
+.hd .mainMenu li ul li:hover a{
+	background: #496175;
+}
+	
+.hd .toplist {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    width: 375px;
+}
+
+
+.hd ul.toplist li 
+{
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.hd ul.toplist li.listborder {
+	background: transparent url("bootstrap/images/footerlinkborder.png") no-repeat scroll right 7px;
+	min-width: 3px;
+	min-height: 8px;
+	padding-right: 15px;
+}
+
+.hd ul.toplist li a 
+{
+    text-decoration: none;
+	color: #CACED1;
+	font-family: "AM";
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 11px;
+}
+
+.hd ul.toplist li:last-child 
+{
+	border-right: 0px ;
+}
+
+.hd .zip.btn-start
+{
+    border: 1px solid transparent;
+    background-color: #fff;
+    width: 145px;
+    border-radius: 9px;
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: 400;
+    color: #959595;
+    padding-top: 2px;
+    xpadding-left: 2px;
+    min-height: 26px;
+    margin-top: 11px;
+    padding-left: 10px;
+}
+
+>>>>>>> JAC-798
