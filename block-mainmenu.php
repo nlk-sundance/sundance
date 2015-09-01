@@ -1,3 +1,12 @@
+<?php
+/**
+ * The Main menu <ul>
+ *
+ * @package Sundance
+ * @subpackage Sundance
+ * @since Sundance 2.0
+ */
+?>
 <ul class="mainMenu">
     <li class="hover"><?php
         global $tubcats;
