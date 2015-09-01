@@ -14,8 +14,18 @@
         <div class="logo">
             <h1><a href="<?php bloginfo('url'); ?>">Sundance Spas&reg;</a></h1>
         </div>
+        <ul class="toplist">
+  						<li class="listborder"><a href="<?php bloginfo('url'); ?>/request-literature/">Free Brochure</a></li>
+  						<li><a href="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/">Nearest Dealer</a></li>
+  						<li>
+  							<form id="dealer-finder" method="post" action="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/cities/">
+								<input type="text" class="zip btn-start" name="zip" id="zip" placeholder="zip/postal code" />
+								<input name="zipcodeSearch" value="1" type="hidden">
+							</form>
+  						</li>
+  					</ul>
         <?php
-        wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
+        //wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
         ?>
         <ul class="mainMenu">
             <li class="hover"><?php
