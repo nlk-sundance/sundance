@@ -57,7 +57,7 @@
             global $post;
             if ( is_page(2447) || ( $post->post_parent == 2447 ) ) echo ' active';
         } ?>"><a href="<?php echo get_permalink(2447); ?>">Backyard Life</a>
-        <ul>
+        <ul class="backyard-ideas">
             <?php echo sundance_wplistpages_cache(2447, 's_backyard_listpages'); ?>
         </ul>
     </li>
