@@ -2665,6 +2665,11 @@ strong{
 		font-size:11px;
 		padding: 0 0 10px;
 	}
+
+	ul.backyard-ideas li.page-item-6112 ul.children {
+		display: none;
+	}
+
 	/* - - - FORM CONTENT - - - */
 	.w960 .formWrap { width: 730px; }
 	.formWrap p,

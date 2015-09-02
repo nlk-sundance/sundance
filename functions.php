@@ -1885,7 +1885,7 @@ function sundance_acc_cats() {
 
 function sundance_wplistpages_cache( $parent_id, $transname ) {
 	if ( false === ( $special_query_results = get_transient( $transname ) ) ) {
-		$o = wp_list_pages('child_of='. absint($parent_id) .'&title_li=&echo=0&sort_column=post_date&sort_order=DESC');
+		$o = wp_list_pages('child_of='. absint($parent_id) .'&title_li=&echo=0');
 		set_transient( $transname, $o, 60*60*12 );
 	}
 	return get_transient( $transname );
