@@ -28,7 +28,6 @@ doShowContent : function () {
 }
 });
 function submitGeneric() {
-	console.log('bv-review-triggered');
     $BV.ui(
         "rr",
         "submit_generic",
