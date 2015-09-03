@@ -127,13 +127,14 @@ $ser = get_post($serID);
 $vid = esc_attr($s_specs['video_id']);
 if ( isset($vid) && !empty($vid) ) :
     $videoid = $vid;
+    $vidtitle = get_the_title() . ' Spa';
 else :
     $viditle = $ser->post_title;
     if ( $vidtitle == 'Select' ) { $videoid = false; } //'aDETNR5oAgg'
     if ( $vidtitle == 880 ) { $videoid = 'zCdzYmarTWk'; }
     if ( $vidtitle == 780 ) { $videoid = '5aWp_SGPXD8'; }
     if ( $vidtitle == 680 ) { $videoid = false; } //'38_rQgt0IAc'
-    $viditle = $vidtitle;
+    $vidtitle .= ' Series';
 endif;
 
 ?>
@@ -150,7 +151,7 @@ dataLayer.push({
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
         <?php if ( $vidtitle ) { ?>
-        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($videoid); ?> Series</div>
+        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($vidtitle); ?> Series</div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
