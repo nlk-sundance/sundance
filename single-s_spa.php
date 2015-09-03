@@ -151,8 +151,8 @@ dataLayer.push({
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
-        <?php if ( $vidtitle ) { ?>
-        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($vidtitle); ?> Series</div>
+        <?php if ( $videoid ) { ?>
+        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($vidtitle); ?></div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
