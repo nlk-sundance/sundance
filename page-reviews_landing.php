@@ -36,8 +36,8 @@ function submitGeneric() {
     );
 }
 (function($){
-	(window).load(function(){
-		$('.bv-write-review').bind('click', function(e){
+	$(window).load(function(){
+		$('.bv-write-review').removeAttribute( 'onclick' ).bind('click', function(e){
 			e.preventDefault();
 			submitGeneric();
 		});
