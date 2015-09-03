@@ -36,9 +36,11 @@ function submitGeneric() {
     );
 }
 (function($){
-	$('.bv-write-review').bind('click', function(e){
-		e.preventDefault();
-		submitGeneric();
+	(window).load(function(){
+		$('.bv-write-review').bind('click', function(e){
+			e.preventDefault();
+			submitGeneric();
+		});
 	});
 })(jQuery);
 </script>
