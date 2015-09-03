@@ -7,13 +7,13 @@
  * @since Sundance 2.0
  */
 
-$is_live = ( sds_my_server() == 'live' ? true : false );
+$is_staging = ( sds_my_server() == 'live' ? false : true );
 $bv = new BV(
     array(
         'deployment_zone_id' => 'ReadOnly-en_US',
         'product_id' => "SDS-ALL-REVIEWS", // must match ExternalID in the BV product feed
         'cloud_key' => 'sundancespas-486bb392da92b7b9f1e1628eec33b8ae',
-        'staging' => $is_live
+        'staging' => $is_staging
         )
     );
 
@@ -28,13 +28,20 @@ doShowContent : function () {
 }
 });
 function submitGeneric() {
-	console.log('bv-review-triggered');
     $BV.ui(
         "rr",
         "submit_generic",
         { "categoryId" : "SDS" }
     );
 }
+(function($){
+	$(window).load(function(){
+		$('.bv-write-review').removeAttr( 'onclick' ).bind('click', function(e){
+			e.preventDefault();
+			submitGeneric();
+		});
+	});
+})(jQuery);
 </script>
 <div class="cols">
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -46,7 +53,7 @@ function submitGeneric() {
 		<div class="page">
 			<div class="entry-content" style="position: relative;">
 				<?php the_content(); ?>
-				<button id="submit-review" type="button" onclick="submitGeneric()" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button>
+				<button id="submit-review" type="button" onclick="submitGeneric()" class="bigBlueBtn" style="position: absolute; right: 0; top: 62px; padding: 10px;">Write a Review</button>
 	            <div itemscope itemtype="http://schema.org/Product">
 	                <meta itemprop="name" content="<?php echo the_title(); ?>" />
 	                <div id="BVRRContainer">
