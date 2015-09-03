@@ -130,12 +130,24 @@ if ( isset($vid) && !empty($vid) ) :
     $videoid = $vid;
     $vidtitle = get_the_title() . ' Spa';
 else :
-    $viditle = $ser->post_title;
-    if ( $vidtitle == 'Select' ) { $videoid = false; } //'aDETNR5oAgg'
-    if ( $vidtitle == 880 ) { $videoid = 'zCdzYmarTWk'; }
-    if ( $vidtitle == 780 ) { $videoid = '5aWp_SGPXD8'; }
-    if ( $vidtitle == 680 ) { $videoid = false; } //'38_rQgt0IAc'
-    $vidtitle .= ' Series';
+    switch ($ser->post_title) {
+        case 'Select':
+            $videoid = false; //'aDETNR5oAgg'
+            break;
+        case '880':
+            $videoid = 'zCdzYmarTWk'; //'zCdzYmarTWk'
+            break;
+        case '780':
+            $videoid = '5aWp_SGPXD8'; //'5aWp_SGPXD8'
+            break;
+        case '680':
+            $videoid = false; //'38_rQgt0IAc'
+            break;
+        default:
+            $videoid = false;
+            break;
+    }
+    $vidtitle = $ser->post_title . ' Series';
 endif;
 
 ?>
@@ -152,7 +164,7 @@ dataLayer.push({
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
         <?php if ( $videoid ) { ?>
-        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($vidtitle); ?></div>
+        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php echo $vidtitle; ?></div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
