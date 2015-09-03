@@ -37,7 +37,7 @@ function submitGeneric() {
 }
 (function($){
 	$(window).load(function(){
-		$('.bv-write-review').removeAttribute( 'onclick' ).bind('click', function(e){
+		$('.bv-write-review').removeAttr( 'onclick' ).bind('click', function(e){
 			e.preventDefault();
 			submitGeneric();
 		});
@@ -54,7 +54,7 @@ function submitGeneric() {
 		<div class="page">
 			<div class="entry-content" style="position: relative;">
 				<?php the_content(); ?>
-				<!--button id="submit-review" type="button" onclick="submitGeneric()" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button-->
+				<button id="submit-review" type="button" onclick="submitGeneric()" class="bigBlueBtn" style="position: absolute; right: 0; padding: 10px;">Write a Review</button>
 	            <div itemscope itemtype="http://schema.org/Product">
 	                <meta itemprop="name" content="<?php echo the_title(); ?>" />
 	                <div id="BVRRContainer">
