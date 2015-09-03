@@ -35,6 +35,11 @@ function submitGeneric() {
         { "categoryId" : "SDS" }
     );
 }
+(function($){
+	$('.bv-write-review').bind('click', function(){
+		$(this).submitGeneric();
+	});
+})(jQuery);
 </script>
 <div class="cols">
 	<?php while ( have_posts() ) : the_post(); ?>
