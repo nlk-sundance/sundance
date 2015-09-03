@@ -125,10 +125,17 @@ $cats = $custom[0];
 $serID = $cats[0];
 $ser = get_post($serID);
 
-if ( $ser->post_title == 'Select' ) { $serval = 'aDETNR5oAgg'; }
-if ( $ser->post_title == 880 ) { $serval = 'zCdzYmarTWk'; }
-if ( $ser->post_title == 780 ) { $serval = '5aWp_SGPXD8'; }
-if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
+$vid = esc_attr($s_specs['video_id']);
+if ( isset($vid) && !empty($vid) ) :
+    $videoid = $vid;
+else :
+    $viditle = $ser->post_title;
+    if ( $vidtitle == 'Select' ) { $videoid = false; } //'aDETNR5oAgg'
+    if ( $vidtitle == 880 ) { $videoid = 'zCdzYmarTWk'; }
+    if ( $vidtitle == 780 ) { $videoid = '5aWp_SGPXD8'; }
+    if ( $vidtitle == 680 ) { $videoid = false; } //'38_rQgt0IAc'
+    $viditle = $vidtitle;
+endif;
 
 ?>
 <script>
@@ -143,8 +150,8 @@ dataLayer.push({
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
-        <?php if ( ! in_array( $ser->post_title, array('Select', '680') ) ) { ?>
-        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $serval; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($ser->post_title); ?> Series</div>
+        <?php if ( $vidtitle ) { ?>
+        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($videoid); ?> Series</div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
