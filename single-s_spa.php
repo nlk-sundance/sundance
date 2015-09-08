@@ -286,7 +286,7 @@ dataLayer.push({
             <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View MSRP</a>
             <div class="msrp" style="display: none;">
                 <?php echo '<p><span class="msrp-price">' . $msrp . '</span> MSRP</p>'; ?>
-                <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
+                <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Actual retail price may vary based on rebates, incentives and/or discounts that may be available at your local dealer. Please request a quote or visit your local authorized dealer for current pricing information.</p>
                 <a id="msrp-pricing" href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
                 <a id="msrp-dealer" href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
             </div>
