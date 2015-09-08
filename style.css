@@ -5521,7 +5521,7 @@ a.get-colorselector
 }
 a#show-msrp {
 	cursor: pointer;
-	display: none; /* https://ninthlink.atlassian.net/browse/JAC-879 */
+	/*display: none;*/ /* https://ninthlink.atlassian.net/browse/JAC-879, https://ninthlink.atlassian.net/browse/JAC-938 */
 }
 a#show-msrp.close {
 	background: #c2c2c2;
