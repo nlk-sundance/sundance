@@ -181,6 +181,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) 
 {
+	.page .page
+	{
+		padding: 15px;
+	}
+	
 	.color-selector.color-selector-container .color-selector-wrapper .left {
 	    margin-right: 2%;
 	    width: 59.8%;
@@ -213,16 +218,12 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	.color-selector.color-selector-container .color-selector-wrapper .left {
 	    float: none;
 	    width: 100%;
-	    padding-left: 15px;
-	    padding-right: 15px;
 	    height: auto;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .right {
 	    float: none;
 	    width: 100%;
-	    padding-left: 15px;
-	    padding-right: 15px;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
