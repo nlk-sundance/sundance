@@ -212,6 +212,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 @media only screen and (max-width: 767px) 
 {
+	.page .page
+	{
+		padding: 15px;
+	}
+	
 	.color-selector.color-selector-container .color-selector-wrapper {
 		
 	}	
