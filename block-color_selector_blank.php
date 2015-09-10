@@ -199,7 +199,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
 	{
-		top: 40px !important;
+		xtop: 40px !important;
 	}
 }
 
