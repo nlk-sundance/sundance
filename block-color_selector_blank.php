@@ -171,6 +171,12 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	display: none;
 }
 
+.bd {
+    margin-top: 0px !important;
+    max-width: 960px;
+    min-width: auto;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 959px) 
 {
 	.color-selector.color-selector-container .color-selector-wrapper .left {
@@ -179,8 +185,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img {
-	    height: auto;
-	    width: 450px;
+	    height: auto !important;
+	    width: 450px !important;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .right {
@@ -193,7 +199,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
 	{
-		top: 40px;
+		top: 40px !important;
 	}
 }
 
@@ -219,8 +225,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
 	{
-		width: 350px;
-		height: auto;
+		width: 350px !important;
+		height: auto !important;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
