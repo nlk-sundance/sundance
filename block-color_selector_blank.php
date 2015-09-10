@@ -175,6 +175,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
     margin-top: 0px !important;
     max-width: 960px;
     min-width: auto;
+    width: 100%;
+    margin: 0px auto;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) 
