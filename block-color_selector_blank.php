@@ -208,6 +208,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	{
 		xtop: 40px !important;
 	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 29px;
+	}
 }
 
 @media only screen and (max-width: 767px) 
@@ -250,6 +255,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	.show-for-small
 	{
 		display: block;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 23px;
 	}
 	
 }	
