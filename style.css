@@ -4673,6 +4673,7 @@ strong{
 			position: absolute;
   			right: 66px;
   			top: 112px;
+  			z-index: 10;
 		}
 
 
