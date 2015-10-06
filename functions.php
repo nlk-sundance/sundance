@@ -3201,6 +3201,8 @@ function sds_my_server() {
 	switch ( $url ) {
 		case 'http://www.sundancespas.com' :
 		case 'http://www.sundancespas.com/' :
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
 			return 'live';
 			break;
 		case 'http://sundancespas.ninthlink.me' :
@@ -3215,6 +3217,21 @@ function sds_my_server() {
 			break;
 	}
 	return 'live';
+}
+function sds_is_ca() {
+	$url = get_bloginfo('url');
+	switch ( $url ) {
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
+			return true;
+			break;
+		case 'http://www.sundancespas.com' :
+		case 'http://www.sundancespas.com/' :
+		default :
+			return false;
+			break;
+	}
+	return false;
 }
 
 
