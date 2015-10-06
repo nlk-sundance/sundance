@@ -309,6 +309,10 @@ function sundance_body_class($classes) {
 	if ( is_search() ) {
 		$classes[] = 'page';
 	}
+
+	if ( sds_is_ca() ) {
+		$classes[] = 'sds-canada';
+	}
 	
 	return $classes;
 }

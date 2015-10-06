@@ -1830,6 +1830,9 @@ strong{
 		border-top:1px solid #797866;
 		font-family: "AH", Tahoma, Geneva, sans-serif;
 	}
+	.sds-canada.hot-tub-detail .tabContainer .tabs li{
+		width:144px;
+	}
 	.hot-tub-detail .tabContainer .tabs li.current{
 		background:#FFF;
 	}
