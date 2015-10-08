@@ -13,16 +13,16 @@ get_header(); ?>
     	<div class="slide">
             <?php
             $show_promo = true;
-            $promo_start = "8/20/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-            $promo_end = "9/8/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+            $promo_start = "10/08/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+            $promo_end = "10/27/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
                 case 'http://www.sundancespas.ca':
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/Homepage.jpg';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/Homepage-oct2015.jpg';
                     break;
                 
                 default:
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/Homepage.jpg';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/Homepage-oct2015.jpg';
                     break;
             }
             if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>

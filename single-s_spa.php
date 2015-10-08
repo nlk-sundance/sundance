@@ -304,7 +304,7 @@ dataLayer.push({
                 <li><a href="#specs">Specifications</a></li>
                 <li><a href="#jets">Jets</a></li>
                 <li><a href="#options">Options</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <?php if( ! sds_is_ca() ) { ?><li><a href="#reviews">Reviews</a></li><?php } ?>
             </ul>
             <div class="tab highlights current" id="highlights">
                 <div class="inner">
@@ -537,6 +537,7 @@ dataLayer.push({
                     <?php } else echo '<p>No Options</p>'; ?>
                 </div>
             </div>
+            <?php if( ! sds_is_ca() ) { ?>
             <div class="tab reviews" id="reviews">
                 <div class="inner">
                         <div id="BVRRContainer">
@@ -555,6 +556,7 @@ dataLayer.push({
                         </script>
                 </div>
             </div>
+            <?php } ?>
 
             
             
