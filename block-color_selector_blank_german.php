@@ -308,10 +308,10 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Kupfersand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="N/A" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="N/A" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="carribeansurf" data-pdf="carribeansurf" rel="Carribean Surf" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/caribbean-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="N/A" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium-thumb.jpg" height="50" width="50" /></div>
+				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium-thumb.jpg" height="50" width="50" /></div>
 			</div>
 			<h2><strong>CABINETRY:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
