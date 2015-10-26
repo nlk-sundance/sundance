@@ -3360,6 +3360,9 @@ strong{
 		border-radius: 8px;
 		font-size: 12px;
 	}
+	body[class*="/hot-tub-dealer-locator/cities/"] .entry-content {
+		padding: 20px; /* Locate dealer page with no results */
+	}
 	.page.locate.details .entry-content #dealer_details_3col {
 		min-height: 316px;
 		border-bottom: 1px solid #d6d6d6;

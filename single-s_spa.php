@@ -304,7 +304,7 @@ dataLayer.push({
                 <li><a href="#specs">Specifications</a></li>
                 <li><a href="#jets">Jets</a></li>
                 <li><a href="#options">Options</a></li>
-                <?php if( ! sds_is_ca() ) { ?><li><a href="#reviews">Reviews</a></li><?php } ?>
+                <?php if( ! sds_is_ca() ) { ?><li><a href="#reviews" id="show_reviews">Reviews</a></li><?php } ?>
             </ul>
             <div class="tab highlights current" id="highlights">
                 <div class="inner">
@@ -547,10 +547,7 @@ dataLayer.push({
                         $BV.ui( 'rr', 'show_reviews', {
                             doShowContent : function () {
                             // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                                $('ul#spatabs li.current').removeClass('current');
-                                $('div.tab.current').removeClass('current');
-                                $('li a[href="#reviews"]').parent().addClass('current');
-                                $('#reviews').addClass('current').css('display', 'block');
+                                jQuery("#show_reviews").click();
                             }
                         });
                         </script>
