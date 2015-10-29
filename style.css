@@ -3084,7 +3084,8 @@ strong{
 		font-size:10px;
 	}
 	.backyard-life .horzBorder{
-		float: left;
+		clear: both;
+		padding-top: 19px;
 		width: 687px;
 		margin: 20px -9px;
 	}
