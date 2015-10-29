@@ -1229,20 +1229,18 @@ strong{
 		*/
 		.btn.arrow {
 			background: url(images/icons/silver-arrow-center.png) repeat-x 0 0;
+			border-radius: 4px 0 0 4px;
 			color: #fff;
 			cursor: pointer;
 			display: inline-block;
 			font: 14px/38px "AH";
 			height: 33px;
-			margin-left: 3px;
-			margin-right: 16px;
 			padding-left: 17px;
-			padding-right: 4px;
+			padding-right: 13px;
+			position: relative;
 			text-decoration: none;
 			text-shadow: 1px 1px 1px #666, -1px -1px 1px #aaa;
 			text-transform: uppercase;
-			vertical-align: top;
-			width: auto;
 		}
 		.btn.arrow:hover {
 			text-decoration: none;
@@ -1252,6 +1250,7 @@ strong{
 			-o-filter: brightness(0.95);
 			-ms-filter: brightness(0.95);
 		}
+		/*
 		.btn.arrow:before {
 			content: '';
 			background: url(images/icons/silver-arrow-left.png) no-repeat 0 0;
@@ -1261,13 +1260,15 @@ strong{
 			position: relative;
 			width: 3px;
 		}
+		*/
 		.btn.arrow:after {
 			content: '';
 			background: url(images/icons/silver-arrow-right.png) no-repeat 0 0;
 			display: inline-block;
-			height: 33px;
-			position: relative;
-			right: -20px;
+			height: 32px;
+			position: absolute;
+			right: -15px;
+			top: 0;
 			width: 16px;
 		}
 
