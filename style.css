@@ -5703,6 +5703,9 @@ a#show-msrp.close {
 	color: #4b5257;
 	font-family: "AH";
 }
+
+/* lightbox fix */
+#TB_closeWindowButton .screen-reader-text { display: none; }
 /* ----- LABOR DAY SALE ----- */
 .labor-head { font-family: "AM"; font-size: 17px; }
 .labor-head .tagline { padding-top: 5px; }
@@ -5717,3 +5720,4 @@ a#show-msrp.close {
 .labor-bottom-content h3 { color: #786c5f; font-weight: bold; font-size: 35px; padding-top: 8px; margin-left: 25px;}
 .labor-bottom-content2 p { font-size: 16px; color: #333; }
 .labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
+
