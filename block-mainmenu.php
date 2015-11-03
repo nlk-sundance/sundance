@@ -67,7 +67,7 @@
                 <div class="sitemapFlop">
                     <?php
                     if ( true ) { //false === ( $special_query_results = get_transient( 's_sitemap' ) ) ) {
-                        $mm .= '<div class="cols">';
+                        $mm = '<div class="cols">';
                         $mm .= '<div class="col w140">';
                         $mm .= '<h2><a href="'. get_permalink(1894) .'">Hot Tubs</a></h2>';
                         $mm .= '<ul>';
