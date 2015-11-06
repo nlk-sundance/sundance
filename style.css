@@ -3361,9 +3361,25 @@ strong{
 		border-radius: 8px;
 		font-size: 12px;
 	}
-	body[class*="/hot-tub-dealer-locator/cities/"] .entry-content {
-		padding: 20px; /* Locate dealer page with no results */
+	/* Locate dealer page with no results */
+	.\/hot-tub-dealer-locator\/cities\/ .entry-content {
+		padding: 30px;
 	}
+	.\/hot-tub-dealer-locator\/cities\/ .bar2 {
+	    width:55%
+	}
+	.\/hot-tub-dealer-locator\/cities\/ p {
+	    font-size:16px;
+	    line-height:1.4;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bigBlueBtn {
+	    max-width: 16.5em;
+	    text-transform:none;
+	    color:#fff;
+	    padding:8px 1em;
+	    font-family:'AR';
+	}/* end Locate dealer page with no results */
+
 	.page.locate.details .entry-content #dealer_details_3col {
 		min-height: 316px;
 		border-bottom: 1px solid #d6d6d6;
