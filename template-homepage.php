@@ -16,8 +16,8 @@ get_header('bootstrap'); ?>
   				</div>
   				<div class="col-xs-12 col-sm-5 col-md-5">
   					<div class="bannercaption">
-  						<h1>ALIQUAM FINIBUS TRISTI ODIO SIT AMET ULTRICES</h1>
-  						<p>Morbi condimentum ex ipsum, ac tempus est pharetra et. Nullam consequat erat vel sem vestibulum fermentum. Praesent maximus bibendum malesuada.</p>
+  						<h1>DO MORE OF WHAT MATTERS TO YOU.</h1>
+  						<p>With more than 35 years of experience crafting high quality spas, we take pride in helping people spend time meaningfully. So go ahead and relax more. Let your mind wander. Savor each and every moment. Celebrate life. Start your Sundance<sup>&reg;</sup> lifestyle today. You deserve it.</p>
   						<a href="<?php bloginfo('url'); ?>/selectseries/" class="hot btn-start">VIEW HOT TUBS</a>
   					</div>
   				</div>
@@ -65,10 +65,11 @@ get_header('bootstrap'); ?>
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padl0 padr0">
   							<h3>Find Your Nearest Dealer</h3>
+  							<p>Find your nearest dealer and experience the Sundance<sup>&reg;</sup> Spas lifestyle for yourself</p>
   							<ul class="dealerlist">
-	  							<li>Aliquam finibus tristique odio sit amet</li>
-	  							<li>Posuere semper nisi vitae pharetra</li>
-	  							<li>Maecenas ante est</li>
+	  							<li>Get guidance finding the right spa for you</li>
+	  							<li>Test spas wet and dry</li>
+	  							<li>Take advantage of money saving offers</li>
   							</ul>
   							<form id="dealer-finder" method="post" action="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/cities/">
   								<input type="firstname" class="form-control" name="zip" id="zip" placeholder=" Enter your zip code">
@@ -84,11 +85,11 @@ get_header('bootstrap'); ?>
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padr0">
   							<h3>Free Brochure</h3>
+  							<p>Download your free brochure to:</p>
   							<ul class="brochurelist">
-	  							<li>Aliquam finibus tristique odio sit amet</li>
-	  							<li>Posuere semper nisi vitae pharetra</li>
-	  							<li>Tempus in pretium eu</li>
-	  							<li>Maecenas ante est</li>
+	  							<li>Compare spa models at a glance</li>
+	  							<li>Explore benefits of Sundance<sup>&reg;</sup> hydrotherapy</li>
+	  							<li>Learn why owners buy again and again</li>
 	  						</ul>	
 	  						<a href="<?php bloginfo('url'); ?>/request-literature/" class="btn btn-primary btn-blue">GET BROCHURE</a>
   						</div>
@@ -131,27 +132,15 @@ get_header('bootstrap'); ?>
   			<div class="row hydrotherapy">
   				<div class="col-xs-12 col-sm-4 col-md-4">
 	  				<h1>Hydrotherapy</h1>
-	  				<ul class="hydrotherapy">
-		  				<li>Aliquam finibus tristique odio sit amet</li>
-		  				<li>Posuere semper nisi vitae pharetra</li>
-		  				<li>Maecenas ante est</li>
-	  				</ul>
+	  				<p>Understand the healing benefits of Sundance<sup>&reg;</sup> hydrotherapy.</p>
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">
   					<h1>SunSmart WiFi App</h1>
-  					<ul class="hydrotherapy">
-	  					<li>Aliquam finibus tristique odio sit amet</li>
-	  					<li>Posuere semper nisi vitae pharetra</li>
-	  					<li>Maecenas ante est</li>
-	  				</ul>	
+  					<p>The SunSmart<sup>&reg;</sup> WiFi Kit lets you stay in tune with your spa remotely.</p>	
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">
   					<h1>Warranty</h1>
-  					<ul class="hydrotherapy">
-	  					<li>Aliquam finibus tristique odio sit amet</li>
-	  					<li>Posuere semper nisi vitae pharetra</li>
-	  					<li>Maecenas ante est</li>
-	  				</ul>	
+  					<p>Our industry-leading Sundance<sup>&reg;</sup> Spas warranty has you covered.</p>
   				</div>
   			</div>
   		</section>

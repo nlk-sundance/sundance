@@ -511,6 +511,11 @@ ul.dealerlist li, ul.brochurelist li{
 	padding: 0px 25px;
 }
 
+.wrapper.groupcontainer .hydrotherapy p
+{
+	margin-left: 25px;	
+}
+
 .wrapper.tipscontainer h1
 {
 	margin-top:20px;
