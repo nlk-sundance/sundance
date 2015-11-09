@@ -63,7 +63,7 @@ get_header('bootstrap'); ?>
   			<div class="row whitecontent">
   				<div class="col-xs-12 col-sm-6 col-md-6 firstcontent">
   					<div class="row">
-  						<div class="col-xs-12 col-sm-8 col-md-7 padl0 padr0">
+  						<div class="col-xs-12 col-sm-8 col-md-7 padl0 xpadr0">
   							<h3>Find Your Nearest Dealer</h3>
   							<p>Find your nearest dealer and experience the Sundance<sup>&reg;</sup> Spas lifestyle for yourself</p>
   							<ul class="dealerlist">
