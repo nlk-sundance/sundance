@@ -332,7 +332,7 @@ jQuery(function($){
 	function updatepdf() {
 		var pdf1 = $('.color-selector div.shell.thumb.active').attr('data-pdf'),
 			pdf2 = $('.color-selector div.skirt.thumb.active').attr('data-pdf'),
-			pdfroot = "<?php echo get_stylesheet_directory_uri().'/brochures/shellskirtoptions/'; ?>";
+			pdfroot = "<?php echo get_stylesheet_directory_uri().'/brochures/shellskirtoptions/aus/'; ?>";
 		if ( $(this).hasClass('shell') ) {
 			pdf1 = $(this).attr('data-pdf');
 		}
