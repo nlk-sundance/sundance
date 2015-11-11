@@ -293,7 +293,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Das Modell Cameo dient als Muster-Whirlpool zum Zeigen der möglichen Farben. Die Whirlpoolgrößen und Düsenplatzierungen variieren je nach Modell. Nicht alle Farben für alle Modelle verfügbar. Siehe Farbauswahl auf der jeweiligen Modellseite.</p>
+				<p>Das Modell Cameo dient als Muster-Whirlpool um Ihnen alle möglichen Farbkomibationen zu zeigen. Die Whirlpoolgrößen und Düsenplatzierungen variieren je nach Modell. Nicht alle Farben für alle Modelle verfügbar. Siehe Farbauswahl auf der jeweiligen Modellseite.</p>
 			</div>
 
 		</div>
@@ -310,7 +310,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Kupfersand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="carribeansurf" data-pdf="carribeansurf" rel="Carribean Surf" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/caribbean-thumb.jpg" height="50" width="50" /></div>
 			</div>
-			<h2><strong>CABINETRY:</strong> <span class="skirt-name"></span></h2>
+			<h2><strong>VERKLEIDUNG:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
 				<div class="skirt thumb coastal active" timg="coastal" rel="Coastal (Grau)" data-pdf="coastal" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/coastal-thumb.jpg" height="50" width="50" /></div>
 				<div class="skirt thumb mahogny" timg="mahogny" rel="Mahagoni" data-pdf="mahogny" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/mahogny-thumb.jpg" height="50" width="50" /></div>
