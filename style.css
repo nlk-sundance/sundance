@@ -552,7 +552,7 @@ strong{
 	}
 
 	.hd .mainMenu li ul li ul li:hover {
-		background: #e4ecef; /* Old browsers */
+		background: #e4ecef; /* safety */
 		background: -moz-linear-gradient(top,  #e4ecef 70%, #ffffff 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#e4ecef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
