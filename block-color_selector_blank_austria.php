@@ -300,6 +300,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 		
 		<div class="right">
 
+
 			<h2><strong>ACRYL-FARBE:</strong> <span class="shell-name"></span></h2>
 			<div class="shells">
 				<div class="shell thumb active" timg="celestite" data-pdf="celestite" rel="Celestite" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/celestite-thumb.jpg" height="50" width="50"/></div>
