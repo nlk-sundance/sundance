@@ -30,10 +30,10 @@
 	define( 'TESTAPI', 'http://sundanceqa.aimbase.com/formbuilder/api/lead' );
 
 	$LIVEHOST = array( 'www.sundancespas.com', 'www.sundancespas.ca' );
-	$TESTHOST = array( 'beta.sundancespas.com', 'sundancespas.ninthlink.me', 'local.sundance' );
+	$TESTHOST = array( 'beta.sundancespas.com', 'sds.nlkdev.net', 'local.sundance' );
 
 	$BETAHOST = array( 'beta.sundancespas.com' );
-	$DEVHOST = array( 'sundancespas.ninthlink.me' );
+	$DEVHOST = array( 'sds.nlkdev.net' );
 	$LOCALHOST = array( 'local.sundance' );
 
 	date_default_timezone_set('America/Los_Angeles');

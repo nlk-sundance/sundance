@@ -3209,8 +3209,8 @@ function sds_my_server() {
 		case 'http://www.sundancespas.ca/' :
 			return 'live';
 			break;
-		case 'http://sundancespas.ninthlink.me' :
-		case 'http://sundancespas.ninthlink.me/' :
+		case 'http://sds.nlkdev.net' :
+		case 'http://sds.nlkdev.net/' :
 			return 'dev';
 			break;
 		case 'http://localhost/sundancespas.com' :
