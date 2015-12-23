@@ -154,7 +154,7 @@ get_header('bootstrap'); ?>
 	  				<div class="col-xs-12 col-sm-6 col-md-6">
 	  					<div class="row">
 	  						<div class="col-xs-12"> 					
-	  						<p><span>YOU CAN BELIEVE IN A SUNDANCE SPA.</span> Established in 1979, Sundance Spas has been recognized internationally with more awards and honors than any other spa company. our exclusive components, processes, and features include the famous line of potented Fluidix jets. We are committed to using environmentally sale equipment and practices. Read about our distinguished history of spa innovation in the Sundance Spas brochure.</p>
+	  						<p><span>YOU CAN BELIEVE IN A SUNDANCE<sup>&reg;</sup> SPA.</span> Established in 1979, Sundance Spas has been recognized internationally with more awards and honors than any other spa company. our exclusive components, processes, and features include the famous line of potented Fluidix<sup>&trade;</sup> jets. We are committed to using environmentally sale equipment and practices. Read about our distinguished history of spa innovation in the Sundance Spas brochure.</p>
 	  					</div>
 	  					</div> 					
 	  					<div class="row">
