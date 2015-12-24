@@ -37,14 +37,14 @@ get_header('bootstrap'); ?>
   				<div class="col-xs-12 col-sm-3 col-md-3">
   					<div class="therapy hovercard">
   						<div class="bestherapy">
-  				<h3>THERAPY</h3>
+  				<h3>LOW PROFILE</h3>
   				</div>
   				</div> 				
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
   				<div class="entertaining hovercard">
   						<div class="mostentertaining">
-  				<h3>ENTERTAINING</h3>
+  				<h3>ENERGY EFFICIENT</h3>
   				</div>
   				</div> 				
   				</div> 				
