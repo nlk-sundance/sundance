@@ -135,7 +135,7 @@ get_header('bootstrap'); ?>
 	  				<p>Understand the healing benefits of Sundance<sup>&reg;</sup> hydrotherapy.</p>
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">
-  					<h1>SunSmart WiFi App</h1>
+  					<h1>SunSmart<sup>&reg;</sup> WiFi App</h1>
   					<p>The SunSmart<sup>&reg;</sup> WiFi Kit lets you stay in tune with your spa remotely.</p>	
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">
