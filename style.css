@@ -5923,10 +5923,40 @@ a#show-msrp.close {
 	background: transparent url("images/pods/arrow_down.png") no-repeat scroll 0px 0px;
 }
 
-.tubSeries .description .details table .p .view-details
+.podscols .tubSeries .description .details table .p .view-details
 {
 	background: transparent url("images/pods/view_details.png") repeat scroll 0px 0px;
 	width: 116px;
 	height: 26px;
 	margin-top: 5px;
 }
+
+.page .bd .rightCol .block a
+{
+	color: #414037;
+}
+
+.podscols .main .headline .description, .podscols .main .headline .description p
+{
+	font-size: 14px;
+	line-height: 24px;
+	color: #493627;
+	font-family: Arial;
+}
+
+.podscols .main .headline h1
+{
+	font-size: 30px;
+	line-height: 34px;
+	color: #0b2a4a;
+	font-family: "AR";
+}
+
+.podscols .tubSeries .tubGrid h4 {
+    border-top: 1px solid #EEE;
+    padding: 6px 3px;
+    font: 700 21px "AH",Tahoma,Geneva,sans-serif;
+    color: #0b2a4a;
+    text-transform: uppercase;
+}
+
