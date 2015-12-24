@@ -314,7 +314,8 @@ strong{
 	body {
 		font-family:"AR", Verdana, Geneva, sans-serif;
 		font-size: 85%;
-		background:#FFF url(images/bg/body.jpg) top center no-repeat;
+		xbackground:#FFF url(images/bg/body.jpg) top center no-repeat;
+		background: #ebe7e0;
 		color: #493627;
 	}
 	.wrap{
@@ -5916,3 +5917,7 @@ a#show-msrp.close {
     text-transform: uppercase;
 }
 
+.smallcontainer a:hover
+{
+	text-decoration: none !important;
+}
