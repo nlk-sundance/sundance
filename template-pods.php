@@ -62,15 +62,21 @@ if($cat_tubs=='') $cat_tubs = array();
 												<?php 
 												// loop through rows (sub repeater)
 													$c = 0;
+													$trclosed = true;
+													
 													while( have_rows('featured_spas') ): the_row();
 													$o = '';
-													if ( $c == 0 ) {
+													$c += 1;
+													
+													if ( $c%4 == 1 ) {
 														$o .= '<tr>';
+														$trclosed = false;
 													}
 													$spa_id = get_sub_field('featured_spa');
 													$t = array();
 													$t['name'] = get_the_title($spa_id);
-													$specs = get_post_meta($spa_id, 's_specs', false);
+													$custom = get_post_meta($spa_id, 's_specs', false);
+													$specs = $custom[0];
 													$t['seats'] = $specs['seats'];
 													$t['jets'] = $specs['jets'];
 													$t['vol'] = $specs['vol'];
@@ -90,14 +96,21 @@ if($cat_tubs=='') $cat_tubs = array();
 														//}
 														$o .= '</a>';
 													$o .= '</td>';
-													if ( $c == 3 ) {
+													if ( $c%4 == 0 ) {
 														$o .= '</tr>';
+														$trclosed = true;
 													}
 													echo $o;
 													$c++;
 												?>
 														
-												<?php endwhile; ?>
+												<?php 
+													endwhile;
+													if(!$trclosed)
+													{
+														echo '</tr>';
+													} 
+												?>
 											<?php endif; //if( get_sub_field('items') ): ?>
 								        <?php
 								    endwhile;
