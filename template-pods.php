@@ -78,8 +78,16 @@ if($cat_tubs=='') $cat_tubs = array();
 													$custom = get_post_meta($spa_id, 's_specs', false);
 													$specs = $custom[0];
 													$t['seats'] = $specs['seats'];
-													$t['jets'] = $specs['pumps'];
-													$t['vol'] = $specs['vol_us'];
+													$custom = get_post_meta($spa_id, 's_jets');
+													$tub_jets = $custom[0];
+													$total_jets = 0;
+													foreach($tub_jets as $tub_jet)
+													{
+														$total_jets += intval($tub_jet);
+													}
+													
+													$t['jets'] = $total_jets;
+													$t['vol'] = $specs['vol_int'];
 													$t['url'] = get_permalink($spa_id);
 													$t['seats'] = $specs['seats'];
 													$o .= '<td width="168">';
@@ -101,7 +109,7 @@ if($cat_tubs=='') $cat_tubs = array();
 														$trclosed = true;
 													}
 													echo $o;
-													$c++;
+													//$c++;
 												?>
 														
 												<?php 
