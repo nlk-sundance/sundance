@@ -5837,3 +5837,52 @@ a#show-msrp.close {
     padding-left: 10px;
 }
 
+/* New pods pages */
+.main .headline .description.w670
+{
+	width: 670px;
+}
+
+.rightCol .bigBlueBtn{
+		font: 400 16px/22px 'AH', Helvetica, Geneva, arial, sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #414037;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-align: center;
+		text-shadow: none;
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 8px;
+		box-shadow: 3px 3px 6px #444;
+		background: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
+		background-size: cover;
+		-webkit-transition: all 0.5s;
+	    -moz-transition: all 0.5s;
+	    -o-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+	
+	.rightCol .bigBlueBtn:hover {
+		background: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
+		background-size: cover;
+		opacity: 0.9;
+		-webkit-transition: all 0.5s;
+	    -moz-transition: all 0.5s;
+	    -o-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+	
+.page .bd .sidepods .rightCol .block.brochure.bottom .arrow
+{
+	background: transparent url("images/pods/arrow_down.png") no-repeat scroll 0px 0px;
+}
+
+.tubSeries .description .details table .p .view-details
+{
+	background: transparent url("images/pods/view_details.png") repeat scroll 0px 0px;
+	width: 116px;
+	height: 26px;
+	margin-top: 5px;
+}
