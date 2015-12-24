@@ -17,7 +17,7 @@ if($cat_tubs=='') $cat_tubs = array();
 //$serieslanding = ( $post->ID == 1894 );
 
 ?>
- <div class="cols">
+ <div class="cols podscols">
     <div class="main col w730"><div class="main-title">
         <?php the_post_thumbnail();
 		?></div>
