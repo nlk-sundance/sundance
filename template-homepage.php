@@ -28,28 +28,28 @@ get_header('bootstrap'); ?>
   		<div class="container smallcontainer">
   			<div class="row ">
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  					<a href="<?php bloginfo('url'); ?>/"><div class="selling hovercard">
+  					<a href="<?php bloginfo('url'); ?>/best-selling"><div class="selling hovercard">
   						<div class="bestselling">
   				<h3>BEST SELLING</h3>
   				</div>
   				</div></a>
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  					<a href="<?php bloginfo('url'); ?>/"><div class="therapy hovercard">
+  					<a href="<?php bloginfo('url'); ?>/low-profile"><div class="therapy hovercard">
   						<div class="bestherapy">
   				<h3>LOW PROFILE</h3>
   				</div>
   				</div></a> 				
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  				<a href="<?php bloginfo('url'); ?>/"><div class="entertaining hovercard">
+  				<a href="<?php bloginfo('url'); ?>/energy-efficient"><div class="entertaining hovercard">
   						<div class="mostentertaining">
   				<h3>ENERGY EFFICIENT</h3>
   				</div>
   				</div></a> 				
   				</div> 				
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  				<a href="<?php bloginfo('url'); ?>/"><div class="search hovercard">
+  				<a href="<?php bloginfo('url'); ?>/search-by-size"><div class="search hovercard">
   						<div class="mostsearch">
   				<h3>SEARCH BY SIZE</h3>
   				</div>
