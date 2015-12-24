@@ -87,7 +87,7 @@ if($cat_tubs=='') $cat_tubs = array();
 													}
 													
 													$t['jets'] = $total_jets;
-													$t['vol'] = $specs['vol_int'];
+													$t['vol'] = str_replace(array('US', 'us'), array('', ''), $specs['vol_us']);
 													$t['url'] = get_permalink($spa_id);
 													$t['seats'] = $specs['seats'];
 													$o .= '<td width="168">';
