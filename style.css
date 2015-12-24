@@ -5917,6 +5917,11 @@ a#show-msrp.close {
     text-transform: uppercase;
 }
 
+.podscols .tubSeries .tubGrid h4 span
+{
+	font: 400 21px "AL",Tahoma,Geneva,sans-serif;
+	text-transform: none !important;
+}
 .smallcontainer a:hover
 {
 	text-decoration: none !important;
