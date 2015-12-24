@@ -49,7 +49,62 @@ if($cat_tubs=='') $cat_tubs = array();
                 </div-->
                 <div class="description">
                     <div class="details">
-                       <?php echo sundance_series_tubs($cat_tubs, $post->ID); ?>
+                       <?php //echo sundance_series_tubs($cat_tubs, $post->ID); ?>
+                       <?php
+                       		echo '<table class="tubGrid">';
+	                       		if( have_rows('spas_repeater') ):
+								 	while ( have_rows('spas_repeater') ) : the_row();
+								        ?>
+								        <tr><td colspan="4"><h4><?php the_sub_field('spas_title'); ?></h4></td></tr>
+								        <?php 
+											// check for rows (sub repeater)
+											if( have_rows('featured_spas') ): ?>
+												<?php 
+												// loop through rows (sub repeater)
+													$c = 0;
+													while( have_rows('featured_spas') ): the_row();
+													$o = '';
+													if ( $c == 0 ) {
+														$o .= '<tr>';
+													}
+													$spa_id = get_sub_field('featured_spa');
+													$t = array();
+													$t['name'] = get_the_title($spa_id);
+													$specs = get_post_meta($spa_id, 's_specs', false);
+													$t['seats'] = $specs['seats'];
+													$t['jets'] = $specs['jets'];
+													$t['vol'] = $specs['vol'];
+													$t['url'] = get_permalink($spa_id);
+													$t['seats'] = $specs['seats'];
+													$o .= '<td width="168">';
+														$o .= '<a href="'. esc_url($t['url']) .'">';
+														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+														$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
+														$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
+														$o .= '<span class="p">Total Jets: '. absint($t['jets']) .'</span>';
+														$o .= '<span class="p">Capacity: '. esc_attr($t['vol']) .'</span>';
+														//$o .= '<span class="p"><img src="'. get_bloginfo('template_url') .'/images/icons/view-details-arrow.png" border="0" class="det" /></span>';
+														$o .= '<span class="p"><div class="view-details"></div></span>';
+														//if (class_exists('MultiPostThumbnails')) {
+														//	$o .= MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-large', $i, 'overhead-mid', array('class'=>'ov'));
+														//}
+														$o .= '</a>';
+													$o .= '</td>';
+													if ( $c == 3 ) {
+														$o .= '</tr>';
+													}
+													echo $o;
+													$c++;
+												?>
+														
+												<?php endwhile; ?>
+											<?php endif; //if( get_sub_field('items') ): ?>
+								        <?php
+								    endwhile;
+								else :
+								endif;
+							echo '</table>';								
+                       ?>
                     </div>
                 </div>
                 <br class="clear" />
