@@ -5875,7 +5875,7 @@ a#show-msrp.close {
 	    transition: all 0.5s;
 	}
 	
-.page .bd .sidepods .rightCol .block.brochure.bottom .arrow
+.page .bd .rightCol .block.brochure.bottom .arrow
 {
 	background: transparent url("images/pods/arrow_down.png") no-repeat scroll 0px 0px;
 }
