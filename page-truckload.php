@@ -73,11 +73,12 @@ endwhile;
 <div class="arrow"><h3>Request the Truckload Sale in your town</h3></div>
 
 <div class="inner">
-    <?php
-    //API call to get two letter country code remotely
-    $IP=$_SERVER['REMOTE_ADDR']; 
-    $ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP);
-	echo do_shortcode('[gravityform id="15" title="false" description="false"]');
+	<?php
+    	//API call to get two letter country code remotely
+	    //$IP=$_SERVER['REMOTE_ADDR']; 
+	    //$ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP);
+		echo do_shortcode('[gravityform id="15" title="false" description="false"]');
+		echo '<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>';
 	/*
     ?>
 

@@ -5738,3 +5738,14 @@ a#show-msrp.close {
 .labor-bottom-content2 p { font-size: 16px; color: #333; }
 .labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
 
+/* Truck Load Gravity Form Extra css */
+.gform_wrapper.truckloadform_wrapper form
+{
+	padding: 1px 0 !important;
+}
+
+.gform_wrapper.truckloadform_wrapper .top_label .gfield_label
+{
+	font-weight: 400;
+	margin-bottom: 0px;
+}
