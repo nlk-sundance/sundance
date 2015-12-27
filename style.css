@@ -5973,4 +5973,15 @@ a#show-msrp.close {
 .smallcontainer a:hover
 {
 	text-decoration: none !important;
+
+/* Truck Load Gravity Form Extra css */
+.gform_wrapper.truckloadform_wrapper form
+{
+	padding: 1px 0 !important;
+}
+
+.gform_wrapper.truckloadform_wrapper .top_label .gfield_label
+{
+	font-weight: 400;
+	margin-bottom: 0px;
 }
