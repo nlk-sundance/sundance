@@ -5857,8 +5857,16 @@ a#show-msrp.close {
 		border: 1px solid #fff;
 		border-radius: 8px;
 		box-shadow: 3px 3px 6px #444;
-		background: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
-		background-size: cover;
+		xbackground: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
+		xbackground-size: cover;
+		background: #ddd8c3; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ddd8c3 0%, #d5d3ba 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ddd8c3), color-stop(100%,#d5d3ba)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #ddd8c3 0%,#d5d3ba 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #ddd8c3 0%,#d5d3ba 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #ddd8c3 0%,#d5d3ba 100%); /* IE10+ */
+		background: linear-gradient(top,  #ddd8c3 0%,#d5d3ba 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddd8c3', endColorstr='#d5d3ba',GradientType=0 ); /* IE6-9 */
 		-webkit-transition: all 0.5s;
 	    -moz-transition: all 0.5s;
 	    -o-transition: all 0.5s;
@@ -5866,9 +5874,19 @@ a#show-msrp.close {
 	}
 	
 	.rightCol .bigBlueBtn:hover {
-		background: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
-		background-size: cover;
-		opacity: 0.9;
+		xbackground: url(images/pods/side_button_bg.jpg) 0 0 no-repeat transparent;
+		xbackground-size: cover;
+		xopacity: 0.9;
+		color: #FFF;
+		background: #bbb7a6; /* Old browsers */
+		background: -moz-linear-gradient(top,  #bbb7a6 0%, #a2a08d 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbb7a6), color-stop(100%,#a2a08d)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #bbb7a6 0%,#a2a08d 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #bbb7a6 0%,#a2a08d 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #bbb7a6 0%,#a2a08d 100%); /* IE10+ */
+		background: linear-gradient(top,  #bbb7a6 0%,#a2a08d 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbb7a6', endColorstr='#a2a08d',GradientType=0 ); /* IE6-9 */
+
 		-webkit-transition: all 0.5s;
 	    -moz-transition: all 0.5s;
 	    -o-transition: all 0.5s;
@@ -5891,6 +5909,11 @@ a#show-msrp.close {
 .page .bd .rightCol .block a
 {
 	color: #414037;
+}
+
+.page .bd .rightCol .block a
+{
+	color: #FFF;
 }
 
 .podscols .main .headline .description, .podscols .main .headline .description p
