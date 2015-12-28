@@ -5911,7 +5911,7 @@ a#show-msrp.close {
 	color: #414037;
 }
 
-.page .bd .rightCol .block a
+.page .bd .rightCol .block a:hover
 {
 	color: #FFF;
 }
