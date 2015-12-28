@@ -9,20 +9,7 @@
 
 get_header('bootstrap'); ?>
 	<section class="wrapper bannercontainer">
-  		<div class="container bigcontainer">
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-7 col-md-7">
-  					
-  				</div>
-  				<div class="col-xs-12 col-sm-5 col-md-5">
-  					<div class="bannercaption">
-  						<h1>DO MORE OF WHAT MATTERS TO YOU.</h1>
-  						<p>With more than 35 years of experience crafting high quality spas, we take pride in helping people spend time meaningfully. So go ahead and relax more. Let your mind wander. Savor each and every moment. Celebrate life. Start your Sundance<sup>&reg;</sup> lifestyle today. You deserve it.</p>
-  						<a href="<?php bloginfo('url'); ?>/selectseries/" class="hot btn-start">VIEW HOT TUBS</a>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+  		<?php echo do_shortcode('[rev_slider alias="homepageslider"]'); ?>
   	</section>
   	<section class="wrapper minicontainer">
   		<div class="container smallcontainer">
