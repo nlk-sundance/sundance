@@ -5979,6 +5979,7 @@ a#show-msrp.close {
 {
 	background: #0B2A4A;
 	border: 0px solid #FFF;
+	padding: 0px;
 }
 
 .ft .menuWrap .topMenu li a
