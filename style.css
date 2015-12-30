@@ -6018,8 +6018,7 @@ a#show-msrp.close {
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+	
 }
 
 .col-4
@@ -6028,8 +6027,6 @@ a#show-msrp.close {
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
 }
 
 .ft
@@ -6057,11 +6054,13 @@ a#show-msrp.close {
 	    text-indent: -9999px;
 	    height: 20px;
 	    width: 144px;
+	    margin-top: 20px;
+		margin-bottom: 10px;
 }
 
 ul.footericon 
 {
-    margin: 30px;
+    margin: 25px 0px;
     padding: 0px;
 }
 
@@ -6116,6 +6115,7 @@ ul.spa
 {
 	float: left;
     padding: 0px;
+    margin-bottom: 10px;
 }
 
 ul.spa li 
@@ -6138,7 +6138,7 @@ ul.spa li a
     font-family: "AR";
     font-size: 12px;
     font-weight: 400;
-    line-height: 10px;
+    line-height: 24px;
     
 }
 
@@ -6151,6 +6151,7 @@ ul.footer-links
 {
 	float: left;
 	padding: 0px;
+	margin-bottom: 10px;
 }
 
 ul.footer-links li 
@@ -6165,7 +6166,7 @@ ul.footer-links li a
     font-family: "AR";
     font-size: 11px;
     font-weight: 400;
-    line-height: 10px;
+    line-height: 22px;
     margin-top: 15px;
     
 }
