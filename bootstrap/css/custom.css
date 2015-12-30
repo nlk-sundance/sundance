@@ -723,7 +723,8 @@ ul.rightcategories li a{
 .wrapper.footercontainer
 {
 	background-color: #0b2a4a;
-    min-height: 615px;
+    xmin-height: 615px;
+    margin-bottom: 0px;
 }
 
 .wrapper.footercontainer h1.smalllogo a

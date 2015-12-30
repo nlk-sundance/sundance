@@ -5949,3 +5949,180 @@ a#show-msrp.close {
 {
 	text-decoration: none !important;
 }
+
+/* Footer Update */
+
+.col-8
+{
+	width: 66.6667%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col-4
+{
+	width: 33.3333%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.ft
+{
+	background: #0B2A4A;
+	min-height: 145px;
+}
+
+.ft .wrap .inner
+{
+	background: #0B2A4A;
+	border: 0px solid #FFF;
+}
+
+.ft .menuWrap .topMenu li a
+{
+	color: #FFF;
+}
+
+.ft h1.smalllogo a
+{
+	    background: url("bootstrap/images/sundance_logosmall.png") 0 0 no-repeat transparent;
+	    text-decoration: none;
+	    display: block;
+	    text-indent: -9999px;
+	    height: 20px;
+	    width: 144px;
+}
+
+ul.footericon 
+{
+    margin: 30px;
+    padding: 0px;
+}
+
+.footericon li 
+{
+    float: left;
+    list-style: none;
+    padding: 0px;
+}
+
+.footericon li.facebook a {
+    background: url("bootstrap/images/button_fb.png") 0 0 no-repeat transparent;
+    min-height:26px;
+    width: 22px;
+    text-decoration: none;
+    display: block;
+    text-indent: -9999px;
+    margin: 2px 7px;
+}
+
+.footericon li.twitter a {
+    background: url("bootstrap/images/button_tw.png") 0 0 no-repeat transparent;
+    min-height:26px;
+    width: 27px;
+    text-decoration: none;
+    display: block;
+    text-indent: -9999px;
+    margin: 2px 7px;
+}
+
+.footericon li.youtube a {
+    background: url("bootstrap/images/play.png") 0 0 no-repeat transparent;
+    min-height:26px;
+    width: 25px;
+    text-decoration: none;
+    display: block;
+    text-indent: -9999px;
+    margin: 2px 7px;
+}
+
+.footericon li.google a {
+    background: url("bootstrap/images/b_google+.png") 0 0 no-repeat transparent;
+    min-height:26px;
+    width: 30px;
+    text-decoration: none;
+    display: block;
+    text-indent: -9999px;
+    margin: 2px 7px;
+}
+
+ul.spa
+{
+	float: left;
+    padding: 0px;
+}
+
+ul.spa li 
+{
+    display: inline-block;
+    padding: 0px 5px 0px 0px;
+}
+
+ul.spa li.border {
+	background: transparent url("bootstrap/images/spaborder.png") no-repeat scroll right 5px;
+	min-width: 5px;
+	min-height: 14px;
+	padding-right: 10px;
+}
+
+ul.spa li a 
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: "AR";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10px;
+    
+}
+
+ul.spa li:last-child 
+{
+	border-right: 0px ;
+}
+
+ul.footer-links
+{
+	float: left;
+	padding: 0px;
+}
+
+ul.footer-links li 
+{
+    display: inline-block;
+    padding: 0px 5px 0px 0px;
+}
+ul.footer-links li a 
+{
+    text-decoration: none;
+    color: #a7a9ac;
+    font-family: "AR";
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 10px;
+    margin-top: 15px;
+    
+}
+
+ul.footer-links li.border
+{
+	background: transparent url("bootstrap/images/footerlinkborder.png") no-repeat scroll right 7px;
+	min-width: 8px;
+	min-height: 10px;
+	padding-right: 10px;
+}
+
+.ft p 
+{
+	font-family:"AR";
+	font-size: 10px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 15px;
+}
