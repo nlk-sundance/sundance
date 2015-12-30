@@ -293,7 +293,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Das Modell Cameo dient als Muster-Whirlpool um Ihnen alle möglichen Farbkomibationen zu zeigen. Die Whirlpoolgrößen und Düsenplatzierungen variieren je nach Modell. Nicht alle Farben für alle Modelle verfügbar. Siehe Farbauswahl auf der jeweiligen Modellseite.</p>
+				<p>Das Modell Cameo dient als Muster-Whirlpool um Ihnen alle möglichen Farbkomibationen zu zeigen. Die Whirlpoolgrößen und Düsenplatzierungen variieren je nach Modell. Nicht alle Farben sind für alle Modelle verfügbar. Siehe Farbauswahl auf der jeweiligen Modellseite.</p>
 			</div>
 
 		</div>
