@@ -269,8 +269,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 	<div class="color-selector-wrapper">
 		<h1 class="color-heading hidemodal">Whirlpool Farbauswahl</h1>
-		<p class="hidemodal hide-for-small">Benutzen Sie die Farbpalette auf der rechten Seite. Wählen Sie Schalen und Verkleidung Optionen.</p>
-		<p class="hidemodal show-for-small">Benutzen Sie die Farbpalette auf der boden Seite. Wählen Sie Schalen und Verkleidung Optionen.</p>
+		<p class="hidemodal hide-for-small">Benutzen Sie die Farbpalette auf der rechten Seite. Klicken Sie auf die Schalen- und Verkleidungsfarben um die jeweilige Farbkombination zu sehen.</p>
+		<p class="hidemodal show-for-small">Benutzen Sie die Farbpalette auf der rechten Seite. Klicken Sie auf die Schalen- und Verkleidungsfarben um die jeweilige Farbkombination zu sehen.</p>
 		<div class="left">
 
 			<div class="tub-container">
