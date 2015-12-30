@@ -5034,12 +5034,12 @@ strong{
 	}
 	.tubThumb .tubViewDetails {
 		position: absolute;
-		width: 109px;
-		height: 25px;
+		width: 116px;
+		height: 26px;
 		top: 55px;
 		left: 50%;
-		margin-left: -55px;
-		background: url(/wp-content/themes/sundance/images/icons/view-details-overlay.png) no-repeat;
+		margin-left: -58px;
+		background: url(images/pods/view_details.png) no-repeat;
 		display:none;
 	}
 	.tubSeries .description .details table a:hover .tubViewDetails {
@@ -6128,3 +6128,9 @@ ul.footer-links li.border
 	color: #fff;
 	line-height: 15px;
 }
+
+.page .bd .rightCol .block.brochure.top .arrow {
+		top: -9px;
+		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-arrow-yellow.png) no-repeat 0px 0px;
+	}
+	
