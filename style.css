@@ -6194,3 +6194,31 @@ ul.footer-links li.border
 		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-arrow-yellow.png) no-repeat 0px 0px;
 	}
 	
+/* Tubs Go To Link */
+
+.tubslink > ul
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+.tubslink > ul > li
+{
+	list-style: none;
+	margin: 0px 15px;
+	list-style: none;
+}
+
+.tubslink > ul > li > a
+{
+	font-size: 14px;
+	font-family: "AR",Tahoma,Geneva,sans-serif;
+	float: left;
+	width: 100%;
+	margin: 10px 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #236DC7;
+	text-decoration: underline;
+}
