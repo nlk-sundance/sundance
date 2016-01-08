@@ -26,7 +26,7 @@ if($cat_tubs=='') $cat_tubs = array();
 	        'slow');
 	}
 	
-	jQuery(".tubslink > ul > li > a").click(function(e) { 
+	jQuery(".srcollto").click(function(e) { 
 	      // Prevent a page reload when a link is pressed
 	    e.preventDefault(); 
 	      // Call the scroll function
@@ -51,10 +51,10 @@ if($cat_tubs=='') $cat_tubs = array();
             </div>
             <div class="tubslink">
             	<ul>
-            		<li><a href="#tubs_1">6+ people</a></li>
-            		<li><a href="#tubs_2">5-6 people</a></li>
-            		<li><a href="#tubs_3">4-5 people</a></li>
-            		<li><a href="#tubs_4">2-3 people</a></li>
+            		<li><a class="srcollto" href="#tubs_1">6+ people</a></li>
+            		<li><a class="srcollto" href="#tubs_2">5-6 people</a></li>
+            		<li><a class="srcollto" href="#tubs_3">4-5 people</a></li>
+            		<li><a class="srcollto" href="#tubs_4">2-3 people</a></li>
             	</ul>
             </div>
             <div class="tubSeries">
