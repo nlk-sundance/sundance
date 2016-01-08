@@ -87,6 +87,18 @@
 							</div>
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<?php 
+											wp_nav_menu( array(
+										        'menu'       => 'mainmenu',
+										        'depth'      => 2,
+										        'container'  => false,
+										        'menu_class' => 'nav navbar-nav',
+										        'fallback_cb' => 'wp_page_menu',
+										        //Process nav menu using our custom nav walker
+										        'walker' => new wp_bootstrap_navwalker())
+										    ); 
+										?>
+										<?php /* ?>
 										<ul class="nav navbar-nav">
 											<li class="listborder dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPA</a>
@@ -135,7 +147,7 @@
 											<li class="search">
 												<a href="#">SEARCH</a>
 											</li>	
-										</ul>
+										</ul><?php */ ?>
 							</div>
 						</div><!-- /.container-fluid -->
 					</nav>
