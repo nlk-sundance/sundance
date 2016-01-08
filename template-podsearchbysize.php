@@ -26,13 +26,15 @@ if($cat_tubs=='') $cat_tubs = array();
 	        'slow');
 	}
 	
-	jQuery(".srcollto").click(function(e) { 
-	      // Prevent a page reload when a link is pressed
-	    e.preventDefault(); 
-	      // Call the scroll function
-	    goToByScroll(jQuery(this).attr('href'));           
+	jQuery(document).ready(function(){
+		jQuery(".srcollto").click(function(e) { 
+		      // Prevent a page reload when a link is pressed
+		    e.preventDefault(); 
+		      // Call the scroll function
+		    goToByScroll(jQuery(this).attr('href'));           
+		});	
 	});
-
+	
 </script>
  <div class="cols podscols">
     <div class="main col w730"><div class="main-title">
