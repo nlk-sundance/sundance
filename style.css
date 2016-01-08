@@ -6146,8 +6146,9 @@ ul.footer-links li.border
 .tubslink > ul > li
 {
 	list-style: none;
-	margin: 0px 15px;
-	list-style: none;
+	float: left;
+	width: 24%;
+	text-align: center;
 }
 
 .tubslink > ul > li > a
