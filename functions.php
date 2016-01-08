@@ -3578,3 +3578,5 @@ function jht_do_hreflang() {
 	if ( array_key_exists($p['path'], $a) )
 		print $a[ $p['path'] ];
 }
+
+

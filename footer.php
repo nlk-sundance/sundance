@@ -27,6 +27,18 @@
         <?php
         //wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
         ?>
+        <?php 
+											wp_nav_menu( array(
+										        'menu'       => 'mainmenu',
+										        'depth'      => 2,
+										        'container'  => false,
+										        'menu_class' => 'mainMenu',
+										        'fallback_cb' => 'wp_page_menu',
+										        //Process nav menu using our custom nav walker
+										        'walker' => new wp_bootstrap_navwalker())
+											); 
+		?>
+		<?php /*
         <ul class="mainMenu">
             <li class="hover"><?php
             global $tubcats;
@@ -158,9 +170,10 @@
             // Use the data like you would have normally...
             //$sitemap = get_transient( 's_sitemap' );
             echo $sitemap; ?></div></li></ul></li>
-            <?php /* ?><li class="find last"><?php get_sidebar('dlform'); ?></li><?php */ ?>
+            <?php /* ?><li class="find last"><?php get_sidebar('dlform'); ?></li><?php  ?>
             <li class="search"><a href="#">SEARCH</a></li>
             </ul>
+            <?php */ ?>
     </div>
 </div>
     
