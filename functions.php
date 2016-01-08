@@ -3695,4 +3695,4 @@ function jht_do_hreflang() {
 		print $a[ $p['path'] ];
 }
 
-
+require get_template_directory() . '/includes/wp_bootstrap_navwalker.php';
