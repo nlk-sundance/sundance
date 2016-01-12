@@ -52,11 +52,9 @@ get_header('bootstrap'); ?>
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padl0 xpadr0">
   							<h3>Find Your Nearest Dealer</h3>
-  							<p>Find your nearest dealer and experience the Sundance<sup>&reg;</sup> Spas lifestyle for yourself</p>
   							<ul class="dealerlist">
 	  							<li>Get guidance finding the right spa for you</li>
 	  							<li>Test spas wet and dry</li>
-	  							<li>Take advantage of money saving offers</li>
   							</ul>
   							<form id="dealer-finder" method="post" action="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/cities/">
   								<input type="firstname" class="form-control" name="zip" id="zip" placeholder=" Enter your zip code">
@@ -72,7 +70,6 @@ get_header('bootstrap'); ?>
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padr0">
   							<h3>Free Brochure</h3>
-  							<p>Download your free brochure to:</p>
   							<ul class="brochurelist">
 	  							<li>Compare spa models at a glance</li>
 	  							<li>Explore benefits of Sundance<sup>&reg;</sup> hydrotherapy</li>
@@ -158,7 +155,7 @@ get_header('bootstrap'); ?>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4">
 	  					<h1>Online Financing</h1>
-	  					<p><span>Qualify for online financing now.</span> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
+	  					<p><a href="#"><span>Qualify for online financing now.</span></a> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4 tub blogcat">
 	  					<h1>Categories</h1>
