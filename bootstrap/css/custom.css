@@ -1013,3 +1013,9 @@ ul.footer-links li.border
 {
 	padding-right: 0px;
 }
+
+
+.navbar-nav > li > .dropdown-menu > li > a
+{
+	padding: 5px 20px;
+}
