@@ -155,7 +155,7 @@ get_header('bootstrap'); ?>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4">
 	  					<h1>Online Financing</h1>
-	  					<p><a href="#"><span>Qualify for online financing now.</span></a> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
+	  					<p><a href="<?php bloginfo('url'); ?>/financing/"><span>Qualify for online financing now.</span></a> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4 tub blogcat">
 	  					<h1>Categories</h1>
