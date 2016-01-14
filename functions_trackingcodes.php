@@ -189,13 +189,26 @@ function sds_is_thanks_page() {
 		$prod = isset($s_specs['product_id']) ? esc_attr($s_specs['product_id']) : false;
 		$val = get_post_meta( $post->ID, 'lead-type', true );
 
+		$bvtype = get_post_meta( $post->ID, 'bvtype', true );
+		$bvlabel = get_post_meta( $post->ID, 'bvlabel', true );
+		$bvvalue = get_post_meta( $post->ID, 'bvval', true );
+
 		if ( $prod ) { ?>
 			<script type="text/javascript"> 
 			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
 			</script>
 		<?php }
 		
-		if ( $val ) { ?>
+		if ( !empty( $bvtype ) && !empty( $bvlabel ) ) { ?>
+			<script>
+			$BV.SI.trackConversion({
+			"type" : "<?php echo $bvtype; ?>",
+			"label" : "<?php echo $bvlabel; ?>",
+			"value" : "<?php echo ( !empty($bvvalue) ? $bvvalue : 1 ); ?>"
+			});
+			</script>
+		<?php }
+		else if ( $val ) { ?>
 			<script>
 			$BV.SI.trackConversion({
 			"type" : "lead",
