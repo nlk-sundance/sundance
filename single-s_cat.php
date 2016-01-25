@@ -57,7 +57,13 @@ $serieslanding = ( $post->ID == 1894 );
 					}
 					$o .= '</div>';
 					$o .= '<div class="description" id="'. esc_attr($c['name']) .'-Series-Spas">';
-					$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series&trade; Spas</a></h1>';
+					if($c['name'] == 'Select')
+					{
+						$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series<sup>&reg;</sup> Spas</a></h1>';	
+					}
+					else {
+						$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series&trade; Spas</a></h1>';
+					}
 					$o .= $series->post_excerpt;
 					$o .= '<div class="details">';
 					$o .= '<a class="openDetails" href="#'. esc_attr($c['name']) .'-Series-Spas">View Details</a>';
@@ -77,7 +83,7 @@ $serieslanding = ( $post->ID == 1894 );
             <div class="headline">
                 <div class="model">
                     <h1><?php the_title(''); ?></h1>
-                    <h2>Series Spas</h2>
+                    <h2>Series<?php if(get_the_title() == 'Select'){ echo '<sup>&reg</sup>'; } ?> Spas</h2>
                 </div>
                 <div class="description w480 noline">
                     <?php echo sundance_shortdesc($post->post_content, true); ?>
