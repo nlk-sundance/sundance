@@ -5740,6 +5740,7 @@ a#show-msrp.close {
 .labor-bottom-content2 p { font-size: 16px; color: #333; }
 .labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
 
+
 /* Blue Header */
 
 .hd {
@@ -6222,4 +6223,11 @@ ul.footer-links li.border
 	text-transform: uppercase;
 	color: #236DC7;
 	text-decoration: underline;
+}
+
+sup
+{
+	position: relative;
+    top: -0.5em;
+    font-size: 80%;
 }
