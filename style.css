@@ -5837,3 +5837,9 @@ a#show-msrp.close {
     padding-left: 10px;
 }
 
+/*New Sprite for Montclain*/
+
+.tubThumb.montclair {
+	background-image: url('images/sds-tubs-sprite_resized.jpg');
+	background-position: -278px -832px;
+}
