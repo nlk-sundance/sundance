@@ -5887,6 +5887,7 @@ a#show-msrp.close {
     padding-left: 10px;
 }
 
+
 /* New pods pages */
 .main .headline .description.w670
 {
@@ -6231,3 +6232,11 @@ sup
     top: -0.5em;
     font-size: 80%;
 }
+
+/*New Sprite for Montclain*/
+
+.tubThumb.montclair {
+	background-image: url('images/sds-tubs-sprite_resized.jpg');
+	background-position: -278px -832px;
+}
+
