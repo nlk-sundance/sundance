@@ -5843,3 +5843,10 @@ a#show-msrp.close {
 	background-image: url('images/sds-tubs-sprite_resized.jpg');
 	background-position: -278px -832px;
 }
+
+.tubSeries .description .details table .p .view-details {
+	background: transparent url("images/view_details.png") repeat scroll 0px 0px;
+	width: 116px;
+	height: 26px;
+	margin-top: 5px;
+}
