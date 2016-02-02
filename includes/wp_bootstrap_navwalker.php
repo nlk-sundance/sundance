@@ -100,7 +100,101 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 			$item_output .= ($args->has_children && $depth == 0) ? ' </a>' : '</a>';
 			$item_output .= $args->after;
-
+			if(in_array('spa_series', $classes))
+			{
+				//$item_output .= 's1';
+				global $tubcats;
+				$o = '';
+				if(in_array('selectseries', $classes))
+				{
+					$tubs = $tubcats['1896']['tubs'];
+					$o = '<ul class="megamenu">';
+                    
+                    foreach ( $tubs as $t ) {
+                        if ( !in_array( $t['id'], array(2151,2157,2159) ) ) {
+                            $o .= '<li><div><a href="'. esc_url($t['url']) .'" class="navtub">';
+                            if (class_exists('MultiPostThumbnails')) {
+                                $img = MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-small', $t['id'], 'overhead-small' );
+                                $o .= $img;
+                            } else {
+                                $o .= '<img src="'. get_bloginfo('template_url') .'/images/tubs/tub-thumb-100.jpg" />';
+                            }
+                            $o .= '</a>';
+                            $o .= '<h2><a href="' . esc_url($t['url']) . '">' . esc_attr($t['name']) . '</a></h2>';
+                            $o .= '<p><a href="' . esc_url($t['url']) . '">Seats ' . esc_attr($t['seats']) . '</a></p>';
+                            $o .= '</div></li>';
+                        }
+                    }
+                    $o .= '</ul>';
+				}
+				else if(in_array('880series', $classes))
+				{
+					$tubs = $tubcats['1899']['tubs'];
+					$o = '<ul class="megamenu">';
+                    
+                    foreach ( $tubs as $t ) {
+                        if ( !in_array( $t['id'], array(2151,2157,2159) ) ) {
+                            $o .= '<li><div><a href="'. esc_url($t['url']) .'" class="navtub">';
+                            if (class_exists('MultiPostThumbnails')) {
+                                $img = MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-small', $t['id'], 'overhead-small' );
+                                $o .= $img;
+                            } else {
+                                $o .= '<img src="'. get_bloginfo('template_url') .'/images/tubs/tub-thumb-100.jpg" />';
+                            }
+                            $o .= '</a>';
+                            $o .= '<h2><a href="' . esc_url($t['url']) . '">' . esc_attr($t['name']) . '</a></h2>';
+                            $o .= '<p><a href="' . esc_url($t['url']) . '">Seats ' . esc_attr($t['seats']) . '</a></p>';
+                            $o .= '</div></li>';
+                        }
+                    }
+                    $o .= '</ul>';
+				}
+				else if(in_array('780series', $classes))
+				{
+					$tubs = $tubcats['1901']['tubs'];
+					$o = '<ul class="megamenu">';
+                    
+                    foreach ( $tubs as $t ) {
+                        if ( !in_array( $t['id'], array(2151,2157,2159) ) ) {
+                            $o .= '<li><div><a href="'. esc_url($t['url']) .'" class="navtub">';
+                            if (class_exists('MultiPostThumbnails')) {
+                                $img = MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-small', $t['id'], 'overhead-small' );
+                                $o .= $img;
+                            } else {
+                                $o .= '<img src="'. get_bloginfo('template_url') .'/images/tubs/tub-thumb-100.jpg" />';
+                            }
+                            $o .= '</a>';
+                            $o .= '<h2><a href="' . esc_url($t['url']) . '">' . esc_attr($t['name']) . '</a></h2>';
+                            $o .= '<p><a href="' . esc_url($t['url']) . '">Seats ' . esc_attr($t['seats']) . '</a></p>';
+                            $o .= '</div></li>';
+                        }
+                    }
+                    $o .= '</ul>';
+				}
+				else if(in_array('680series', $classes))
+				{
+					$tubs = $tubcats['1903']['tubs'];
+					$o = '<ul class="megamenu">';
+                    
+                    foreach ( $tubs as $t ) {
+                        if ( !in_array( $t['id'], array(2151,2157,2159) ) ) {
+                            $o .= '<li><div><a href="'. esc_url($t['url']) .'" class="navtub">';
+                            if (class_exists('MultiPostThumbnails')) {
+                                $img = MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-small', $t['id'], 'overhead-small' );
+                                $o .= $img;
+                            } else {
+                                $o .= '<img src="'. get_bloginfo('template_url') .'/images/tubs/tub-thumb-100.jpg" />';
+                            }
+                            $o .= '</a>';
+                            $o .= '<h2><a href="' . esc_url($t['url']) . '">' . esc_attr($t['name']) . '</a></h2>';
+                            $o .= '<p><a href="' . esc_url($t['url']) . '">Seats ' . esc_attr($t['seats']) . '</a></p>';
+                            $o .= '</div></li>';
+                        }
+                    }
+                    $o .= '</ul>';
+				}
+				$item_output .=  $o ;
+			}
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}

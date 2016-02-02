@@ -6191,6 +6191,7 @@ ul.footer-links li.border
 	line-height: 15px;
 }
 
+<<<<<<< HEAD
 .page .bd .rightCol .block.brochure.top .arrow {
 		top: -9px;
 		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-arrow-yellow.png) no-repeat 0px 0px;
@@ -6246,3 +6247,83 @@ sup
 	height: 26px;
 	margin-top: 5px;
 }
+=======
+#menu-mainmenu > li.seriescat > ul.dropdown-menu
+{
+	width: 115px;
+}
+
+#menu-mainmenu > li > a
+{
+	padding: 14px 20px 24px;
+}
+
+
+#menu-mainmenu > li > ul.dropdown-menu
+{
+	padding-bottom: 12px;
+}
+
+
+#menu-mainmenu > li > ul.dropdown-menu
+{
+	padding-top: 25px;
+	background: #ebe7e0;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li a
+{
+	color: #0b2a4a;	
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > a
+{
+	color: #0b2a4a;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "AM";
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li:hover a{
+	background: #fbfaf9;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > a:hover
+{
+	background: #fbfaf9;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > ul
+{
+	background: #FFF;
+	padding-left: 0px;
+	margin-left: 115px;
+	box-shadow: none;
+}
+
+#menu-mainmenu li ul li ul, #menu-mainmenu li ul li ul li, #menu-mainmenu .sitemap > ul .sitemapFlop {
+    background: #FFF;
+}
+
+#menu-mainmenu li ul li ul li:hover
+{
+	background: #fbfaf9;
+}
+
+ #menu-mainmenu .sitemap > ul .sitemapFlop h2
+{
+	color: #081f37;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "AM";
+	margin-top: 5px;
+}
+
+ #menu-mainmenu .sitemap > ul .sitemapFlop a
+{
+	color: #081f37;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "AR";
+}
+>>>>>>> JAC-1279
