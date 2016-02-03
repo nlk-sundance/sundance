@@ -59,10 +59,10 @@
     <section class="wrapper headercontainer">
   		<div class="container">
   			<div class="row">
-  				<div class="col-xs-12 col-sm-12 col-md-5">
+  				<div class="col-xs-12 col-sm-12 col-md-4">
   					<h1 class="logo"><a href="<?php bloginfo('url'); ?>">logo</a></h1>
   				</div>
-  				<div class="col-xs-12 col-sm-12 col-md-7">
+  				<div class="col-xs-12 col-sm-12 col-md-8">
   					<ul class="toplist">
   						<li class="listborder"><a href="<?php bloginfo('url'); ?>/request-literature/">Free Brochure</a></li>
   						<li><a href="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/">Nearest Dealer</a></li>

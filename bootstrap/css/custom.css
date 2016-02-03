@@ -982,7 +982,7 @@ ul.footer-links li.border
 }
 
 
-@media (min-width: 991px) {
+@media (max-width: 991px) {
   	.wrapper.headercontainer h1.logo a {
 	    display: block;
 	    margin: 45px auto 30px;
@@ -1013,7 +1013,6 @@ ul.footer-links li.border
 {
 	padding-right: 0px;
 }
-
 
 .navbar-nav > li > .dropdown-menu > li > a
 {
@@ -1214,5 +1213,16 @@ ul.footer-links li.border
 {
 	opacity: 0;
 	visibility: hidden;
+}
+
+@media (max-width: 1150px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 15px;
+	}
+	
+	ul.navbar-nav li.search a
+	{
+		padding-right: 25px !important;
+	}
 }
 
