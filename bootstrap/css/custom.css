@@ -1012,3 +1012,15 @@ ul.footer-links li.border
 {
 	padding-right: 0px;
 }
+
+
+@media (max-width: 1150px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 15px;
+	}
+	
+	ul.navbar-nav li.search a
+	{
+		padding-right: 25px !important;
+	}
+}
