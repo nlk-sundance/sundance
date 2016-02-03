@@ -14,28 +14,28 @@ get_header('bootstrap'); ?>
   	<section class="wrapper minicontainer">
   		<div class="container smallcontainer">
   			<div class="row ">
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   					<div class="selling hovercard">
   						<div class="bestselling">
   				<h3>BEST SELLING</h3>
   				</div>
   				</div>
   				</div>
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   					<div class="therapy hovercard">
   						<div class="bestherapy">
   				<h3>THERAPY</h3>
   				</div>
   				</div> 				
   				</div>
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   				<div class="entertaining hovercard">
   						<div class="mostentertaining">
   				<h3>ENTERTAINING</h3>
   				</div>
   				</div> 				
   				</div> 				
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   				<div class="search hovercard">
   						<div class="mostsearch">
   				<h3>SEARCH BY SIZE</h3>
@@ -48,7 +48,7 @@ get_header('bootstrap'); ?>
   	<section class="wrapper whitecontainer">
   		<div class="container smallcontainer">
   			<div class="row whitecontent">
-  				<div class="col-xs-12 col-sm-6 col-md-6 firstcontent">
+  				<div class="col-xs-12 col-sm-12 col-md-6 firstcontent">
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padl0 xpadr0">
   							<h3>Find Your Nearest Dealer</h3>
@@ -68,7 +68,7 @@ get_header('bootstrap'); ?>
   						</div>
   					</div>
   				</div>
-  				<div class="col-xs-12 col-sm-6 col-md-6">
+  				<div class="col-xs-12 col-sm-12 col-md-6">
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padr0">
   							<h3>Free Brochure</h3>
@@ -91,14 +91,14 @@ get_header('bootstrap'); ?>
   	<section class="wrapper smallcontainer">
   		<div class="container smallcontainer">
   			<div class="row smallcontent">
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-5 col-md-3">
   					<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/truck.png">
   				</div>
-  				<div class="col-xs-12 col-sm-5 col-md-5">
+  				<div class="col-xs-12 col-sm-7 col-md-5">
   					<h1>Truckload <span>Savings Event</span></h1>
   					<p>Take Advantage of the season's best discounts!</p>
   				</div>
-  				<div class="col-xs-12 col-sm-4 col-md-4 dreambtncont">
+  				<div class="col-xs-12 col-sm-12 col-md-4 dreambtncont text-center">
   					<a href="#" class="btn btn-primary btn-blue btn-big">GET THE SPA OF YOUR DREAMS</a>
   				</div>
   			</div>
