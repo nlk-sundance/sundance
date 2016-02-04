@@ -11,7 +11,7 @@ get_header('bootstrap'); ?>
 	<section class="wrapper bannercontainer">
   		<?php echo do_shortcode('[rev_slider alias="homepageslider"]'); ?>
   	</section>
-  	<section class="wrapper minicontainer">
+  	<section class="wrapper minicontainer podscont">
   		<div class="container smallcontainer">
   			<div class="row ">
   				<div class="col-xs-12 col-sm-6 col-md-3">
