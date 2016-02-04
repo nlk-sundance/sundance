@@ -15,32 +15,32 @@ get_header('bootstrap'); ?>
   		<div class="container smallcontainer">
   			<div class="row ">
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  					<div class="selling hovercard">
+  					<a href="<?php bloginfo('url'); ?>/best-selling"><div class="selling hovercard">
   						<div class="bestselling">
   				<h3>BEST SELLING</h3>
   				</div>
-  				</div>
+  				</div></a>
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  					<div class="therapy hovercard">
+  					<a href="<?php bloginfo('url'); ?>/low-profile"><div class="therapy hovercard">
   						<div class="bestherapy">
-  				<h3>THERAPY</h3>
+  				<h3>LOW PROFILE</h3>
   				</div>
-  				</div> 				
+  				</div></a> 				
   				</div>
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  				<div class="entertaining hovercard">
+  				<a href="<?php bloginfo('url'); ?>/energy-efficient"><div class="entertaining hovercard">
   						<div class="mostentertaining">
-  				<h3>ENTERTAINING</h3>
+  				<h3>ENERGY EFFICIENT</h3>
   				</div>
-  				</div> 				
+  				</div></a> 				
   				</div> 				
   				<div class="col-xs-12 col-sm-3 col-md-3">
-  				<div class="search hovercard">
+  				<a href="<?php bloginfo('url'); ?>/search-by-size"><div class="search hovercard">
   						<div class="mostsearch">
   				<h3>SEARCH BY SIZE</h3>
   				</div>
-  				</div> 	
+  				</div></a> 	
   				</div>
   			</div>
   		</div>
@@ -119,7 +119,7 @@ get_header('bootstrap'); ?>
 	  				<p>Understand the healing benefits of Sundance<sup>&reg;</sup> hydrotherapy.</p>
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">
-  					<h1>SunSmart WiFi App</h1>
+  					<h1>SunSmart<sup>&reg;</sup> WiFi App</h1>
   					<p>The SunSmart<sup>&reg;</sup> WiFi Kit lets you stay in tune with your spa remotely.</p>	
   				</div>
   				<div class="col-xs-12 col-sm-4 col-md-4">

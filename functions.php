@@ -3578,3 +3578,13 @@ function jht_do_hreflang() {
 	if ( array_key_exists($p['path'], $a) )
 		print $a[ $p['path'] ];
 }
+
+function sundance_series( $tub_id ) {
+	$custom = get_post_meta($tub_id, 's_cats');
+	
+	if(isset($custom[0]))
+	{
+		return get_the_title($custom[0]);
+	}
+	return '';
+}
