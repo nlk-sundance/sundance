@@ -1014,6 +1014,7 @@ ul.footer-links li.border
 	padding-right: 0px;
 }
 
+
 .navbar-nav > li > .dropdown-menu > li > a
 {
 	padding: 5px 20px;
@@ -1224,5 +1225,8 @@ ul.footer-links li.border
 	{
 		padding-right: 25px !important;
 	}
+	.container.smallcontainer > .row > .col-xs-12
+	{
+		min-height: 270px;	
+	}
 }
-
