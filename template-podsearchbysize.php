@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Pods Page
+ * Template Name: Pods - Search By Size Page
  *
  * @package Sundance
  * @subpackage Sundance
@@ -17,6 +17,25 @@ if($cat_tubs=='') $cat_tubs = array();
 //$serieslanding = ( $post->ID == 1894 );
 
 ?>
+<script type="text/javascript">
+	function goToByScroll(link){
+	      // Remove "link" from the ID
+	      // Scroll
+	    jQuery('html,body').animate({
+	        scrollTop: jQuery(link).offset().top - 50},
+	        'slow');
+	}
+	
+	jQuery(document).ready(function(){
+		jQuery(".srcollto").click(function(e) { 
+		      // Prevent a page reload when a link is pressed
+		    e.preventDefault(); 
+		      // Call the scroll function
+		    goToByScroll(jQuery(this).attr('href'));           
+		});	
+	});
+	
+</script>
  <div class="cols podscols">
     <div class="main col w730"><div class="main-title">
         <?php the_post_thumbnail();
@@ -31,6 +50,14 @@ if($cat_tubs=='') $cat_tubs = array();
                     <?php echo sundance_shortdesc($post->post_content, true); ?>
                 </div>
                 <br class="clear" />
+            </div>
+            <div class="tubslink">
+            	<ul>
+            		<li><a class="srcollto" href="#tubs_1">6+ people</a></li>
+            		<li><a class="srcollto" href="#tubs_2">5-6 people</a></li>
+            		<li><a class="srcollto" href="#tubs_3">4-5 people</a></li>
+            		<li><a class="srcollto" href="#tubs_4">2-3 people</a></li>
+            	</ul>
             </div>
             <div class="tubSeries">
                 <!--div class="overhead">
@@ -53,9 +80,10 @@ if($cat_tubs=='') $cat_tubs = array();
                        <?php
                        		echo '<table class="tubGrid">';
 	                       		if( have_rows('spas_repeater') ):
+									$tubsc = 0;
 								 	while ( have_rows('spas_repeater') ) : the_row();
 								        ?>
-								        <tr><td colspan="4"><h4><?php the_sub_field('spas_title'); ?></h4></td></tr>
+								        <tr id="tubs_<?php echo ++$tubsc;?>"><td colspan="4"><h4><?php the_sub_field('spas_title'); ?></h4></td></tr>
 								        <?php 
 											// check for rows (sub repeater)
 											if( have_rows('featured_spas') ): ?>

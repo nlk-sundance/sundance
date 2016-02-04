@@ -5034,12 +5034,12 @@ strong{
 	}
 	.tubThumb .tubViewDetails {
 		position: absolute;
-		width: 109px;
-		height: 25px;
+		width: 116px;
+		height: 26px;
 		top: 55px;
 		left: 50%;
-		margin-left: -55px;
-		background: url(/wp-content/themes/sundance/images/icons/view-details-overlay.png) no-repeat;
+		margin-left: -58px;
+		background: url(images/pods/view_details.png) no-repeat;
 		display:none;
 	}
 	.tubSeries .description .details table a:hover .tubViewDetails {
@@ -6137,5 +6137,40 @@ ul.footer-links li.border
 	font-weight: 400;
 	color: #fff;
 	line-height: 15px;
+}
+
+.page .bd .rightCol .block.brochure.top .arrow {
+		top: -9px;
+		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-arrow-yellow.png) no-repeat 0px 0px;
+	}
+	
+/* Tubs Go To Link */
+
+.tubslink > ul
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+.tubslink > ul > li
+{
+	list-style: none;
+	float: left;
+	width: 24%;
+	text-align: center;
+}
+
+.tubslink > ul > li > a
+{
+	font-size: 14px;
+	font-family: "AR",Tahoma,Geneva,sans-serif;
+	float: left;
+	width: 100%;
+	margin: 10px 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #236DC7;
+	text-decoration: underline;
 }
 
