@@ -1225,7 +1225,11 @@ ul.footer-links li.border
 	{
 		padding-right: 25px !important;
 	}
-	.container.smallcontainer > .row > .col-xs-12
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  	
+	.podscont > .row > .col-xs-12
 	{
 		min-height: 270px;	
 	}
