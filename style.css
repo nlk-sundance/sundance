@@ -5887,6 +5887,16 @@ a#show-msrp.close {
     padding-left: 10px;
 }
 
+/*New Sprite for Montclain*/
+
+.tubThumb.montclair {
+	background-image: url('images/sds-tubs-sprite_resized.jpg');
+	background-position: -278px -832px;
+}
+
+.tubSeries .description .details table .p .view-details {
+	background: transparent url("images/view_details.png") repeat scroll 0px 0px;
+}
 
 /* New pods pages */
 .main .headline .description.w670
@@ -6190,7 +6200,6 @@ ul.footer-links li.border
 	color: #fff;
 	line-height: 15px;
 }
-
 
 .page .bd .rightCol .block.brochure.top .arrow {
 		top: -9px;
