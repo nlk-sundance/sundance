@@ -1229,7 +1229,7 @@ ul.footer-links li.border
 
 @media (max-width: 991px) and (min-width: 768px) {
   	
-	.podscont > .row > .col-xs-12
+	.podscont > .container > .row > .col-xs-12
 	{
 		min-height: 270px;	
 	}
