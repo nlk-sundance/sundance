@@ -3698,12 +3698,13 @@ function jht_do_hreflang() {
 require get_template_directory() . '/includes/wp_bootstrap_navwalker.php';
 
 function sundance_series( $tub_id ) {
-	$custom = get_post_meta($tub_id, 's_cats');
+	$custom = get_post_meta($tub_id,'s_cats');
+	$cats = $custom[0];
+	$serID = $cats[0];
 	
-	if(isset($custom[0]))
+	if(isset($serID))
 	{
-		return get_the_title($custom[0]);
+		return get_the_title($serID);
 	}
 	return '';
 }
-
