@@ -4541,7 +4541,7 @@ strong{
 			width: 1024px;
 			height: 698px;
 			margin-bottom: -180px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/hero-narrow.jpg) no-repeat 50% 0%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/banner_main.jpg) no-repeat 50% 0%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h1,
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h2 {
@@ -4573,7 +4573,7 @@ strong{
 			left: -8px;
 			width: 184px;
 			height: 248px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content.one-part .the-brochure-img {
 			/*left: -34px;*/
@@ -4762,18 +4762,18 @@ strong{
 			position: absolute;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-model {
-			width: 517px;
-			height: 378px;
+			width: 431px;
+			height: 362px;
 			left: -118px;
 			top: -63px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-model.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open1.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-benefits {
-			width: 497px;
-			height: 434px;
+			width: 560px;
+			height: 337px;
 			right: -58px;
 			top: -171px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-benefits.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open2.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
@@ -4786,11 +4786,11 @@ strong{
 			height: 333px;
 			left: -115px;
 			top: -25px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-satisfied.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
-			width: 732px;
-			height: 488px;
+			width: 400px;
+			height: 333px;
 			left: -250px;
 			top: -126px;
 			background: url(/wp-content/themes/sundance/images/ppc-landing/img-tubbing.png) no-repeat 50% 50%;
@@ -4888,7 +4888,7 @@ strong{
 		}
 		body.sundance-brochure .ft.cta {
 			position: relative;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/cta-footer.png) no-repeat 50% 0;
+			background: #797866;
 			height: 303px;
 			}
 		body.sundance-brochure .ft .wrap {
@@ -4896,7 +4896,7 @@ strong{
 		}
 		body.sundance-brochure .ft .inner {
 			border: none;
-			background: none;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_banner.png) no-repeat 0px 30px #797866;
 		}
 		body.sundance-brochure .ft.cta .inner {
 			height: 303px;
@@ -6243,6 +6243,7 @@ sup
     font-size: 80%;
 }
 
+
 /*New Sprite for Montclain*/
 
 .tubThumb.montclair {
@@ -6344,3 +6345,23 @@ sup
 .altamar {background-position: 0px 0px; background-image: url('images/tubs/altamar_138.png'); }
 .marin {background-position: 0px 0px; background-image: url('images/tubs/marin_138.png'); }
 .capri {background-position: 0px 0px; background-image: url('images/tubs/capri_138.png'); }
+
+body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"], .sundance-brochure .bigBlueBtn
+{
+		background: rgb(1,142,161); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(55,125,216,1) 0%, rgba(55,125,216,1) 50%, rgba(77,145,237,1) 51%, rgba(77,145,237,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,125,216,1)), color-stop(50%,rgba(55,125,216,1)), color-stop(51%,rgba(77,145,237,1)), color-stop(100%,rgba(77,145,237,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#377dd8', endColorstr='#4d91ed',GradientType=0 ); /* IE6-9 */
+
+}
+
+body.sundance-brochure .ft .logo p
+{
+	color: #000;
+	height: 46px;
+}
+
