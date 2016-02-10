@@ -4570,7 +4570,7 @@ strong{
 		body.sundance-brochure .bd .wrap .page-header .content .the-brochure-img {
 			position: absolute;
 			top: -72px;
-			left: -8px;
+			left: 3px;
 			width: 184px;
 			height: 248px;
 			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
@@ -4791,7 +4791,7 @@ strong{
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
 			height: 333px;
-			left: -30px;
+			left: -130px;
 			top: -50px;
 			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
 		}
@@ -4888,7 +4888,7 @@ strong{
 		}
 		body.sundance-brochure .ft.cta {
 			position: relative;
-			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/cta-footer.png") no-repeat scroll 50% 0px;
+			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/cta-footerv2.png") no-repeat scroll 50% 0px;
 			height: 303px;
 			}
 		body.sundance-brochure .ft .wrap {
