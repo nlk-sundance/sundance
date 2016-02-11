@@ -4541,7 +4541,7 @@ strong{
 			width: 1024px;
 			height: 698px;
 			margin-bottom: -180px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/banner_main.jpg) no-repeat 50% 0%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/hero-narrow.jpg) no-repeat 50% 0%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h1,
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h2 {
@@ -6243,7 +6243,6 @@ sup
     font-size: 80%;
 }
 
-
 /*New Sprite for Montclain*/
 
 .tubThumb.montclair {
@@ -6364,4 +6363,3 @@ body.sundance-brochure .ft .logo p
 	color: #000;
 	height: 46px;
 }
-
