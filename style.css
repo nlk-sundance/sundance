@@ -4540,7 +4540,7 @@ strong{
 			width: 1024px;
 			height: 698px;
 			margin-bottom: -180px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/banner_main.jpg) no-repeat 50% 0%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/hero-narrow.jpg) no-repeat 50% 0%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h1,
 		body.sundance-brochure .bd .wrap .page-header .content .span1of1 h2 {
@@ -5744,23 +5744,4 @@ sup
 	position: relative;
     top: -0.5em;
     font-size: 80%;
-}
-
-body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"], .sundance-brochure .bigBlueBtn
-{
-		background: rgb(1,142,161); /* Old browsers */
-		background: -moz-linear-gradient(top,  rgba(55,125,216,1) 0%, rgba(55,125,216,1) 50%, rgba(77,145,237,1) 51%, rgba(77,145,237,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,125,216,1)), color-stop(50%,rgba(55,125,216,1)), color-stop(51%,rgba(77,145,237,1)), color-stop(100%,rgba(77,145,237,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgba(55,125,216,1) 0%,rgba(55,125,216,1) 50%,rgba(77,145,237,1) 51%,rgba(77,145,237,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#377dd8', endColorstr='#4d91ed',GradientType=0 ); /* IE6-9 */
-
-}
-
-body.sundance-brochure .ft .logo p
-{
-	color: #000;
-	height: 46px;
 }

@@ -57,12 +57,13 @@ input#gform_submit_button_11 {
     	<div class="content" role="main">
             <div class="content-list rt" style="height:390px;">
                 <div id="img-model" class="listimg"></div>
-                <h2>See Spa Models at a Glance</h2>
+                <h2>Compare Hot Tub Models at a Glance</h2>
                 <ul>
-                	<li>Choose spa sizes and seating that fit your needs</li>
-                	<li>Make a “wish list” of features and options</li>
-                    <li>Dive into details or browse through — one-stop shopping!</li>
+                	<li>Find the perfect hot tub for you</li>
+                	<li>Choose hot tub sizes, seating, and features</li>
+                    <li>Use as an all-in-one shopping guide</li>
                 </ul>
+            
             </div>
         	<div class="content-list lt" style="height:345px;">
                 <div id="img-benefits" class="listimg"></div>
