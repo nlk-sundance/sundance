@@ -135,7 +135,9 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Cameo&trade; model shown for visualization purposes only. Spa size and jet placement will vary by model. Not all colors available in all models. See individual product pages for available colors.</p>
+				<p>Cameo&trade; model shown for visualization purposes only. Tub size, configuration, features, controls, options, physical appearance and performance will vary by model.
+<br/>Not all colors available in all models. See individual product pages for available colors.
+</p>
 			</div>
 
 		</div>
