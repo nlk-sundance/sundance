@@ -1067,6 +1067,7 @@ ul.footer-links li.border
 		-o-transition: all 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
+		min-height: 165px;
 	}
 
 	#menu-mainmenu li ul li ul li:hover {
