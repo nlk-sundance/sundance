@@ -6235,6 +6235,7 @@ ul.footer-links li.border
 	display: block;
 	text-indent: -9999px;
 	position: absolute;
+	z-index: 20;
 }
 
 .spabadge.badge-medium
