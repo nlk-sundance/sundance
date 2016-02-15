@@ -6266,7 +6266,21 @@ ul.footer-links li.border
 	background-image: url('images/badges/lowentry.png');
 }
 
+.spabadge.badge-medium.lowentry
+{
+	background-size: 60px 40px;
+	top: -10px;
+	left: -3px;
+}
+
 .spabadge.lounge
 {
 	background-image: url('images/badges/lounge.png');
+}
+
+.spabadge.badge-medium.lounge
+{
+	background-size: 57px 30px;
+	top: -5px;
+	left: -10px;
 }
