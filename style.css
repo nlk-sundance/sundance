@@ -5740,7 +5740,6 @@ a#show-msrp.close {
 .labor-bottom-content2 p { font-size: 16px; color: #333; }
 .labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
 
-
 /* Blue Header */
 
 .hd {
@@ -6236,6 +6235,7 @@ ul.footer-links li.border
 	text-decoration: underline;
 }
 
+
 sup
 {
 	position: relative;
@@ -6344,4 +6344,43 @@ sup
 .altamar {background-position: 0px 0px; background-image: url('images/tubs/altamar_138.png'); }
 .marin {background-position: 0px 0px; background-image: url('images/tubs/marin_138.png'); }
 .capri {background-position: 0px 0px; background-image: url('images/tubs/capri_138.png'); }
+
+
+/* Badges */
+.spabadge
+{
+	display: block;
+	text-indent: -9999px;
+	position: absolute;
+	z-index: 20;
+}
+
+.spabadge.badge-medium
+{
+	left: -15px;
+	top: -15px;
+	background-size: auto 50px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.spabadge.bestseller
+{
+	background-image: url('images/badges/bestseller.png');
+}
+
+.spabadge.bestbuy
+{
+	background-image: url('images/badges/bestbuy.png');
+}
+
+.spabadge.lowentry
+{
+	background-image: url('images/badges/lowentry.png');
+}
+
+.spabadge.lounge
+{
+	background-image: url('images/badges/lounge.png');
+}
 
