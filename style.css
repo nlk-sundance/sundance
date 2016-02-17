@@ -6253,17 +6253,17 @@ ul.footer-links li.border
 
 .spabadge.bestseller
 {
-	background-image: url('images/badges/bestseller.png');
+	background-image: url('images/badges/bestsellerv2.png');
 }
 
 .spabadge.bestbuy
 {
-	background-image: url('images/badges/bestbuy.png');
+	background-image: url('images/badges/bestbuyv2.png');
 }
 
 .spabadge.lowentry
 {
-	background-image: url('images/badges/lowentry.png');
+	background-image: url('images/badges/lowentryv2.png');
 }
 
 .spabadge.badge-medium.lowentry
@@ -6275,7 +6275,7 @@ ul.footer-links li.border
 
 .spabadge.lounge
 {
-	background-image: url('images/badges/lounge.png');
+	background-image: url('images/badges/loungev2.png');
 }
 
 .spabadge.badge-medium.lounge
