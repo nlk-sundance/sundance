@@ -175,4 +175,5 @@ if($cat_tubs=='') $cat_tubs = array();
 <br class="clear" />
 <?php
 endwhile;
+
 get_footer(); ?>
