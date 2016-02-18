@@ -38,8 +38,8 @@
  * @since Sundance 2.0
  */
 
-if ( !session_id() )
-	add_action( 'init', 'session_start' );
+//if ( !session_id() )
+//	add_action( 'init', 'session_start' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -91,6 +91,7 @@ function sundance_setup() {
 	add_image_size( 'blog-mid', 211, 159, true );
 	add_image_size( 'blog-thm', 93, 70, true );
 	add_image_size( 'accthm', 140, 125, true );
+	add_image_size( 'banner-full', 960, 285, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -307,6 +308,10 @@ function sundance_body_class($classes) {
 	
 	if ( is_search() ) {
 		$classes[] = 'page';
+	}
+
+	if ( sds_is_ca() ) {
+		$classes[] = 'sds-canada';
 	}
 	
 	return $classes;
@@ -1329,6 +1334,7 @@ function sundance_specs_metabox() {
 	$info = $custom[0];
 	if($info=='') $info = array(
 		'product_id' => '',
+		'video_id' => '',
 		'msrp' => '',
 		'seats' => '',
 		'dim_us' => '',
@@ -1355,6 +1361,9 @@ function sundance_specs_metabox() {
 	?><table width="100%">
 	<tr valign="top">
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
+    </tr>
+	<tr valign="top">
+    <td width="187"><label for="s_specs[video_id]">YouTube Video ID</label></td><td><input type="text" name="s_specs[video_id]" value="<?php esc_attr_e($info['video_id']); ?>" size="20" /></td>
     </tr>
 	<tr valign="top">
 	<td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
@@ -1465,6 +1474,16 @@ function sundance_tub_sort($a,$b) {
 	return $a['menu_order'] > $b['menu_order'];
 }
 
+// Fix serialized data
+function fix_serialized_data( $data ) {
+	$fixed_serialized_data = preg_replace_callback ( '!s:(\d+):"(.*?)";!',
+		function($match) {
+		return ($match[1] == strlen($match[2])) ? $match[0] : 's:' . strlen($match[2]) . ':"' . $match[2] . '";';
+		},
+		$data );
+	return $fixed_serialized_data;
+}
+
 function sundance_meta_save($post_id){
 	// verify if this is an auto save routine. If it is our form has not been submitted, so we dont want
 	// to do anything
@@ -1523,8 +1542,8 @@ function sundance_meta_save($post_id){
 					// also want to make sure it is NOT in any cats it shouldnt be in, so
 					foreach($allcats as $c) {
 						$cat_id = $c->ID;
-						$custom = get_post_meta($cat_id, 's_cat_tubs');
-						$cat_tubs = $custom[0];
+						$custom = get_post_meta($cat_id);
+						$cat_tubs = unserialize(fix_serialized_data( $custom['s_cat_tubs'][0] ));
 						if($cat_tubs=='') $cat_tubs = array();
 						
 						$tname = 's_'. $cat_id .'_tubtable';
@@ -1551,8 +1570,8 @@ function sundance_meta_save($post_id){
 				} else {
 					foreach($allcats as $c) {
 						$cat_id = $c->ID;
-						$custom = get_post_meta($cat_id, 's_cat_tubs');
-						$cat_tubs = $custom[0];
+						$custom = get_post_meta($cat_id);
+						$cat_tubs = unserialize(fix_serialized_data( $custom['s_cat_tubs'][0] ));
 						if($cat_tubs=='') $cat_tubs = array();
 						
 						$tname = 's_'. $cat_id .'_tubtable';
@@ -1564,10 +1583,10 @@ function sundance_meta_save($post_id){
 						}
 					}
 				}
-				$moretransients = array( 's_tubcats', 's_allcats', 's_alltubs' );
+				/*$moretransients = array( 's_tubcats', 's_allcats', 's_alltubs' );
 				foreach ( $moretransients as $t ) {
 					delete_transient( $t );
-				}
+				}*/
 			}
 		}
 	}
@@ -1594,68 +1613,52 @@ function jht_all_tubs_images($tubs) {
 
 // sets array of categories/collections, with sub arrays of associated TUBS
 function sundance_series_setup() {
-	// transient for s_tubcats
-	//if ( false === ( $special_query_results = get_transient( 's_tubcats' ) ) ) {
-	// It wasn't there, so regenerate the data and save the transient
-
-	// main HOT TUBS category is id #8, so we can skip that...
-
-	// transient for s_allcats
-	// if ( false === ( $special_query_results = get_transient( 's_allcats' ) ) ) {
-	// It wasn't there, so regenerate the data and save the transient
+	// Get SERIES, exclude the ALL series
 	$series = get_posts(array('numberposts'=>-1,'post_type'=>'s_cat','orderby'=>'menu_order','order'=>'ASC','exclude'=>1894));
-	//set_transient( 's_allcats', $special_query_results, 60*60*12 );
-	//}
-	// Use the data like you would have normally...
-	//$series = get_transient( 's_allcats' );
-
-	// transient for s_alltubs
-	//if ( false === ( $special_query_results = get_transient( 's_alltubs' ) ) ) {
-	// It wasn't there, so regenerate the data and save the transient
+	
 	$alltubs = get_posts( array( 'numberposts' => -1, 'post_type' => 's_spa', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
-	//set_transient( 's_alltubs', $special_query_results, 60*60*12 );
-	//}
-	// Use the data like you would have normally...
-	//$alltubs = get_transient( 's_alltubs' );
 
 	$cats = array();
-	foreach ( $series as $c ) {
-		if ( !isset($cats[$c->ID]) ) $cats[$c->ID] = array();
 
+	foreach ( $series as $c ) {
+		if ( ! isset( $cats[$c->ID] ) )
+			$cats[$c->ID] = array();
+ 
 		$cats[$c->ID]['name'] = $c->post_title;
 		$cats[$c->ID]['url'] = get_bloginfo('url') .'/'. $c->post_name .'/'; //get_permalink($c->ID);
 		$cats[$c->ID]['tubs'] = array();
-		/*
-		if (class_exists('MultiPostThumbnails')) {
-		$img_id = MultiPostThumbnails::get_post_thumbnail_id('jht_cat', 'nav-rollover', $c->ID);
-		$cat_img = get_post($img_id);
-		$cat_img = $cat_img->guid;
-		} else {
-		$cat_img = '';
-		}
 
-		$cats[$c->ID]['img'] = $cat_img;
-		*/
-		$custom = get_post_meta($c->ID, 's_cat_tubs');
-		$cat_tubs = $custom[0];
-		if($cat_tubs=='') {
+		$custom = get_post_meta($c->ID);
+		$cat_tubs = unserialize(fix_serialized_data( $custom['s_cat_tubs'][0] ));
+		if ($cat_tubs=='') {
 			$cat_tubs = array();
 		} else {
-			/*
-			foreach ( $cat_tubs as $k => $t ) {
-			$cat_tubs[$k]['imgs'] = $tub_imgs[$k];
-			}
-			*/
 			usort($cat_tubs, 'sundance_tub_sort');
 		}
-
+		
 		$cats[$c->ID]['tubs'] = $cat_tubs;
 	}
 
-	set_transient( 's_tubcats', $cats, 60*60*12 );
-	//}
-	// Use the data like you would have normally...
-	//$cats = get_transient( 's_tubcats' );
+	/*
+	foreach ($alltubs as $tub) {
+		$custom_c = get_post_meta($tub->ID, 's_cats');
+		$cat_id = $custom_c[0][0];
+		$custom_s = get_post_meta($tub->ID, 's_specs');
+		$tub_specs = $custom_s[0];
+		//var_dump($tub);
+		$cats[$cat_id]['tubs'][$tub->ID] = array(
+			'id' => $tub->ID,
+			'url' => get_bloginfo('url') .'/'. $tub->post_name .'/',
+			'name' => $tub->post_title,
+			'size' => get_post_meta($tub->ID, 's_size', true),
+			'jets' => 1,
+			'vol' => ( sds_is_US() ? $tub_specs['vol_us'] : $tub_specs['vol_int'] ),
+			);
+		foreach ($tub_specs as $spec => $value) {
+			$cats[$cat_id]['tubs'][ $tub->ID ][ $spec ] = $value;
+		}
+	}*/
+
 	global $tubcats;
 	$tubcats = $cats;
 }
@@ -1808,9 +1811,9 @@ function sundance_grouptubs($tubs) {
 
 function sundance_series_tubs( $cat_tubs, $series_id ) {
 	// transient for s_tubcats
-	$tname = 's_'. $series_id .'_tubtable';
+	//$tname = 's_'. $series_id .'_tubtable';
 	
-	if ( false === ( $special_query_results = get_transient( $tname ) ) ) {
+	//if ( false === ( $special_query_results = get_transient( $tname ) ) ) {
 		$o = '<table class="tubGrid">';
 		if ( count( $cat_tubs ) == 0 ) {
 			$o .= '<tr><td><div><h3>None found</h3></div></td><td colspan="3">&nbsp;</td></tr>';
@@ -1833,12 +1836,23 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 						if ( $t == '' ) {
 							$o .= '&nbsp;';	
 						} else {
+							$spa_id = $t['id'];
+							$custom = get_post_meta($spa_id, 's_specs', false);
+							$specs = $custom[0];
+							$t['dim_us'] = $specs['dim_us'];
+							$t['dim_int'] = $specs['dim_int'];
+							$bazaarvoiceID = $specs['product_id'];
 							$o .= '<a href="'. esc_url($t['url']) .'">';
 							$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+							$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
 							$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
+							//$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
+							//$o .= '<span class="p">Total Jets: '. absint($t['jets']) .'</span>';
+							//$o .= '<span class="p">Capacity: '. esc_attr($t['vol']) .'</span>';
 							$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
-							$o .= '<span class="p">Total Jets: '. absint($t['jets']) .'</span>';
-							$o .= '<span class="p">Capacity: '. esc_attr($t['vol']) .'</span>';
+							$o .= '<span class="p">Dimensions:<br/> '. esc_attr($t['dim_us']) .'<br/><small>('. esc_attr($t['dim_int']) .')</small></span>';
+							$o .= '<span class="p">Series: '. esc_attr(sundance_series($spa_id)) .'</span>';
+														
 							//$o .= '<span class="p"><img src="'. get_bloginfo('template_url') .'/images/icons/view-details-arrow.png" border="0" class="det" /></span>';
 							$o .= '<span class="p"><div class="view-details"></div></span>';
 							//if (class_exists('MultiPostThumbnails')) {
@@ -1856,10 +1870,10 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 			}
 		}
 		$o .= '</table>';
-		set_transient( $tname, $o, 60*60*12 );
-	}
+		//set_transient( $tname, $o, 60*60*12 );
+	//}
 	// Use the data like you would have normally...
-	$o = get_transient( $tname );
+	//$o = get_transient( $tname );
 	return $o;
 }
 
@@ -1960,6 +1974,7 @@ function sundance_publ_acc_transients($post_id) {
 }
 add_action( 'publish_s_acc', 'sundance_publ_acc_transients' );
 
+/*
 function sundance_flush_tubcats_transients($post_id) {
 	$thispost = get_post($post_id);
 	// we know we want to flush jht_tubs
@@ -1984,6 +1999,7 @@ function sundance_flush_tubcats_transients($post_id) {
 add_action( 'publish_s_spa', 'sundance_flush_tubcats_transients' );
 add_action( 'publish_s_cat', 'sundance_flush_tubcats_transients' );
 add_action( 'publish_s_jet', 'sundance_flush_tubcats_transients' );
+*/
 
 function sundance_pagetitle() {
 	global $post;
@@ -2599,12 +2615,17 @@ require('functions_geo.php');
 if ( ! function_exists('geo_redirection') ) {
 	function geo_redirection() {
 
-		$g = geo_data();
+		if ( isset($_COOKIE['georesult']) ) {
+			$g = json_decode(stripcslashes($_COOKIE['georesult']), true);
+		}
+		else {
+			$g = geo_data();
+		}
 		$c = $g['country'];
 
 		switch ($c) {
 			case 'CA':
-				if ( is_front_page() ) {
+				if ( is_front_page() && get_bloginfo('url') == 'http://www.sundancespas.com/' ) {
 					wp_redirect('http://www.sundancespas.ca/');
 					//exit();
 				}
@@ -2617,6 +2638,9 @@ if ( ! function_exists('geo_redirection') ) {
 add_action( 'wp', 'geo_redirection' );
 
 
+function sds_is_US() {
+	return ( get_bloginfo('url') == 'http://www.sundancespas.com/' ? true : false );
+}
 
 
 // [get_blog_info dir="url"]
@@ -2678,35 +2702,38 @@ function google_tag_manager_criteo() {
 add_action('do_custom_data_layer', 'custom_data_layer_container');
 function custom_data_layer_container() {
 	global $post;
-	
+
 	$expire = time()+60*60*24*30;
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	setcookie("sdscid", $custId, $expire, '/');
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
 	$str .= '"get":' . json_encode($_SERVER['QUERY_STRING']) . ',';
 	
-	if ( function_exists('geo_data') )
-		$str .= '"geo":' . json_encode(geo_data()) . ',';
+	if ( isset($_COOKIE['georesult']) ) {
+		$a = json_decode(stripcslashes($_COOKIE['georesult']), true);
+		$str .= '"geo":' . json_encode( $a ) . ',';
+	}
 	
 	$str .= '"customerId":"' . $custId . '",';
 	
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
 		$parts = explode( "&", get_the_title($post->ID) );
 		$prodId = $parts[0];
-		setcookie("sdsspa", $prodId, $expire, '/');
+		//setcookie("sdsspa", $prodId, $expire, '/');
 
 		$str .= '"productId":"' . $prodId . '",';
 	}
-	
 	if ( get_post_type($post->ID) == "s_cat" ) { // is category spa page
-		global $post;
-		$custom = get_post_meta($post->ID, 's_cat_tubs');
-		$cat_tubs = $custom[0];
-		if ( count( $cat_tubs ) !== 0 ) {
+		//$custom = get_post_meta($post->ID, 's_cat_tubs');
+		//$cat_tubs = $custom[0];
+		$custom = get_post_meta($post->ID);
+		$cat_tubs = unserialize(fix_serialized_data( $custom['s_cat_tubs'][0] ));
+		$str_list = '';
+		if ( count( $cat_tubs ) !== 0  && is_array($cat_tubs) ) {
 			$i = 0;
 			foreach( $cat_tubs as $k => $v ) {
 				$i++;
@@ -2718,12 +2745,12 @@ function custom_data_layer_container() {
 			$str .= $str_list;
 		}
 	}
-	if ( is_page(5111) || is_page(2982) ) { // brochure page - paid search
+	if ( is_page('request-literature') || is_page('sundance-brochure') ) { // brochure page - paid search
 		$transId = time();
 		if ( $prodId )
 			$str .= '"productId":"' . $prodId . '",';
 	}
-	if ( is_page(2984) ) { // brochure thanks page
+	if ( is_page('thanks') ) { // brochure thanks page
 		$transId = time();
 		if ( $prodId )
 			$str .= '"productId":"' . $prodId . '",';
@@ -2736,11 +2763,92 @@ function custom_data_layer_container() {
 function custom_data_layer() {
 	do_action('do_custom_data_layer');
 }
+add_action('init', 'data_layer_cookie');
+function data_layer_cookie() {
+	if ( ! is_admin() ):
+		$expire = time()+60*60*24*30;
+		$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
+		setcookie("sdscid", $custId, $expire, '/');
+		if ( get_post_type() == "s_spa" ) { // is single spa page
+			$parts = explode( "&", get_the_title($post->ID) );
+			$prodId = $parts[0];
+			setcookie("sdsspa", $prodId, $expire, '/');
+		}
+	endif;
+}
 
 
 // Tracking Codes
 include('functions_trackingcodes.php');
 
+
+
+/**
+* Is SubPage?
+*
+* Checks if the current page is a sub-page and returns true or false.
+*
+* @param  $page mixed optional ( post_name or ID ) to check against.
+* @return boolean
+*/
+function sds_is_subpage( $page = null )
+{
+    global $post;
+    // is this even a page?
+    if ( ! is_page() )
+        return false;
+    // does it have a parent?
+    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+        return false;
+    // is there something to check against?
+    if ( ! isset( $page ) ) {
+        // yup this is a sub-page
+        return true;
+    } else {
+        // if $page is an integer then its a simple check
+        if ( is_int( $page ) ) {
+            // check
+            if ( $post->post_parent == $page )
+                return true;
+        } else if ( is_string( $page ) ) {
+            // get ancestors
+            $parent = get_ancestors( $post->ID, 'page' );
+            // does it have ancestors?
+            if ( empty( $parent ) )
+                return false;
+            // get the first ancestor
+            $parent = get_post( $parent[0] );
+            // compare the post_name
+            if ( $parent->post_name == $page )
+                return true;
+        }
+        return false;
+    }
+}
+
+
+
+function sharpspring_become_a_dealer() {
+	$str = '<script type="text/javascript">
+		var _ss = _ss || [];
+		_ss.push(\'_setDomain\', \'https://koi-7AFC9LNY.sharpspring.com/net\');
+		_ss.push(\'_setAccount\', \'KOI-II72QWOE\');
+		_ss.push(\'_trackPageView\');
+		(function(){ 
+			var ss = document.createElement(\'script\');
+			ss.type = \'text/javascript\';
+			ss.async = true;
+			ss.src = (\'https:\' == document.location.protocol ? \'https://\' : \'http://\') + \'koi-7AFC9LNY.sharpspring.com/client/ss.js?ver=1.1.1\';
+			var scr = document.getElementsByTagName(\'script\')[0];
+			scr.parentNode.insertBefore(ss, scr); 
+		}
+		)();
+		</script>';
+	if ( sds_is_subpage('become-a-dealer') || is_page( 'become-a-dealer' ) )
+		echo $str;
+}
+
+add_action( 'wp_head', 'sharpspring_become_a_dealer' );
 
 
 /*	*	*	*	*	*	*	*	*
@@ -3126,18 +3234,37 @@ function sds_my_server() {
 	switch ( $url ) {
 		case 'http://www.sundancespas.com' :
 		case 'http://www.sundancespas.com/' :
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
 			return 'live';
 			break;
-		case 'http://sundancespas.ninthlink.me' :
-		case 'http://sundancespas.ninthlink.me/' :
+		case 'http://sds.nlkdev.net' :
+		case 'http://sds.nlkdev.net/' :
 			return 'dev';
 			break;
 		case 'http://localhost/sundancespas.com' :
 		case 'http://localhost/sundancespas.com/' :
+		case 'http://localhost.sundancespas.com' :
+		case 'http://localhost.sundancespas.com/' :
 			return 'local';
 			break;
 	}
 	return 'live';
+}
+function sds_is_ca() {
+	$url = get_bloginfo('url');
+	switch ( $url ) {
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
+			return true;
+			break;
+		case 'http://www.sundancespas.com' :
+		case 'http://www.sundancespas.com/' :
+		default :
+			return false;
+			break;
+	}
+	return false;
 }
 
 
@@ -3154,7 +3281,7 @@ function sds_my_server() {
 			if ( is_page('reviews') ) {
 				if( sds_my_server() != 'live' )
 				{
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/ReadOnly/en_US/bvapi.js', array(), '1.0', false); //staging
 				}
 				else
 				{
@@ -3580,3 +3707,15 @@ function jht_do_hreflang() {
 }
 
 require get_template_directory() . '/includes/wp_bootstrap_navwalker.php';
+
+function sundance_series( $tub_id ) {
+	$custom = get_post_meta($tub_id,'s_cats');
+	$cats = $custom[0];
+	$serID = $cats[0];
+	
+	if(isset($serID))
+	{
+		return get_the_title($serID);
+	}
+	return '';
+}

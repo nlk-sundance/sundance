@@ -23,7 +23,7 @@
 								<input name="zipcodeSearch" value="1" type="hidden">
 							</form>
   						</li>
-  					</ul>
+  		</ul>
         <?php
         //wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
         ?>

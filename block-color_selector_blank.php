@@ -122,12 +122,155 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 .color-selector-modal-title span a::after {
 	padding-top: 4px;
 }	
+
+/* For Responsiveness */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.cols .w960.main {
+    width: 100%;
+    box-sizing: border-box;
+    xpadding: 0px 15px;
+}
+
+
+.color-selector.color-selector-container .color-selector-wrapper {
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .left {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    margin-right: 2%;
+    text-align: center;
+    width: 67.8%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    padding-top: 22px;
+    width: 30%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download{
+	width: 100%;
+	max-width: 240px;
+}
+
+.show-for-small
+{
+	display: none;
+}
+
+.bd {
+    margin-top: 0px !important;
+    max-width: 960px;
+    min-width: auto;
+    width: 100%;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+	.page .page
+	{
+		padding: 15px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    margin-right: 2%;
+	    width: 59.8%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img {
+	    height: auto !important;
+	    width: 450px !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    box-sizing: border-box;
+	    float: left;
+	    height: auto;
+	    padding-top: 22px;
+	    width: 33%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		xtop: 40px !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 29px;
+	}
+}
+
+@media only screen and (max-width: 767px) 
+{
+	.page .page
+	{
+		padding: 15px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper {
+		
+	}	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    float: none;
+	    width: 100%;
+	    height: auto;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    float: none;
+	    width: 100%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		width: 350px !important;
+		height: auto !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
+	{
+		height: 255px;
+	}
+	
+	.hide-for-small
+	{
+		display: none !important;
+	}
+	
+	.show-for-small
+	{
+		display: block;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 23px;
+	}
+	
+}	
+
 </style>
 <div class="color-selector color-selector-container">
 
 	<div class="color-selector-wrapper">
 		<h1 class="color-heading hidemodal">Spa Color Selector</h1>
-		<p class="hidemodal">Use the color palette to the right to pick out your shell and cabinet color.</p>
+		<p class="hidemodal hide-for-small">Use the color palette to the right to pick out your shell and cabinet color.</p>
+		<p class="hidemodal show-for-small">Use the color palette at the bottom to pick out your shell and cabinet color.</p>
 		<div class="left">
 
 			<div class="tub-container">
@@ -141,16 +284,17 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum.png" timg="platinum" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester.png" timg="oyester" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara.png" timg="sahara" height="137" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand.png" timg="sand" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand.png" timg="coppersand" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight.png" timg="midnight" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco.png" timg="monaco" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/carribeansurf.png" timg="carribeansurf" height="137" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium.png" timg="titanium" height="137" width="576" />
+					<?php /* ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium.png" timg="titanium" height="137" width="576" /><?php */ ?>
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Cameo&trade; model shown for visualization purposes only. Spa size and jet placement will vary by model. Not all colors available in all models. See individual product pages for available colors.</p>
+				<p>Cameo&trade; model shown for visualization purposes only. Tub size, configuration, features, controls, options, physical appearance and performance will vary by model.
+<br/>Not all colors available in all models. See individual product pages for available colors.
+</p>
 			</div>
 
 		</div>
@@ -163,12 +307,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="oyester" data-pdf="oyester" rel="Oyster" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Copper Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="carribeansurf" data-pdf="carribeansurf" rel="Carribean Surf" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/caribbean-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium-thumb.jpg" height="50" width="50" /></div>
+				<?php /* ?><div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium-thumb.jpg" height="50" width="50" /></div><?php */ ?>
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">

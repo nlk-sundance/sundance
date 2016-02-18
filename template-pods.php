@@ -78,6 +78,9 @@ if($cat_tubs=='') $cat_tubs = array();
 													$custom = get_post_meta($spa_id, 's_specs', false);
 													$specs = $custom[0];
 													$t['seats'] = $specs['seats'];
+													$t['dim_us'] = $specs['dim_us'];
+													$t['dim_int'] = $specs['dim_int'];
+													$bazaarvoiceID = $specs['product_id'];
 													$custom = get_post_meta($spa_id, 's_jets');
 													$tub_jets = $custom[0];
 													$total_jets = 0;
@@ -92,11 +95,16 @@ if($cat_tubs=='') $cat_tubs = array();
 													$t['seats'] = $specs['seats'];
 													$o .= '<td width="168">';
 														$o .= '<a href="'. esc_url($t['url']) .'">';
-														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" >
+																	<div class="tubViewDetails"></div>';
+														//			if(get_field('tub_badge', $spa_id) && get_field('tub_badge', $spa_id) != 'na')
+														//				$o .= '<span class="spabadge badge-medium '.get_field('tub_badge', $spa_id).'"></span>';			
+														$o .= '</div>';
+														$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
 														$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
 														$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
-														$o .= '<span class="p">Total Jets: '. absint($t['jets']) .'</span>';
-														$o .= '<span class="p">Capacity: '. esc_attr($t['vol']) .'</span>';
+														$o .= '<span class="p">Dimensions:<br/> '. esc_attr($t['dim_us']) .'<br/><small>('. esc_attr($t['dim_int']) .')</small></span>';
+														$o .= '<span class="p">Series: '. esc_attr(sundance_series($spa_id)) .'</span>';
 														//$o .= '<span class="p"><img src="'. get_bloginfo('template_url') .'/images/icons/view-details-arrow.png" border="0" class="det" /></span>';
 														$o .= '<span class="p"><div class="view-details"></div></span>';
 														//if (class_exists('MultiPostThumbnails')) {
@@ -138,4 +146,5 @@ if($cat_tubs=='') $cat_tubs = array();
 <br class="clear" />
 <?php
 endwhile;
+
 get_footer(); ?>

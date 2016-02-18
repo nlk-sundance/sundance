@@ -13,6 +13,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -59,10 +60,10 @@
     <section class="wrapper headercontainer">
   		<div class="container">
   			<div class="row">
-  				<div class="col-xs-12 col-sm-5 col-md-4">
+  				<div class="col-xs-12 col-sm-12 col-md-4">
   					<h1 class="logo"><a href="<?php bloginfo('url'); ?>">logo</a></h1>
   				</div>
-  				<div class="col-xs-12 col-sm-7 col-md-8">
+  				<div class="col-xs-12 col-sm-12 col-md-8">
   					<ul class="toplist">
   						<li class="listborder"><a href="<?php bloginfo('url'); ?>/request-literature/">Free Brochure</a></li>
   						<li><a href="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/">Nearest Dealer</a></li>

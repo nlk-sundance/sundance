@@ -73,10 +73,13 @@ endwhile;
 <div class="arrow"><h3>Request the Truckload Sale in your town</h3></div>
 
 <div class="inner">
-    <?php
-    //API call to get two letter country code remotely
-    $IP=$_SERVER['REMOTE_ADDR']; 
-    $ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP);
+	<?php
+    	//API call to get two letter country code remotely
+	    //$IP=$_SERVER['REMOTE_ADDR']; 
+	    //$ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP);
+		echo do_shortcode('[gravityform id="15" title="false" description="false"]');
+		echo '<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>';
+	/*
     ?>
 
                     <form action="<?php echo get_permalink(); ?>" method="post" id="requestform" class="truckloadform">
@@ -106,7 +109,7 @@ endwhile;
                                     <input id="person_phone" name="Phone" type="text" class="text w170 number" placeholder="Numbers only please"/>
                                 </td>
                             </tr>
-                            <?php /*
+                            <?php 
                             <tr>
                                 <td>
                                     <label for="Address1">Address*</label><br />
@@ -266,7 +269,7 @@ endwhile;
                                     </select>
                                 </td>
                             </tr>
-                            */ ?>
+                             ?>
                             <tr>
                                 <td>
                                     <label for="PostalCode">Zip/Postal Code<span class="rqd"> *</span></label><br />
@@ -535,7 +538,7 @@ endwhile;
                                     </select>
                                 </td>
                             </tr>
-                            <?php /*
+                            <?php 
                             <tr>
                                 <td>
                                     <fieldset onclick="var selected = [];
@@ -565,7 +568,7 @@ endwhile;
                                     </fieldset>
                                 </td>
                             </tr>
-                            */ ?>
+                             ?>
                             <tr>
                                 <td class="gaptop">
                                     <label class="w170"> Do you currently own, or have you ever owned a hot tub? </label><br />
@@ -576,7 +579,7 @@ endwhile;
                                         <option value="Yes">Yes</option> 
                                         <option value="No" selected>No</option> 
                                     </select>
-                                    */ ?>
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -650,7 +653,7 @@ endwhile;
                             </tr>
                         </table>
                         <p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
-                    </form>
+                    </form><?php */ ?>
 
 <h3>Share This</h3>
 <div class="share">

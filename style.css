@@ -553,7 +553,7 @@ strong{
 	}
 
 	.hd .mainMenu li ul li ul li:hover {
-		background: #e4ecef; /* Old browsers */
+		background: #e4ecef; /* safety */
 		background: -moz-linear-gradient(top,  #e4ecef 70%, #ffffff 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#e4ecef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -927,8 +927,8 @@ strong{
 		color: #fff;
 		text-transform: uppercase;
 	}
-	.bd .istub.select .main .spa-name {
-		bottom: -14px;
+	.bd .istub .main img + .spa-name {
+		bottom: -11px;
 	}
 	.bd .istub .main .spa-name sup {
 		font-size: smaller;
@@ -1230,20 +1230,18 @@ strong{
 		*/
 		.btn.arrow {
 			background: url(images/icons/silver-arrow-center.png) repeat-x 0 0;
+			border-radius: 4px 0 0 4px;
 			color: #fff;
 			cursor: pointer;
 			display: inline-block;
 			font: 14px/38px "AH";
 			height: 33px;
-			margin-left: 3px;
-			margin-right: 16px;
 			padding-left: 17px;
-			padding-right: 4px;
+			padding-right: 13px;
+			position: relative;
 			text-decoration: none;
 			text-shadow: 1px 1px 1px #666, -1px -1px 1px #aaa;
 			text-transform: uppercase;
-			vertical-align: top;
-			width: auto;
 		}
 		.btn.arrow:hover {
 			text-decoration: none;
@@ -1253,6 +1251,7 @@ strong{
 			-o-filter: brightness(0.95);
 			-ms-filter: brightness(0.95);
 		}
+		/*
 		.btn.arrow:before {
 			content: '';
 			background: url(images/icons/silver-arrow-left.png) no-repeat 0 0;
@@ -1262,13 +1261,15 @@ strong{
 			position: relative;
 			width: 3px;
 		}
+		*/
 		.btn.arrow:after {
 			content: '';
 			background: url(images/icons/silver-arrow-right.png) no-repeat 0 0;
 			display: inline-block;
-			height: 33px;
-			position: relative;
-			right: -20px;
+			height: 32px;
+			position: absolute;
+			right: -15px;
+			top: 0;
 			width: 16px;
 		}
 
@@ -1831,12 +1832,15 @@ strong{
 		border-top:1px solid #797866;
 		font-family: "AH", Tahoma, Geneva, sans-serif;
 	}
+	.sds-canada.hot-tub-detail .tabContainer .tabs li{
+		width:144px;
+	}
 	.hot-tub-detail .tabContainer .tabs li.current{
 		background:#FFF;
 	}
 	.hot-tub-detail .tabContainer .tabs li a{
 		color:#FFF;
-		padding: 8px 42px 8px 12px;
+		padding: 8px 41px 8px 12px;
 		display:block;
 		background:url(images/icons/tabSeparator.png) bottom right no-repeat;
 	}
@@ -2665,6 +2669,11 @@ strong{
 		font-size:11px;
 		padding: 0 0 10px;
 	}
+
+	ul.backyard-ideas li.page-item-6112 ul.children {
+		display: none;
+	}
+
 	/* - - - FORM CONTENT - - - */
 	.w960 .formWrap { width: 730px; }
 	.formWrap p,
@@ -3353,6 +3362,25 @@ strong{
 		border-radius: 8px;
 		font-size: 12px;
 	}
+	/* Locate dealer page with no results */
+	.\/hot-tub-dealer-locator\/cities\/ .entry-content {
+		padding: 30px;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bar2 {
+	    width:55%
+	}
+	.\/hot-tub-dealer-locator\/cities\/ p {
+	    font-size:16px;
+	    line-height:1.4;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bigBlueBtn {
+	    max-width: 16.5em;
+	    text-transform:none;
+	    color:#fff;
+	    padding:8px 1em;
+	    font-family:'AR';
+	}/* end Locate dealer page with no results */
+
 	.page.locate.details .entry-content #dealer_details_3col {
 		min-height: 316px;
 		border-bottom: 1px solid #d6d6d6;
@@ -4542,17 +4570,17 @@ strong{
 		body.sundance-brochure .bd .wrap .page-header .content .the-brochure-img {
 			position: absolute;
 			top: -72px;
-			left: -8px;
+			left: 3px;
 			width: 184px;
 			height: 248px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content.one-part .the-brochure-img {
 			/*left: -34px;*/
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small-blk.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
@@ -4669,6 +4697,7 @@ strong{
 			position: absolute;
   			right: 66px;
   			top: 112px;
+  			z-index: 10;
 		}
 
 
@@ -4733,18 +4762,18 @@ strong{
 			position: absolute;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-model {
-			width: 517px;
-			height: 378px;
-			left: -118px;
+			width: 431px;
+			height: 362px;
+			left: -30px;
 			top: -63px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-model.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open1.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-benefits {
-			width: 497px;
-			height: 434px;
-			right: -58px;
-			top: -171px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-benefits.png) no-repeat 50% 50%;
+			width: 560px;
+			height: 337px;
+			right: -34px;
+			top: -55px;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open2.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
@@ -4757,14 +4786,14 @@ strong{
 			height: 333px;
 			left: -115px;
 			top: -25px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-satisfied.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
-			width: 732px;
-			height: 488px;
-			left: -250px;
-			top: -126px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/img-tubbing.png) no-repeat 50% 50%;
+			width: 485px;
+			height: 333px;
+			left: -130px;
+			top: -50px;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
 		}
 
 		body.sundance-brochure .bd .wrap #award-bar {
@@ -4859,7 +4888,7 @@ strong{
 		}
 		body.sundance-brochure .ft.cta {
 			position: relative;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/cta-footer.png) no-repeat 50% 0;
+			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/cta-footerv2.png") no-repeat scroll 50% 0px;
 			height: 303px;
 			}
 		body.sundance-brochure .ft .wrap {
@@ -5034,12 +5063,12 @@ strong{
 	}
 	.tubThumb .tubViewDetails {
 		position: absolute;
-		width: 109px;
-		height: 25px;
+		width: 116px;
+		height: 26px;
 		top: 55px;
 		left: 50%;
-		margin-left: -55px;
-		background: url(/wp-content/themes/sundance/images/icons/view-details-overlay.png) no-repeat;
+		margin-left: -58px;
+		background: url(images/pods/view_details.png) no-repeat;
 		display:none;
 	}
 	.tubSeries .description .details table a:hover .tubViewDetails {
@@ -5517,6 +5546,7 @@ a.get-colorselector
 }
 a#show-msrp {
 	cursor: pointer;
+	/*display: none;*/ /* https://ninthlink.atlassian.net/browse/JAC-879, https://ninthlink.atlassian.net/browse/JAC-938 */
 }
 a#show-msrp.close {
 	background: #c2c2c2;
@@ -5692,6 +5722,24 @@ a#show-msrp.close {
 	font-family: "AH";
 }
 
+/* lightbox fix */
+#TB_closeWindowButton .screen-reader-text { display: none; }
+
+/* ----- LABOR DAY SALE ----- */
+.labor-head { font-family: "AM"; font-size: 17px; }
+.labor-head .tagline { padding-top: 5px; }
+.labor-main-content .c2a, .labor-main-content .foot-note { font-family: "AL"; color: #fff; }
+.labor-main-content .c2a h2 { font-size: 36px; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid #fff; display: inline-block; padding-bottom: 10px; margin-bottom: 10px;}
+.labor-main-content .c2a .line1 { font-size: 22px; text-transform: uppercase; display: inline-block; border-bottom: 2px solid #fff; padding-bottom: 10px;  margin-bottom: 10px;}
+.labor-main-content .c2a .line2 { font-size: 35px; font-weight: bold; }
+.labor-main-content .c2a .line3 { font-size: 18px; }
+.labor-main-content .gfield_required, .labor-main-content label { display: none; }
+.labor-main-content input.input-md { border-radius: 5px; border: 1px solid #b29f77; padding: 10px 0 10px 10px;  margin-bottom: 10px!important;}
+.labor-bottom-content2 { position: relative; }
+.labor-bottom-content h3 { color: #786c5f; font-weight: bold; font-size: 35px; padding-top: 8px; margin-left: 25px;}
+.labor-bottom-content2 p { font-size: 16px; color: #333; }
+.labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
+
 /* Blue Header */
 
 .hd {
@@ -5838,6 +5886,17 @@ a#show-msrp.close {
     padding-left: 10px;
 }
 
+/*New Sprite for Montclain*/
+
+.tubThumb.montclair {
+	background-image: url('images/sds-tubs-sprite_resized.jpg');
+	background-position: -278px -832px;
+}
+
+.tubSeries .description .details table .p .view-details {
+	background: transparent url("images/view_details.png") repeat scroll 0px 0px;
+}
+
 /* New pods pages */
 .main .headline .description.w670
 {
@@ -5948,6 +6007,18 @@ a#show-msrp.close {
 .smallcontainer a:hover
 {
 	text-decoration: none !important;
+}
+
+/* Truck Load Gravity Form Extra css */
+.gform_wrapper.truckloadform_wrapper form
+{
+	padding: 1px 0 !important;
+}
+
+.gform_wrapper.truckloadform_wrapper .top_label .gfield_label
+{
+	font-weight: 400;
+	margin-bottom: 0px;
 }
 
 /* Footer Update */
@@ -6129,6 +6200,63 @@ ul.footer-links li.border
 	line-height: 15px;
 }
 
+.page .bd .rightCol .block.brochure.top .arrow {
+		top: -9px;
+		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-arrow-yellow.png) no-repeat 0px 0px;
+	}
+	
+/* Tubs Go To Link */
+
+.tubslink > ul
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+.tubslink > ul > li
+{
+	list-style: none;
+	float: left;
+	width: 24%;
+	text-align: center;
+}
+
+.tubslink > ul > li > a
+{
+	font-size: 14px;
+	font-family: "AR",Tahoma,Geneva,sans-serif;
+	float: left;
+	width: 100%;
+	margin: 10px 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #236DC7;
+	text-decoration: underline;
+}
+
+
+sup
+{
+	position: relative;
+    top: -0.5em;
+    font-size: 80%;
+}
+
+/*New Sprite for Montclain*/
+
+.tubThumb.montclair {
+	background-image: url('images/sds-tubs-sprite_resized.jpg');
+	background-position: -278px -832px;
+}
+
+.tubSeries .description .details table .p .view-details {
+	background: transparent url("images/view_details.png") repeat scroll 0px 0px;
+	width: 116px;
+	height: 26px;
+	margin-top: 5px;
+}
+
 #menu-mainmenu > li.seriescat > ul.dropdown-menu
 {
 	width: 115px;
@@ -6207,3 +6335,70 @@ ul.footer-links li.border
 	line-height: 16px;
 	font-family: "AR";
 }
+
+/* New List image for 880 Series */
+.maxxus {background-position: 0px 0px; background-image: url('images/tubs/maxxus_138.png'); }
+.aspen {background-position: 0px 0px; background-image: url('images/tubs/aspen_138.png'); }
+.optima {background-position: 0px 0px; background-image: url('images/tubs/optima_138.png'); }
+.cameo {background-position: 0px 0px; background-image: url('images/tubs/cameo_138.png'); }
+.altamar {background-position: 0px 0px; background-image: url('images/tubs/altamar_138.png'); }
+.marin {background-position: 0px 0px; background-image: url('images/tubs/marin_138.png'); }
+.capri {background-position: 0px 0px; background-image: url('images/tubs/capri_138.png'); }
+
+
+/* Badges */
+.spabadge
+{
+	display: block;
+	text-indent: -9999px;
+	position: absolute;
+	z-index: 20;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-color: transparent;
+}
+
+.spabadge.badge-medium
+{
+	left: -15px;
+	top: -15px;
+	background-size: auto 50px;
+	height: 50px;
+	width: 100px;
+}
+
+
+.spabadge.bestseller
+{
+	background-image: url('images/badges/bestseller.png');
+}
+
+.spabadge.bestbuy
+{
+	background-image: url('images/badges/bestbuy.png');
+}
+
+.spabadge.lowentry
+{
+	background-image: url('images/badges/lowentry.png');
+}
+
+.spabadge.badge-medium.lowentry
+{
+	background-size: 60px 40px;
+	top: -10px;
+	left: -3px;
+}
+
+.spabadge.lounge
+{
+	background-image: url('images/badges/lounge.png');
+}
+
+.spabadge.badge-medium.lounge
+{
+	background-size: 57px 30px;
+	top: -5px;
+	left: -10px;
+}
+

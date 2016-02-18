@@ -9,46 +9,33 @@
 
 get_header('bootstrap'); ?>
 	<section class="wrapper bannercontainer">
-  		<div class="container bigcontainer">
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-7 col-md-7">
-  					
-  				</div>
-  				<div class="col-xs-12 col-sm-5 col-md-5">
-  					<div class="bannercaption">
-  						<h1>DO MORE OF WHAT MATTERS TO YOU.</h1>
-  						<p>With more than 35 years of experience crafting high quality spas, we take pride in helping people spend time meaningfully. So go ahead and relax more. Let your mind wander. Savor each and every moment. Celebrate life. Start your Sundance<sup>&reg;</sup> lifestyle today. You deserve it.</p>
-  						<a href="<?php bloginfo('url'); ?>/selectseries/" class="hot btn-start">VIEW HOT TUBS</a>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+  		<?php echo do_shortcode('[rev_slider alias="homepageslider"]'); ?>
   	</section>
-  	<section class="wrapper minicontainer">
+  	<section class="wrapper minicontainer podscont">
   		<div class="container smallcontainer">
   			<div class="row ">
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   					<a href="<?php bloginfo('url'); ?>/best-selling"><div class="selling hovercard">
   						<div class="bestselling">
   				<h3>BEST SELLING</h3>
   				</div>
   				</div></a>
   				</div>
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   					<a href="<?php bloginfo('url'); ?>/low-profile"><div class="therapy hovercard">
   						<div class="bestherapy">
   				<h3>LOW PROFILE</h3>
   				</div>
   				</div></a> 				
   				</div>
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   				<a href="<?php bloginfo('url'); ?>/energy-efficient"><div class="entertaining hovercard">
   						<div class="mostentertaining">
   				<h3>ENERGY EFFICIENT</h3>
   				</div>
   				</div></a> 				
   				</div> 				
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-6 col-md-3">
   				<a href="<?php bloginfo('url'); ?>/search-by-size"><div class="search hovercard">
   						<div class="mostsearch">
   				<h3>SEARCH BY SIZE</h3>
@@ -61,15 +48,13 @@ get_header('bootstrap'); ?>
   	<section class="wrapper whitecontainer">
   		<div class="container smallcontainer">
   			<div class="row whitecontent">
-  				<div class="col-xs-12 col-sm-6 col-md-6 firstcontent">
+  				<div class="col-xs-12 col-sm-12 col-md-6 firstcontent">
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padl0 xpadr0">
   							<h3>Find Your Nearest Dealer</h3>
-  							<p>Find your nearest dealer and experience the Sundance<sup>&reg;</sup> Spas lifestyle for yourself</p>
   							<ul class="dealerlist">
 	  							<li>Get guidance finding the right spa for you</li>
 	  							<li>Test spas wet and dry</li>
-	  							<li>Take advantage of money saving offers</li>
   							</ul>
   							<form id="dealer-finder" method="post" action="<?php bloginfo('url'); ?>/hot-tub-dealer-locator/cities/">
   								<input type="firstname" class="form-control" name="zip" id="zip" placeholder=" Enter your zip code">
@@ -77,15 +62,14 @@ get_header('bootstrap'); ?>
   							</form>
   						</div>
   						<div class="col-xs-12 col-sm-4 col-md-5 padl0 padr0">
-  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/image5.png">
+  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/dealer_image.jpg">
   						</div>
   					</div>
   				</div>
-  				<div class="col-xs-12 col-sm-6 col-md-6">
+  				<div class="col-xs-12 col-sm-12 col-md-6">
   					<div class="row">
   						<div class="col-xs-12 col-sm-8 col-md-7 padr0">
   							<h3>Free Brochure</h3>
-  							<p>Download your free brochure to:</p>
   							<ul class="brochurelist">
 	  							<li>Compare spa models at a glance</li>
 	  							<li>Explore benefits of Sundance<sup>&reg;</sup> hydrotherapy</li>
@@ -104,14 +88,14 @@ get_header('bootstrap'); ?>
   	<section class="wrapper smallcontainer">
   		<div class="container smallcontainer">
   			<div class="row smallcontent">
-  				<div class="col-xs-12 col-sm-3 col-md-3">
+  				<div class="col-xs-12 col-sm-5 col-md-3">
   					<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/truck.png">
   				</div>
-  				<div class="col-xs-12 col-sm-5 col-md-5">
+  				<div class="col-xs-12 col-sm-7 col-md-5">
   					<h1>Truckload <span>Savings Event</span></h1>
   					<p>Take Advantage of the season's best discounts!</p>
   				</div>
-  				<div class="col-xs-12 col-sm-4 col-md-4 dreambtncont">
+  				<div class="col-xs-12 col-sm-12 col-md-4 dreambtncont text-center">
   					<a href="#" class="btn btn-primary btn-blue btn-big">GET THE SPA OF YOUR DREAMS</a>
   				</div>
   			</div>
@@ -171,7 +155,7 @@ get_header('bootstrap'); ?>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4">
 	  					<h1>Online Financing</h1>
-	  					<p><span>Qualify for online financing now.</span> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
+	  					<p><a href="<?php bloginfo('url'); ?>/financing/"><span>Qualify for online financing now.</span></a> *Not valid with other not promotional offers. Restrictions apply. See participating dealers for complete terms and conditions. Financing available on approved credit.</p>
 	  				</div>
 	  				<div class="col-xs-12 col-sm-4 col-md-4 tub blogcat">
 	  					<h1>Categories</h1>

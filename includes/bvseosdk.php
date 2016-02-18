@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BV PHP SEO SDK
  *
@@ -78,7 +79,7 @@ class BV {
             'staging' => FALSE,
             'subject_type' => 'product',
             'latency_timeout' => 1000,
-            'current_page_url' => isset($params['current_page_url']) ? $params['current_page_url'] : '', //get the current page url passed in as a "parameter"
+            'current_page_url' => $params['current_page_url'], //get the current page url passed in as a "parameter"
             'base_page_url' => $this->_getCurrentUrl(),
             'bot_detection' => FALSE,  // bot detection should only be enabled if average execution time regularly exceeds 350ms.
             'include_display_integration_code' => FALSE,  
@@ -541,25 +542,25 @@ class Base{
     }
 
     private function _buildComment($msg,$url,$access_method){
-    	$footer = '<ul id="BVSEOSDK" style="display:none;">';
-    	$footer .= "\n".'	<li id="vn">bvseo-1.0.1.3-beta</li>';
-    	$footer .= "\n".'	<li id="sl">bvseo-p</li>';
-    	if ($this->config['internal_file_path']) {
-    		$footer .= "\n".'	<li id="mt">bvseo-FILE</li>';
-    	} else {
-    		$footer .= "\n".'	<li id="mt">bvseo-CLOUD</li>';
-    	}
-    	$footer .= "\n".'	<li id="et">bvseo-'.$this->response_time.'ms</li>';
-    	$footer .= "\n".'	<li id="ct">bvseo-'.strtoupper($this->config['bv_product']).'</li>';
-    	$footer .= "\n".'	<li id="st">bvseo-'.strtoupper($this->config['subject_type']).'</li>';
-    	$footer .= "\n"."	<li id='am'>bvseo-$access_method</li>";
-    	if (strlen($msg) > 0) {
-    		$footer .= "\n".'	<li id="ms">bvseo-msg: '.$msg.'</li>';
-    	}
-     	$footer .= "\n".'</ul>';   
-     	
-    	//when in debug mode, also display the following information
-    	if (isset($_GET['bvreveal'])){
+        $footer = '<ul id="BVSEOSDK" style="display:none;">';
+        $footer .= "\n".'   <li id="vn">bvseo-1.0.1.3-beta</li>';
+        $footer .= "\n".'   <li id="sl">bvseo-p</li>';
+        if ($this->config['internal_file_path']) {
+            $footer .= "\n".'   <li id="mt">bvseo-FILE</li>';
+        } else {
+            $footer .= "\n".'   <li id="mt">bvseo-CLOUD</li>';
+        }
+        $footer .= "\n".'   <li id="et">bvseo-'.$this->response_time.'ms</li>';
+        $footer .= "\n".'   <li id="ct">bvseo-'.strtoupper($this->config['bv_product']).'</li>';
+        $footer .= "\n".'   <li id="st">bvseo-'.strtoupper($this->config['subject_type']).'</li>';
+        $footer .= "\n"."   <li id='am'>bvseo-$access_method</li>";
+        if (strlen($msg) > 0) {
+            $footer .= "\n".'   <li id="ms">bvseo-msg: '.$msg.'</li>';
+        }
+        $footer .= "\n".'</ul>';   
+        
+        //when in debug mode, also display the following information
+        if (isset($_GET['bvreveal'])){
             if($_GET['bvreveal'] == 'debug') {
                 $footer .= "\n".'<ul id="BVSEOSDK_DEBUG" style="display:none;">';
                 $footer .= "\n".'   <li id="cloudKey">'.$this->config['cloud_key'].'</li>';
@@ -587,13 +588,13 @@ class Base{
        // return "\n".'<!--BVSEO|dp: '.$this->config['deployment_zone_id'].'|sdk: v1.0-p|msg: '.$msg.' -->';
     }
 
-	private function _booleanToString($boolean){
-		if ($boolean){
-			return 'TRUE';
-		}else{
-			return 'FALSE';
-		}
-	}
+    private function _booleanToString($boolean){
+        if ($boolean){
+            return 'TRUE';
+        }else{
+            return 'FALSE';
+        }
+    }
 
 
 } // end of Base class
