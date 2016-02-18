@@ -949,8 +949,8 @@ strong{
 		position:relative;
 		overflow:hidden;
 		min-height:72px;
-		/*background:url(images/hero/blank.jpg) 0 0 repeat-x;*/
-		background-color: #E5E0CD;
+		background:url(images/hero/blank.jpg) 0 0 repeat-x;
+		/*background-color: #E5E0CD;*/
 	}
 	.bd .main .main-title img {
 		min-width: 729px;
@@ -962,7 +962,7 @@ strong{
 	/*.bd .main .main-title h1,
 	.bd .istub .main h1 {*/
 	.bd .main .main-title h1 {
-		position:relative;
+		position:absolute;
 		bottom: -10px;
 		left:26px;
 		color:#FFF;
