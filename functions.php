@@ -1841,8 +1841,10 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 							$specs = $custom[0];
 							$t['dim_us'] = $specs['dim_us'];
 							$t['dim_int'] = $specs['dim_int'];
+							$bazaarvoiceID = $specs['product_id'];
 							$o .= '<a href="'. esc_url($t['url']) .'">';
 							$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+							$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
 							$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
 							//$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
 							//$o .= '<span class="p">Total Jets: '. absint($t['jets']) .'</span>';
