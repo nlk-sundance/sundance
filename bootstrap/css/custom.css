@@ -1218,7 +1218,7 @@ ul.footer-links li.border
 }
 
 
-@media (max-width: 1215px) and (min-width: 1171px) {
+@media (max-width: 1220px) and (min-width: 1171px) {
   	#menu-mainmenu > li > a {
 	    padding: 10px 18px;
 	}
@@ -1235,7 +1235,7 @@ ul.footer-links li.border
 	}
 }
 
-@media (max-width: 1090px) and (min-width: 992px) {
+@media (max-width: 1105px) and (min-width: 992px) {
   	#menu-mainmenu > li > a {
 	    padding: 10px 9px;
 	}
