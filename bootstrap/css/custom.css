@@ -124,11 +124,11 @@ ul.navbar-nav li.search {
 }
 
 ul.navbar-nav li.search a{
-	background: url("../images/search_icon.png") no-repeat scroll right 9px transparent;
+	background: url("../images/search_icon.png") no-repeat scroll right 6px transparent;
     min-width: 22px;
     min-height: 20px;
     display: inline-block;
-    padding-right: 25px;
+    padding-right: 25px !important;
 }
 
 .wrapper.bannercontainer{
@@ -1203,7 +1203,7 @@ ul.footer-links li.border
 
 #menu-mainmenu > li > a
 {
-	padding: 10px 25px;
+	padding: 10px 24px;
 }
 
 #menu-mainmenu > li > .dropdown-menu
