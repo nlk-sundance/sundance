@@ -1202,7 +1202,7 @@ ul.footer-links li.border
 
 #menu-mainmenu > li > a
 {
-	padding: 10px 24px;
+	padding: 10px 20px;
 }
 
 #menu-mainmenu > li > .dropdown-menu
@@ -1217,14 +1217,20 @@ ul.footer-links li.border
 	visibility: hidden;
 }
 
-@media (max-width: 1150px) and (min-width: 992px) {
+@media (max-width: 1170px) and (min-width: 992px) {
   	#menu-mainmenu > li > a {
-	    padding: 10px 15px;
+	    padding: 10px 14px;
 	}
 	
 	ul.navbar-nav li.search a
 	{
 		padding-right: 25px !important;
+	}
+}
+
+@media (max-width: 1050px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 9px;
 	}
 }
 
