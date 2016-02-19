@@ -91,6 +91,7 @@ function sundance_setup() {
 	add_image_size( 'blog-mid', 211, 159, true );
 	add_image_size( 'blog-thm', 93, 70, true );
 	add_image_size( 'accthm', 140, 125, true );
+	add_image_size( 'banner-full', 960, 285, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -307,6 +308,10 @@ function sundance_body_class($classes) {
 	
 	if ( is_search() ) {
 		$classes[] = 'page';
+	}
+
+	if ( sds_is_ca() ) {
+		$classes[] = 'sds-canada';
 	}
 	
 	return $classes;
@@ -1329,6 +1334,8 @@ function sundance_specs_metabox() {
 	$info = $custom[0];
 	if($info=='') $info = array(
 		'product_id' => '',
+		'video_id' => '',
+		'msrp' => '',
 		'seats' => '',
 		'dim_us' => '',
 		'dim_int' => '',
@@ -1355,6 +1362,12 @@ function sundance_specs_metabox() {
 	<tr valign="top">
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
     </tr>
+	<tr valign="top">
+    <td width="187"><label for="s_specs[video_id]">YouTube Video ID</label></td><td><input type="text" name="s_specs[video_id]" value="<?php esc_attr_e($info['video_id']); ?>" size="20" /></td>
+    </tr>
+	<tr valign="top">
+	<td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
+	</tr>
     <tr valign="top">
     <td width="187"><label for="s_specs[seats]">Seats</label></td><td><input type="text" name="s_specs[seats]" value="<?php esc_attr_e($info['seats']); ?>" size="10" /></td>
     </tr>
@@ -1468,20 +1481,20 @@ function sundance_meta_save($post_id){
 	return $post_id;
 	
 	// Check permissions
-	if (in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
+	if ( isset($_POST['post_type']) && in_array($_POST['post_type'],array('s_spa', 'page', 's_vid', 's_feat')) ) {
 		if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
 	} else {
 	//if ( !current_user_can( 'edit_post', $post_id ) )
 	  return $post_id;
 	}
 	
-	if($_POST['post_type'] == 'page') {
+	if( isset($_POST['post_type']) && $_POST['post_type'] == 'page') {
 		$info = $_POST['s_pageopts'];
 		update_post_meta($post_id, 's_pageopts', $info);
 		return $info;
 	}
 	
-	if( in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
+	if( isset($_POST['post_type']) && in_array( $_POST['post_type'] , array( 's_feat', 's_vid' ) ) ) {
 		$info = $_POST['s_info'];
 		update_post_meta($post_id, 's_info', $info);
 		return $info;
@@ -1669,8 +1682,8 @@ function my_deregister_heartbeat() {
 
 function sundance_add_scripts() {
 	if ( ! is_admin() ) {
-		wp_deregister_script('jquery');
-		wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false);
+		//wp_deregister_script('jquery');
+		//wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false);
 		wp_enqueue_script( 'jquery-migrate','http://code.jquery.com/jquery-migrate-1.2.1.js',array('jquery'), '1.2.1', false);
 		wp_enqueue_script( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', array('jquery'), '1.11.2', false );
 		wp_enqueue_script( 'jquery-ui-tooltip', get_bloginfo('template_url') .'/js/jquery-ui-1.10.3.custom.min.js', array('jquery'), '1.10.4' );
@@ -1950,7 +1963,7 @@ add_action( 'edit_category', 'sundance_edit_cat_transients' );
 
 // [slug]-accs : on sitemap.php & elsewhere?
 function sundance_publ_acc_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	$thisterms = wp_get_object_terms($post_id, 's_acc_cat', array('fields' => 'slugs'));
 	foreach ( $thisterms as $t ) {
 		delete_transient( $t .'-accs' );
@@ -1959,7 +1972,7 @@ function sundance_publ_acc_transients($post_id) {
 add_action( 'publish_s_acc', 'sundance_publ_acc_transients' );
 
 function sundance_flush_tubcats_transients($post_id) {
-	$thispost = wp_get_single_post($post_id);
+	$thispost = get_post($post_id);
 	// we know we want to flush jht_tubs
     delete_transient( 's_tubcats' );
     delete_transient( 's_tubcats_landing' );
@@ -2590,381 +2603,8 @@ function format_phone_us( $phone = '', $format='standard', $convert = true, $tri
 }
 
 // GEO FUNCTIONS
-function geo_data( $debug = false, $return = null ) {
-	// do nothing if viewing admin pages (geo not needed)
-	if ( is_admin() )
-		return false;
-	if( session_id() == '' ) {
-		session_start();
-	}
 
-	$ip = get_the_ip();
-
-	if ( isset( $_POST['PostalCode'] ) ) :
-		$a = geo_data_mysql_zip( $_POST['PostalCode'] );
-		if ( $a ) {
-			$_SESSION['geoDbLookupData'] = $a;
-			return $a;
-		}
-	endif;
-
-	if ( isset($_SESSION['geoDbLookupData']) && $_SESSION['geoDbLookupData']['ip'] === $ip ) :
-		$a = $_SESSION['geoDbLookupData'];
-	else :
-		$a = geo_data_mysql_ip( $ip );
-		if ( !$a ) {
-			//$a = geo_data_curl( $ip );
-		}
-	endif;
-
-	/* Possibly...
-
-	// if session set, use that
-	if ( isset($_SESSION['geoDbLookupData']) ) :
-		$a = $_SESSION['geoDbLookupData'];
-	// otherwise search by IP
-	elseif ( $ip ) :
-		$a = geo_data_mysql_ip( $ip );
-	// if IP result not valid, search by post code
-	elseif ( isset( $_POST['PostalCode'] ) ) :
-		$a = geo_data_mysql_zip( $_POST['PostalCode'] );
-	// if no post cde and no IP
-	// return some sort of default
-	endif;
-
-	if ( $a ) {
-		$_SESSION['geoDbLookupData'] = $a;
-		return $a;
-	}
-
-	*/
-
-	if ( !$a ) {
-		return array(
-			'locId'				=>	0,
-			'country'			=>	'US',
-			'region'			=>	'',
-			'city'				=>	'',
-			'postalCode'		=>	'00000',
-			'latitude'			=>	'',
-			'longitude'			=>	'',
-			'metroCode'			=>	'',
-			'areacode'			=>	'',
-			'ip'				=>	'',
-			);
-	}
-
-	$_SESSION['geoDbLookupData'] = $a;
-	// And finally we return the resulting array to wherever it is needed...
-	return $a;
-}
-
-function geo_data_curl( $ip ) {
-	if ( !$ip ) {
-		$ip = 'me';
-	}
-	$username = '66659';
-	$password = 'FJv62Mz6ezIB';
-
-	$ch = curl_init('https://geoip.maxmind.com/geoip/v2.0/city/' . $ip . '');
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 1);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$result = curl_exec($ch);
-	$httpResult = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-	$a = json_decode($result, true);
-	$b = array(
-		'locId'				=>	0,
-		'country'			=>	$a['country']['iso_code'],
-		'region'			=>	$a['subdivisions'][0]['iso_code'],
-		'city'				=>	$a['city']['names']['en'],
-		'postalCode'		=>	$a['postal']['code'],
-		'latitude'			=>	$a['location']['latitude'],
-		'longitude'			=>	$a['location']['longitude'],
-		'metroCode'			=>	$a['location']['metro_code'],
-		'areacode'			=>	'',
-		'ip'				=>	$ip,
-		'queries_remaining'	=>	$a['maxmind']['queries_remaining'],
-		);
-	if ( $httpResult == 200 ) {
-		return $b;
-	}
-	return false;
-}
-
-function geo_data_mysql_ip( $ip ) {
-	$a = false;
-
-	$livehost		= array( 'www.sundancespas.com', 'www.sundancespas.ca' );
-	$betahost		= array( 'beta.sundancespas.com' );
-	$devhost		= array( 'sundancespas.ninthlink.me' );
-	$localhost		= array( 'local.sundance' );
-	if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $betahost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
-	}
-	$query = "SELECT gl.* FROM geoip_locations gl LEFT JOIN geoip_blocks gb ON gb.locId = gl.locId WHERE gb.startIpNum <= INET_ATON( ? ) AND gb.endIpNum >= INET_ATON( ? ) LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "ss", $ip, $ip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$postalCode,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	$ip,
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
-	return $a;
-}
-
-function geo_data_mysql_zip( $zip ) {
-	$a = false;
-	
-	$livehost		= array( 'www.sundancespas.com', 'www.sundancespas.ca' );
-	$betahost		= array( 'beta.sundancespas.com' );
-	$devhost		= array( 'sundancespas.ninthlink.me' );
-	$localhost		= array( 'local.sundance' );
-	if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $betahost ) ) {
-		$the_user = "sundance_geoip";
-		$the_pass = "r4e3w2q1!";
-		$the_name = "sundance_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
-	}
-	$clean_zip = clean_zip( $zip );
-	$query = "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "s", $clean_zip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$zip,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	get_the_ip(),
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
-	return $a;
-}
-
-function getRemoteIPAddress() {
-
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) :
-        return $_SERVER['HTTP_CLIENT_IP'];
-	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) :
-        return $_SERVER['HTTP_X_FORWARDED_FOR'];
-    endif;
-
-    return $_SERVER['REMOTE_ADDR'];
-}
-
-function get_the_ip() {
-
-	$s = $_SERVER['QUERY_STRING'];
-	parse_str($s, $o);
-
-	if ( array_key_exists('ip', $o) ) :
-		$ip = $o['ip'];
-	elseif ( !empty($_SERVER['HTTP_CLIENT_IP']) ) :
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-	elseif ( !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) :
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    else :
-    	$ip = $_SERVER['REMOTE_ADDR'];
-    endif;
-	if ( !filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE) || !filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_RES_RANGE) || $ip == '127.0.0.1' ) {
-		return false;
-	}
-	return $ip;
-}
-
-function clean_zip( $zip ) {
-
-	$zip = strtoupper( preg_replace( "/\s/", '', $zip ) );
-	$valid_country = false;
-
-	$reg	=	array(
-		"US"	=>	"^\d{5}([\-]?\d{4})?$",
-		"CA"	=>	"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ])\ {0,1}(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
-		"UK"	=>	"^(GIR|[A-Z]\d[A-Z\d]??|[A-Z]{2}\d[A-Z\d]??)[ ]??(\d[A-Z]{2})$",
-		"DE"	=>	"\b((?:0[1-46-9]\d{3})|(?:[1-357-9]\d{4})|(?:[4][0-24-9]\d{3})|(?:[6][013-9]\d{3}))\b",
-		"FR"	=>	"^(F-)?((2[A|B])|[0-9]{2})[0-9]{3}$",
-		"IT"	=>	"^(V-|I-)?[0-9]{5}$",
-		"AU"	=>	"^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$",
-		"NL"	=>	"^[1-9][0-9]{3}\s?([a-zA-Z]{2})?$",
-		"ES"	=>	"^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$",
-		"DK"	=>	"^([D-d][K-k])?( |-)?[1-9]{1}[0-9]{3}$",
-		"SE"	=>	"^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$",
-		"BE"	=>	"^[1-9]{1}[0-9]{3}$"
-	);
-
-	// Check if we can validate the zip against one of the above countries
-	foreach ( $reg as $k => $v ) {
-		if ( preg_match( "/" . $v . "/i", $zip ) ) {
-			$valid_country = $k;
-			break;
-		}
-	}
-	// For US or CA, clean the zip for geo search
-	if ( $valid_country == 'US' ) :
-		list($clean_zip) = explode('-', $zip);
-	elseif ( $valid_country == 'CA' ) :
-		$clean_zip = substr( $zip, 0, 3 );
-	else :
-		$clean_zip = $zip;
-	endif;
-
-	$clean_zip = strtolower( $clean_zip );
-
-	return $clean_zip;
-}
-function zip_to_geo( $original_zip ) {
-	$a = false;
-
-	$zip = clean_zip( $original_zip );
-
-	if ( $zip[1] !== false ) {
-
-		$livehost		= array( 'www.sundancespas.com', 'www.sundancespas.ca', 'beta.sundancespas.com' );
-		$betahost		= array( 'beta.sundancespas.com' );
-		$devhost		= array( 'sundancespas.ninthlink.me' );
-		$localhost		= array( 'local.sundance' );
-		if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-			$the_user = "sundance_geoip";
-			$the_pass = "r4e3w2q1!";
-			$the_name = "sundance_geoip";
-		}
-		if ( in_array( $_SERVER['SERVER_NAME'], $betahost ) ) {
-			$the_user = "sundance_geoip";
-			$the_pass = "r4e3w2q1!";
-			$the_name = "sundance_geoip";
-		}
-		if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-			$the_user = "admin_geoip";
-			$the_pass = "r4e3w2q1";
-			$the_name = "admin_geoip";
-		}
-		if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-			$the_user = "root";
-			$the_pass = "";
-			$the_name = "nlk_geoip";
-		}
-		$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-	
-		if ($mysqli->connect_errno) {
-
-			$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-
-			return false;
-		}
-
-		$query = "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1";
-
-		if ( $stmt = $mysqli->prepare( $query ) ) {
-
-			$stmt->bind_param( "s", $zip );
-
-			$stmt->execute();
-
-			$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-
-			while ( $stmt->fetch() ) {
-
-				$a = array(
-
-					'locId'			=>	$locId,
-					'country'		=>	$country,
-					'region'		=>	$region,
-					'city'			=>	$city,
-					'postalCode'	=>	$original_zip,
-					'latitude'		=>	$latitude,
-					'longitude'		=>	$longitude,
-					'metroCode'		=>	$metroCode,
-					'areacode'		=>	$areaCode,
-					'ip'			=>	get_the_ip(),
-
-					);
-
-			}
-
-			$stmt->close();
-
-		}
-
-		$mysqli->close();
-
-	}
-
-	return $a;
-}
-
+require('functions_geo.php');
 
 // geo redirect
 if ( ! function_exists('geo_redirection') ) {
@@ -3009,43 +2649,39 @@ endif;
 
 
 // Google Tag Manager Main
-add_action('do_google_tag_manager', 'google_tag_manager_container');
+add_action('google_tag_manager', 'google_tag_manager_container', 10);
 function google_tag_manager_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-NTFWKQ\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NTFWKQ');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager() {
-	do_action('do_google_tag_manager');
+	do_action('google_tag_manager');
 }
 
 // Google Tag Manager Criteo
-add_action('do_google_tag_manager_criteo', 'google_tag_manager_criteo_container');
+add_action('google_tag_manager_criteo', 'google_tag_manager_criteo_container', 10);
 function google_tag_manager_criteo_container() {
-	$str = <<<GTM
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	$str = "<!-- Google Tag Manager -->
+	<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-PWJ2SH\"
+	height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PWJ2SH');</script>
-	<!-- End Google Tag Manager -->
-GTM;
+	<!-- End Google Tag Manager -->";
 	echo $str;
 }
 function google_tag_manager_criteo() {
-	do_action('do_google_tag_manager_criteo');
+	do_action('google_tag_manager_criteo');
 }
 
 
@@ -3056,20 +2692,23 @@ function custom_data_layer_container() {
 	
 	$expire = time()+60*60*24*30;
 
-	$custId = get_current_user_id() > 0 ? get_current_user_id() : isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) ;
+	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	setcookie("sdscid", $custId, $expire, '/');
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
 	$str .= '"get":' . json_encode($_SERVER['QUERY_STRING']) . ',';
-	$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
+	if ( function_exists('geo_data') )
+		$str .= '"geo":' . json_encode(geo_data()) . ',';
+	
 	$str .= '"customerId":"' . $custId . '",';
 	
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
 		$parts = explode( "&", get_the_title($post->ID) );
 		$prodId = $parts[0];
-		setcookie("sdsspa", $prodId, $expire, '/');
+		//setcookie("sdsspa", $prodId, $expire, '/');
 
 		$str .= '"productId":"' . $prodId . '",';
 	}
@@ -3115,6 +2754,74 @@ include('functions_trackingcodes.php');
 
 
 
+/**
+* Is SubPage?
+*
+* Checks if the current page is a sub-page and returns true or false.
+*
+* @param  $page mixed optional ( post_name or ID ) to check against.
+* @return boolean
+*/
+function sds_is_subpage( $page = null )
+{
+    global $post;
+    // is this even a page?
+    if ( ! is_page() )
+        return false;
+    // does it have a parent?
+    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+        return false;
+    // is there something to check against?
+    if ( ! isset( $page ) ) {
+        // yup this is a sub-page
+        return true;
+    } else {
+        // if $page is an integer then its a simple check
+        if ( is_int( $page ) ) {
+            // check
+            if ( $post->post_parent == $page )
+                return true;
+        } else if ( is_string( $page ) ) {
+            // get ancestors
+            $parent = get_ancestors( $post->ID, 'page' );
+            // does it have ancestors?
+            if ( empty( $parent ) )
+                return false;
+            // get the first ancestor
+            $parent = get_post( $parent[0] );
+            // compare the post_name
+            if ( $parent->post_name == $page )
+                return true;
+        }
+        return false;
+    }
+}
+
+
+
+function sharpspring_become_a_dealer() {
+	$str = '<script type="text/javascript">
+		var _ss = _ss || [];
+		_ss.push(\'_setDomain\', \'https://koi-7AFC9LNY.sharpspring.com/net\');
+		_ss.push(\'_setAccount\', \'KOI-II72QWOE\');
+		_ss.push(\'_trackPageView\');
+		(function(){ 
+			var ss = document.createElement(\'script\');
+			ss.type = \'text/javascript\';
+			ss.async = true;
+			ss.src = (\'https:\' == document.location.protocol ? \'https://\' : \'http://\') + \'koi-7AFC9LNY.sharpspring.com/client/ss.js?ver=1.1.1\';
+			var scr = document.getElementsByTagName(\'script\')[0];
+			scr.parentNode.insertBefore(ss, scr); 
+		}
+		)();
+		</script>';
+	if ( sds_is_subpage('become-a-dealer') || is_page( 'become-a-dealer' ) )
+		echo $str;
+}
+
+add_action( 'wp_head', 'sharpspring_become_a_dealer' );
+
+
 /*	*	*	*	*	*	*	*	*
  *
  *	SDS Startup Guide Web app
@@ -3122,8 +2829,11 @@ include('functions_trackingcodes.php');
  *	*	*	*	*	*	*	*	*/
 
 // StartUp Guide Ajaxify
-wp_enqueue_script( 'startupguide-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
-wp_localize_script( 'startupguide-ajax-request', 'StartupAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+function startupguide_ajaxify() {
+	wp_enqueue_script( 'startupguide-ajax-request', get_template_directory_uri() . '/js/startupguide-ajax.js', array( 'jquery' ) );
+	wp_localize_script( 'startupguide-ajax-request', 'StartupAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action('wp_enqueue_scripts', 'startupguide_ajaxify');
 
 add_action( 'wp_ajax_load-content', 'startupguide_ajax_content'); // for users logged-in
 add_action ( 'wp_ajax_nopriv_load-content', 'startupguide_ajax_content' ); // guests
@@ -3495,18 +3205,37 @@ function sds_my_server() {
 	switch ( $url ) {
 		case 'http://www.sundancespas.com' :
 		case 'http://www.sundancespas.com/' :
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
 			return 'live';
 			break;
-		case 'http://sundancespas.ninthlink.me' :
-		case 'http://sundancespas.ninthlink.me/' :
+		case 'http://sds.nlkdev.net' :
+		case 'http://sds.nlkdev.net/' :
 			return 'dev';
 			break;
 		case 'http://localhost/sundancespas.com' :
 		case 'http://localhost/sundancespas.com/' :
+		case 'http://localhost.sundancespas.com' :
+		case 'http://localhost.sundancespas.com/' :
 			return 'local';
 			break;
 	}
 	return 'live';
+}
+function sds_is_ca() {
+	$url = get_bloginfo('url');
+	switch ( $url ) {
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
+			return true;
+			break;
+		case 'http://www.sundancespas.com' :
+		case 'http://www.sundancespas.com/' :
+		default :
+			return false;
+			break;
+	}
+	return false;
 }
 
 
@@ -3523,7 +3252,7 @@ function sds_my_server() {
 			if ( is_page('reviews') ) {
 				if( sds_my_server() != 'live' )
 				{
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/ReadOnly/en_US/bvapi.js', array(), '1.0', false); //staging
 				}
 				else
 				{
@@ -3552,7 +3281,6 @@ function sds_my_server() {
 		add_filter( 'wpseo_canonical', 'remove_yoast_canonical_link' );
 
 /** END BazaarVoice **/
-
 
 
 

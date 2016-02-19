@@ -42,6 +42,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+body div[class^="bv"] img.emoji {
+	max-width: 18px !important;
+	vertical-align: middle !important;
+}
 ol, ul {
 	list-style: none;
 }
@@ -78,7 +82,6 @@ strong{
 }
 .avenir65-20{
 	font-size:20px !important;
-	font-family:AM, Tahoma, Geneva, sans-serif;
 }
 
 @font-face {
@@ -309,10 +312,10 @@ strong{
 
 /* - - - - LAYOUT - - - - */
 	body {
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:12px;
+		font-family:"AR", Verdana, Geneva, sans-serif;
+		font-size: 85%;
 		background:#FFF url(images/bg/body.jpg) top center no-repeat;
-		color:#786C60;
+		color: #493627;
 	}
 	.wrap{
 		width:960px;
@@ -379,7 +382,7 @@ strong{
 /* - - - - HEAD - - - - */
 	.hd{
 		background: #797866;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -450,7 +453,7 @@ strong{
 	.hd .mainMenu li:hover a,
 	.hd .mainMenu li.active a{
 		background:#F1F0EE;
-		color: #786C5F;
+		color: #493627;
 	}
 	.hd .mainMenu li.last:hover a, .hd .mainMenu li.last.active a { background: none; color: #fff }
 	.hd .mainMenu li.last:hover a:hover { text-decoration: underline }
@@ -462,7 +465,7 @@ strong{
 		left: 0;
 		z-index:100;
 		background:#F1F0EE;
-		color:#786C5F;
+		color: #493627;
 		padding:10px 0 30px;
 		width:115px;
 		
@@ -491,7 +494,7 @@ strong{
 		position:static;
 	}
 	.hd .mainMenu li ul li a{
-		color:#786C5F;
+		color: #493627;
 		padding: 5px 12px;
 		text-transform:none;
 		/*white-space:nowrap;*/
@@ -539,7 +542,7 @@ strong{
 		padding:10px 21px;
 		float:left;
 		background:#FFF;
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
@@ -549,7 +552,7 @@ strong{
 	}
 
 	.hd .mainMenu li ul li ul li:hover {
-		background: #e4ecef; /* Old browsers */
+		background: #e4ecef; /* safety */
 		background: -moz-linear-gradient(top,  #e4ecef 70%, #ffffff 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#e4ecef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -592,7 +595,7 @@ strong{
 		line-height:18px;
 		border: 1px solid #E9E9E9;
 		margin: 0 0 0 5px;
-		font-family:Arial, Helvetica, sans-serif;
+		font-family:"AR", Arial, Helvetica, sans-serif;
 		color:#C3C0B7;
 	}
 	.hd .mainMenu li.find form input.submit{
@@ -637,12 +640,12 @@ strong{
 		display:block;
 		float:none !important;
 		padding: 0 !important;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:12px;
 		line-height:1.42em;
 	}
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul li a{
-		color:#A59685;
+		color: #493627;
 	}
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul li:hover{
 		background:none;
@@ -651,9 +654,9 @@ strong{
 		white-space:normal;
 	}
 	.hd .mainMenu .sitemap h2{
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:13px;
-		color:#786C5F;
+		color: #493627;
 		margin: 0 0 5px;
 		padding:0;
 		line-height:1.15em;
@@ -661,7 +664,7 @@ strong{
 		background:none !important;
 	}
 	.hd .mainMenu .sitemap h2 a{
-		color:#786C5F;
+		color: #493627;
 		text-decoration:none;
 		text-transform:uppercase;
 		background:none !important;
@@ -674,9 +677,9 @@ strong{
 		border-bottom:1px solid #D6D6D6;
 	}
 	.hd .mainMenu .sitemap>ul .sitemapFlop ul.list li a{
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:11px;
-		color:#786C5F;
+		color: #493627;
 		text-transform:uppercase;
 		display:block;
 		padding:2px 0 0;
@@ -914,6 +917,7 @@ strong{
 		box-sizing: border-box;
 		width:729px;
 	}
+	.hot-tub-detail .bd .main { background: transparent; }
 	.bd .istub .main .spa-name {
 		position: absolute;
 		bottom: 56px;
@@ -922,8 +926,8 @@ strong{
 		color: #fff;
 		text-transform: uppercase;
 	}
-	.bd .istub.select .main .spa-name {
-		bottom: -14px;
+	.bd .istub .main img + .spa-name {
+		bottom: -11px;
 	}
 	.bd .istub .main .spa-name sup {
 		font-size: smaller;
@@ -936,7 +940,7 @@ strong{
 	}
 	.bd .main h1{
 		font-size:36px;
-		color:#786C61;
+		color: #493627;
 		font-weight:normal;
 		padding: 0 0 20px;
 		font-family:AL, Tahoma, Geneva, sans-serif
@@ -1034,7 +1038,7 @@ strong{
 		float: left;
 		width: 70px;
 		font: bold 12px/116% Verdana, Geneva, sans-serif;
-		color: #786c5f;
+		color: #493627;
 		text-align: center;
 		background: #f1f0ee;
 		border: 1px solid #d6d6d6;
@@ -1082,7 +1086,7 @@ strong{
 	.truckform label {
 		display: block;
 		font: 13px/15px "AM", sans-serif;
-		color: #797866;
+		color: #493627;
 	}
 	.truckform .txt {
 		border: 1px solid #dcdcdc;
@@ -1108,7 +1112,7 @@ strong{
 	.bd .main h2{
 		font-size:17px;
 		color:#669999;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height:120%;
 		padding: 0 0 7px;
 	}
@@ -1157,7 +1161,7 @@ strong{
 	}
 	.main .subMenu li a{
 		color:#8D8567;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR",Tahoma, Geneva, sans-serif;
 		display:block;
 		width:180px;
 		text-align:center;
@@ -1225,20 +1229,18 @@ strong{
 		*/
 		.btn.arrow {
 			background: url(images/icons/silver-arrow-center.png) repeat-x 0 0;
+			border-radius: 4px 0 0 4px;
 			color: #fff;
 			cursor: pointer;
 			display: inline-block;
 			font: 14px/38px "AH";
 			height: 33px;
-			margin-left: 3px;
-			margin-right: 16px;
 			padding-left: 17px;
-			padding-right: 4px;
+			padding-right: 13px;
+			position: relative;
 			text-decoration: none;
 			text-shadow: 1px 1px 1px #666, -1px -1px 1px #aaa;
 			text-transform: uppercase;
-			vertical-align: top;
-			width: auto;
 		}
 		.btn.arrow:hover {
 			text-decoration: none;
@@ -1248,6 +1250,7 @@ strong{
 			-o-filter: brightness(0.95);
 			-ms-filter: brightness(0.95);
 		}
+		/*
 		.btn.arrow:before {
 			content: '';
 			background: url(images/icons/silver-arrow-left.png) no-repeat 0 0;
@@ -1257,13 +1260,15 @@ strong{
 			position: relative;
 			width: 3px;
 		}
+		*/
 		.btn.arrow:after {
 			content: '';
 			background: url(images/icons/silver-arrow-right.png) no-repeat 0 0;
 			display: inline-block;
-			height: 33px;
-			position: relative;
-			right: -20px;
+			height: 32px;
+			position: absolute;
+			right: -15px;
+			top: 0;
 			width: 16px;
 		}
 
@@ -1273,10 +1278,12 @@ strong{
 	.blueFade {
 		
 	}
-	.sundance-brochure .bigBlueBtn {
+	.sundance-brochure .bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		border: 1px solid #00A1B7 !important;
 	}
-	.bigBlueBtn {
+	.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		font: 400 16px/22px 'AH', Helvetica, Geneva, arial, sans-serif;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -1328,7 +1335,8 @@ strong{
 		padding: 16px 34px;
 		z-index: 9;
 	}
-	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn {
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input.bigBlueBtn,
+	body.sundance-brochure .bd .wrap .page-header .content.one-part form input[type="submit"] {
 		position: absolute;
 		right: -4px;
 		top: 54px;
@@ -1411,7 +1419,7 @@ strong{
 	}
 	.bd .tubSeries h1 strong{
 		font-weight:normal;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.tubSeries .overhead{
 		margin: 12px 0 0;
@@ -1426,17 +1434,17 @@ strong{
 	}
 	.bd .tubSeries h1 a{
 		text-decoration:none;
-		color:#786C5F;
+		color: #493627;
 	}
 	.tubSeries h2{
 		font-size:12px;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		text-transform:uppercase;
 		margin: 0 0 20px;
 	}
 	.tubSeries .description p{
 		font-size:13px;
-		color: #A59685;
+		color: #493627;
 		padding: 0 140px 0 0;
 		line-height:150%;
 	}
@@ -1449,7 +1457,7 @@ strong{
 		border-top:1px solid #D6D6D6;
 		padding: 6px 3px;
 		font: 700 21px 'AH', Tahoma, Geneva, sans-serif;
-		color:#786C5F;
+		color: #493627;
 		text-transform:uppercase;
 
 	}
@@ -1463,14 +1471,14 @@ strong{
 		display: block;
 		padding:5px 5px 16px;
 		background: #fff;
-		color: #a59685;
+		color: #493627;
 	}
 	.tubSeries .description .details table a:hover{
 		text-decoration: none;
 	}
 	.tubSeries .description .details table .h3{
 		font: 700 16px Arial, Tahoma, sans-serif;
-		color:#786C5F;
+		color: #493627;
 		display: block;
 		margin: 3px 0;
 	}
@@ -1478,7 +1486,7 @@ strong{
 		display: block;
 		padding: 0 0 2px;
 		font-size:13px;
-		color:#786C5F;
+		color: #493627;
 		line-height:125%;
 	}
 	.tubSeries .description .details table .p img{
@@ -1547,17 +1555,17 @@ strong{
 	}
 	.main .headline .model h1{
 		font-size:72px;
-		font-family: AL, Tahoma, Geneva, sans-serif;
+		font-family: "AL", Tahoma, Geneva, sans-serif;
 		margin:0;
 		padding:0;
-		color:#786C5F;
+		color: #493627;
 	}
 	.main .headline .model h2{
 		font-size:30px;
 		text-transform:lowercase;
 		padding:0;
 		margin:-15px 0 0;
-		color:#786C5F;
+		color: #493627;
 	}
 	.main .headline .description{
 		float:left;
@@ -1566,13 +1574,13 @@ strong{
 	}
 	.main .headline .description h3{
 		font-size:12px;
-		font-family:AM, Tahoma, Geneva, sans-serif;
-		color:#786C5F;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
+		color: #493627;
 		margin: 0 0 10px;
 		text-transform:uppercase;	
 	}
 	.main .headline .description p{
-		color:#A59685;
+		color: #493627;
 		font-size:13px;
 		line-height:150%;
 	}
@@ -1593,8 +1601,8 @@ strong{
 	}
 	.page .main .tubSeries .overhead { width: 222px; height: 232px; left: 0 }
 	.hot-tub-detail .main .specs{
-		color:#A59687;
-		font-family: Tahoma, Geneva, sans-serif;
+		color: #493627;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
 		font-size:13px;
 		line-height:150%;
 		float:left;
@@ -1604,7 +1612,7 @@ strong{
 		margin: 0 0 20px;
 	}
 	.hot-tub-detail .main .description a{
-		color:#A59687;
+		color: #493627;
 		font-weight:bold;
 		text-decoration:underline;
 	}
@@ -1615,7 +1623,7 @@ strong{
 	.hot-tub-detail .main .specs table .label{
 		text-transform:uppercase;
 		font-size:10px;
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		width:90px;
 	}
 	.hot-tub-detail .main .specs table td{
@@ -1632,8 +1640,8 @@ strong{
 	}
 	.hot-tub-detail .main .colors h3{
 		font-size:12px;
-		font-family:Tahoma, Geneva, sans-serif;
-		color:#786C60;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
+		color: #493627;
 		float: left;
 		width: 100%;
 		margin: 0 0 5px;
@@ -1670,8 +1678,8 @@ strong{
 		position: absolute;
 		right: 16px;
 		top: 12px;
-		font-family: Tahoma, Geneva, sans-serif;
-		color: #786C61;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
+		color: #493627;
 		font-size: 30px;
 	}
 	.hot-tub-detail .main .energy .cost sup{
@@ -1686,17 +1694,17 @@ strong{
 		font-size:17px;
 		text-transform:none;
 		padding:22px 0 0;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		border:none;
 	}
 	.hot-tub-detail .energy h4{
 		text-decoration:underline;
 		font-weight:bold;
 		padding: 6px 0 2px;
-		color:#786C60;
+		color: #493627;
 	}
 	.hot-tub-detail .energy p{
-		color:#786C60;
+		color: #493627;
 		line-height:125%;
 	}
 	.hot-tub-detail .side.features .inner{
@@ -1719,9 +1727,9 @@ strong{
 		position:relative;
 	}
 	.hot-tub-detail .side.features ul li a{
-		color: #A59685;
+		color: #493627;
 		display:block;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.hot-tub-detail .side.features li .feature{
 		position:absolute;
@@ -1730,7 +1738,7 @@ strong{
 		z-index:999;
 		width: 330px;
 		background:#FFF;
-		color:#786C61;
+		color: #493627;
 		text-transform:none;
 		padding: 0 0 50px 0;
 		opacity:0;
@@ -1778,7 +1786,7 @@ strong{
 	}
 	.hot-tub-detail .side.features .feature h2{
 		font-size:18px;
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		margin: 0 0 8px;
 	}
 	.hot-tub-detail .side.features .feature p{
@@ -1804,7 +1812,7 @@ strong{
 		color:#FFF;
 		background:#8F8669;
 	}
-	.hot-tub-detail .side.features ul li .feature .more a { font-family: Tahoma, Geneva, sans-serif; color: #fff }
+	.hot-tub-detail .side.features ul li .feature .more a { font-family: "AR", Tahoma, Geneva, sans-serif; color: #fff }
 	.hot-tub-detail .tabWrap{
 		position:relative;
 		margin: 30px 0 -8px;
@@ -1817,25 +1825,28 @@ strong{
 	}
 	.hot-tub-detail .tabContainer .tabs li{
 		float:left;
-		width:120px;
+		/*width:120px;*/
 		text-transform:uppercase;
 		background:#797866;
 		border-top:1px solid #797866;
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
+	}
+	.sds-canada.hot-tub-detail .tabContainer .tabs li{
+		width:144px;
 	}
 	.hot-tub-detail .tabContainer .tabs li.current{
 		background:#FFF;
 	}
 	.hot-tub-detail .tabContainer .tabs li a{
 		color:#FFF;
-		padding:8px;
+		padding: 8px 42px 8px 12px;
 		display:block;
 		background:url(images/icons/tabSeparator.png) bottom right no-repeat;
 	}
 	.hot-tub-detail .tabContainer .tabs li.current a{
-		padding: 8px 4px 8px 16px;
+		/*padding: 8px 4px 8px 16px;*/
 		border-left:1px solid #797866;
-		color:#786C61;
+		color: #493627;
 		background: #FFF;
 	}
 	.hot-tub-detail .tabContainer .tabs li:last-child a{
@@ -1859,7 +1870,7 @@ strong{
 	}
 	.hot-tub-detail .tab .w160 h3{
 		font-weight:bold;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		margin: 0 0 6px;
 	}
 	.hot-tub-detail .tab .w160 ul{
@@ -1884,8 +1895,8 @@ strong{
 	.hot-tub-detail .tab.colors li {
 		float:left;
 		padding: 0 14px 14px 0;
-		color:#786C60;
-		font-family:Tahoma, Geneva, sans-serif;
+		color: #493627;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		line-height:16px;
 	}
 	/* - - - SPECS - - - */
@@ -1941,7 +1952,7 @@ strong{
 		line-height:20px;
 	}
 	.hot-tub-detail .tab.jets ul li a{
-		color:#786C60;
+		color: #493627;
 	}
 	.hot-tub-detail .tab.jets ul li a:hover{
 		text-decoration:none;
@@ -1970,8 +1981,8 @@ strong{
 	}
 	.hot-tub-detail .bd .findDealer h2{
 		font-size:14.5px;
-		font-family:AM, Tahoma, Geneva, sans-serif;
-		color:#786C61;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
+		color: #493627;
 		margin: 0 0 5px;
 	}
 	.hot-tub-detail .bd .findDealer input.text {
@@ -2002,7 +2013,7 @@ strong{
 		width: 100%;
 	}
 	.hot-tub-detail .bd .findDealer .actions li a{
-		color:#786C61;
+		color: #493627;
 		text-decoration:underline;
 	}
 
@@ -2014,7 +2025,7 @@ strong{
 	.page .bd .cols .leftMenu .inner h3{
 		font-size:17px;
 		color:#669999;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height:120%;
 		padding: 0 0 7px;
 	}
@@ -2043,12 +2054,12 @@ strong{
 	.bd .leftMenu li{
 		padding: 0 30px 16px 0;
 		text-transform:uppercase;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 	.page .bd .cols .leftMenu.normul .inner ul { padding-left: 1.5em }
 	.bd .leftMenu.normul li { font: 10px/166% Verdana, Geneva, sans-serif; text-transform: none; padding: 0 0 1em; list-style: disc }
 	.bd .leftMenu li a{
-		color:#786C61;
+		color: #493627;
 		text-decoration:none;
 	}
 	.bd .leftMenu .share{ padding:10px 0 20px; float: left; width: 108%;  }
@@ -2083,7 +2094,7 @@ strong{
 		display:block;
 		margin:10px 0 10px 10px;
 		padding:0 10px 0 0;
-		color: #786C61;
+		color: #493627;
 		text-transform:uppercase;
 		font: 14px/17px "AM";
 	}
@@ -2105,10 +2116,10 @@ strong{
 
 	/* text and fonts */
 	.owners-corner p,
-	.bd .owners-corner .entry-content li { color: #797866; }
+	.bd .owners-corner .entry-content li { color: #493627; }
 
 	.bd .owners-corner .main h2 {
-		color: #786C5F;
+		color: #493627;
 		font-family: "AL", arial, helvetica, sans-serif;
 		font-size: 24px;
 	}
@@ -2127,7 +2138,7 @@ strong{
 		margin-right: 0;
 	}
 	.bd .main .owners-links h2 {
-		color: #797866;
+		color: #493627;
 		font: 20px/24px "AM";
 		margin: 16px 30px 14px 0;
 	}
@@ -2159,7 +2170,7 @@ strong{
 	}
 	span.oc-badge > span {
 		clear: both;
-		color: #4C443B;
+		color: #493627;
 		display: block;
 	}
 	span.oc-badge > span:first-child {
@@ -2415,9 +2426,9 @@ strong{
 		}
 		.bd div.sunsmart .main h2 {
 			font-size: 21px;
-			color: #786C61;
+			color: #493627;
 			font-weight: normal;
-			font-family: AL, Tahoma, Geneva, sans-serif;
+			font-family: "AL", Tahoma, Geneva, sans-serif;
 		}
 		.bd div.sunsmart .main img#sunsmart-list {
 			margin: 20px auto;
@@ -2536,7 +2547,7 @@ strong{
 		width:122px;
 		text-transform:uppercase;
 		background:#699;
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 	}
 	.health-benefits .smallTabs .tabs li{
 		width:162px;
@@ -2583,7 +2594,7 @@ strong{
 		background:none;
 	}
 	.bd .smallTabs .tab h3{
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:12px;
 	}
 	.bd .smallTabs .tab h3 a{
@@ -2632,14 +2643,14 @@ strong{
 
 	}
 	.backyard-life .tiles ul.grid h2{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:15px;
 		text-transform:uppercase;
 		padding:0 0 10px;
-		color:#786C61;
+		color: #493627;
 	}
 	.backyard-life .tiles ul.grid h3{
-		font-family: AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:11px;
 		padding:0 0 10px;
 	}
@@ -2650,13 +2661,18 @@ strong{
 		padding:0;
 		display:inline;
 		margin:0;
-		color:#786C61;
+		color: #493627;
 		font-size:11px;
 	}
 	.backyard-life .tiles ul.grid p{
 		font-size:11px;
 		padding: 0 0 10px;
 	}
+
+	ul.backyard-ideas li.page-item-6112 ul.children {
+		display: none;
+	}
+
 	/* - - - FORM CONTENT - - - */
 	.w960 .formWrap { width: 730px; }
 	.formWrap p,
@@ -2678,13 +2694,13 @@ strong{
 		width:140px;
 	}
 	.sitemap .entry-content h2{
-		font-family:AH, Tahoma, Geneva, sans-serif;
-		color:#786C5F;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
+		color: #493627;
 		font-size:13px;
 		text-transform:uppercase;
 	}
 	.sitemap .entry-content h2 a{
-		color:#786C5F;
+		color: #493627;
 	}
 	.sitemap .entry-content ul{
 		margin: 0 0 15px;
@@ -2696,10 +2712,10 @@ strong{
 	}
 	.sitemap .entry-content ul li{
 		font-size:13px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.sitemap .entry-content ul li a{
-		color:#A59685;
+		color: #493627;
 	}
 
 /* - - - - BLOG STYLES - - - */
@@ -2722,7 +2738,7 @@ strong{
 		line-height:145%;
 	}
 	.blog .tiles ul.grid p a{
-		color:#786C61;
+		color: #493627;
 	}
 
 	.blog .return{
@@ -2741,7 +2757,7 @@ strong{
 	.blog .return p.n { float: right }
 	.blog h1.title,
 	.page h1.title{
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		font-size:32px;
 		margin: 11px 19px 11px;
 		padding:0;
@@ -2766,10 +2782,10 @@ strong{
 		font-size:13px;
 		line-height:146%;
 		margin: 0 0 19px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.page .entry-content{
-		color:#A59685;
+		color: #493627;
 	}
 	.entry-content h1,
 	.entry-content h2,
@@ -2792,7 +2808,7 @@ strong{
 		font-size:19px;
 	}
 	.entry-content h2{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:17px;
 	}
 	.entry-content h3{
@@ -2839,7 +2855,7 @@ strong{
 	}
 	#comments{
 		padding:19px;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	#comments h3#comments-title{
 		font-size:12px;
@@ -2869,7 +2885,7 @@ strong{
 	#respond input[type="text"],
 	#respond textarea{
 		width:380px;
-		font-family: Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		font-size:14px;
 	}
 	#respond input[type="submit"]{
@@ -2880,7 +2896,7 @@ strong{
 		text-transform:uppercase;
 		font-size:16px;
 		border-radius:8px;
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		cursor:pointer;
 		background: #afaea4; /* Old browsers */
 		background: -moz-linear-gradient(top,  #afaea4 0%, #7a7867 99%); /* FF3.6+ */
@@ -2909,7 +2925,7 @@ strong{
 		font-size:11px;
 	}
 	.blog .side .widget ul li a{
-		color:#786C60;
+		color: #493627;
 	}
 
 /* - - - - VIDEO LANDING - - - - */
@@ -2941,12 +2957,12 @@ strong{
 		padding: 0 5px 0 0;
 	}
 	.video .videoList .thumbs .title{
-		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-family:"AR", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size:12px;
 	}
 
 	.video .videoList .thumbs .title a{
-		color:#786C60;
+		color: #493627;
 		display:block;
 	}
 	.video .videoList .thumbs li:hover .title a,
@@ -3046,7 +3062,7 @@ strong{
 	.bd .leftSide h2{
 		font-size: 17px;
 		color: #699 !important;
-		font-family: AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		line-height: 120%;
 		padding: 0 0 7px !important;
 	}
@@ -3207,7 +3223,7 @@ strong{
 	}
 	.locateDealerForm label{
 		font-weight:bold;
-		font-family:Verdana, Geneva, sans-serif;
+		font-family:"AR", Verdana, Geneva, sans-serif;
 		color:#6F6459;
 	}
 	.locateDealerForm select{
@@ -3219,7 +3235,7 @@ strong{
 	.locate .page h2,
 	.resources h2{
 		font-family:AL, Tahoma, Geneva, sans-serif !important;
-		color:#786C5F !important;
+		color:#000000 !important;
 		border-bottom: 1px solid #D6D6D6;
 		font-size:24px !important;
 		margin: 0 0 20px;
@@ -3231,7 +3247,7 @@ strong{
 		margin: 0 0 20px;
 	}
 	.locate .results h3{
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		font-size:13px;
 		margin:0;
 		padding:0;
@@ -3284,7 +3300,7 @@ strong{
 	}
 
 	.expanders h3{
-		font-family:AH, Tahoma, Geneva, sans-serif;
+		font-family: "AH", Tahoma, Geneva, sans-serif;
 		font-size:14px !important;
 		color: #1F6CC5;
 		text-transform:none !important;
@@ -3345,6 +3361,25 @@ strong{
 		border-radius: 8px;
 		font-size: 12px;
 	}
+	/* Locate dealer page with no results */
+	.\/hot-tub-dealer-locator\/cities\/ .entry-content {
+		padding: 30px;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bar2 {
+	    width:55%
+	}
+	.\/hot-tub-dealer-locator\/cities\/ p {
+	    font-size:16px;
+	    line-height:1.4;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bigBlueBtn {
+	    max-width: 16.5em;
+	    text-transform:none;
+	    color:#fff;
+	    padding:8px 1em;
+	    font-family:'AR';
+	}/* end Locate dealer page with no results */
+
 	.page.locate.details .entry-content #dealer_details_3col {
 		min-height: 316px;
 		border-bottom: 1px solid #d6d6d6;
@@ -3363,7 +3398,7 @@ strong{
 		list-style: none;
 	}
 	.page.locate.details .entry-content #dealer_details_3col #dealer_details_3col_details {
-		color: #786C5F !important;
+		color: #000000 !important;
 		padding: 18px 24px;
 	}
 	.page.locate.details .entry-content #dealer_details_3col #dealer_details_3col_details a.teal-button {
@@ -3447,7 +3482,7 @@ strong{
 		font-size: 14px;
 		font-family: 'AH';
 		font-weight: 400;
-		color: #786C5F;
+		color: #493627;
 		margin-top: 20px;
 		margin-bottom: 30px;
 		line-height: 39px;
@@ -3460,7 +3495,7 @@ strong{
 	}
 	#dealer_details_2col_testimonials li {
 		list-style: none;
-		color: #786C5F;
+		color: #493627;
 	}
 	#dealer_details_2col_testimonials #testimonial-container p {
 		font-size: 14px;
@@ -3471,7 +3506,7 @@ strong{
 	#dealer_details_2col_testimonials span.test-quot {
 		position: absolute;
 		font-size: 70px;
-		font-family: helvetica;
+		font-family:"AR", helvetica;
 	}
 	#dealer_details_2col_testimonials span.test-quot.lt {
 		left: -34px;
@@ -3555,7 +3590,7 @@ strong{
 	#dealer_details_main #dealer_details_main_tabbed ul.header li.active,
 	#dealer_details_main #dealer_details_main_tabbed ul.header li:hover {
 		background-color: #fff;
-		color: #797866;
+		color: #493627;
 		border-color: #797866;
 		border-width: 1px 1px 0 1px;
 		border-style: solid;
@@ -3576,16 +3611,16 @@ strong{
 		display: block;
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h3 {
-		color: #797866;
+		color: #493627;
 		font: 400 18px 'AH';
 		margin-bottom: 18px
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area h4 {
-		color: #797866;
+		color: #493627;
 		font: 400 14px 'AH';
 	}
 	#dealer_details_main #dealer_details_main_tabbed div.tab-area p {
-		color: #797866;
+		color: #493627;
 		font-size: 14px;
 	}
 	#dealer_details_main #dealer_details_main_tabbed #dealer_staff_intro_text {
@@ -3600,7 +3635,7 @@ strong{
 	#dealer_details_main #dealer_details_main_sidebar div.header {
 		background-color: #E5DFCD;
 		box-sizing: border-box;
-		color: #786C60;
+		color: #493627;
 		font-size: 15px;
 		font-family: 'AM';
 		height: 39px;
@@ -3650,7 +3685,7 @@ strong{
 		margin-left: -230px;
 		width: 460px;
 		background-color: #e5dfcd;
-		color: #797866;
+		color: #493627;
 	}
 	#sms-container #sms-form h3,
 	#sms-container #sms-form-success h3 {
@@ -3724,7 +3759,7 @@ strong{
 		padding: 5px;
 	}
 	.bd .w240 h2 a{
-		color: #797866;
+		color: #493627;
 		text-decoration: none;
 	}
 	.bd .w240 h1,
@@ -3733,7 +3768,7 @@ strong{
 	.bd .w240 h4,
 	.bd .w240 p,
 	.bd .w240 ul{
-		color: #797866;
+		color: #493627;
 		padding: 5px;
 	}
 
@@ -3759,14 +3794,14 @@ strong{
 	.home .bd .w240.blog h3,
 	.home .bd .w240.blog p,
 	.home .bd .w240.blog li{
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 		line-height:142%;
 	}
 	.home .bd .w240.blog ul li{
 		line-height:150%;
 	}
 	.home .bd .w240.blog ul li a{
-		color: #786C60;
+		color: #493627;
 		text-decoration:none;
 	}
 	.bd a{
@@ -3786,7 +3821,7 @@ strong{
 	}
 	.bd .w480 ul li{
 		line-height:155%;
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 	}
 
 	.acc { float: left; width: 100%; margin: 10px 0 }
@@ -3820,7 +3855,7 @@ strong{
 		padding: 4px;
 	}
 	.bd .list li a.arrowRight{
-		color: #7B736F;
+		color: #493627;
 		display:block;
 		background:url(images/icons/arrowRight.jpg) right center no-repeat;
 		height:32px;
@@ -3832,7 +3867,7 @@ strong{
 		color:#216CC5;
 	}
 	.side .searchform { display: block; width: 100%; margin: 5px }
-	.side #s { float: left; width: 152px; height: 28px; border: none; padding: 0 11px; font-size: 11px; font-family: Tahoma, Geneva, sans-serif; color: #333; background: url(images/icons/search-form.png) no-repeat 0 0 }
+	.side #s { float: left; width: 152px; height: 28px; border: none; padding: 0 11px; font-size: 11px; font-family: "AR", Tahoma, Geneva, sans-serif; color: #333; background: url(images/icons/search-form.png) no-repeat 0 0 }
 	.bd .w230 .thirtyYears{
 		background:url(images/icons/thirtyfiveyears_new.jpg) center no-repeat;
 		height:115px;
@@ -3852,7 +3887,7 @@ strong{
 	.ft{	
 		clear:both;
 		margin: 0;
-		font-family:Tahoma, Geneva, sans-serif;
+		font-family:"AR", Tahoma, Geneva, sans-serif;
 	}
 	.ft .wrap .inner{
 		float:left;
@@ -3893,7 +3928,7 @@ strong{
 		float:left;
 		margin: 0 0 0 13px;
 		padding: 0 13px 0 0;
-		border-right: 1px solid #877970;
+		border-right: 1px solid #000000;
 		line-height:8px;
 		height: 8px;
 		vertical-align:bottom;
@@ -3907,7 +3942,7 @@ strong{
 	.ft .menuWrap .topMenu li a{
 		font-weight:bold;
 		line-height: 12px;
-		color:#877970;
+		color: #493627;
 		text-decoration:none;
 		position: relative;
 		top: -4px;
@@ -3920,7 +3955,7 @@ strong{
 	.ft .menuWrap .bottomMenu li a{
 		font-size:11px;
 		line-height: 14px;
-		color:#877970;
+		color: #493627;
 		text-decoration:none;
 		position: relative; top: -4px;
 	}
@@ -3989,16 +4024,16 @@ strong{
 		display:block;
 	}
 	.overlay .dialog h2{
-		font-family: AR, Tahoma, Geneva, sans-serif;
+		font-family: "AR", Tahoma, Geneva, sans-serif;
 		font-size:21px;
 		margin: 0 0 1em;
 	}
 	.overlay .dialog table{
 	}
 	.overlay .dialog td{
-		font-family:AM, Tahoma, Geneva, sans-serif;
+		font-family: "AM", Tahoma, Geneva, sans-serif;
 		font-size:14px;
-		color: #797866;
+		color: #493627;
 		padding: 0 10px 5px 0;
 	}
 		
@@ -4226,14 +4261,15 @@ strong{
 	}
 	div.awareness-text {
 		width: 100%;
-		min-height: 275px;
+		xmin-height: 275px;
 		float: left;
 		padding-right: 22px;
+		padding-bottom: 25px;
 	}
 	div.awareness-text h4 {
 		font: bold 16px/24px "Verdana" !important;
 		margin-bottom: 12px;
-		color: #779798;
+		color: #493627;
 	}
 	div.awareness-text p.text {
 		padding-right: 4px;
@@ -4471,6 +4507,10 @@ strong{
 			border: none;
 		}
 
+		body.sundance-brochure .gform_wrapper {
+			margin: 0;
+		}
+
 		body.sundance-brochure.brochure1 .bd .wrap .page-header,
 		body.sundance-brochure.brochure2 .bd .wrap .page-header {
 			height: 700px;
@@ -4535,7 +4575,7 @@ strong{
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content.one-part .the-brochure-img {
-			left: -34px;
+			/*left: -34px;*/
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
@@ -4543,11 +4583,57 @@ strong{
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
-			width: 960px;
+			/*width: 960px;*/
+			width: auto;
 			margin: auto;
+			padding-left: 170px;
 		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body {
+			width: 600px
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+			margin-bottom: 0 !important;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .validation_error {
+			display: none;
+		}
+
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body input,
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
+			margin-top: 1px;
+			height: 24px;
+			padding: 0;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .gform_body select {
+			height: 29px;
+		}
+		body.sundance-brochure ::-webkit-input-placeholder,
+		body.sundance-brochure :-moz-placeholder,
+		body.sundance-brochure ::-moz-placeholder,
+		body.sundance-brochure :-ms-input-placeholder {
+			color: #000;
+		}
+
 		body.sundance-brochure .bd .wrap .page-header .content form label {
 			color: #000;
+			display: none;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .pad_top select {
+			margin-top: 32px;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .show_label label {
+			display: block;
+			margin-top: 0px;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form .show_label select {
+			width: 98%;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] {
+			margin-top: 0;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content form input[type="checkbox"] + label {
+			display: block;
+			margin-top: 3px;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form > table {
 			position: relative;
@@ -4605,6 +4691,12 @@ strong{
 			top: 111px;
 			font-size: 9px;
 			font-style: italic;
+		}
+		body.sundance-brochure .bd .wrap .page-header .content .privacy {
+			position: absolute;
+  			right: 66px;
+  			top: 112px;
+  			z-index: 10;
 		}
 
 
@@ -5336,7 +5428,7 @@ strong{
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div input[type="text"],
 .page-template-page-dealersearch-php .dd.ds .wrap.drop-down form div select {
 	box-sizing: border-box;
-	color: #786C5F;
+	color: #493627;
 	font-style: 18px;
 	height: 36px;
 	width: 290px;
@@ -5406,21 +5498,6 @@ strong{
 .uh-four h2:before { background: url(images/dealer-locator/uh-four.png) no-repeat 0 0; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* - - - - - Landing Page - Email Nurture - - - - - */
 .col.w240.leftMenu .inner .custom-sidebar {
 	overflow: hidden;
@@ -5428,4 +5505,243 @@ strong{
 }
 .page.page-narrow {
 	padding: 22px 12px;
+}
+
+.awareness-full-width
+{
+	padding: 20px 25px;
+}
+
+a.get-colorselector
+{
+	font-size: 14px;
+	font-family:"AR", Tahoma,Geneva,sans-serif;
+	color: #493627;
+	float: left;
+	width: 100%;
+	margin: 10px 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #236DC7;
+	text-decoration: underline;
+}
+
+/* - - - - - MSRP - - - - - */
+.msrp {
+	background-color: #efefef;
+	border: 1px solid #efefef;
+	margin-left: -10px;
+	margin-top: 20px;
+	padding: 16px 16px 20px;
+}
+.msrp .msrp-price {
+	font-family: "AL";
+	font-size: 30px;
+}
+.msrp .msrp-price + p {
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 16px 0;
+}
+a#show-msrp {
+	cursor: pointer;
+	/*display: none;*/ /* https://ninthlink.atlassian.net/browse/JAC-879, https://ninthlink.atlassian.net/browse/JAC-938 */
+}
+a#show-msrp.close {
+	background: #c2c2c2;
+	background-color: #c2c2c2;
+	text-shadow: none;
+}
+.msrp > p + p {
+	line-height: 1.4em;
+	margin: 10px 0;
+}
+
+/* ----- HOT TUB BUYER'S GUIDE ----- */
+
+.bd .main .main-title.fullwidth-title img
+{
+	width: 960px;
+	height: 285px;
+}
+
+.bd .main .main-title.fullwidth-title h1
+{
+	font-family: "AH";
+}
+
+.bd .main.buyersguidemain .hero-content
+{
+	background: #ecedef;
+	padding: 50px 50px 30px 30px;
+	
+}
+
+.bd .main.buyersguidemain .hero-content h2
+{
+	color: #37495c;
+	font-family: "AH";
+	font-size: 28px;
+	line-height: 32px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.bd .main.buyersguidemain .hero-content p
+{
+	color: #a59685;
+	font-family: "Verdana";
+	font-size: 13px;
+	line-height: 19px;
+	margin-bottom: 15px;
+}
+
+
+.bd .main.buyersguidemain .page .entry-content h3
+{
+	color: #37495c;
+	font-family: "AL";
+	font-size: 21px;
+	line-height: 26px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	text-transform: none;
+}
+
+.bd .main.buyersguidemain .page  .entry-content h4
+{
+	color: #37495c;
+}
+
+.bd .main.buyersguidemain .page .entry-content p
+{
+	color: #a59685;
+	font-family: "Verdana";
+	font-size: 13px;
+	line-height: 19px;
+	margin-bottom: 15px;
+}
+
+.bd .main.buyersguidemain .page  .entry-content ul.checklist
+{
+	margin-left: 0px;
+}
+
+.bd .main.buyersguidemain .page  .entry-content ul.checklist li
+{
+	list-style: none;
+	background: url('images/buyingguide/checklist_icon.png') 0 0 no-repeat transparent;
+	padding-left: 20px;
+	color: #a59685;
+	font-size: 13px;
+	line-height: 17px;
+	margin-bottom: 10px;
+}
+
+
+.bottomnavigation
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0px 20px;
+}
+
+.bottomnavigation div.previous-step
+{
+	float: left;
+	width: 50px;
+	
+}
+
+
+.bottomnavigation div.next-steps
+{
+	float: right;
+	width: 630px;
+	text-align: right;
+}
+
+.bottomnavigation div.previous-step span.previous-arr
+{
+	width: 36px;
+	height: 30px;
+	display: block;
+	text-indent: -9999px;
+	background: url('images/buyingguide/previous_step.png') 0 0 no-repeat transparent;
+}
+
+.bottomnavigation div.next-steps a.nextstep , .bottomnavigation div.next-steps span.orspan
+{
+	font-family: "AH";
+	color: #37495c;
+	font-size: 11px;
+	line-height: 26px;	
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+.bottomnavigation div.next-steps a.btn.btn-green
+{
+	background: #018ea1;
+	font-family: "AH";
+	color: #FFF;
+	font-size: 11px;
+	padding: 10px 15px;
+	display: inline-block;
+	margin: 0px 5px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+
+.bd .w230.buyerguidesidebar .inner {
+    padding: 0px 10px 20px 20px;
+    position: relative;
+    margin-top: 55px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li
+{
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li a
+{
+	color: #818c95;
+	font-family: "AM";
+	color: #37495c;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.bd .w230.buyerguidesidebar .inner ul li.current-menu-item a
+{
+	color: #4b5257;
+	font-family: "AH";
+}
+
+/* lightbox fix */
+#TB_closeWindowButton .screen-reader-text { display: none; }
+/* ----- LABOR DAY SALE ----- */
+.labor-head { font-family: "AM"; font-size: 17px; }
+.labor-head .tagline { padding-top: 5px; }
+.labor-main-content .c2a, .labor-main-content .foot-note { font-family: "AL"; color: #fff; }
+.labor-main-content .c2a h2 { font-size: 36px; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid #fff; display: inline-block; padding-bottom: 10px; margin-bottom: 10px;}
+.labor-main-content .c2a .line1 { font-size: 22px; text-transform: uppercase; display: inline-block; border-bottom: 2px solid #fff; padding-bottom: 10px;  margin-bottom: 10px;}
+.labor-main-content .c2a .line2 { font-size: 35px; font-weight: bold; }
+.labor-main-content .c2a .line3 { font-size: 18px; }
+.labor-main-content .gfield_required, .labor-main-content label { display: none; }
+.labor-main-content input.input-md { border-radius: 5px; border: 1px solid #b29f77; padding: 10px 0 10px 10px;  margin-bottom: 10px!important;}
+.labor-bottom-content2 { position: relative; }
+.labor-bottom-content h3 { color: #786c5f; font-weight: bold; font-size: 35px; padding-top: 8px; margin-left: 25px;}
+.labor-bottom-content2 p { font-size: 16px; color: #333; }
+.labor-bottom-content2 .vc_span11 { padding-left: 50px!important; position: absolute!important; top: -55px; left: 110px;}
+
+
+sup
+{
+	position: relative;
+    top: -0.5em;
+    font-size: 80%;
 }

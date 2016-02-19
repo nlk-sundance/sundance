@@ -16,6 +16,28 @@ get_header();
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
+<style>
+.gform-body.row {
+  width: 600px;
+  padding-top: 13px;
+}
+select#input_11_4 {
+  height: 24px;
+  margin-top: 37px;
+}
+select#input_11_6 {
+  height: 24px;
+}
+div#input_11_7_1 {
+  padding-top: 4px;
+}
+label#label_11_7_1 {
+  display: block;
+}
+input#gform_submit_button_11 {
+  right: 12px;
+}
+</style>
 <div id="main-wrapper">
 	<div class="page-header one-part" id="page-header">
     	<div class="content center one-part"> <!-- bg image here -->
@@ -23,47 +45,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	
             </div>
             <div class="brown-bar">
-
-                <form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="two-part-form">
-                    <div class="the-brochure-img"></div>
-                    <?php avala_hidden_fields( 13, 6, 12 ); ?>
-                    <table>
-                        <tr>
-                            <td>
-                                <?php avala_field('first_name', 'text full', true, 'field', array('size'=>"14", 'placeholder'=>"First Name *", 'required'=>"required" )); ?>
-                            </td>
-                            <td>
-                                <?php avala_field('last_name', 'text full', true, 'field', array('size'=>"15", 'placeholder'=>"Last Name *", 'required'=>"required" )); ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <?php avala_field('postal_code', 'text full', true, 'field', array('size'=>"7", 'placeholder'=>"Zip *", 'required'=>"required" )); ?>
-                            </td>
-                            <td>
-                                <?php avala_field('email', 'text full email', true, 'field', array('size'=>"20", 'placeholder'=>"Email *", 'required'=>"required" )); ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <table>
-                                    <tr>
-                                        <td width="199"><?php avala_field('currently_own', '', false, 'all', '', 'select', 'Have you ever owned<br />a hot tub?'); ?></td>
-                                        <td width="199"><?php avala_field('buy_time_frame', '', false, 'all', '', 'select', 'When do you plan to purchase<br />a hot tub?'); ?></td>
-                                        <td width="195"><?php avala_field('product_use', '', false, 'all', '', 'select', 'What is the primary benefit you are looking for in a hot tub?'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">
-                                            <?php avala_field('newsletter', '', false, 'field' ); ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <input type="submit" value="Get My Brochure" class="bigBlueBtn blueFade" onClick="_gaq.push(['_trackEvent', 'lead', 'brochure-full']);" />
-                    <p><small>* indicates required fields.<br><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
-                </form>
+                <div class="the-brochure-img"></div>
+                <?php echo do_shortcode('[gravityform id=11 ajax=true title=false description=false]'); ?>
+                <p class="privacy"><small>* indicates required fields.<br><a href="<?php echo get_bloginfo('url'); ?>/about-us/privacy-policy" target="_blank">Privacy policy.</a></small></p>
                 <div class="more-fold"></div>
             </div>
 

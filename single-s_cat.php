@@ -6,6 +6,21 @@
  * @subpackage Sundance
  * @since Sundance 2.0
  */
+
+/**
+ * http_response_code / status_header fix for tub pages
+ *
+ * We are bypassing all the 404fix function mess and just directly embedding on single tub pages for now. The whole build/system for generating pages is a nightmare!
+ * @see https://ninthlink.atlassian.net/browse/JAC-870
+ *
+ */
+if( function_exists('http_response_code') ) {
+    http_response_code(200);
+} else {
+    status_header(200);
+}
+
+
 get_header(); 
 while ( have_posts() ) : the_post();
 global $post;
@@ -42,7 +57,13 @@ $serieslanding = ( $post->ID == 1894 );
 					}
 					$o .= '</div>';
 					$o .= '<div class="description" id="'. esc_attr($c['name']) .'-Series-Spas">';
-					$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series&trade; Spas</a></h1>';
+					if($c['name'] == 'Select')
+					{
+						$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series<sup>&reg;</sup> Spas</a></h1>';	
+					}
+					else {
+						$o .= '<h1><a href="'. get_permalink($i) .'"><strong>'. esc_attr($c['name']) .'</strong> Series&trade; Spas</a></h1>';
+					}
 					$o .= $series->post_excerpt;
 					$o .= '<div class="details">';
 					$o .= '<a class="openDetails" href="#'. esc_attr($c['name']) .'-Series-Spas">View Details</a>';
@@ -62,7 +83,7 @@ $serieslanding = ( $post->ID == 1894 );
             <div class="headline">
                 <div class="model">
                     <h1><?php the_title(''); ?></h1>
-                    <h2>Series Spas</h2>
+                    <h2>Series<?php if(get_the_title() == 'Select'){ echo '<sup>&reg</sup>'; } ?> Spas</h2>
                 </div>
                 <div class="description w480 noline">
                     <?php echo sundance_shortdesc($post->post_content, true); ?>

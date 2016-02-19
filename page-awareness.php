@@ -108,6 +108,7 @@ get_header(); ?>
 				</div>
 			</div>
 	</div>
+	<div class="clr"></div>
 	<div class="awareness-bottom three-col">
 		<div>
 			<img src="/wp-content/themes/sundance/images/awareness/sdsaware-bl1.jpg" />

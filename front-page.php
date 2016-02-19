@@ -11,14 +11,32 @@ get_header(); ?>
 <div class="hero">
     <div class="slides">
     	<div class="slide">
-            <!-- Holiday Promo (commented out - no promo) -->
-            <?php /* <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php bloginfo('template_url'); ?>/images/hero/Homepage_03.jpg" width="960" height="320" alt="Hot Tubs" /></a> */ ?>
-
-            <!-- Regular home hero -->
-            <?php /* COMMENT OUT FOR PROMO */ ?>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/hero/home-slide2.jpg" width="960" height="320" alt="Hot Tubs" /></a>
-            <h1>Life is better with a Sundance Spa</h1>
-            <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/IB8YE8ka2s0?rel=0">Watch the Video</div>
+            <?php
+            $show_promo = true;
+            $promo_start = "12/10/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+            $promo_end = "12/14/2015 23:59:59"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+            $promo_img = '';
+            switch ( get_bloginfo('url') ) {
+                case 'http://www.sundancespas.ca':
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/hero12112015CA.jpg';
+                    break;
+                
+                default:
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/hero12112015.jpg';
+                    break;
+            }
+            if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
+                <!-- Promo -->
+                <style type="text/css">
+                /*#home-dealer-locate { display: none; }*/
+                </style>
+                <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php echo $promo_img; ?>" width="960" height="320" alt="Hot Tubs" /></a>
+            <?php else : ?>
+                <!-- Default -->
+                <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/hero/home-slide2.jpg" width="960" height="320" alt="Hot Tubs" /></a>
+                <h1>Life is better with a Sundance Spa</h1>
+                <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/IB8YE8ka2s0?rel=0">Watch the Video</div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="rightCol">
@@ -32,16 +50,16 @@ get_header(); ?>
                 <div class="inner">
                     <a href="<?php echo bloginfo('url'); ?>/truckload/"><img src="<?php bloginfo('template_url'); ?>/images/icons/truckload-sale.jpg" alt="Truckload Super Sale" width="230" height="145" /></a>
                     <h2 class="avenir65-20"><a href="<?php echo bloginfo('url'); ?>/truckload/">Truckload Savings Event</a></h2>
-                    <p class="avenir65-13">Request a sale in your town and <br />save up to 50%.</p>
+                    <p class="avenir65-13">Take advantage of the season’s <br />best discounts!</p>
                     <p><a href="<?php echo bloginfo('url'); ?>/truckload/" class="goArrow">Go</a></p>
                 </div>
             </div>
             <div class="col w240">
                 <div class="inner">
-                    <a href="<?php echo get_permalink(2823); ?>"><img src="<?php bloginfo('template_url'); ?>/images/icons/hydrotherapy.jpg" border="0" /></a>
-                    <h2 class="avenir65-20"><a href="<?php echo get_permalink(2823); ?>">Hydrotherapy Spa</a></h2>
-                    <p class="avenir65-13">Positive results for our bodies and our minds.</p>
-                    <p><a href="<?php echo get_permalink(2823); ?>" class="goArrow">Go</a></p>
+                    <a href="<?php echo get_bloginfo('url'); ?>/accessories/sunstrong-covers/"><img src="<?php bloginfo('template_url'); ?>/images/icons/sunstrongcover.jpg" border="0" /></a>
+                    <h2 class="avenir65-20"><a href="<?php echo get_bloginfo('url'); ?>/accessories/sunstrong-covers/">SunStrong™ Premium Spa Covers</a></h2>
+                    <p class="avenir65-13">Make caring for your spa both stylish and simple.</p>
+                    <p><a href="<?php echo get_bloginfo('url'); ?>/accessories/sunstrong-covers/" class="goArrow">Go</a></p>
                 </div>
             </div>
             <div class="col w240 last">
