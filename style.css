@@ -949,7 +949,7 @@ strong{
 		position:relative;
 		overflow:hidden;
 		min-height:72px;
-		background:url(images/hero/blank.jpg) 0 0 repeat-x;
+		background:url(images/hero/blank.jpg) 0 bottom repeat-x #e5e0cd;
 		/*background-color: #E5E0CD;*/
 	}
 	.bd .main .main-title img {
