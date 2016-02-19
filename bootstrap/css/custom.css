@@ -18,13 +18,13 @@
     text-decoration: none;
     display: block;
     text-indent: -9999px;
-    margin: 45px 50px 0px 0px;
+    margin: 45px 0px 0px 0px;
 }
 
 ul.toplist
 {
 	float: right;
-    padding: 11px 50px 0px;
+    padding: 0px;
 }
 
 ul.toplist li 
@@ -1217,6 +1217,16 @@ ul.footer-links li.border
 	visibility: hidden;
 }
 
+.navbar-default .container-fluid, .navbar-default .navbar-collapse
+{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#menu-mainmenu > li:first-child > a
+{
+	padding-left: 0px;
+}
 
 @media (max-width: 1220px) and (min-width: 1171px) {
   	#menu-mainmenu > li > a {
