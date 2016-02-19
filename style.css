@@ -4762,18 +4762,18 @@ strong{
 			position: absolute;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-model {
-			width: 431px;
-			height: 362px;
-			left: -30px;
+			width: 703px;
+			height: 376px;
+			left: -330px;
 			top: -63px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open1.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_compare.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-benefits {
-			width: 560px;
-			height: 337px;
-			right: -34px;
+			width: 696px;
+			height: 322px;
+			right: -224px;
 			top: -55px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open2.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_benefits.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
@@ -4786,14 +4786,14 @@ strong{
 			height: 333px;
 			left: -115px;
 			top: -25px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
 			height: 333px;
 			left: -130px;
 			top: -50px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_open3.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
 		}
 
 		body.sundance-brochure .bd .wrap #award-bar {
