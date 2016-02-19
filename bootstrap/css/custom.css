@@ -1228,6 +1228,11 @@ ul.footer-links li.border
 	padding-left: 0px;
 }
 
+.wrapper.headercontainer .container
+{
+	max-width: 960px;
+}
+
 @media (max-width: 1220px) and (min-width: 1171px) {
   	#menu-mainmenu > li > a {
 	    padding: 10px 18px;
