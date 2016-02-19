@@ -23,7 +23,7 @@
 								<input name="zipcodeSearch" value="1" type="hidden">
 							</form>
   						</li>
-  					</ul>
+  		</ul>
         <?php
         //wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'topMenu', 'theme_location' => 'topres' ) );
         ?>
@@ -286,6 +286,13 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var h1Height = jQuery('.bd .main .main-title h1').height();
+		if(h1Height > 72)
+			jQuery('.bd .main .main-title').css('min-height', h1Height);
+	});
+</script>
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

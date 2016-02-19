@@ -14,17 +14,17 @@
 
 .wrapper.headercontainer h1.logo a
 {
-    background: url("../images/logo.png") 0 0 no-repeat transparent;
+    background: url("../images/sundance-spas.png") 0 0 no-repeat transparent;
     text-decoration: none;
     display: block;
     text-indent: -9999px;
-    margin: 45px 50px 0px 0px;
+    margin: 45px 0px 0px 0px;
 }
 
 ul.toplist
 {
 	float: right;
-    padding: 11px 50px 0px;
+    padding: 0px;
 }
 
 ul.toplist li 
@@ -67,8 +67,8 @@ ul.toplist li:last-child
     color: #959595;
     padding-top: 2px;
     xpadding-left: 2px;
-    min-height: 26px;
-    margin-top: 11px;
+    min-height: 30px;
+    margin-top: 8px;
     padding-left: 10px;
 }
 
@@ -124,11 +124,11 @@ ul.navbar-nav li.search {
 }
 
 ul.navbar-nav li.search a{
-	background: url("../images/search_icon.png") no-repeat scroll right 9px transparent;
+	background: url("../images/search_icon.png") no-repeat scroll right 6px transparent;
     min-width: 22px;
     min-height: 20px;
     display: inline-block;
-    padding-right: 25px;
+    padding-right: 25px !important;
 }
 
 .wrapper.bannercontainer{
@@ -1066,6 +1066,7 @@ ul.footer-links li.border
 		-o-transition: all 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
+		min-height: 165px;
 	}
 
 	#menu-mainmenu li ul li ul li:hover {
@@ -1201,7 +1202,7 @@ ul.footer-links li.border
 
 #menu-mainmenu > li > a
 {
-	padding: 10px 25px;
+	padding: 10px 18px;
 }
 
 #menu-mainmenu > li > .dropdown-menu
@@ -1216,14 +1217,42 @@ ul.footer-links li.border
 	visibility: hidden;
 }
 
-@media (max-width: 1150px) and (min-width: 992px) {
+.navbar-default .container-fluid, .navbar-default .navbar-collapse
+{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#menu-mainmenu > li:first-child > a
+{
+	padding-left: 0px;
+}
+
+.wrapper.headercontainer .container
+{
+	max-width: 960px;
+}
+
+@media (max-width: 1220px) and (min-width: 1171px) {
   	#menu-mainmenu > li > a {
-	    padding: 10px 15px;
+	    padding: 10px 18px;
+	}
+}
+
+@media (max-width: 1170px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 14px;
 	}
 	
 	ul.navbar-nav li.search a
 	{
 		padding-right: 25px !important;
+	}
+}
+
+@media (max-width: 1105px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 9px;
 	}
 }
 

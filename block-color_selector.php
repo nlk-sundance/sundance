@@ -126,7 +126,6 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum.png" timg="platinum" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester.png" timg="oyester" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara.png" timg="sahara" height="137" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand.png" timg="sand" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand.png" timg="coppersand" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight.png" timg="midnight" height="137" width="576" />
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco.png" timg="monaco" height="137" width="576" />
@@ -135,7 +134,9 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				</div>
 			</div>
 			<div class="tub-details">
-				<p>Cameo&trade; model shown for visualization purposes only. Spa size and jet placement will vary by model. Not all colors available in all models. See individual product pages for available colors.</p>
+				<p>Cameo&trade; model shown for visualization purposes only. Tub size, configuration, features, controls, options, physical appearance and performance will vary by model.
+<br/>Not all colors available in all models. See individual product pages for available colors.
+</p>
 			</div>
 
 		</div>
@@ -148,7 +149,6 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="oyester" data-pdf="oyester" rel="Oyster" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/oyester-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara-thumb.jpg" height="50" width="50" /></div>
-				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="coppersand" data-pdf="coppersand" rel="Copper Sand" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/coppersand-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight-thumb.jpg" height="50" width="50" /></div>
 				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco-thumb.jpg" height="50" width="50" /></div>
