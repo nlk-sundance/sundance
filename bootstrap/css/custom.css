@@ -14,7 +14,7 @@
 
 .wrapper.headercontainer h1.logo a
 {
-    background: url("../images/logo.png") 0 0 no-repeat transparent;
+    background: url("../images/sundance-spas.png") 0 0 no-repeat transparent;
     text-decoration: none;
     display: block;
     text-indent: -9999px;
@@ -67,8 +67,8 @@ ul.toplist li:last-child
     color: #959595;
     padding-top: 2px;
     xpadding-left: 2px;
-    min-height: 26px;
-    margin-top: 11px;
+    min-height: 30px;
+    margin-top: 8px;
     padding-left: 10px;
 }
 
@@ -1202,7 +1202,7 @@ ul.footer-links li.border
 
 #menu-mainmenu > li > a
 {
-	padding: 10px 20px;
+	padding: 10px 18px;
 }
 
 #menu-mainmenu > li > .dropdown-menu
