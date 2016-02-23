@@ -27,7 +27,7 @@ get_header(); ?>
 <div class="tab current" id="controls-880">
     <ul class="grid col2">
             <li><div>
-           <img src="<?php bloginfo('template_url'); ?>/images/features/Controls880-4.jpg" border="0" />
+           <img src="<?php bloginfo('template_url'); ?>/images/features/control_new.jpg" border="0" />
             <h3>i-Touch Controls</h3>
             <ul>
             
@@ -42,7 +42,7 @@ get_header(); ?>
         </div></li>
 
         <li><div>
-            <img src="<?php bloginfo('template_url'); ?>/images/features/Controls880-3.jpg" border="0" />
+            <img src="<?php bloginfo('template_url'); ?>/images/features/waterfall_new.jpg" border="0" />
             <h3>AquaTerrace Waterfall Dial</h3>
             <ul>
            	

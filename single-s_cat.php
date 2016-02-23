@@ -25,8 +25,9 @@ get_header();
 while ( have_posts() ) : the_post();
 global $post;
 
-$custom = get_post_meta($post->ID, 's_cat_tubs');
-$cat_tubs = $custom[0];
+$custom = get_post_meta($post->ID);
+$cat_tubs = unserialize(fix_serialized_data($custom['s_cat_tubs'][0]));
+
 if($cat_tubs=='') $cat_tubs = array();
 
 $serieslanding = ( $post->ID == 1894 );
@@ -45,14 +46,14 @@ $serieslanding = ( $post->ID == 1894 );
         <div class="inner">
         <?php if ( $serieslanding )  {
 			// hot-tubs-and-spas : transient s_tubcats_landing
-			if ( true ) { //false === ( $special_query_results = get_transient( 's_tubcats_landing' ) ) ) {
+			//if ( true ) { //false === ( $special_query_results = get_transient( 's_tubcats_landing' ) ) ) {
 				global $tubcats;
 				$o = '';
 				foreach ( $tubcats as $i => $c ) {
 					$series = get_post($i);
 					$o .= '<div class="tubSeries interactive" id="'. esc_attr($c['name']) .'-Series">';
 					$o .= '<div class="overhead">';
-					if (class_exists('MultiPostThumbnails')) {
+					if (class_exists('MultiPostThumbnails') && isset($c['tubs'][0]) ) {
 						$o .= MultiPostThumbnails::get_the_post_thumbnail('s_spa', 'overhead-large', $c['tubs'][0]['id'], 'overhead-mid');
 					}
 					$o .= '</div>';
@@ -73,7 +74,7 @@ $serieslanding = ( $post->ID == 1894 );
 				}
 				
 				set_transient( 's_tubcats_landing', $o, 60*60*12 );
-			}
+			//}
 			// Use the data like you would have normally...
 			//$o = get_transient( 's_tubcats_landing' );
 			echo $o;

@@ -95,7 +95,11 @@ if($cat_tubs=='') $cat_tubs = array();
 													$t['seats'] = $specs['seats'];
 													$o .= '<td width="168">';
 														$o .= '<a href="'. esc_url($t['url']) .'">';
-														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" >
+																	<div class="tubViewDetails"></div>';
+														//			if(get_field('tub_badge', $spa_id) && get_field('tub_badge', $spa_id) != 'na')
+														//				$o .= '<span class="spabadge badge-medium '.get_field('tub_badge', $spa_id).'"></span>';			
+														$o .= '</div>';
 														$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
 														$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
 														$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';
@@ -142,4 +146,5 @@ if($cat_tubs=='') $cat_tubs = array();
 <br class="clear" />
 <?php
 endwhile;
+
 get_footer(); ?>

@@ -14,17 +14,17 @@
 
 .wrapper.headercontainer h1.logo a
 {
-    background: url("../images/logo.png") 0 0 no-repeat transparent;
+    background: url("../images/sundance-spas.png") 0 0 no-repeat transparent;
     text-decoration: none;
     display: block;
     text-indent: -9999px;
-    margin: 45px 50px 0px 0px;
+    margin: 45px 0px 0px 0px;
 }
 
 ul.toplist
 {
 	float: right;
-    padding: 11px 50px 0px;
+    padding: 0px;
 }
 
 ul.toplist li 
@@ -67,8 +67,8 @@ ul.toplist li:last-child
     color: #959595;
     padding-top: 2px;
     xpadding-left: 2px;
-    min-height: 26px;
-    margin-top: 11px;
+    min-height: 30px;
+    margin-top: 8px;
     padding-left: 10px;
 }
 
@@ -124,11 +124,11 @@ ul.navbar-nav li.search {
 }
 
 ul.navbar-nav li.search a{
-	background: url("../images/search_icon.png") no-repeat scroll right 9px transparent;
+	background: url("../images/search_icon.png") no-repeat scroll right 6px transparent;
     min-width: 22px;
     min-height: 20px;
     display: inline-block;
-    padding-right: 25px;
+    padding-right: 25px !important;
 }
 
 .wrapper.bannercontainer{
@@ -723,7 +723,8 @@ ul.rightcategories li a{
 .wrapper.footercontainer
 {
 	background-color: #0b2a4a;
-    min-height: 615px;
+    xmin-height: 615px;
+    margin-bottom: 0px;
 }
 
 .wrapper.footercontainer h1.smalllogo a
@@ -1014,18 +1015,244 @@ ul.footer-links li.border
 }
 
 
-@media (max-width: 1150px) and (min-width: 992px) {
+.navbar-nav > li > .dropdown-menu > li > a
+{
+	padding: 5px 20px;
+}
+
+/* Mega Menu */
+	#menu-mainmenu li ul li ul{
+		z-index:99;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background:#F1F0EE;
+		width: 572px;
+		padding: 0 0 0 115px;
+		box-shadow: -3px 3px 3px rgba(0,0,0,0.35);
+		margin: 0;
+	}
+	
+	#menu-mainmenu li:hover ul li ul{
+		visibility:hidden;
+		opacity:0;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		-ms-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+		
+		-webkit-transition-delay: 0.2s;
+		-moz-transition-delay: 0.2s;
+		-o-transition-delay: 0.2s;
+		-ms-transition-delay: 0.2s;
+		transition-delay: 0.2s;
+		
+	}
+	
+	#menu-mainmenu li:hover ul li:hover ul{
+		visibility:visible;
+		opacity:1;
+	}
+	
+	#menu-mainmenu li ul li ul li{
+		padding:10px 21px;
+		float:left;
+		background:#FFF;
+		font-family:"AR", Verdana, Geneva, sans-serif;
+		list-style: none;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		min-height: 165px;
+	}
+
+	#menu-mainmenu li ul li ul li:hover {
+		background: #e4ecef; /* safety */
+		background: -moz-linear-gradient(top,  #e4ecef 70%, #ffffff 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#e4ecef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* IE10+ */
+		background: linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4ecef', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	}
+	
+	#menu-mainmenu li ul li ul li a{
+		background:none !important;
+		padding:0;
+	}
+	
+	#menu-mainmenu li ul li ul li a.navtub {
+		width: 101px;
+		height: 103px;
+	}
+	
+	#menu-mainmenu li ul li ul li h2
+	{
+		margin: 5px 0px 0px;
+	}
+	
+	#menu-mainmenu li ul li ul li h2 a{
+		font-size:13px;
+		font-weight:bold;
+		margin: 3px 0;
+		font-family: "AM";
+	}
+	
+	#menu-mainmenu li ul li ul li p a{
+		font-size:13px;
+		font-family: "AR";
+	}
+	
+
+#menu-mainmenu > li.seriescat > ul.dropdown-menu
+{
+	width: 115px;
+}
+
+#menu-mainmenu > li > a
+{
+	padding: 14px 20px 24px;
+}
+
+
+#menu-mainmenu > li > ul.dropdown-menu
+{
+	padding-bottom: 12px;
+}
+
+
+#menu-mainmenu > li > ul.dropdown-menu
+{
+	padding-top: 25px;
+	background: #ebe7e0;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li a
+{
+	color: #0b2a4a;	
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > a
+{
+	color: #0b2a4a;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "AM";
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li:hover a{
+	background: #fbfaf9;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > a:hover
+{
+	background: #fbfaf9;
+}
+
+#menu-mainmenu > li > ul.dropdown-menu > li > ul
+{
+	background: #FFF;
+	padding-left: 0px;
+	margin-left: 115px;
+	box-shadow: none;
+}
+
+#menu-mainmenu li ul li ul, #menu-mainmenu li ul li ul li, #menu-mainmenu .sitemap > ul .sitemapFlop {
+    background: #FFF;
+}
+
+#menu-mainmenu li ul li ul li:hover
+{
+	background: #fbfaf9;
+}
+
+ #menu-mainmenu li ul li ul li h2
+{
+	color: #081f37;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "AM";
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+#menu-mainmenu li ul li ul li h2 a
+{
+	text-decoration: none;
+}
+
+#menu-mainmenu li ul li ul li  p
+{
+	margin: 0px;
+	padding: 0px;	
+}
+
+ #menu-mainmenu li ul li ul li p a
+{
+	color: #081f37;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "AR";
+	text-decoration: none !important;
+}
+
+#menu-mainmenu > li > a
+{
+	padding: 10px 18px;
+}
+
+#menu-mainmenu > li > .dropdown-menu
+{
+	padding-top: 25px;
+	background: #ebe7e0;
+}
+
+#menu-mainmenu > li > .dropdown-menu > li > ul.megamenu
+{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.navbar-default .container-fluid, .navbar-default .navbar-collapse
+{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#menu-mainmenu > li:first-child > a
+{
+	padding-left: 0px;
+}
+
+.wrapper.headercontainer .container
+{
+	max-width: 960px;
+}
+
+@media (max-width: 1220px) and (min-width: 1171px) {
   	#menu-mainmenu > li > a {
-	    padding: 10px 15px;
+	    padding: 10px 18px;
+	}
+}
+
+@media (max-width: 1170px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 14px;
 	}
 	
 	ul.navbar-nav li.search a
 	{
 		padding-right: 25px !important;
 	}
-	.container.smallcontainer > .row > .col-xs-12
-	{
-		min-height: 270px;	
+}
+
+@media (max-width: 1105px) and (min-width: 992px) {
+  	#menu-mainmenu > li > a {
+	    padding: 10px 9px;
 	}
 }
 

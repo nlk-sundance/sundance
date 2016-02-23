@@ -83,7 +83,7 @@ global $tubcats;
 
 			<div>
 
-				<p>The i-Touch<sup>&trade;</sup> Control Panel gives you complete control of your spa at your fingertips. With a convenient backlit LCD display, the i-Touch<sup>&trade;</sup> Control Panel is easy to read at all times.</p>
+				<p>The SunTouch<sup>&trade;</sup> Control Panel amplifies ease of use with a glowing, color, touch screen control and icon-driven menus, so programming your spa is even easier any time of day.</p>
 
 				<button show="sg-details-panel">Explore More</button>
 

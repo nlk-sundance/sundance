@@ -62,7 +62,7 @@ get_header('bootstrap'); ?>
   							</form>
   						</div>
   						<div class="col-xs-12 col-sm-4 col-md-5 padl0 padr0">
-  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/image5.png">
+  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/dealer_image.jpg">
   						</div>
   					</div>
   				</div>

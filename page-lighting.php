@@ -27,7 +27,7 @@ get_header(); ?>
             <div class="tab current" id="lighting-880">
                 <ul class="grid col2">
                     <li><div>
-                        <img src="<?php bloginfo('template_url'); ?>/images/features/880-lighting.jpg" border="0" />
+                        <img src="<?php bloginfo('template_url'); ?>/images/features/waterfall_v2.jpg" border="0" />
                         <h3>SunGlow&trade; Lighting System and AquaTerrace&trade; Water Feature</h3>
                         <ul>
                         <li>AquaTerrace&trade; water feature includes colored backlighting with a rotating spectrum or one-color settings.</li>

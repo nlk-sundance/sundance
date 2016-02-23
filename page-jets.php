@@ -8,8 +8,10 @@
  */
 
 // transient for s_alljets_bycat
+delete_transient( 's_alljets_bycat' );
+
 if ( false === ( $special_query_results = get_transient( 's_alljets_bycat' ) ) ) {
-	$jetcats = get_terms('s_jet_ser', array('orderby'=>'id'));
+	$jetcats = get_terms('s_jet_ser', array('orderby'=>'term_order', 'order' => 'ASC'));
 	foreach ( $jetcats as $i => $c ) {
 		$jet_ids = get_objects_in_term($c->term_id, 's_jet_ser');
 		$jets = array();
