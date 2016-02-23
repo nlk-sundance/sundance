@@ -1477,11 +1477,15 @@ function sundance_tub_sort($a,$b) {
 // Fix serialized data
 function fix_serialized_data( $data ) {
 	$fixed_serialized_data = preg_replace_callback( '!s:(\d+):"(.*?)";!',
-		function($match) {
+		/*function($match) {
 		return ($match[1] == strlen($match[2])) ? $match[0] : 's:' . strlen($match[2]) . ':"' . $match[2] . '";';
-		},
+		},*/
+		'fix_serialized_data_function',
 		$data );
 	return $fixed_serialized_data;
+}
+function fix_serialized_data_function($match) {
+	return ($match[1] == strlen($match[2])) ? $match[0] : 's:' . strlen($match[2]) . ':"' . $match[2] . '";';
 }
 
 function sundance_meta_save($post_id){
