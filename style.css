@@ -5746,3 +5746,13 @@ sup
     top: -0.5em;
     font-size: 80%;
 }
+
+/* New Overview image for 880 Series List */
+.maxxus {background-position: 0px 0px; background-image: url('images/tubs/maxxus_138.png'); }
+.aspen {background-position: 0px 0px; background-image: url('images/tubs/aspen_138.png'); }
+.optima {background-position: 0px 0px; background-image: url('images/tubs/optima_138.png'); }
+.cameo {background-position: 0px 0px; background-image: url('images/tubs/cameo_138.png'); }
+.altamar {background-position: 0px 0px; background-image: url('images/tubs/altamar_138.png'); }
+.marin {background-position: 0px 0px; background-image: url('images/tubs/marin_138.png'); }
+.capri {background-position: 0px 0px; background-image: url('images/tubs/capri_138.png'); }
+
