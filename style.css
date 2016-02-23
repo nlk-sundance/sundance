@@ -553,7 +553,7 @@ strong{
 	}
 
 	.hd .mainMenu li ul li ul li:hover {
-		background: #e4ecef; /* Old browsers */
+		background: #e4ecef; /* safety */
 		background: -moz-linear-gradient(top,  #e4ecef 70%, #ffffff 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#e4ecef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  #e4ecef 70%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -3353,6 +3353,25 @@ strong{
 		border-radius: 8px;
 		font-size: 12px;
 	}
+	/* Locate dealer page with no results */
+	.\/hot-tub-dealer-locator\/cities\/ .entry-content {
+		padding: 30px;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bar2 {
+	    width:55%
+	}
+	.\/hot-tub-dealer-locator\/cities\/ p {
+	    font-size:16px;
+	    line-height:1.4;
+	}
+	.\/hot-tub-dealer-locator\/cities\/ .bigBlueBtn {
+	    max-width: 16.5em;
+	    text-transform:none;
+	    color:#fff;
+	    padding:8px 1em;
+	    font-family:'AR';
+	}/* end Locate dealer page with no results */
+
 	.page.locate.details .entry-content #dealer_details_3col {
 		min-height: 316px;
 		border-bottom: 1px solid #d6d6d6;
