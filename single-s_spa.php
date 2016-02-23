@@ -12,6 +12,23 @@
  * @subpackage Sundance
  * @since Sundance 2.0
  */
+
+
+/**
+ * http_response_code / status_header fix for tub pages
+ *
+ * We are bypassing all the 404fix function mess and just directly embedding on single tub pages for now. The whole build/system for generating pages is a nightmare!
+ * @see https://ninthlink.atlassian.net/browse/JAC-870
+ *
+ */
+if( function_exists('http_response_code') ) {
+    http_response_code(200);
+} else {
+    status_header(200);
+}
+
+
+
 get_header();
 while ( have_posts() ) : the_post();
 global $post;
@@ -108,10 +125,30 @@ $cats = $custom[0];
 $serID = $cats[0];
 $ser = get_post($serID);
 
-if ( $ser->post_title == 'Select' ) { $serval = 'aDETNR5oAgg'; }
-if ( $ser->post_title == 880 ) { $serval = 'zCdzYmarTWk'; }
-if ( $ser->post_title == 780 ) { $serval = '5aWp_SGPXD8'; }
-if ( $ser->post_title == 680 ) { $serval = '38_rQgt0IAc'; }
+$vid = esc_attr($s_specs['video_id']);
+if ( isset($vid) && !empty($vid) ) :
+    $videoid = $vid;
+    $vidtitle = get_the_title() . ' Spa';
+else :
+    switch ($ser->post_title) {
+        case 'Select':
+            $videoid = false; //'aDETNR5oAgg'
+            break;
+        case '880':
+            $videoid = 'zCdzYmarTWk'; //'zCdzYmarTWk'
+            break;
+        case '780':
+            $videoid = '5aWp_SGPXD8'; //'5aWp_SGPXD8'
+            break;
+        case '680':
+            $videoid = false; //'38_rQgt0IAc'
+            break;
+        default:
+            $videoid = false;
+            break;
+    }
+    $vidtitle = $ser->post_title . ' Series';
+endif;
 
 ?>
 <script>
@@ -121,13 +158,13 @@ dataLayer.push({
     'event':'pageReady'
 });
 </script>
-<div class="cols istub <?php if ( $ser->post_title == 'Select' ) { echo 'select'; } ?>">
+<div class="cols istub <?php echo ( is_numeric($ser->post_title) ? 'series' . $ser->post_title : strtolower( $ser->post_title ) ); ?>">
   <div itemscope itemtype="http://schema.org/Product">
     <div class="main col w730">
         <?php the_post_thumbnail(); ?>
         <!--h1><?php the_title(); ?></h1-->
-        <?php if ( $ser->post_title != 'Select' ) { ?>
-        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $serval; ?>?rel=0">VIDEO: Learn about the <?php esc_attr_e($ser->post_title); ?> Series</div>
+        <?php if ( $videoid ) { ?>
+        <div class="fancy-button" goto="vidmodal" rel="//www.youtube-nocookie.com/embed/<?php echo $videoid; ?>?rel=0">VIDEO: Learn about the <?php echo $vidtitle; ?></div>
         <?php } ?>
         <div class="spa-name" itemprop="name" content="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></div>
     </div>
@@ -249,7 +286,7 @@ dataLayer.push({
             <a id="show-msrp" href="#msrp" class="bigBlueBtn getpricing">View MSRP</a>
             <div class="msrp" style="display: none;">
                 <?php echo '<p><span class="msrp-price">' . $msrp . '</span> MSRP</p>'; ?>
-                <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
+                <p>Prices listed are Manufacturer’s Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
                 <a id="msrp-pricing" href="/get-a-quote/" class="bigBlueBtn">Get Pricing</a>
                 <a id="msrp-dealer" href="/hot-tub-dealer-locator/" class="bigBlueBtn gap15px" style="margin-top: 15px;">Find a Dealer</a>
             </div>
@@ -268,7 +305,7 @@ dataLayer.push({
                 <li><a href="#specs">Specifications</a></li>
                 <li><a href="#jets">Jets</a></li>
                 <li><a href="#options">Options</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <?php if( ! sds_is_ca() ) { ?><li><a href="#reviews" id="show_reviews">Reviews</a></li><?php } ?>
             </ul>
             <div class="tab highlights current" id="highlights">
                 <div class="inner">
@@ -501,6 +538,7 @@ dataLayer.push({
                     <?php } else echo '<p>No Options</p>'; ?>
                 </div>
             </div>
+            <?php if( ! sds_is_ca() ) { ?>
             <div class="tab reviews" id="reviews">
                 <div class="inner">
                         <div id="BVRRContainer">
@@ -510,15 +548,13 @@ dataLayer.push({
                         $BV.ui( 'rr', 'show_reviews', {
                             doShowContent : function () {
                             // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                                $('ul#spatabs li.current').removeClass('current');
-                                $('div.tab.current').removeClass('current');
-                                $('li a[href="#reviews"]').parent().addClass('current');
-                                $('#reviews').addClass('current').css('display', 'block');
+                                jQuery("#show_reviews").click();
                             }
                         });
                         </script>
                 </div>
             </div>
+            <?php } ?>
 
             
             

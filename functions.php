@@ -91,6 +91,7 @@ function sundance_setup() {
 	add_image_size( 'blog-mid', 211, 159, true );
 	add_image_size( 'blog-thm', 93, 70, true );
 	add_image_size( 'accthm', 140, 125, true );
+	add_image_size( 'banner-full', 960, 285, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -307,6 +308,10 @@ function sundance_body_class($classes) {
 	
 	if ( is_search() ) {
 		$classes[] = 'page';
+	}
+
+	if ( sds_is_ca() ) {
+		$classes[] = 'sds-canada';
 	}
 	
 	return $classes;
@@ -1329,6 +1334,7 @@ function sundance_specs_metabox() {
 	$info = $custom[0];
 	if($info=='') $info = array(
 		'product_id' => '',
+		'video_id' => '',
 		'msrp' => '',
 		'seats' => '',
 		'dim_us' => '',
@@ -1355,6 +1361,9 @@ function sundance_specs_metabox() {
 	?><table width="100%">
 	<tr valign="top">
     <td width="187"><label for="s_specs[product_id]">Product ID</label></td><td><input type="text" name="s_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
+    </tr>
+	<tr valign="top">
+    <td width="187"><label for="s_specs[video_id]">YouTube Video ID</label></td><td><input type="text" name="s_specs[video_id]" value="<?php esc_attr_e($info['video_id']); ?>" size="20" /></td>
     </tr>
 	<tr valign="top">
 	<td width="187"><label for="s_specs[msrp]">MSRP</label></td><td><input type="text" name="s_specs[msrp]" value="<?php esc_attr_e($info['msrp']); ?>" size="20" /></td>
@@ -2694,7 +2703,7 @@ function custom_data_layer_container() {
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );
 	$prodId = isset($_COOKIE["sdsspa"]) ? $_COOKIE["sdsspa"] : '' ;
-	setcookie("sdscid", $custId, $expire, '/');
+	//setcookie("sdscid", $custId, $expire, '/');
 	
 
 	$str = '<script>dataLayer = [{';
@@ -2708,7 +2717,7 @@ function custom_data_layer_container() {
 	if ( get_post_type($post->ID) == "s_spa" ) { // is single spa page
 		$parts = explode( "&", get_the_title($post->ID) );
 		$prodId = $parts[0];
-		setcookie("sdsspa", $prodId, $expire, '/');
+		//setcookie("sdsspa", $prodId, $expire, '/');
 
 		$str .= '"productId":"' . $prodId . '",';
 	}
@@ -2752,6 +2761,74 @@ function custom_data_layer() {
 // Tracking Codes
 include('functions_trackingcodes.php');
 
+
+
+/**
+* Is SubPage?
+*
+* Checks if the current page is a sub-page and returns true or false.
+*
+* @param  $page mixed optional ( post_name or ID ) to check against.
+* @return boolean
+*/
+function sds_is_subpage( $page = null )
+{
+    global $post;
+    // is this even a page?
+    if ( ! is_page() )
+        return false;
+    // does it have a parent?
+    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+        return false;
+    // is there something to check against?
+    if ( ! isset( $page ) ) {
+        // yup this is a sub-page
+        return true;
+    } else {
+        // if $page is an integer then its a simple check
+        if ( is_int( $page ) ) {
+            // check
+            if ( $post->post_parent == $page )
+                return true;
+        } else if ( is_string( $page ) ) {
+            // get ancestors
+            $parent = get_ancestors( $post->ID, 'page' );
+            // does it have ancestors?
+            if ( empty( $parent ) )
+                return false;
+            // get the first ancestor
+            $parent = get_post( $parent[0] );
+            // compare the post_name
+            if ( $parent->post_name == $page )
+                return true;
+        }
+        return false;
+    }
+}
+
+
+
+function sharpspring_become_a_dealer() {
+	$str = '<script type="text/javascript">
+		var _ss = _ss || [];
+		_ss.push(\'_setDomain\', \'https://koi-7AFC9LNY.sharpspring.com/net\');
+		_ss.push(\'_setAccount\', \'KOI-II72QWOE\');
+		_ss.push(\'_trackPageView\');
+		(function(){ 
+			var ss = document.createElement(\'script\');
+			ss.type = \'text/javascript\';
+			ss.async = true;
+			ss.src = (\'https:\' == document.location.protocol ? \'https://\' : \'http://\') + \'koi-7AFC9LNY.sharpspring.com/client/ss.js?ver=1.1.1\';
+			var scr = document.getElementsByTagName(\'script\')[0];
+			scr.parentNode.insertBefore(ss, scr); 
+		}
+		)();
+		</script>';
+	if ( sds_is_subpage('become-a-dealer') || is_page( 'become-a-dealer' ) )
+		echo $str;
+}
+
+add_action( 'wp_head', 'sharpspring_become_a_dealer' );
 
 
 /*	*	*	*	*	*	*	*	*
@@ -3137,6 +3214,8 @@ function sds_my_server() {
 	switch ( $url ) {
 		case 'http://www.sundancespas.com' :
 		case 'http://www.sundancespas.com/' :
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
 			return 'live';
 			break;
 		case 'http://sundancespas.ninthlink.me' :
@@ -3145,10 +3224,27 @@ function sds_my_server() {
 			break;
 		case 'http://localhost/sundancespas.com' :
 		case 'http://localhost/sundancespas.com/' :
+		case 'http://localhost.sundancespas.com' :
+		case 'http://localhost.sundancespas.com/' :
 			return 'local';
 			break;
 	}
 	return 'live';
+}
+function sds_is_ca() {
+	$url = get_bloginfo('url');
+	switch ( $url ) {
+		case 'http://www.sundancespas.ca' :
+		case 'http://www.sundancespas.ca/' :
+			return true;
+			break;
+		case 'http://www.sundancespas.com' :
+		case 'http://www.sundancespas.com/' :
+		default :
+			return false;
+			break;
+	}
+	return false;
 }
 
 
@@ -3165,7 +3261,7 @@ function sds_my_server() {
 			if ( is_page('reviews') ) {
 				if( sds_my_server() != 'live' )
 				{
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/sundancespas/ReadOnly/en_US/bvapi.js', array(), '1.0', false); //staging
 				}
 				else
 				{

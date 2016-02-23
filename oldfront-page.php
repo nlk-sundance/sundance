@@ -13,20 +13,23 @@ get_header(); ?>
     	<div class="slide">
             <?php
             $show_promo = true;
-            $promo_start = "6/25/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-            $promo_end = "7/14/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+            $promo_start = "11/20/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+            $promo_end = "11/30/2015 23:59:59"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
             $promo_img = '';
             switch ( get_bloginfo('url') ) {
                 case 'http://www.sundancespas.ca':
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/canada-day2015.jpg';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/hero-Nov-2015.jpg';
                     break;
                 
                 default:
-                    $promo_img = get_bloginfo('template_url') . '/images/hero/independence-day2015.jpg';
+                    $promo_img = get_bloginfo('template_url') . '/images/hero/hero-Nov-2015.jpg';
                     break;
             }
             if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
-                <!-- Spring Promo -->
+                <!-- Promo -->
+                <style type="text/css">
+                /*#home-dealer-locate { display: none; }*/
+                </style>
                 <a href="<?php echo get_bloginfo('url'); ?>/specials/"><img src="<?php echo $promo_img; ?>" width="960" height="320" alt="Hot Tubs" /></a>
             <?php else : ?>
                 <!-- Default -->

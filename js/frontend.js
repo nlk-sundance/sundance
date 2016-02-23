@@ -492,22 +492,22 @@ jQuery(function($){
 			$('div.vid-cta-section').append('<div id="vcta880"><div class="tub-thumb"><span>Top-line Luxury</span></div><a class="details-btn" href="/880series/"></a></div>');
 			$('div.vid-cta-section').append('<div id="vcta780"><div class="tub-thumb"><span>Upgraded Features</span></div><a class="details-btn" href="/780series/"></a></div>');
 			$('div.vid-cta-section').append('<div id="vcta680"><div class="tub-thumb"><span>Entry Sundance</span></div><a class="details-btn" href="/680series/"></a></div>');
-			$('div.vid-cta-section').append('<div id="vctabrochure"><a href="/request-literature/" onClick="_gaq.push([\'_trackEvent\', \'VideoPop\', \'Brochure\']);" ></a></div>');
+			$('div.vid-cta-section').append('<div id="vctabrochure"><a href="/request-literature/"></a></div>'); // onClick="_gaq.push([\'_trackEvent\', \'VideoPop\', \'Brochure\']);"
 		}
 		$('div#vctaselect').click(function(){ 
-			_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', 'Select']);
+			//_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', 'Select']);
 			window.location = "/selectseries/";
 		});
 		$('div#vcta880').click(function(){
-			_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '880']);
+			//_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '880']);
 			window.location = "/880series/";
 		});
 		$('div#vcta780').click(function(){
-			_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '780']);
+			//_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '780']);
 			window.location = "/780series/";
 		});
 		$('div#vcta680').click(function(){
-			_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '680']);
+			//_gaq.push(['_trackEvent', 'VideoPop', 'HotTub', '680']);
 			window.location = "/680series/";
 		});
 	});
