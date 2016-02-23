@@ -122,12 +122,155 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 .color-selector-modal-title span a::after {
 	padding-top: 4px;
 }	
+
+/* For Responsiveness */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.cols .w960.main {
+    width: 100%;
+    box-sizing: border-box;
+    xpadding: 0px 15px;
+}
+
+
+.color-selector.color-selector-container .color-selector-wrapper {
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .left {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    margin-right: 2%;
+    text-align: center;
+    width: 67.8%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    padding-top: 22px;
+    width: 30%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download{
+	width: 100%;
+	max-width: 240px;
+}
+
+.show-for-small
+{
+	display: none;
+}
+
+.bd {
+    margin-top: 0px !important;
+    max-width: 960px;
+    min-width: auto;
+    width: 100%;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+	.page .page
+	{
+		padding: 15px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    margin-right: 2%;
+	    width: 59.8%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img {
+	    height: auto !important;
+	    width: 450px !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    box-sizing: border-box;
+	    float: left;
+	    height: auto;
+	    padding-top: 22px;
+	    width: 33%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		xtop: 40px !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 29px;
+	}
+}
+
+@media only screen and (max-width: 767px) 
+{
+	.page .page
+	{
+		padding: 15px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper {
+		
+	}	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    float: none;
+	    width: 100%;
+	    height: auto;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    float: none;
+	    width: 100%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		width: 350px !important;
+		height: auto !important;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
+	{
+		height: 255px;
+	}
+	
+	.hide-for-small
+	{
+		display: none !important;
+	}
+	
+	.show-for-small
+	{
+		display: block;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-skirt img
+	{
+		top: 23px;
+	}
+	
+}	
+
 </style>
 <div class="color-selector color-selector-container">
 
 	<div class="color-selector-wrapper">
 		<h1 class="color-heading hidemodal">Spa Color Selector</h1>
-		<p class="hidemodal">Use the color palette to the right to pick out your shell and cabinet color.</p>
+		<p class="hidemodal hide-for-small">Use the color palette to the right to pick out your shell and cabinet color.</p>
+		<p class="hidemodal show-for-small">Use the color palette at the bottom to pick out your shell and cabinet color.</p>
 		<div class="left">
 
 			<div class="tub-container">

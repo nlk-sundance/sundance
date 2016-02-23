@@ -6193,3 +6193,10 @@ ul.footer-links li.border
 	text-decoration: underline;
 }
 
+
+sup
+{
+	position: relative;
+    top: -0.5em;
+    font-size: 80%;
+}
