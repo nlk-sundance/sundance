@@ -10,9 +10,9 @@ get_header();
 while ( have_posts() ) : the_post();
 global $post;
 
-$custom = get_post_meta($post->ID, 's_cat_tubs');
-$cat_tubs = $custom[0];
-if($cat_tubs=='') $cat_tubs = array();
+//$custom = get_post_meta($post->ID, 's_cat_tubs');
+//$cat_tubs = $custom[0];
+//if($cat_tubs=='') $cat_tubs = array();
 
 //$serieslanding = ( $post->ID == 1894 );
 
