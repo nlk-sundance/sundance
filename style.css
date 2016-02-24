@@ -815,7 +815,7 @@ strong{
 
 	.page .bd .rightCol .block.brochure-thumb.top {
 		position: relative;
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top.png) no-repeat 50% 100%;
+		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-new.png) no-repeat 50% 100%;
 	}
 	.page .bd .rightCol .block.brochure .arrow {
 		position: absolute;
@@ -839,7 +839,7 @@ strong{
 	}
 
 	.page .bd .rightCol .block.brochure-thumb.bottom {
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-bottom.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
+		background: url(/wp-content/themes/sundance/images/icons/brochure-right-bottom-new.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
 	}
 	.page .bd .rightCol .video{
 		border:none;
