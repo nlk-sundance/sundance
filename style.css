@@ -5059,7 +5059,7 @@ strong{
 		height: 166px;
 		padding: 0;
 		margin-bottom: 14px;
-		background: url(/wp-content/themes/sundance/images/tubs/sds-tubs-sprite.jpg) no-repeat;
+		background: url(/wp-content/themes/sundance/images/tubs/sds-tubs-sprite-new.jpg) no-repeat;
 	}
 	.tubThumb .tubViewDetails {
 		position: absolute;
@@ -6336,7 +6336,7 @@ sup
 	font-family: "AR";
 }
 
-/* New List image for 880 Series */
+/* New List image for 880 Series 
 .maxxus {background-position: 0px 0px; background-image: url('images/tubs/maxxus_138.png'); }
 .aspen {background-position: 0px 0px; background-image: url('images/tubs/aspen_138.png'); }
 .optima {background-position: 0px 0px; background-image: url('images/tubs/optima_138.png'); }
@@ -6344,6 +6344,7 @@ sup
 .altamar {background-position: 0px 0px; background-image: url('images/tubs/altamar_138.png'); }
 .marin {background-position: 0px 0px; background-image: url('images/tubs/marin_138.png'); }
 .capri {background-position: 0px 0px; background-image: url('images/tubs/capri_138.png'); }
+*/
 
 
 /* Badges */
