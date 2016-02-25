@@ -13,12 +13,13 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <title>
 	<?php wp_title( '' ); ?>
 	<?php
-	if ( $_GET['bvrrp'] )
+	if ( isset( $_GET['bvrrp'] ) )
 		echo ' Reviews';
-	if ( $_GET['bvqap'] )
+	if ( isset( $_GET['bvqap'] ) )
 		echo ' Questions';
 	?>
 </title>

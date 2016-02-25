@@ -86,7 +86,6 @@ $bv = new BV(
         )
     );
 
-
 // transient for s_alljets
 if ( false === ( $special_query_results = get_transient( 's_alljets' ) ) ) {
 	// It wasn't there, so regenerate the data and save the transient
@@ -316,7 +315,7 @@ dataLayer.push({
 						$h = get_post($hid);
 					?>
                         <div class="col w160<?php if ( $i == 3 ) echo ' last'; ?>">
-                            <h3><?php esc_attr_e($h->post_title); ?></h3>
+                            <h3><?php echo($h->post_title); ?></h3>
                             <?php
 							echo get_the_post_thumbnail($hid);
 							echo apply_filters('the_content', $h->post_content);
@@ -527,7 +526,7 @@ dataLayer.push({
 						$h = get_post($hid);
 					?>
                         <div class="col w160<?php if ( $i == 3 ) echo ' last'; ?>">
-                            <h3><?php esc_attr_e($h->post_title); ?></h3>
+                            <h3><?php echo($h->post_title); ?></h3>
                             <?php
 							echo get_the_post_thumbnail($hid);
 							echo apply_filters('the_content', $h->post_content);

@@ -63,6 +63,7 @@ input#gform_submit_button_11 {
                 	<li>Choose hot tub sizes, seating, and features</li>
                     <li>Use as an all-in-one shopping guide</li>
                 </ul>
+            
             </div>
         	<div class="content-list lt" style="height:345px;">
                 <div id="img-benefits" class="listimg"></div>
@@ -84,7 +85,7 @@ input#gform_submit_button_11 {
             </div>
 		</div>
     </section>
-    <div id="award-bar"></div>
+    <?php /* ?><div id="award-bar"></div><?php */ ?>
     <div id="video-bar">
         <div class="testimonial-block">
             <div class="l">
