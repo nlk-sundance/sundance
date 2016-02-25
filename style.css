@@ -1873,6 +1873,7 @@ strong{
 		font-weight:bold;
 		font-family:"AR", Tahoma, Geneva, sans-serif;
 		margin: 0 0 6px;
+		min-height: 28px;
 	}
 	.hot-tub-detail .tab .w160 ul{
 		padding: 15px 20px 0 15px;
