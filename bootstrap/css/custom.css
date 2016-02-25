@@ -802,11 +802,16 @@ ul.spa li
     padding: 0px 5px 0px 0px;
 }
 
-ul.spa li.border {
+ul.spa li.border,
+ul.spa.ft1 > li {
 	background: transparent url("../images/spaborder.png") no-repeat scroll right 5px;
 	min-width: 5px;
 	min-height: 14px;
 	padding-right: 10px;
+}
+ul.spa.ft1 > li:last-child {
+	background: none;
+	padding-right: 0;
 }
 
 ul.spa li a 
@@ -848,12 +853,18 @@ ul.footer-links li a
     
 }
 
-ul.footer-links li.border
+ul.footer-links li.border,
+ul.footer-links.ft2 > li
 {
 	background: transparent url("../images/footerlinkborder.png") no-repeat scroll right 7px;
 	min-width: 8px;
 	min-height: 10px;
 	padding-right: 10px;
+}
+ul.footer-links.ft2 > li:last-child
+{
+	background: none
+	padding-right: 0;
 }
 
 .wrapper.footercontainer p 

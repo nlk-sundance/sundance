@@ -169,4 +169,4 @@ get_header('bootstrap'); ?>
           </div>
         </div>
       </section>
-<?php get_footer(); //get_footer('bootstrap'); ?>
+<?php get_footer('bootstrap'); ?>

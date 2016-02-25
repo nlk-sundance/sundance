@@ -45,44 +45,15 @@
 	  				<h1 class="smalllogo"><a href="<?php bloginfo('url'); ?>">logo</a></h1>
 	  			</div>
 	  			<div class="col-4">
-    				<ul class="footericon">
-    					<li class="facebook"><a href="http://www.facebook.com/SundanceSpas">facebook</a></li>
-    					<li class="twitter"><a href="http://twitter.com/sundance_spas">twitter</a></li>
-    					<li class="youtube"><a href="http://www.youtube.com/sundancespas">youtube</a></li>
-    					<li class="google"><a href="https://plus.google.com/107104241400965217576">google</a></li>
-    				</ul>
+    				<?php get_footer('block_social'); ?>
 	  			</div>
 	  			<div class="clear"></div>
 	  			<div class="col-12">
-                    <?php 
-                        wp_nav_menu( 
-                            array(
-                                'menu'       => 'footer1',
-                                //'depth'      => 2,
-                                'container'  => false,
-                                'menu_class' => 'spa ft1',
-                                //'fallback_cb' => 'wp_page_menu',
-                                //Process nav menu using our custom nav walker
-                                //'walker' => new wp_bootstrap_navwalker()
-                            )
-                        ); 
-                    ?>
+                    <?php get_footer('block_menu1'); ?>
 		  		</div>
 		  		<div class="clear"></div>
 	  			<div class="col-12">
-                    <?php 
-                        wp_nav_menu( 
-                            array(
-                                'menu'       => 'footer2',
-                                'depth'      => 2,
-                                'container'  => false,
-                                'menu_class' => 'footer-links ft2',
-                                //'fallback_cb' => 'wp_page_menu',
-                                //Process nav menu using our custom nav walker
-                                //'walker' => new wp_bootstrap_navwalker()
-                            )
-                        ); 
-                    ?>
+                    <?php get_footer('block_menu2'); ?>
 	  			</div>
 	  			<div class="clear"></div>	
 	  			<div class="col-12">
