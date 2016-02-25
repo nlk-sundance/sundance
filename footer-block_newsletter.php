@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer Block - Bottom Menu (2nd Row)
+ * Footer Block - Newsletter
  * This is part of the footer
  *
  * @package Sundance
