@@ -863,7 +863,7 @@ ul.footer-links.ft2 > li
 }
 ul.footer-links.ft2 > li:last-child
 {
-	background: none
+	background: none;
 	padding-right: 0;
 }
 
