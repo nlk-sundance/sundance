@@ -111,15 +111,15 @@ get_header('bootstrap'); ?>
         </div>
         <div class="row hydrotherapy">
           <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1>Hydrotherapy</h1>
+            <h1><a href="/hydrotherapy-spa/">Hydrotherapy</a></h1>
             <p>Understand the healing benefits of Sundance<sup>&reg;</sup> hydrotherapy.</p>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1>SunSmart<sup>&reg;</sup> WiFi App</h1>
+            <h1><a href="/features/sunsmart/">SunSmart<sup>&reg;</sup> WiFi App</a></h1>
             <p>The SunSmart<sup>&reg;</sup> WiFi Kit lets you stay in tune with your spa remotely.</p>  
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1>Warranty</h1>
+            <h1><a href="/difference/warranty/">Warranty</a></h1>
             <p>Our industry-leading Sundance<sup>&reg;</sup> Spas warranty has you covered.</p>
           </div>
         </div>
