@@ -469,7 +469,7 @@ ul.dealerlist li, ul.brochurelist li{
 
 .wrapper.smallcontainer p
 {
-	font-family: "MyriadPro";
+	font-family: "MyriadPro", Arial;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -509,6 +509,9 @@ ul.dealerlist li, ul.brochurelist li{
 	font-family: "AL";
 	font-weight: 600;
 	padding: 0px 25px;
+}
+.wrapper.groupcontainer .hydrotherapy h1 a {
+	color: #0b2a4a;
 }
 
 .wrapper.groupcontainer .hydrotherapy p
