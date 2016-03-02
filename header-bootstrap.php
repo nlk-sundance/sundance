@@ -47,6 +47,8 @@
 		wp_head(); 
     ?>
     <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/frontend.js?ver=1.1'></script>
+
   </head>
   
 <body <?php body_class(); ?>>
