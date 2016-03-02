@@ -24,7 +24,7 @@
 			</form>
 			</li>
   		</ul>
-  		<div class=".main-navigation">
+  		<div class="main-navigation">
 	        <?php 
 	            wp_nav_menu( array(
 	            'menu'       => 'mainmenu',
