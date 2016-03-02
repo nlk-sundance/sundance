@@ -1277,7 +1277,6 @@ ul.footer-links.ft2 > li:last-child
 	bottom: 10px;
 	width: 0px;
 	z-index: 9;
-	display: none;
 	max-height: 50px;
 }
 .main-navigation form.search-form label

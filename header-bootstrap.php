@@ -47,7 +47,57 @@
 		wp_head(); 
     ?>
     <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/frontend.js?ver=1.1'></script>
+    <script type="text/javascript">
+    	jQuery(document).ready(function(){
+    		
+			var searchshow = jQuery('.main-navigation .searchlink > a');
+			var searchform = jQuery('.main-navigation form.search-form');
+			var searchsubmit = jQuery('input[type="submit"].search-submit');
+			var searchfield = jQuery('input[type="search"].search-field');
+			
+			// show search form (desktop)
+			searchshow.click(function(e){
+				e.preventDefault;
+				searchform.animate({
+					width: "100%"
+				}, 350);
+				searchfield.focus();
+			});
+			
+			// search submit versus display show/hide etc.
+			searchsubmit.click(function(e){
+				// if search is empty...
+				if( !searchfield.val() && searchfield.is(":visible") ) {
+					// do not submit
+					e.preventDefault();
+					// if desktop...
+					if( !jQuery('.main-navigation').hasClass('toggled') ) {
+						searchform.animate({
+							width: 0
+						}, 350); // hide search form (desktop)
+						//searchfield.val(''); // remove form value
+						searchsubmit.removeClass('do-search'); // remove search icon for X
+						return;
+					}
+					searchfield.focus(); // if mobile, field focus
+					return;
+				}
+				// otherwise search
+				searchform.submit();
+			});
+		
+			// show search icon if content, otherwise close X
+			searchfield.bind('blur keyup', function(){
+				var v = jQuery(this).val();
+				if( v ) {
+					searchsubmit.addClass('do-search');
+				}
+				else {
+					searchsubmit.removeClass('do-search');
+				}
+			});
+    	});
+    </script>
 
   </head>
   
