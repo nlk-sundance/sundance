@@ -6416,10 +6416,6 @@ sup
 }
 
 /* SEARCH FORM */
-.main-navigation li.menu-item-search {
-	float: right;
-	top: -6px;
-}
 .main-navigation li.menu-item-search a#show-search-form {
 	background: url(images/menu-top-icon-search.png) no-repeat 0 2px;
 	background-color: transparent;
