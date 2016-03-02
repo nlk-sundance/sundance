@@ -36,7 +36,13 @@
 	            'walker' => new wp_bootstrap_navwalker())
 	            ); 
 			?>
-			<?php echo get_search_form(); ?>
+			<form style="width: 100%;" role="search" method="get" class="search-form" action="<?php bloginfo('url'); ?>">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input class="search-field" placeholder="Search …" value="" name="s" title="Search for:" type="search">
+				</label>
+				<input class="search-submit" value="Search" type="submit">
+			</form>
 		</div>
     </div>
 </div>
