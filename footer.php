@@ -24,17 +24,20 @@
 			</form>
 			</li>
   		</ul>
-        <?php 
-            wp_nav_menu( array(
-            'menu'       => 'mainmenu',
-            'depth'      => 2,
-            'container'  => false,
-            'menu_class' => 'mainMenu',
-            'fallback_cb' => 'wp_page_menu',
-            //Process nav menu using our custom nav walker
-            'walker' => new wp_bootstrap_navwalker())
-            ); 
-		?>
+  		<div class=".main-navigation">
+	        <?php 
+	            wp_nav_menu( array(
+	            'menu'       => 'mainmenu',
+	            'depth'      => 2,
+	            'container'  => false,
+	            'menu_class' => 'mainMenu',
+	            'fallback_cb' => 'wp_page_menu',
+	            //Process nav menu using our custom nav walker
+	            'walker' => new wp_bootstrap_navwalker())
+	            ); 
+			?>
+			<?php echo get_search_form(); ?>
+		</div>
     </div>
 </div>
     
