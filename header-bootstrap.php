@@ -205,7 +205,7 @@
 								</div>
 							</div><!-- /.container-fluid -->
 						</nav>
-						<form style="width: 100%;" role="search" method="get" class="search-form" action="<?php bloginfo('url'); ?>">
+						<form role="search" method="get" class="search-form" action="<?php bloginfo('url'); ?>">
 							<label>
 								<span class="screen-reader-text">Search for:</span>
 								<input class="search-field" placeholder="Search …" value="" name="s" title="Search for:" type="search">

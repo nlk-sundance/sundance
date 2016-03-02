@@ -6446,6 +6446,12 @@ sup
 	max-height: 50px;
 	max-width: 700px;
 }
+
+.main-navigation form.search-form span.screen-reader-text
+{
+	display: none;	
+}
+
 .main-navigation form.search-form input.search-field {
 	background-color: #333;
 	border: none;
@@ -6473,7 +6479,7 @@ sup
 	position: absolute;
 	right: 10px;
 	text-shadow: none;
-	top: 35px;
+	top: 29px;
 	width: 20px;
 }
 .main-navigation form.search-form input.search-submit.do-search {
