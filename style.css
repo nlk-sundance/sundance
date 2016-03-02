@@ -6440,9 +6440,12 @@ sup
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	top: 0;
+	bottom: 12px;
 	width: 0px;
 	z-index: 9;
+	max-height: 50px;
+	max-width: 700px;
+	display: none;
 }
 .main-navigation form.search-form input.search-field {
 	background-color: #333;
@@ -6471,7 +6474,7 @@ sup
 	position: absolute;
 	right: 10px;
 	text-shadow: none;
-	top: 50%;
+	top: 35px;
 	width: 20px;
 }
 .main-navigation form.search-form input.search-submit.do-search {
