@@ -815,7 +815,7 @@ strong{
 
 	.page .bd .rightCol .block.brochure-thumb.top {
 		position: relative;
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-new.png) no-repeat 50% 100%;
+		background: url(/wp-content/themes/sundance/images/icons/send_brochure.png) no-repeat 50% 100%;
 	}
 	.page .bd .rightCol .block.brochure .arrow {
 		position: absolute;
@@ -839,7 +839,7 @@ strong{
 	}
 
 	.page .bd .rightCol .block.brochure-thumb.bottom {
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-bottom-new.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
+		background: url(/wp-content/themes/sundance/images/icons/send_brochure.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
 	}
 	.page .bd .rightCol .video{
 		border:none;
@@ -4581,7 +4581,7 @@ strong{
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
-			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/form_free_brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
@@ -4767,14 +4767,14 @@ strong{
 			height: 376px;
 			left: -330px;
 			top: -63px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_compare.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_dimension.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-benefits {
 			width: 696px;
 			height: 322px;
 			right: -224px;
 			top: -55px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_benefits.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_watercare.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
@@ -4787,14 +4787,14 @@ strong{
 			height: 333px;
 			left: -115px;
 			top: -25px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
 			height: 333px;
 			left: -130px;
 			top: -50px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open.jpg) no-repeat 50% 50%;
 		}
 
 		body.sundance-brochure .bd .wrap #award-bar {
@@ -4889,7 +4889,7 @@ strong{
 		}
 		body.sundance-brochure .ft.cta {
 			position: relative;
-			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/cta-footerv2.png") no-repeat scroll 50% 0px;
+			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/bottom_free_brochure.jpg") no-repeat scroll 50% 0px;
 			height: 303px;
 			}
 		body.sundance-brochure .ft .wrap {
@@ -6413,4 +6413,75 @@ sup
 	background-size: 57px 30px;
 	top: -5px;
 	left: -10px;
+}
+
+/* SEARCH FORM */
+.main-navigation li.menu-item-search a#show-search-form {
+	background: url(images/menu-top-icon-search.png) no-repeat 0 2px;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	color: #e1e1e1;
+	display: block;
+	font-family: "GSL";
+	font-size: 12px;
+	letter-spacing: 2px;
+	padding: 6px 0px 6px 24px;
+	text-shadow: none;
+	text-transform: capitalize;
+}
+.main-navigation li.menu-item-search a#show-search-form:hover {
+	color: #fff;
+}
+.main-navigation form.search-form {
+	background-color: #262626;
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+	width: 0px;
+	z-index: 9;
+	max-height: 50px;
+	max-width: 700px;
+}
+
+.main-navigation form.search-form span.screen-reader-text
+{
+	display: none;	
+}
+
+.main-navigation form.search-form input.search-field {
+	background-color: #333;
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 30px;
+	font-family: "GSL";
+	padding-left: 16px;
+	height: 100%;
+	width: 100%;
+}
+.main-navigation form.search-form input.search-submit {
+	background-color: transparent;
+	background-image: url(images/menu-top-icon-search-close.png);
+	background-repeat: no-repeat;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	color: transparent;
+	display: block;
+	height: 20px;
+	margin-top: -12px;
+	padding: 0px;
+	position: absolute;
+	right: 10px;
+	text-shadow: none;
+	top: 29px;
+	width: 20px;
+}
+.main-navigation form.search-form input.search-submit.do-search {
+	background-image: url(images/menu-top-icon-search.png);
 }
