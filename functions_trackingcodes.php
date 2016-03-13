@@ -220,7 +220,7 @@ function sds_is_thanks_page() {
 
 	if (sds_my_server() !== 'local') {
 		add_action('wp_footer', 'pixel_ms');
-		add_action('wp_footer', 'pixel_turn');
+		//add_action('wp_footer', 'pixel_turn');
 		add_action('wp_footer', 'pixel_sitecatalyst');
 		add_action('wp_footer', 'quantcast_tag');
 		add_action('wp_head', 'pixel_bazaarinvoice');

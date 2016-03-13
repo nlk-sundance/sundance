@@ -815,7 +815,7 @@ strong{
 
 	.page .bd .rightCol .block.brochure-thumb.top {
 		position: relative;
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-top-new.png) no-repeat 50% 100%;
+		background: url(/wp-content/themes/sundance/images/icons/send_brochure.png) no-repeat 50% 100%;
 	}
 	.page .bd .rightCol .block.brochure .arrow {
 		position: absolute;
@@ -839,7 +839,7 @@ strong{
 	}
 
 	.page .bd .rightCol .block.brochure-thumb.bottom {
-		background: url(/wp-content/themes/sundance/images/icons/brochure-right-bottom-new.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
+		background: url(/wp-content/themes/sundance/images/icons/send_brochure.png) no-repeat 50% 0%, url(images/bg/horz-gradient-list.jpg) bottom center no-repeat;
 	}
 	.page .bd .rightCol .video{
 		border:none;
@@ -1873,6 +1873,7 @@ strong{
 		font-weight:bold;
 		font-family:"AR", Tahoma, Geneva, sans-serif;
 		margin: 0 0 6px;
+		min-height: 28px;
 	}
 	.hot-tub-detail .tab .w160 ul{
 		padding: 15px 20px 0 15px;
@@ -4580,7 +4581,7 @@ strong{
 			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_small.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .page-header .content.one-part .the-brochure-img {
-			background: url(/wp-content/themes/sundance/images/ppc-landing/free_brochure.png) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/form_free_brochure.png) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .page-header .content form {
 			position: relative;
@@ -4766,14 +4767,14 @@ strong{
 			height: 376px;
 			left: -330px;
 			top: -63px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_compare.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_dimension.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-benefits {
 			width: 696px;
 			height: 322px;
 			right: -224px;
 			top: -55px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_benefits.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_watercare.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
@@ -4786,14 +4787,14 @@ strong{
 			height: 333px;
 			left: -115px;
 			top: -25px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open.jpg) no-repeat 50% 50%;
 		}
 		body.sundance-brochure.brochure3 .bd .wrap .section .content-list #img-satisfied {
 			width: 485px;
 			height: 333px;
 			left: -130px;
 			top: -50px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_why.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open.jpg) no-repeat 50% 50%;
 		}
 
 		body.sundance-brochure .bd .wrap #award-bar {
@@ -4888,7 +4889,7 @@ strong{
 		}
 		body.sundance-brochure .ft.cta {
 			position: relative;
-			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/cta-footerv2.png") no-repeat scroll 50% 0px;
+			background: transparent url("/wp-content/themes/sundance/images/ppc-landing/bottom_free_brochure.jpg") no-repeat scroll 50% 0px;
 			height: 303px;
 			}
 		body.sundance-brochure .ft .wrap {
@@ -6136,11 +6137,16 @@ ul.spa li
     padding: 0px 5px 0px 0px;
 }
 
-ul.spa li.border {
+ul.spa li.border,
+ul.spa.ft1 > li {
 	background: transparent url("bootstrap/images/spaborder.png") no-repeat scroll right 5px;
 	min-width: 5px;
 	min-height: 14px;
 	padding-right: 10px;
+}
+ul.spa.ft1 > li:last-child {
+	background: none;
+	padding-right: 0;
 }
 
 ul.spa li a
@@ -6183,12 +6189,18 @@ ul.footer-links li a
 
 }
 
-ul.footer-links li.border
+ul.footer-links li.border,
+ul.footer-links.ft2 > li
 {
 	background: transparent url("bootstrap/images/footerlinkborder.png") no-repeat scroll right 7px;
 	min-width: 8px;
 	min-height: 10px;
 	padding-right: 10px;
+}
+ul.footer-links.ft2 > li:last-child
+{
+	background: none;
+	padding-right: 0;
 }
 
 .ft p

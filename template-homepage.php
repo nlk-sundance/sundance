@@ -78,7 +78,7 @@ get_header('bootstrap'); ?>
 	  						<a href="<?php bloginfo('url'); ?>/request-literature/" class="btn btn-primary btn-blue">GET BROCHURE</a>
   						</div>
   						<div class="col-xs-12 col-sm-4 col-md-5 padl0 padr0">
-  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/small_logo.png">
+  							<img class="ximg-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/sundance_brochure_home.jpg">
   						</div>
   					</div>
   				</div>

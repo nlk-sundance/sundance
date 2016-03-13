@@ -314,7 +314,7 @@ dataLayer.push({
 					foreach ( $s_high as $i => $hid ) {
 						$h = get_post($hid);
 					?>
-                        <div class="col w160<?php if ( $i == 3 ) echo ' last'; ?>">
+                        <div class="col w160" style="margin-right: 5px;">
                             <h3><?php echo($h->post_title); ?></h3>
                             <?php
 							echo get_the_post_thumbnail($hid);

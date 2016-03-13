@@ -10,9 +10,9 @@ get_header();
 while ( have_posts() ) : the_post();
 global $post;
 
-$custom = get_post_meta($post->ID, 's_cat_tubs');
-$cat_tubs = $custom[0];
-if($cat_tubs=='') $cat_tubs = array();
+//$custom = get_post_meta($post->ID, 's_cat_tubs');
+//$cat_tubs = $custom[0];
+//if($cat_tubs=='') $cat_tubs = array();
 
 //$serieslanding = ( $post->ID == 1894 );
 
@@ -128,7 +128,7 @@ if($cat_tubs=='') $cat_tubs = array();
 																	if(get_field('tub_badge', $spa_id) && get_field('tub_badge', $spa_id) != 'na')
 																		$o .= '<span class="spabadge badge-medium '.get_field('tub_badge', $spa_id).'"></span>';			
 														$o .= '</div>';						
-														$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
+														//$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
 														$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
 														$o .= '<span class="h3">'. esc_attr($t['name']) .'</span>';
 														$o .= '<span class="p">Seats: '. esc_attr($t['seats']) .'</span>';

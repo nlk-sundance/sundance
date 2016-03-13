@@ -27,29 +27,25 @@ get_header(); ?>
 		<div class="col w480 last">
 			<ul class="grid accs">
 				<?php
-					//if ( false === ( $special_query_results = get_transient( 's_feats_wimgs' ) ) ) {
-						$q = get_posts(array(
-							'numberposts' => -1,
-							'orderby' => 'menu_order',
-							'order' => 'ASC',
-							'post_type' => 'page',
-							'post_parent' => 2414,
-						));
-						$o = '';
-						foreach ( $q as $i => $p ) {
-							$img = get_the_post_thumbnail( $p->ID, 'accthm' );
-							$r[$a->term_id] = array(
-								'name' => str_replace('Spa Cleaners &amp; Water Purification Systems', 'Cleaners &amp; Ozone Systems', esc_attr($a->name)),
-								'url' => get_term_link($a->slug, 's_acc_cat'),
-								'img' => $img,
-							);
-							$c3 = ( $i%3 == 2 ) ? ' class="third"' : '';
-							$o .= '<li'. $c3 .'><h3><a href="'. get_permalink($p->ID) .'">'. $img .'<br />'. esc_attr($p->post_name) .'</a></h3></li>';
-						}
-
-						//set_transient( 's_feats_wimgs', $o, 60*60*12 );
-					//}
-					//$o = get_transient( 's_feats_wimgs' );
+					$q = get_posts(array(
+						'numberposts' => -1,
+						'orderby' => 'menu_order',
+						'order' => 'ASC',
+						'post_type' => 'page',
+						'post_parent' => 2414,
+					));
+					$o = '';
+					$r = array();
+					foreach ( $q as $i => $p ) {
+						$img = get_the_post_thumbnail( $p->ID, 'accthm' );
+						$r[$p->term_id] = array(
+							'name' => str_replace('Spa Cleaners &amp; Water Purification Systems', 'Cleaners &amp; Ozone Systems', esc_attr($p->name)),
+							'url' => get_term_link($p->slug, 's_acc_cat'),
+							'img' => $img,
+						);
+						$c3 = ( $i%3 == 2 ) ? ' class="third"' : '';
+						$o .= '<li'. $c3 .'><h3><a href="'. get_permalink($p->ID) .'">'. $img .'<br />'. esc_attr($p->post_name) .'</a></h3></li>';
+					}
 					echo $o;
 				?>
 				<li class="third">

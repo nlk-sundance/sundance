@@ -655,10 +655,13 @@ endwhile;
                         <p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
                     </form><?php */ ?>
 
-<h3>Share This</h3>
-<div class="share">
-<?php if(function_exists('sharethis_button')) sharethis_button(); ?>
-</div>
+
+<?php if( function_exists('sharethis_button') ) { ?>
+    <h3>Share This</h3>
+    <div class="share">
+        <?php sharethis_button(); ?>
+    </div>
+<?php } ?>
 </div>
 </div>
 </div>
