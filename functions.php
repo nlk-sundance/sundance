@@ -1815,8 +1815,9 @@ function sundance_grouptubs($tubs) {
 
 function sundance_series_tubs( $cat_tubs, $series_id ) {
 	// transient for s_tubcats
+
 	//$tname = 's_'. $series_id .'_tubtable';
-	
+	$bazaarvoices = array();
 	//if ( false === ( $special_query_results = get_transient( $tname ) ) ) {
 		$o = '<table class="tubGrid">';
 		if ( count( $cat_tubs ) == 0 ) {
@@ -1831,7 +1832,6 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 					$o .= '</tr>';
 				
 					$c = 0;
-					$bazaarvoices = array();
 					foreach ( $r as $i => $t ) {
 						if ( $c == 0 ) {
 							$o .= '<tr>';
