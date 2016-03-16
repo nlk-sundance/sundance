@@ -1874,7 +1874,7 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 					
 			<script type="text/javascript">
 				$BV.ui( 'rr', 'inline_ratings', {
-					productIds : [<?=$bazaarvoicetext?>],
+					productIds : [<?php echo $bazaarvoicetext; ?>],
 					containerPrefix : 'BVRRInlineRating'
 				});
 			</script>
