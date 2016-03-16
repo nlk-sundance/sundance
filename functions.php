@@ -1824,7 +1824,7 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 					$o .= '</tr>';
 				
 					$c = 0;
-				
+					$bazaarvoices = array();
 					foreach ( $r as $i => $t ) {
 						if ( $c == 0 ) {
 							$o .= '<tr>';
@@ -1838,7 +1838,7 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 							$specs = $custom[0];
 							$t['dim_us'] = $specs['dim_us'];
 							$t['dim_int'] = $specs['dim_int'];
-							$bazaarvoiceID = $specs['product_id'];
+							$bazaarvoices[] = $bazaarvoiceID = $specs['product_id'];
 							$o .= '<a href="'. esc_url($t['url']) .'">';
 							$o .= '<div class="tubThumb ' . esc_attr( strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace('&trade;','',$t['name'] ) ) ) ) . '" ><div class="tubViewDetails"></div></div>';
 							$o .= '<div id="BVRRInlineRating-' . $bazaarvoiceID . '"></div>';
@@ -1863,10 +1863,24 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 						}
 						$c++;
 					}
+					$bazaarvoicetext = implode($bazaarvoices, "','");
+					$bazaarvoicetext = "'".$bazaarvoicetext."'";
 				}
 			}
 		}
 		$o .= '</table>';
+		ob_start();
+		?>
+					
+			<script type="text/javascript">
+				$BV.ui( 'rr', 'inline_ratings', {
+					productIds : [<?=$bazaarvoicetext?>],
+					containerPrefix : 'BVRRInlineRating'
+				});
+			</script>
+		
+		<?php
+		$o .= ob_get_clean();
 		set_transient( $tname, $o, 60*60*12 );
 	}
 	// Use the data like you would have normally...
