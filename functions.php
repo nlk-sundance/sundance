@@ -1863,7 +1863,7 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 						}
 						$c++;
 					}
-					$bazaarvoicetext = implode($bazaarvoices, "','");
+					$bazaarvoicetext = implode("','",$bazaarvoices);
 					$bazaarvoicetext = "'".$bazaarvoicetext."'";
 				}
 			}
