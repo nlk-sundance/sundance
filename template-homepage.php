@@ -129,7 +129,7 @@ get_header('bootstrap'); ?>
         <div class="container smallcontainer">
           <div class="row paracontent">
             <div class="col-xs-12 col-sm-6 col-md-6">
-              <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/Capri_Couple_SideBySide.jpg">
+              <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/bootstrap/images/believeinasundancespa.jpg">
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="row">
