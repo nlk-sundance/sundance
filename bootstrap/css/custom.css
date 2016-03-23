@@ -1267,7 +1267,7 @@ ul.footer-links.ft2 > li:last-child
 	color: #fff;
 }
 .main-navigation form.search-form {
-	background-color: #262626;
+	background-color: #FFF;
 	display: block;
 	height: 100%;
 	overflow: hidden;
@@ -1278,6 +1278,7 @@ ul.footer-links.ft2 > li:last-child
 	width: 0px;
 	z-index: 9;
 	max-height: 50px;
+	border-radius: 10px;
 }
 .main-navigation form.search-form label
 {
@@ -1289,13 +1290,13 @@ ul.footer-links.ft2 > li:last-child
 	display: none;	
 }
 .main-navigation form.search-form input.search-field {
-	background-color: #333;
+	background-color: #FFF;
 	border: none;
 	border-radius: 0;
 	box-sizing: border-box;
-	color: #fff;
+	color: #959595;
 	font-size: 30px;
-	font-family: "GSL";
+	font-family: "Arial";
 	padding-left: 16px;
 	height: 50px;
 	width: 100%;
@@ -1303,7 +1304,7 @@ ul.footer-links.ft2 > li:last-child
 }
 .main-navigation form.search-form input.search-submit {
 	background-color: transparent;
-	background-image: url(../../images/menu-top-icon-search-close.png);
+	background-image: url(../../images/menu-top-icon-search-dark.png);
 	background-repeat: no-repeat;
 	border: none;
 	border-radius: 0;
@@ -1320,7 +1321,7 @@ ul.footer-links.ft2 > li:last-child
 	width: 20px;
 }
 .main-navigation form.search-form input.search-submit.do-search {
-	background-image: url(../../images/menu-top-icon-search.png);
+	background-image: url(../../images/menu-top-icon-search-dark.png);
 }
 
 @media (max-width: 1220px) and (min-width: 1171px) {
