@@ -10,8 +10,8 @@
 		<ul class="list avenir65-12">
 
 			<!-- Google App Store -->
-			<a href="https://play.google.com/store/search?q=pub:Sundance Spas">
-				<img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" width="200" />
+			<a href="https://play.google.com/store/apps/details?id=and.app.Sundance&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+				<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" width="200" />
 			</a>
 			<!--img alt="Get it on Google Play" src="<?php echo get_template_directory_uri(); ?>/images/owners/SunSmart_QR_Code_to_Google_Play.png" width="200" height="200" /-->
 
