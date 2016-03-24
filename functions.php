@@ -1876,10 +1876,8 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 			}
 		}
 		$o .= '</table>';
-
 		//set_transient( $tname, $o, 60*60*12 );
 	//}
-
 		ob_start();
 		?>
 					
