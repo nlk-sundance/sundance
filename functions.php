@@ -309,7 +309,7 @@ function sundance_body_class($classes) {
 	if ( is_search() ) {
 		$classes[] = 'page';
 	}
-	
+
 	if ( sds_is_ca() ) {
 		$classes[] = 'sds-canada';
 	}
@@ -1591,9 +1591,9 @@ function sundance_meta_save($post_id){
 				foreach ( $moretransients as $t ) {
 					delete_transient( $t );
 				}*/
-				}
 			}
 		}
+	}
 	return $info;
 }
 
@@ -1619,7 +1619,7 @@ function jht_all_tubs_images($tubs) {
 function sundance_series_setup() {
 	// Get SERIES, exclude the ALL series
 	$series = get_posts(array('numberposts'=>-1,'post_type'=>'s_cat','orderby'=>'menu_order','order'=>'ASC','exclude'=>1894));
-
+	
 	$alltubs = get_posts( array( 'numberposts' => -1, 'post_type' => 's_spa', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 
 	$cats = array();
@@ -1627,19 +1627,19 @@ function sundance_series_setup() {
 	foreach ( $series as $c ) {
 		if ( ! isset( $cats[$c->ID] ) )
 			$cats[$c->ID] = array();
-
+ 
 		$cats[$c->ID]['name'] = $c->post_title;
 		$cats[$c->ID]['url'] = get_bloginfo('url') .'/'. $c->post_name .'/'; //get_permalink($c->ID);
 		$cats[$c->ID]['tubs'] = array();
 
 		$custom = get_post_meta($c->ID);
 		$cat_tubs = unserialize(fix_serialized_data( $custom['s_cat_tubs'][0] ));
-		if($cat_tubs=='') {
+		if ($cat_tubs=='') {
 			$cat_tubs = array();
 		} else {
 			usort($cat_tubs, 'sundance_tub_sort');
 		}
-
+		
 		$cats[$c->ID]['tubs'] = $cat_tubs;
 	}
 
@@ -1815,6 +1815,7 @@ function sundance_grouptubs($tubs) {
 
 function sundance_series_tubs( $cat_tubs, $series_id ) {
 	// transient for s_tubcats
+
 	//$tname = 's_'. $series_id .'_tubtable';
 	$bazaarvoices = array();
 	//if ( false === ( $special_query_results = get_transient( $tname ) ) ) {
@@ -1875,6 +1876,10 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 			}
 		}
 		$o .= '</table>';
+
+		//set_transient( $tname, $o, 60*60*12 );
+	//}
+
 		ob_start();
 		?>
 					
@@ -1887,8 +1892,6 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 		
 		<?php
 		$o .= ob_get_clean();
-		set_transient( $tname, $o, 60*60*12 );
-	}
 	// Use the data like you would have normally...
 	//$o = get_transient( $tname );
 	return $o;
@@ -2636,7 +2639,7 @@ if ( ! function_exists('geo_redirection') ) {
 			$g = json_decode(stripcslashes($_COOKIE['georesult']), true);
 		}
 		else {
-		$g = geo_data();
+			$g = geo_data();
 		}
 		$c = $g['country'];
 
@@ -2719,7 +2722,7 @@ function google_tag_manager_criteo() {
 add_action('do_custom_data_layer', 'custom_data_layer_container');
 function custom_data_layer_container() {
 	global $post;
-	
+
 	$expire = time()+60*60*24*30;
 
 	$custId = get_current_user_id() > 0 ? get_current_user_id() : ( isset($_COOKIE["sdscid"]) ? $_COOKIE["sdscid"] : rand( 1000000, 1000000000 ) );

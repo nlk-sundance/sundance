@@ -4794,7 +4794,7 @@ strong{
 			height: 333px;
 			left: -130px;
 			top: -50px;
-			background: url(/wp-content/themes/sundance/images/ppc-landing/brochure_open.jpg) no-repeat 50% 50%;
+			background: url(/wp-content/themes/sundance/images/ppc-landing/borchure_last_img.jpg) no-repeat 50% 50%;
 		}
 
 		body.sundance-brochure .bd .wrap #award-bar {
@@ -6434,7 +6434,7 @@ sup
 	color: #fff;
 }
 .main-navigation form.search-form {
-	background-color: #262626;
+	background-color: #FFF;
 	display: block;
 	height: 100%;
 	overflow: hidden;
@@ -6442,9 +6442,10 @@ sup
 	right: 0;
 	bottom: 12px;
 	width: 0px;
-	z-index: 9;
-	max-height: 50px;
+	z-index: 10;
+	max-height: 41px;
 	max-width: 700px;
+	border-radius: 10px;
 }
 
 .main-navigation form.search-form span.screen-reader-text
@@ -6453,12 +6454,12 @@ sup
 }
 
 .main-navigation form.search-form input.search-field {
-	background-color: #333;
+	background-color: #FFF;
 	border: none;
 	border-radius: 0;
 	box-sizing: border-box;
-	color: #fff;
-	font-size: 30px;
+	color: #959595;
+	font-size: 29px;
 	font-family: "GSL";
 	padding-left: 16px;
 	height: 100%;
@@ -6466,7 +6467,7 @@ sup
 }
 .main-navigation form.search-form input.search-submit {
 	background-color: transparent;
-	background-image: url(images/menu-top-icon-search-close.png);
+	background-image: url(images/menu-top-icon-search-close-dark.png);
 	background-repeat: no-repeat;
 	border: none;
 	border-radius: 0;
@@ -6474,7 +6475,7 @@ sup
 	color: transparent;
 	display: block;
 	height: 20px;
-	margin-top: -12px;
+	margin-top: -17px;
 	padding: 0px;
 	position: absolute;
 	right: 10px;
@@ -6483,5 +6484,5 @@ sup
 	width: 20px;
 }
 .main-navigation form.search-form input.search-submit.do-search {
-	background-image: url(images/menu-top-icon-search.png);
+	background-image: url(images/menu-top-icon-search-dark.png);
 }
