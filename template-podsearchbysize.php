@@ -108,7 +108,7 @@ global $post;
 													$t['seats'] = $specs['seats'];
 													$t['dim_us'] = $specs['dim_us'];
 													$t['dim_int'] = $specs['dim_int'];
-													$bazaarvoiceID = $specs['product_id'];
+													$bazaarvoices[] = $bazaarvoiceID = $specs['product_id'];
 													$custom = get_post_meta($spa_id, 's_jets');
 													$tub_jets = $custom[0];
 													$total_jets = 0;
@@ -161,7 +161,20 @@ global $post;
 								    endwhile;
 								else :
 								endif;
-							echo '</table>';								
+							echo '</table>';
+							if($c >= 1)
+							{
+								$bazaarvoicetext = implode("','",$bazaarvoices);
+								$bazaarvoicetext = "'".$bazaarvoicetext."'";
+								?>
+									<script type="text/javascript">
+										$BV.ui( 'rr', 'inline_ratings', {
+											productIds : [<?php echo $bazaarvoicetext; ?>],
+											containerPrefix : 'BVRRInlineRating'
+										});
+									</script>
+								<?php
+							}									
                        ?>
                     </div>
                 </div>
