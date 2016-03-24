@@ -62,7 +62,7 @@ function show_rightside_img_brochure( $c ) {
 
 if ( $onfront ) { 
 		?>
-			<div class="block locate bigBlueBtn" onclick="window.location='/hot-tub-dealer-locator/';">
+			<div id="home-dealer-locate" class="block locate bigBlueBtn" onclick="window.location='/hot-tub-dealer-locator/';">
     			<a href="/hot-tub-dealer-locator/">Locate a Dealer</a>
 			</div>
 		<?php
