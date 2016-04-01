@@ -3736,7 +3736,7 @@ function sundance_series( $tub_id ) {
 	return '';
 }
 
-function add_meta_tags() {
+function add_hreflang_tags() {
    echo '<link rel="alternate" href="'.get_bloginfo('url').parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH).'" hreflang="en-us" />';
 }
 
