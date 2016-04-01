@@ -1888,7 +1888,7 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 		<?php
 		$o .= ob_get_clean();
 		set_transient( $tname, $o, 60*60*12 );
-	}
+	//}
 	// Use the data like you would have normally...
 	//$o = get_transient( $tname );
 	return $o;
