@@ -46,6 +46,58 @@
 		wp_head(); 
     ?>
     <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	jQuery(document).ready(function(){
+    		
+			var searchshow = jQuery('.main-navigation .searchlink > a');
+			var searchform = jQuery('.main-navigation form.search-form');
+			var searchsubmit = jQuery('input[type="submit"].search-submit');
+			var searchfield = jQuery('input[type="search"].search-field');
+			
+			// show search form (desktop)
+			searchshow.click(function(e){
+				e.preventDefault;
+				searchform.animate({
+					width: "100%"
+				}, 350);
+				searchfield.focus();
+			});
+			
+			// search submit versus display show/hide etc.
+			searchsubmit.click(function(e){
+				// if search is empty...
+				if( !searchfield.val() && searchfield.is(":visible") ) {
+					// do not submit
+					e.preventDefault();
+					// if desktop...
+					if( !jQuery('.main-navigation').hasClass('toggled') ) {
+						searchform.animate({
+							width: 0
+						}, 350); // hide search form (desktop)
+						//searchfield.val(''); // remove form value
+						searchsubmit.removeClass('do-search'); // remove search icon for X
+						return;
+					}
+					searchfield.focus(); // if mobile, field focus
+					return;
+				}
+				// otherwise search
+				searchform.submit();
+			});
+		
+			// show search icon if content, otherwise close X
+			searchfield.bind('blur keyup', function(){
+				var v = jQuery(this).val();
+				if( v ) {
+					searchsubmit.addClass('do-search');
+				}
+				else {
+					searchsubmit.removeClass('do-search');
+				}
+			});
+    	});
+    </script>
+
   </head>
   
 <body <?php body_class(); ?>>
@@ -74,83 +126,92 @@
   						</li>
   					</ul>
   					<div class="clear"></div>
-  					<nav class="navbar navbar-default" role="navigation">
-						<div class="container-fluid">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<?php 
-											wp_nav_menu( array(
-										        'menu'       => 'mainmenu',
-										        'depth'      => 2,
-										        'container'  => false,
-										        'menu_class' => 'nav navbar-nav',
-										        'fallback_cb' => 'wp_page_menu',
-										        //Process nav menu using our custom nav walker
-										        'walker' => new wp_bootstrap_navwalker())
-										    ); 
-										?>
-										<?php /* ?>
-										<ul class="nav navbar-nav">
-											<li class="listborder dropdown">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPA</a>
-												<ul class="dropdown-menu">
-													<li><a href="<?php bloginfo('url'); ?>/selectseries/">Select Series<sup>&trade;</sup></a></li>
-													<li><a href="<?php bloginfo('url'); ?>/880series/">880 Series<sup>&trade;</sup></a></li>
-													<li><a href="<?php bloginfo('url'); ?>/780series/">780 Series<sup>&trade;</sup></a></li>
-													<li><a href="<?php bloginfo('url'); ?>/680series/">680 Series<sup>&trade;</sup></a></li>
-												</ul>
-											</li>
-											<li class="listborder">
-												<a href="<?php bloginfo('url'); ?>/about-us/">ABOUT US</a>
-											</li>
-											<li class="listborder dropdown">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ACCESSORIES</a>
+  					<div class="main-navigation">
+	  					<nav class="navbar navbar-default" role="navigation">
+							<div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+											<?php 
+												wp_nav_menu( array(
+											        'menu'       => 'mainmenu',
+											        'depth'      => 2,
+											        'container'  => false,
+											        'menu_class' => 'nav navbar-nav',
+											        'fallback_cb' => 'wp_page_menu',
+											        //Process nav menu using our custom nav walker
+											        'walker' => new wp_bootstrap_navwalker())
+											    ); 
+											?>
+											<?php /* ?>
+											<ul class="nav navbar-nav">
+												<li class="listborder dropdown">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPA</a>
 													<ul class="dropdown-menu">
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/spa-steps/">Steps</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/spa-scents/">SunScents</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/spa-cleaner/">Water Purification</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/spa-filters/">Spa Filters for Your Hot Tub</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/cover-lifters/">Spa Cover Lifters &amp; Accessories</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/spa-equipment/">Accessories Bazaar</a>
-														</li>
-														<li>
-															<a href="<?php bloginfo('url'); ?>/accessories/sunstrong-covers/">Sunstrong™ Covers</a>
-														</li>
+														<li><a href="<?php bloginfo('url'); ?>/selectseries/">Select Series<sup>&trade;</sup></a></li>
+														<li><a href="<?php bloginfo('url'); ?>/880series/">880 Series<sup>&trade;</sup></a></li>
+														<li><a href="<?php bloginfo('url'); ?>/780series/">780 Series<sup>&trade;</sup></a></li>
+														<li><a href="<?php bloginfo('url'); ?>/680series/">680 Series<sup>&trade;</sup></a></li>
 													</ul>
-											</li>
-											<li class="listborder">
-												<a href="<?php bloginfo('url'); ?>/customer-care/">OWNER</a>
-											</li>
-											<li class="listborder">
-												<a href="<?php bloginfo('url'); ?>/get-a-quote/">GET PRICING</a>
-											</li>
-											<li class="search">
-												<a href="#">SEARCH</a>
-											</li>	
-										</ul><?php */ ?>
-							</div>
-						</div><!-- /.container-fluid -->
-					</nav>
+												</li>
+												<li class="listborder">
+													<a href="<?php bloginfo('url'); ?>/about-us/">ABOUT US</a>
+												</li>
+												<li class="listborder dropdown">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ACCESSORIES</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/spa-steps/">Steps</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/spa-scents/">SunScents</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/spa-cleaner/">Water Purification</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/spa-filters/">Spa Filters for Your Hot Tub</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/cover-lifters/">Spa Cover Lifters &amp; Accessories</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/spa-equipment/">Accessories Bazaar</a>
+															</li>
+															<li>
+																<a href="<?php bloginfo('url'); ?>/accessories/sunstrong-covers/">Sunstrong™ Covers</a>
+															</li>
+														</ul>
+												</li>
+												<li class="listborder">
+													<a href="<?php bloginfo('url'); ?>/customer-care/">OWNER</a>
+												</li>
+												<li class="listborder">
+													<a href="<?php bloginfo('url'); ?>/get-a-quote/">GET PRICING</a>
+												</li>
+												<li class="search">
+													<a href="#">SEARCH</a>
+												</li>	
+											</ul><?php */ ?>
+								</div>
+							</div><!-- /.container-fluid -->
+						</nav>
+						<form role="search" method="get" class="search-form" action="<?php bloginfo('url'); ?>">
+							<label>
+								<span class="screen-reader-text">Search for:</span>
+								<input class="search-field" placeholder="Search …" value="" name="s" title="Search for:" type="search">
+							</label>
+							<input class="search-submit" value="Search" type="submit">
+						</form>
+					</div>
   				</div>
   			</div>
   		</div>
