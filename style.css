@@ -6486,3 +6486,8 @@ sup
 .main-navigation form.search-form input.search-submit.do-search {
 	background-image: url(images/menu-top-icon-search-dark.png);
 }
+
+.truckloadform_wrapper .radio label
+{
+	line-height: 20px !important;
+}
