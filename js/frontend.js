@@ -584,7 +584,55 @@ jQuery(function($){
 	$('#hide-locator').click(function(){
 		$('.page-template-page-dealersearch-php .dd.ds').slideUp('slow');
 		$('#show-locator').removeClass('deactivate');
-	})
+	});
+	
+	var searchshow = $('.main-navigation .searchlink > a');
+	var searchform = $('.main-navigation form.search-form');
+	var searchsubmit = $('input[type="submit"].search-submit');
+	var searchfield = $('input[type="search"].search-field');
+	
+	// show search form (desktop)
+	searchshow.click(function(e){
+		e.preventDefault;
+		searchform.animate({
+			width: "100%"
+		}, 350);
+		searchfield.focus();
+	});
+	
+	// search submit versus display show/hide etc.
+	searchsubmit.click(function(e){
+		// if search is empty...
+		if( !searchfield.val() && searchfield.is(":visible") ) {
+			// do not submit
+			e.preventDefault();
+			// if desktop...
+			if( !$('.main-navigation').hasClass('toggled') ) {
+				searchform.animate({
+					width: 0
+				}, 350); // hide search form (desktop)
+				//searchfield.val(''); // remove form value
+				searchsubmit.removeClass('do-search'); // remove search icon for X
+				return;
+			}
+			searchfield.focus(); // if mobile, field focus
+			return;
+		}
+		// otherwise search
+		searchform.submit();
+	});
+
+	// show search icon if content, otherwise close X
+	searchfield.bind('blur keyup', function(){
+		var v = $(this).val();
+		if( v ) {
+			searchsubmit.addClass('do-search');
+		}
+		else {
+			searchsubmit.removeClass('do-search');
+		}
+	});
+
 });
 
 
