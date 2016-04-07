@@ -3740,6 +3740,7 @@ function sundance_series( $tub_id ) {
 
 function add_hreflang_tags() {
    echo '<link rel="alternate" href="'.get_bloginfo('url').parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH).'" hreflang="en-us" />';
+   echo '<link rel="alternate" href="http://www.sundance-spas.co.uk/" hreflang="en-gb" />';
 }
 
 
