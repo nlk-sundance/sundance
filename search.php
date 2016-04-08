@@ -28,8 +28,8 @@ get_header(); ?>
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 				<div id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous Results', 'sundance' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Next Results <span class="meta-nav">&rarr;</span>', 'sundance' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> More Results', 'sundance' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Previous Results <span class="meta-nav">&rarr;</span>', 'sundance' ) ); ?></div>
 				</div><!-- #nav-below -->
 <?php endif; ?>
 <?php else : ?>
