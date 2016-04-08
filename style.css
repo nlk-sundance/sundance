@@ -5822,7 +5822,7 @@ a#show-msrp.close {
 	padding-right: 10px;
 }
 
-.hd .mainMenu li.search a{
+.hd #menu-mainmenu.mainMenu li.search a{
 	background: url("bootstrap/images/search_icon.png") no-repeat scroll right 9px transparent;
     min-width: 22px;
     min-height: 20px;

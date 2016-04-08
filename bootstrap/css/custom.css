@@ -1277,7 +1277,7 @@ ul.footer-links.ft2 > li:last-child
 	bottom: 10px;
 	width: 0px;
 	z-index: 9;
-	max-height: 50px;
+	max-height: 41px;
 	border-radius: 10px;
 }
 .main-navigation form.search-form label
@@ -1298,7 +1298,7 @@ ul.footer-links.ft2 > li:last-child
 	font-size: 30px;
 	font-family: "Arial";
 	padding-left: 16px;
-	height: 50px;
+	height: 41px;
 	width: 100%;
 	font-weight: 400;
 }
