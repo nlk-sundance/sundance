@@ -49,6 +49,7 @@
 			</form>
     </div>
 </div>
+<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/frontend.js'></script>
 
 <script type="text/javascript">
     jQuery(document).ready(function($){
