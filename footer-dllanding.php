@@ -72,6 +72,7 @@
     </div>
 </div>
 <?php get_footer('block_newsletter'); ?>
+<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/frontend.js'></script>
 <script type="text/javascript">
     jQuery(document).ready(function(){
         var h1Height = jQuery('.bd .main .main-title h1').height();
