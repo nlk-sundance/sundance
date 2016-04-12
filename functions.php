@@ -1877,14 +1877,12 @@ function sundance_series_tubs( $cat_tubs, $series_id ) {
 		$o .= '</table>';
 		ob_start();
 		?>
-					
 			<script type="text/javascript">
 				$BV.ui( 'rr', 'inline_ratings', {
 					productIds : [<?php echo $bazaarvoicetext; ?>],
 					containerPrefix : 'BVRRInlineRating'
 				});
 			</script>
-		
 		<?php
 		$o .= ob_get_clean();
 		set_transient( $tname, $o, 60*60*12 );

@@ -685,6 +685,7 @@ $colors = array(
 			position: absolute;
 			left: 0;
 			display: none;
+			top: 0px;
 		}
 		#startupguide #sg-details-panel #sg-panel-overhead-container #sg-panel-overhead img.sg-layer:active {
 			display: block;
