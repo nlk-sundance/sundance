@@ -5747,6 +5747,7 @@ sup
     font-size: 80%;
 }
 
+
 /* Truck Load Gravity Form Extra css */
 .gform_wrapper.truckloadform_wrapper form
 {
@@ -5758,3 +5759,10 @@ sup
 	font-weight: 400;
 	margin-bottom: 0px;
 }
+
+
+.gform_wrapper div.charleft.warningTextareaInfo
+{
+	display: none !important;
+}
+
