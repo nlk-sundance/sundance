@@ -5746,3 +5746,9 @@ sup
     top: -0.5em;
     font-size: 80%;
 }
+
+
+.gform_wrapper div.charleft.warningTextareaInfo
+{
+	display: none !important;
+}
