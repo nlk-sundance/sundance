@@ -6492,3 +6492,7 @@ sup
 	line-height: 20px !important;
 }
 
+.gform_wrapper div.charleft.warningTextareaInfo
+{
+	display: none !important;
+}
