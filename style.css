@@ -6486,3 +6486,10 @@ sup
 .main-navigation form.search-form input.search-submit.do-search {
 	background-image: url(images/menu-top-icon-search-dark.png);
 }
+
+
+.gform_wrapper div.charleft.warningTextareaInfo
+{
+	display: none !important;
+}
+	
