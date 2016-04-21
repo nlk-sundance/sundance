@@ -77,7 +77,7 @@ endwhile;
     //API call to get two letter country code remotely
     //$IP=$_SERVER['REMOTE_ADDR']; 
     //$ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP);
-    echo do_shortcode('[gravityform id="11" title="false" description="false"]');
+    echo do_shortcode('[gravityform id="12" title="false" description="false"]');
 	echo '<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>';
 	?>
 
