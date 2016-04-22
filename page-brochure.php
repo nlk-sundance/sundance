@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Download Brochure
+ * Template Name: Download Brochure (Avala)
  *
  * @package Sundance
  * @subpackage Sundance
  * @since Sundance 2.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header(); ?>
 

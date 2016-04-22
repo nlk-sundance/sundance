@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Brochure (1 part - 960px - Zip -> Postal)
+ * Template Name: Brochure (1 part - 960px - Zip -> Postal) (Avala)
  *
  * @package SDS
  * @subpackage SDS
  * @since SDS 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:400,900');
 

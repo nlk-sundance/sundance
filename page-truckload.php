@@ -7,7 +7,7 @@
  * @since Sundance 2.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 $truckload_url = get_bloginfo('url') . '/hot-tub-dealer-locator/dealers/get_truckload_cities_json';
 $json = file_get_contents($truckload_url);
