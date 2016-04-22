@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Brochure (2 part)
+ * Template Name: Brochure (2 part) (Avala)
  *
  * @package SDS
  * @subpackage SDS
  * @since SDS 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:400,900');
 

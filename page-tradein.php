@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Trade In
+ * Template Name: Trade In (Avala)
  *
  * @package Sundance
  * @subpackage Sundance
@@ -8,7 +8,7 @@
  */
 
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header(); ?>
 <div class="cols">
